@@ -16,6 +16,8 @@ require_once DIR_CLASS . 'user.class.php';      // takes care of autentication
 require_once DIR_CLASS . 'output.class.php';    // generates output for the views
 require_once DIR_CLASS . 'create.class.php';    // proceses the forms output
 require_once DIR_CLASS . 'edit.class.php';      // edit database records
+
+
 // make a openView function to combine header, footer and content
 function openView($name) {
     require DIR_TEMPLATE . 'header.php';
@@ -28,7 +30,7 @@ $router = new AltoRouter();
 
 // map all the pages
 $router->map('GET', "/", openView("root"), "Home");
-$router->map("GET", "/demo", openView("demo"), "Demo");
+$router->map("GET", "/demo/", openView("demo"), "Demo");
 
 // match the current page to all the routes
 $page = $router->match();
