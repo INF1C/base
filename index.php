@@ -4,9 +4,9 @@
  */
 
 // define folder names
-define("DIR_CLASS", "classes");
-define("DIR_TEMPLATE", "templates");
-define("DIR_VIEW", "views");
+define("DIR_CLASS", "classes/");
+define("DIR_TEMPLATE", "template/");
+define("DIR_VIEW", "views/");
 
 // require the classes used in the application
 require_once DIR_CLASS . 'route.class.php';     // takes care of serving the right page
