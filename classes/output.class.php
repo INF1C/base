@@ -42,7 +42,7 @@ class output extends db {
     /*
     * Created by Lesley Jordan van Oostenrijk
     * Date: 17-12-2014
-    * Description: public function tickets -> overzicht geven van alle tickets
+    * Description: public function tickets -> overzicht geven van alle open tickets
      */
     
     public function openTickets() {
@@ -88,6 +88,33 @@ class output extends db {
         $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status = 'Nieuw' OR Status = 'afgemeld' GROUP BY idTicket";
         $solvetime = $this->select(NULL, NULL, $sql);
         $return = array();
+        
+        foreach ($alleTicketID as $ticket){
+            $this->db_table = "TICKET";
+            
+            $return[$ticket]['IncidentType'] = $this->select(array("IncidentType"), array("idTicket" => $ticket));
+            $return[$ticket]['ProbleemStelling'] = $this->select(array("ProbleemStelling"), array("idTicket" => $ticket));
+            $return[$ticket]['Oplossing'] = $this->select(array("Oplossing"), array("idTicket" => $ticket));
+            
+            $this->db_table = "STATUS_WIJZIGING";
+            $return[$ticket]['GeopendOp'] = $this->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
+            $return[$ticket]['GeslotenOp'] = $this->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1");
+            
+            // Hieronder is een test, dit is niet definitief (ik twijfel of het zal werken namelijk)
+            $Opened = $this->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
+            $Closed = $this->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1");
+            $Solved = ($Closed - $Opened);
+            
+            $return[$ticket]['OplosTijd'] = $Solved;
+            // End of test
+            
+            $idBedrijf = $this->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
+            
+            $this->db_table = "BEDRIJF";
+            $return[$ticket]["Bedrijf"] = $this->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf));
+        }
+        
+        return $return;
     }
     
     /*
