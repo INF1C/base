@@ -34,7 +34,9 @@ $router = new AltoRouter();
 $router->map("GET", "/", function () {
     openView("root");
 }, "Home");
-
+$router->map("GET", "/css", function () {
+    require DIR_TEMPLATE . 'main.css';
+}, "CSS MAIN");
 $router->map("POST|GET", "/demo/", function () {
     openView("demo");
 }, "Demo");
