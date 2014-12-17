@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * Author: Pascal Drewes
+ */
 class db {
 
     private $link;

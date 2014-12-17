@@ -1,4 +1,7 @@
 <?php
+/*
+ * Author: Pascal Drewes
+ */
 require_once 'db.class.php';
 class user extends db {
 
