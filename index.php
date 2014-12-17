@@ -17,7 +17,8 @@ require_once DIR_CLASS . 'output.class.php';    // generates output for the view
 require_once DIR_CLASS . 'create.class.php';    // proceses the forms output
 require_once DIR_CLASS . 'edit.class.php';      // edit database records
 // make a openView function to combine header, footer and content
-function openView($name, $params) {
+
+function openView($name) {
     require DIR_TEMPLATE . 'header.php';
     require DIR_VIEW . $name . ".php";
     require DIR_TEMPLATE . 'footer.php';
@@ -26,15 +27,23 @@ function openView($name, $params) {
 // start the router
 $router = new AltoRouter();
 
-// map all the pages
-$router->map("GET", "/", openView("root", $params), "Home");
-$router->map("GET", "/demo/", openView("demo", $params), "Demo");
+/*
+ * Map all the routes
+ * Syntax: http://altorouter.com/usage/mapping-routes.html
+ */
+$router->map("GET", "/", function () {
+    openView("root");
+}, "Home");
+
+$router->map("GET", "/demo/", function () {
+    openView("demo");
+}, "Demo");
 
 // match the current page to all the routes
 $page = $router->match();
 if ($page && is_callable($page['target'])) {
     call_user_func_array($page['target'], $page['params']);
 } else {
-    // no route was matched
+// no route was matched
     header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
 }
