@@ -8,3 +8,8 @@ and open the template in the editor.
     Author     : Pascal
 */
 
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
