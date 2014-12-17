@@ -42,8 +42,9 @@ $router->map("POST|GET", "/demo/", function () {
 // match the current page to all the routes
 $page = $router->match();
 if ($page && is_callable($page['target'])) {
+    define("PAGE_NAME", $page['name']);
     call_user_func_array($page['target'], $page['params']);
 } else {
     // no route was matched
-    include './error/404.html';
+    include '././error/404.html';
 }
