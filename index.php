@@ -16,3 +16,4 @@ require_once DIR_CLASS . 'output.class.php';    // generates output for the view
 require_once DIR_CLASS . 'create.class.php';    // proceses the forms output
 require_once DIR_CLASS . 'edit.class.php';      // edit database records
 
+echo "<H1>GO SUCK BALLS</H1>";
