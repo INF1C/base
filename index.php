@@ -35,7 +35,7 @@ $router->map("GET", "/", function () {
     openView("root");
 }, "Home");
 
-$router->map("GET", "/demo/", function () {
+$router->map("POST|GET", "/demo/", function () {
     openView("demo");
 }, "Demo");
 
@@ -44,6 +44,6 @@ $page = $router->match();
 if ($page && is_callable($page['target'])) {
     call_user_func_array($page['target'], $page['params']);
 } else {
-// no route was matched
-    header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+    // no route was matched
+    include './error/404.html';
 }
