@@ -29,13 +29,13 @@ function openView($name) {
 $router = new AltoRouter();
 
 // map all the pages
-$router->map('GET', "/", openView("root"), "Home");
-$router->map("GET", "/demo/", openView("demo"), "Demo");
+$router->map('GET', "/", "root", "Home");
+$router->map("GET", "/demo/", "demo", "Demo");
 
 // match the current page to all the routes
 $page = $router->match();
 if ($page && is_callable($page['target'])) {
-    call_user_func_array($page['target'], $page['params']);
+    openView($page['target']);
 } else {
     // no route was matched
     header($_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
