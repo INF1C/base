@@ -6,7 +6,7 @@
 
 // define folder names
 define("DIR_CLASS", "classes/");
-define("DIR_TEMPLATE", "template/");
+define("DIR_TEMPLATE", "templates/");
 define("DIR_VIEW", "views/");
 
 // require the classes used in the application
