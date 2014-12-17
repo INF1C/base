@@ -46,5 +46,5 @@ if ($page && is_callable($page['target'])) {
     call_user_func_array($page['target'], $page['params']);
 } else {
     // no route was matched
-    include '././error/404.html';
+    include '/error/404.html';
 }
