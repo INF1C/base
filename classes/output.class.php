@@ -19,12 +19,12 @@ class output {
         $return = array();
 
         foreach ($alleTicketID as $ticket) {
-            $this->db_table = "TICKET";
+            $this->db->db_table = "TICKET";
 
             $return[$ticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $ticket));
             $return[$ticket]['ProbleemStelling'] = $this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket));
 
-            $this->db_table = "STATUS_WIJZIGING";
+            $this->db->db_table = "STATUS_WIJZIGING";
             $return[$ticket]['HuidigeStatus'] = $this->db->select(NULL, NULL, "SELECT Status FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1");
             $return[$ticket]['GeopendOp'] = $this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
 
