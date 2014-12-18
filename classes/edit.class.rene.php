@@ -13,15 +13,13 @@ class edit extends db
 {
 
 // WIJZIG GEGEVENS MEDEWERKER
-    public function MedewerkerOpslaan($idMedewerker)
-    {//GEGEVENS TERUG VOEREN
+    public function medewerker($Vraag, $idMedewerker) {
+        //GEGEVENS TERUG VOEREN
         $fields = array(
-            $idMedewerker,
-            $Gebruikersnaam,
-            $Email,
-            $Voornaam,
-            $Achternaam,
-            $Tussenvoegsel);
+            "Vraag",
+            "Beschrijving",
+            "Oplossing",
+            );
 
         foreach ($fields as $key)
         {
