@@ -1,5 +1,6 @@
 <?php
 class output {
+    
     public $db;
     
     public function __construct() {

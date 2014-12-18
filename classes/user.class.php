@@ -2,16 +2,13 @@
 /*
  * Author: Pascal Drewes
  */
-require_once 'db.class.php';
-class user extends db {
-
-    // ONDERSTAANDE FUNCTIES NOG NIET GETEST!!! //
-    public $test = TRUE;
+class user {
     
+    public $db;
+
     public function __construct() {
-        parent::__construct();
+        $this->db = new db();
         $this->db_table = "ACCOUNT";
-        
         session_start();
     }
 
@@ -31,12 +28,12 @@ class user extends db {
         // Generate password hash using the safe PHP password_hash
         $data["Wachtwoord"] = password_hash($data["Wachtwoord"], PASSWORD_DEFAULT);
         // Check if the username allready exists
-        $check = $this->select(array("Gebruikersnaam"), array("Gebruikersnaam" => $data["Gebruikersnaam"]));
+        $check = $this->db->select(array("Gebruikersnaam"), array("Gebruikersnaam" => $data["Gebruikersnaam"]));
         if (count($check) >= 1) {
             return "Gebruikersnaam bestaat al!";
         } else {
             // Insert the data into the database
-            $check = $this->insert($data);
+            $check = $this->db->insert($data);
             if ($check === 1) {
                 return TRUE;
             } else {
@@ -54,7 +51,7 @@ class user extends db {
             trigger_error("Niet genoeg gegevens ingevoerd!");
         } else {
             // Check if user exists
-            $result = $this->select(array("Wachtwoord", "Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
+            $result = $this->db->select(array("Wachtwoord", "Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
             if (count($result) === 0) {
                 return "Gebruikersnaam niet gevonden!";
             } else {
