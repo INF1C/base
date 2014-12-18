@@ -1,5 +1,5 @@
-<!--http://stenden-ehelp.nl/classes/create.class%20-%20Martijn.php-->
-
+<!-- http://stenden-ehelp.nl/classes/create.class%20-%20Martijn.php -->
+<!-- Martijn Posthuma -->
 <?php
 require_once 'user.class.php';
 
@@ -11,7 +11,7 @@ class create extends user
         parent::__construct();
     }
 
-    
+    //Dit haalt de data uit de velden en stopt ze in de database
     public function medewerker()
     {
         $this->db_table = "MEDEWERKER";
@@ -29,7 +29,7 @@ class create extends user
                 $data[$field] = filter_input(INPUT_POST, $field);
                 if ($data[$field] === '')
                 {
-                    trigger_error("Lege input");
+                    trigger_error("Nog niet alle velden zijn ingevuld");
                 }
             }
         }
@@ -41,14 +41,15 @@ class create extends user
             return TRUE;
         } else
         {
-            trigger_error("Error bij het aanmaken van uw account!");
+            trigger_error("Error bij het aanmaken van uw account");
         }
     }
 
-    
+    //Dit haalt de data uit de velden en stopt ze in de database
     public function bedrijfsMedewerker($idBedrijf)
     {
         $this->db_table = "BEDRIJF";
+        //Dit contoleerd of er wel een bedrijf is
         $check = $this->select(array($idBedrijf), array("idBedrijf" => $idBedrijf));
         if (count($check) === 1)
         {
@@ -68,7 +69,7 @@ class create extends user
                     $data[$field] = filter_input(INPUT_POST, $field);
                     if ($data[$field] === '')
                     {
-                        trigger_error("Lege input");
+                        trigger_error("Nog niet alle velden zijn ingevuld");
                     }
                 }
             }
@@ -80,18 +81,19 @@ class create extends user
                 return TRUE;
             } else
             {
-                trigger_error("Error bij het aanmaken van uw account!");
+                trigger_error("Error bij het aanmaken van uw account");
             }
         } else
         {
-            echo "bedrijf bestaat niet";
+            echo "Bedrijf bestaat niet";
         }
     }
 
-    
+    //Dit haalt de data uit de velden en stopt ze in de database
     public function bedrijf($idBedrijf)
     {
         $this->db_table = "BEDRIJF";
+        //Dit contoleerd of er wel een bedrijf is
         $check = $this->select(array($idBedrijf), array("idBedrijf" => $idBedrijf));
         if (count($check) === 1)
         {
@@ -110,7 +112,7 @@ class create extends user
                     $data[$field] = filter_input(INPUT_POST, $field);
                     if ($data[$field] === '')
                     {
-                        trigger_error("Lege input");
+                        trigger_error("Nog niet alle velden zijn ingevuld");
                     }
                 }
             }
@@ -122,11 +124,11 @@ class create extends user
                 return TRUE;
             } else
             {
-                trigger_error("Error bij het aanmaken van uw account!");
+                trigger_error("Error bij het aanmaken van uw account");
             }
         } else
         {
-            echo "bedrijf bestaat niet";
+            echo "Bedrijf bestaat niet";
         }
     }
 
