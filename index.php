@@ -1,6 +1,7 @@
 <?php
 
 /*
+ * File: index.php
  * Author: Pascal Drewes
  */
 
@@ -8,6 +9,7 @@
 define("DIR_CLASS", "classes/");
 define("DIR_TEMPLATE", "templates/");
 define("DIR_VIEW", "views/");
+define("DIR_UPLOAD", "upload/");
 
 // require the classes used in the application
 require_once DIR_CLASS . 'route.class.php';     // takes care of serving the right page
@@ -19,7 +21,6 @@ require_once DIR_CLASS . 'edit.class.php';      // edit database records
 
 // Start the router
 $router = new AltoRouter();
-
 
 // Map all the routes
 require_once 'routes.php';

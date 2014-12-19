@@ -9,11 +9,11 @@ class create {
         $this->db = new db();
         $this->user = new user();
     }
-    
+
     /*
      * Author: Kevin Bosman
      */
-    
+
     public function FAQ() {
         $this->db->db_table = "MEDEWERKER";
 
@@ -80,7 +80,7 @@ class create {
         //↑Velden naar database sturen
     }
 
-    public function status($idTicket, $idBedrijfsmedewerker, $idBedrijf, $idMedewerker) {
+    public function statusWijziging($idTicket, $idBedrijfsmedewerker, $idBedrijf, $idMedewerker) {
         $this->db->db_table = "STATUS_WIJZIGING";
 
         $fields = array(
@@ -113,7 +113,7 @@ class create {
 
         date_default_timezone_set('Europe/Amsterdam');
         $date = date('Y-m-d H-i-s');
-        $data["DatumTijd"] = array("DatumTijd" => $date);
+        $data["DatumTijd"] = $date;
         //↑Timestamp aanmaken voor DatumTijd veld	
 
         $check = $this->db->insert($data);
@@ -128,7 +128,7 @@ class create {
     /*
      * Author: Martijn Posthuma
      */
-    
+
     //Dit haalt de data uit de velden en stopt ze in de database
     public function medewerker() {
         $this->db->db_table = "MEDEWERKER";
@@ -146,14 +146,14 @@ class create {
                     trigger_error("Nog niet alle velden zijn ingevuld");
                 }
             }
-        }
-        // Insert the data into the database
-        $this->db->db_table = "MEDEWERKER";
-        $check = $this->insert($data);
-        if ($check === 1) {
-            return TRUE;
-        } else {
-            trigger_error("Error bij het aanmaken van uw account");
+            // Insert the data into the database
+            $this->db->db_table = "MEDEWERKER";
+            $check = $this->insert($data);
+            if ($check === 1) {
+                return TRUE;
+            } else {
+                trigger_error("Error bij het aanmaken van uw account");
+            }
         }
     }
 
@@ -179,14 +179,14 @@ class create {
                         trigger_error("Nog niet alle velden zijn ingevuld");
                     }
                 }
-            }
-            // Insert the data into the database
-            $this->db->db_table = "BEDRIJFSMEDEWERKER";
-            $check = $this->insert($data);
-            if ($check === 1) {
-                return TRUE;
-            } else {
-                trigger_error("Error bij het aanmaken van uw account");
+                // Insert the data into the database
+                $this->db->db_table = "BEDRIJFSMEDEWERKER";
+                $check = $this->insert($data);
+                if ($check === 1) {
+                    return TRUE;
+                } else {
+                    trigger_error("Error bij het aanmaken van uw account");
+                }
             }
         } else {
             echo "Bedrijf bestaat niet";
@@ -194,25 +194,21 @@ class create {
     }
 
     //Dit haalt de data uit de velden en stopt ze in de database
-    public function bedrijf($idBedrijf) {
+    public function bedrijf() {
         $this->db->db_table = "BEDRIJF";
-        //Dit contoleerd of er wel een bedrijf is
-        $check = $this->db->select(array($idBedrijf), array("idBedrijf" => $idBedrijf));
-        if (count($check) === 1) {
-            if ($this->user->register(array("Gebruikersnaam", "Wachtwoord", "Autorisatie"), "bedrijfsMedewerker")) {
-                $data = array();
-                $fields = array(
-                    "idBedrijf",
-                    "Bedrijfsnaam",
-                    "Adresgegevens",
-                    "Telefoon",
-                    "Email",
-                    "Licentie");
-                foreach ($fields as $field) {
-                    $data[$field] = filter_input(INPUT_POST, $field);
-                    if ($data[$field] === '') {
-                        trigger_error("Nog niet alle velden zijn ingevuld");
-                    }
+        if ($this->user->register(array("Gebruikersnaam", "Wachtwoord", "Autorisatie"), "bedrijfsMedewerker")) {
+            $data = array();
+            $fields = array(
+                "idBedrijf",
+                "Bedrijfsnaam",
+                "Adresgegevens",
+                "Telefoon",
+                "Email",
+                "Licentie");
+            foreach ($fields as $field) {
+                $data[$field] = filter_input(INPUT_POST, $field);
+                if ($data[$field] === '') {
+                    trigger_error("Nog niet alle velden zijn ingevuld");
                 }
             }
             // Insert the data into the database
@@ -223,8 +219,6 @@ class create {
             } else {
                 trigger_error("Error bij het aanmaken van uw account");
             }
-        } else {
-            echo "Bedrijf bestaat niet";
         }
     }
 
