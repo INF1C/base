@@ -132,10 +132,9 @@ class create {
     //Dit haalt de data uit de velden en stopt ze in de database
     public function medewerker() {
         $this->db->db_table = "MEDEWERKER";
-        if ($this->user->register(array("Gebruikersnaam", "Wachtwoord", "Autorisatie"), "Medewerker")) {
+        if ($this->user->register(array("Gebruikersnaam", "Wachtwoord"), "Medewerker")) {
             $data = array();
             $fields = array(
-                "idMedewerker",
                 "Email",
                 "voornaam",
                 "Achternaam",
