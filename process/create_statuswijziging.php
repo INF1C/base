@@ -11,7 +11,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	echo "<pre>";
 	var_dump($idBedrijf);
 	var_dump($create->statusWijziging($idTicket, $idBedrijfsmedewerker, $idBedrijf));
-	echo "</pre>"
+	echo "</pre>";
 } else {
 	echo "Please post the next time!";
 }
