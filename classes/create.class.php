@@ -136,7 +136,7 @@ class create {
             $data = array();
             $fields = array(
                 "Email",
-                "voornaam",
+                "Voornaam",
                 "Achternaam",
                 "Tussenvoegsel");
             foreach ($fields as $field) {

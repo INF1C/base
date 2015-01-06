@@ -45,6 +45,16 @@ $router->map("POST|GET", "/debug/output/", function () {
  * END DEBUGGING
  */
 
+/*
+ * PROCESSING INFORMATION
+ */
+
+$router->map("POST|GET", "/process/create/medewerker", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require "process/create_medewerker.php";
+    require DIR_TEMPLATE . 'footer.php';
+}, "Process -> medewerker");
+
 // match the current page to all the routes
 $page = $router->match();
 if ($page && is_callable($page['target'])) {
