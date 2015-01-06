@@ -2,5 +2,8 @@
 
 $output = new output;
     
-        var_dump($output->ticket(1));
-    
+        $ticket = $output->ticket(1);
+ 
+foreach ($ticket as $key => $value) {
+    echo "$value <br>" . "$key";
+}
