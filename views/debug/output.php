@@ -1,18 +1,6 @@
 <?php
 
-$create = new output;
+$output = new output;
     
-    function ticket($idticket) {
-        $this->db->db_table = "TICKET";
-        $fields = array(
-            "idTicket",
-            "IncidentType",
-            "Probleemstelling",
-            "Oplossing"
-        );
-        $where = array("idTicket" => $idticket);
-        return $this->db->select($fields, $where);
-                    
-        var_dump($create->output($idTicket));
-    }
+        var_dump($output->ticket(1));
     
