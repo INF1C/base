@@ -163,11 +163,10 @@ class create {
         //Dit contoleerd of er wel een bedrijf is
         $check = $this->db->select(array($idBedrijf), array("idBedrijf" => $idBedrijf));
         if (count($check) === 1) {
-            if ($this->user->register(array("Gebruikersnaam", "Wachtwoord", "Autorisatie"), "bedrijfsMedewerker")) {
+            if ($this->user->register(array("Gebruikersnaam", "Wachtwoord"), "bedrijfsMedewerker")) {
                 $data = array();
                 $fields = array(
-                    "idBedrijfsMedewerker",
-                    "idBedrijf",
+                    "Gebruikersnaam",
                     "Email",
                     "voornaam",
                     "Achternaam",
@@ -189,7 +188,7 @@ class create {
                 }
             }
         } else {
-            echo "Bedrijf bestaat niet";
+            return "Bedrijf bestaat niet";
         }
     }
 
