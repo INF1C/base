@@ -31,7 +31,7 @@
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- CREATE BEDRIJF -->
+    <!-- CREATE BEDRIJF
     <form method="POST" action="/process/create/bedrijf">
     	<p>
     		<span>Bedrijfsnaam:</span>
@@ -59,6 +59,6 @@
     	<p>
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form>
+    </form> -->
 </div>
 
