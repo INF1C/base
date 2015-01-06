@@ -60,7 +60,7 @@
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- CREATE BEDRIJFSMEDEWERKER -->
+    <!-- CREATE BEDRIJFSMEDEWERKER
     <form method="POST" action="/process/create/bedrijfsmedewerker">
         <p>
         	<span>Gebruikersnaam:</span>
@@ -95,6 +95,7 @@
         	<input type="hidden" value="3" name="Bedrijf" />
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form>
+    </form> -->
+    
 </div>
 
