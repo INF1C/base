@@ -130,7 +130,7 @@ class output {
             "Oplossing"
         );
         $where = array("idTicket" => $idticket);
-        return $this->db->select($fields, $where);
+        return $this->db->select($fields, $where)[0];
     }
 
     public function Statuswijziging($idticket) {
