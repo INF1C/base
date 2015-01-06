@@ -25,6 +25,10 @@ $router->map("POST|GET", "/demo/", function () {
     openView("demo");
 }, "Demo");
 
+// Search
+$router->map("POST|GET", "/search/", function () {
+	openView("search");
+}, "Search");
 /*
  * START DEBUGGING
  */
