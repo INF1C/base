@@ -80,7 +80,7 @@ class create {
         //↑Velden naar database sturen
     }
 
-    public function statusWijziging($idTicket, $idBedrijfsmedewerker, $idBedrijf, $idMedewerker) {
+    public function statusWijziging($idTicket, $idBedrijfsmedewerker, $idBedrijf, $idMedewerker = NULL) {
         $this->db->db_table = "STATUS_WIJZIGING";
 
         $fields = array(

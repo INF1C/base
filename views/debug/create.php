@@ -1,6 +1,6 @@
 
 <div class="form">
-	<!--  CREATE MEDEWERKER
+	<!--  CREATE MEDEWERKER (werkt)
     <form method="POST" action="/process/create/medewerker">
         <p>
         	<span>Gebruikersnaam:</span>
@@ -31,7 +31,7 @@
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- CREATE BEDRIJF
+    <!-- CREATE BEDRIJF (werkt)
     <form method="POST" action="/process/create/bedrijf">
     	<p>
     		<span>Bedrijfsnaam:</span>
@@ -60,7 +60,7 @@
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- CREATE BEDRIJFSMEDEWERKER
+    <!-- CREATE BEDRIJFSMEDEWERKER (werkt)
     <form method="POST" action="/process/create/bedrijfsmedewerker">
         <p>
         	<span>Gebruikersnaam:</span>
@@ -96,7 +96,7 @@
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- CREATE ticket -->
+    <!-- CREATE ticket (werkt)
     <form method="POST" action="/process/create/ticket">
     	<p>
     		<span>IncidentType</span>
@@ -119,28 +119,36 @@
 	    <p>
 	    	<input type="submit" value="submit" name="submit">
 	    </p> 
-    </form>
+    </form> -->
 
 
-	<!-- CREATE statuswijziging
+	<!-- CREATE statuswijziging -->
     <form method="POST" action="/process/create/statuswijziging">
 	    <p>
-		    <span>status</span>
-		    <input type="text" name="Status" />
+            <span>Let op, dit formulier is bedoeld voor bedrijfsmedewerkers!</span>
+		    <input type="hidden" name="Status" value="Nieuw" />
 	    </p>
+        <p>
+            <span>Ticket ID:</span>
+            <input type="number" name="idTicket" />
+        </p>
+        <p>
+            <span>Bedrijfsmedewerker ID: (wordt normaal opgehaald uit de sessie)</span>
+            <input type="number" name="idBedrijfsmedewerker" />
+        </p>
 	    <p>
-		    <span>Soort Contact</span>
+		    <span>Soort Contact: (bijv. telefonisch</span>
 		    <input type="text" name="SoortContact" />
 	    </p>
 	    <p>
-		    <span>memo</span>
+		    <span>Memo:</span>
 		    <textarea rows="5" cols="75"></textarea>
 	    </p>
 		<p>
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
     </form>
-   -->
+   
 	<!-- CREATE faq
 	<form method="POST" action="/process/create/faq">
 		<p>
