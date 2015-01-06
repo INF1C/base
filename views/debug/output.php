@@ -12,7 +12,7 @@ $create = new output;
         );
         $where = array("idTicket" => $idticket);
         return $this->db->select($fields, $where);
-                
+                    
+        var_dump($create->output($idTicket));
     }
     
-    var_dump($create->ticket($idTicket));
