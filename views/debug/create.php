@@ -96,6 +96,69 @@
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    
+    <!-- CREATE ticket -->
+    <form method="POST" action="/process/create/ticket">
+    	<p>
+    		<span>IncidentType</span>
+    		<select name="IncidentType">
+    			<option value="Vraag">Vraag</option>
+    			<option value="Wens">Wens</option>
+    			<option value="Uitval">Uitval</option>
+    			<option value="FunctioneelProbleem">Functioneel Probleem</option>
+    			<option value="TechnischProbleem">Technisch Probleem</option>
+    		</select>
+    	</p>
+	    <p>
+		    <span>Probleemstelling</span>
+			<textarea rows="5" cols="75" name="Probleemstelling"></textarea>
+	    </p>
+	    <p>
+		    <span>Oplossing</span>
+		    <textarea rows="5" cols="75" name="Oplossing"></textarea>
+	    </p>
+	    <p>
+	    	<input type="submit" value="submit" name="submit">
+	    </p> 
+    </form>
+
+
+	<!-- CREATE statuswijziging
+    <form method="POST" action="/process/create/statuswijziging">
+	    <p>
+		    <span>status</span>
+		    <input type="text" name="Status" />
+	    </p>
+	    <p>
+		    <span>Soort Contact</span>
+		    <input type="text" name="SoortContact" />
+	    </p>
+	    <p>
+		    <span>memo</span>
+		    <textarea rows="5" cols="75"></textarea>
+	    </p>
+		<p>
+	    	<input type="submit" value="submit" name="submit">
+	    </p>
+    </form>
+   -->
+	<!-- CREATE faq
+	<form method="POST" action="/process/create/faq">
+		<p>
+			<span>Vraag</span>
+			<input type="text" name="Vraag" />
+		</p>
+		<p>
+			<span>Beschrijving</span>
+			<textarea rows="5" cols="75" name="Beschijving"></textarea>
+		</p>
+		<p>
+			<span>Oplossing</span>
+			<textarea rows="5" cols="75" name="Oplossing"></textarea>
+		</p>
+	    <p>
+	    	<input type="submit" value="submit" name="submit">
+	    </p>
+	</form>
+  	-->
 </div>
 
