@@ -135,6 +135,7 @@ class create {
         if ($this->user->register(array("Gebruikersnaam", "Wachtwoord"), "Medewerker")) {
             $data = array();
             $fields = array(
+                "Gebruikersnaam",
                 "Email",
                 "Voornaam",
                 "Achternaam",
