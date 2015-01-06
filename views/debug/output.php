@@ -3,6 +3,7 @@
 $output = new output;
     
         $ticket = $output->ticket(1);
+        $ticket = $output->ticket(2);
  
 foreach ($ticket as $key => $value) {
     echo "$value <br/>";
