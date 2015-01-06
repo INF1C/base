@@ -168,7 +168,7 @@ class create {
                 $fields = array(
                     "Gebruikersnaam",
                     "Email",
-                    "voornaam",
+                    "Voornaam",
                     "Achternaam",
                     "Tussenvoegsel",
                     "Functie");
