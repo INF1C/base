@@ -166,7 +166,6 @@ class create {
             if ($this->user->register(array("Gebruikersnaam", "Wachtwoord"), "Bedrijfsmedewerker")) {
                 $data = array();
                 $fields = array(
-                    "idBedrijf",
                     "Gebruikersnaam",
                     "Email",
                     "Voornaam",
@@ -179,6 +178,7 @@ class create {
                         trigger_error("Nog niet alle velden zijn ingevuld");
                     }
                 }
+                $data['idBedrijf'] = $idBedrijf;
                 // Insert the data into the database
                 $this->db->db_table = "BEDRIJFSMEDEWERKER";
                 $check = $this->db->insert($data);
