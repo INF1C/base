@@ -104,8 +104,8 @@
     			<option value="Vraag">Vraag</option>
     			<option value="Wens">Wens</option>
     			<option value="Uitval">Uitval</option>
-    			<option value="Functioneel Probleem">Functioneel Probleem</option>
-    			<option value="Technisch Probleem">Technisch Probleem</option>
+    			<option value="Functioneel probleem">Functioneel Probleem</option>
+    			<option value="Technisch probleem">Technisch Probleem</option>
     		</select>
     	</p>
 	    <p>
