@@ -198,7 +198,6 @@ class create {
         $this->db->db_table = "BEDRIJF";
         $data = array();
         $fields = array(
-            "idBedrijf",
             "Bedrijfsnaam",
             "Adresgegevens",
             "Telefoon",
@@ -212,7 +211,7 @@ class create {
         }
         // Insert the data into the database
         $this->db->db_table = "BEDRIJF";
-        $check = $this->insert($data);
+        $check = $this->db->insert($data);
         if ($check === 1) {
             return TRUE;
         } else {
