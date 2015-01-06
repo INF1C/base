@@ -65,7 +65,7 @@ $router->map("POST|GET", "/process/create/bedrijfsmedewerker", function () {
     require DIR_TEMPLATE . 'header.php';
     require "process/create_bedrijfsmedewerker.php";
     require DIR_TEMPLATE . 'footer.php';
-}, "Process -> Bedrijf");
+}, "Process -> Bedrijfsmedewer");
 
 // match the current page to all the routes
 $page = $router->match();
