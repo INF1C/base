@@ -31,7 +31,8 @@ class user {
         // Check if the username allready exists
         $check = $this->db->select(array("Gebruikersnaam"), array("Gebruikersnaam" => $data["Gebruikersnaam"]));
         if (count($check) >= 1) {
-            return "Gebruikersnaam bestaat al!";
+            trigger_error("Gebruikersnaam bestaat al!");
+            return false;
         } else {
             // Insert the data into the database
             $check = $this->db->insert($data);
