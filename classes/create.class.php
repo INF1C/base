@@ -163,7 +163,7 @@ class create {
         //Dit contoleerd of er wel een bedrijf is
         $check = $this->db->select(array($idBedrijf), array("idBedrijf" => $idBedrijf));
         if (count($check) === 1) {
-            if ($this->user->register(array("Gebruikersnaam", "Wachtwoord"), "bedrijfsMedewerker")) {
+            if ($this->user->register(array("Gebruikersnaam", "Wachtwoord"), "Bedrijfsmedewerker")) {
                 $data = array();
                 $fields = array(
                     "Gebruikersnaam",
@@ -180,7 +180,7 @@ class create {
                 }
                 // Insert the data into the database
                 $this->db->db_table = "BEDRIJFSMEDEWERKER";
-                $check = $this->insert($data);
+                $check = $this->db->insert($data);
                 if ($check === 1) {
                     return TRUE;
                 } else {
