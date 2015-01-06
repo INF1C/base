@@ -25,6 +25,7 @@ class user {
         $autorisatieCheck = array('Teamleider', 'Admin', 'Medewerker', 'Bedrijfsmedewerker');
         if (!in_array($Autorisatie, $autorisatieCheck))
             trigger_error("Foute input in 'Autorisatie'");
+        $data['Autorisatie'] = $Autorisatie;
         // Generate password hash using the safe PHP password_hash
         $data["Wachtwoord"] = password_hash($data["Wachtwoord"], PASSWORD_DEFAULT);
         // Check if the username allready exists
