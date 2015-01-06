@@ -1,5 +1,5 @@
 <div class="form">
-    <form method="POST" action="process/create/medewerker">
+    <form method="POST" action="/process/create/medewerker">
         <p>
         	<span>Gebruikersnaam:</span>
         	<input type="text" name="Gebruikersnaam" />
