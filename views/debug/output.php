@@ -16,5 +16,13 @@ foreach ($ticket as $key => $value) {
     <td><?php echo "$key" ?></td>
     <td><?php echo "$value" ?></td> 
   </tr>
+  <tr>
+    <td><?php echo "$key" ?></td>
+    <td><?php echo "$value" ?></td> 
+  </tr>
+  <tr>
+    <td><?php echo "$key" ?></td>
+    <td><?php echo "$value" ?></td> 
+  </tr>
 </table>
 
