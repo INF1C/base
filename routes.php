@@ -32,7 +32,7 @@ $router->map("POST|GET", "/search/", function () {
 // Search
 $router->map("POST|GET", "/search2/", function () {
 	openView("search_test");
-}, "Search");
+}, "Search2");
 /*
  * START DEBUGGING
  */
