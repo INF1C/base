@@ -196,29 +196,27 @@ class create {
     //Dit haalt de data uit de velden en stopt ze in de database
     public function bedrijf() {
         $this->db->db_table = "BEDRIJF";
-        if ($this->user->register(array("Gebruikersnaam", "Wachtwoord", "Autorisatie"), "bedrijfsMedewerker")) {
-            $data = array();
-            $fields = array(
-                "idBedrijf",
-                "Bedrijfsnaam",
-                "Adresgegevens",
-                "Telefoon",
-                "Email",
-                "Licentie");
-            foreach ($fields as $field) {
-                $data[$field] = filter_input(INPUT_POST, $field);
-                if ($data[$field] === '') {
-                    trigger_error("Nog niet alle velden zijn ingevuld");
-                }
+        $data = array();
+        $fields = array(
+            "idBedrijf",
+            "Bedrijfsnaam",
+            "Adresgegevens",
+            "Telefoon",
+            "Email",
+            "Licentie");
+        foreach ($fields as $field) {
+            $data[$field] = filter_input(INPUT_POST, $field);
+            if ($data[$field] === '') {
+                trigger_error("Nog niet alle velden zijn ingevuld");
             }
-            // Insert the data into the database
-            $this->db->db_table = "BEDRIJF";
-            $check = $this->insert($data);
-            if ($check === 1) {
-                return TRUE;
-            } else {
-                trigger_error("Error bij het aanmaken van uw account");
-            }
+        }
+        // Insert the data into the database
+        $this->db->db_table = "BEDRIJF";
+        $check = $this->insert($data);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            trigger_error("Error bij het aanmaken van uw account");
         }
     }
 
