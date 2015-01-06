@@ -147,7 +147,7 @@ class create {
             }
             // Insert the data into the database
             $this->db->db_table = "MEDEWERKER";
-            $check = $this->insert($data);
+            $check = $this->db->insert($data);
             if ($check === 1) {
                 return TRUE;
             } else {
