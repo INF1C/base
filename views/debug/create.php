@@ -84,6 +84,10 @@
         	<input type="text" name="Achternaam" />
         </p>
         <p>
+        	<span>Functie:</span>
+        	<input type="text" name="Functie" />
+        </p>
+        <p>
         	<span>Email:</span>
         	<input type="email" name="Email" />
         </p>
