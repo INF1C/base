@@ -11,16 +11,10 @@ foreach ($ticket as $key => $value) {
 }
 ?>
 
-<table style="width:100%">
+<table style="width:100%" border="1">
   <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
+    <td><?php echo "$key" ?></td>
+    <td><?php echo "$value" ?></td> 
   </tr>
 </table>
 
