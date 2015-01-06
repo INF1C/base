@@ -8,7 +8,7 @@ class user {
 
     public function __construct() {
         $this->db = new db();
-        $this->db_table = "ACCOUNT";
+        $this->db->db_table = "ACCOUNT";
         session_start();
     }
 
