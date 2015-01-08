@@ -122,7 +122,7 @@
     </form> -->
 
 
-	<!-- CREATE statuswijziging -->
+	<!-- CREATE statuswijziging (werkt)
     <form method="POST" action="/process/create/statuswijziging">
 	    <p>
 		    <input type="hidden" name="Status" value="Nieuw" />
@@ -150,9 +150,9 @@
 		<p>
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
-    </form>
+    </form> -->
    
-	<!-- CREATE faq
+	<!-- CREATE faq -->
 	<form method="POST" action="/process/create/faq">
 		<p>
 			<span>Vraag</span>
@@ -170,6 +170,5 @@
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
 	</form>
-  	-->
 </div>
 

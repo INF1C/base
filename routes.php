@@ -87,6 +87,12 @@ $router->map("POST|GET", "/process/create/statuswijziging", function () {
     require DIR_TEMPLATE . 'footer.php';
 }, "Process -> Status Wijziging");
 
+$router->map("POST|GET", "/process/create/faq", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require "process/create_faq.php";
+    require DIR_TEMPLATE . 'footer.php';
+}, "Process -> Status Wijziging");
+
 // match the current page to all the routes
 $page = $router->match();
 if ($page && is_callable($page['target'])) {

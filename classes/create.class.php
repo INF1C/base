@@ -40,6 +40,7 @@ class create {
         }
         //↑Vullen van de benodige velden
 
+        $data['idMedewerker'] = $idMedewerker;
         $check = $this->db->insert($data);
         if ($check === 1) {
             return TRUE;
