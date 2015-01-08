@@ -160,7 +160,7 @@
 		</p>
 		<p>
 			<span>Beschrijving</span>
-			<textarea rows="5" cols="75" name="Beschijving"></textarea>
+			<textarea rows="5" cols="75" name="Beschrijving"></textarea>
 		</p>
 		<p>
 			<span>Oplossing</span>
