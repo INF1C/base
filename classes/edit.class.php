@@ -136,7 +136,7 @@ class edit {
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
             if ($data[$key] === '') {
-                trigger_error("Lege input");
+                trigger_error("Lege input, " . $key);
             }
         }
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
