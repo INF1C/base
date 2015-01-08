@@ -114,7 +114,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
         	<input type="email" name="Email" value="<?= $data['Email'] ?>" />
         </p>
         <p>
-        	<input type="hidden" value="" name="idBedrijfsMedewerker">
+        	<input type="hidden" value="<?= $idBedrijfsMedewerker ?>" name="idBedrijfsMedewerker">
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form>
