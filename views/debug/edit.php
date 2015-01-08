@@ -1,4 +1,10 @@
 <?php
+/* 	
+	!!!!! LET OP !!!!!
+	!!!!! wachtwoord wijzigen functie moet nog gemaakt worden
+*/
+
+
 // LOAD DATA
 $db = new db;
 
@@ -17,11 +23,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
 <div class="form">
 	<!--  EDIT MEDEWERKER -->
     <form method="POST" action="/process/edit/medewerker/">
-        <p>
-        	<span>Wachtwoord:</span>
-        	<input type="password" name="Wachtwoord" />
-        </p>
-
         <p>
         	<span>Voornaam:</span>
         	<input type="text" name="Voornaam" value="<?= $data['Voornaam'] ?>" />

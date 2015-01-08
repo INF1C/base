@@ -16,7 +16,6 @@ class edit {
     public function medewerker($idMedewerker) {
         //GEGEVENS TERUG VOEREN
         $fields = array(
-            "Gebruikersnaam",
             "Email",
             "Voornaam",
             "Achternaam",
