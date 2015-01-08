@@ -6,7 +6,7 @@ $db = new db;
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$idTicket = filter_input(INPUT_POST, 'idTicket');
 	$idBedrijfsmedewerker = filter_input(INPUT_POST, 'idBedrijfsmedewerker');
-	$idMedewerker = filter_input(INPUT_POST, 'idMedewerker')
+	$idMedewerker = filter_input(INPUT_POST, 'idMedewerker');
 	$db->db_table = "BEDRIJFSMEDEWERKER";
 	$idBedrijf = $db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $idBedrijfsmedewerker))[0]['idBedrijf'];
 	echo "<pre>";
