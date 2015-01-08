@@ -6,8 +6,8 @@ $db = new db;
 // MEDEWERKER
 if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
 	$idMedewerker = FILTER_INPUT(INPUT_GET, 'idMedewerker');
-	var_dump($idMedewerker);
-	$data = $db->select(array('Gebruikersnaam'), array('idMedewerker' => $idMedewerker))[0];
+	$db->db_table = "MEDEWERKER";
+	$data = $db->select(array('*'), array('idMedewerker' => $idMedewerker))[0];
 } else {
 	$data = array_fill_keys(array('Gebruikersnaam', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email'), '');
 }
