@@ -9,14 +9,14 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
 	$db->db_table = "MEDEWERKER";
 	$data = $db->select(array('*'), array('idMedewerker' => $idMedewerker))[0];
 } else {
-	$data = array_fill_keys(array('Gebruikersnaam', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email'), '');
+	$data = array_fill_keys(array('idMedewerker', 'Gebruikersnaam', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email'), '');
 }
 
 
 ?>
 <div class="form">
 	<!--  EDIT MEDEWERKER -->
-    <form method="POST" action="/process/edit/medewerker">
+    <form method="POST" action="/process/edit/medewerker/">
         <p>
         	<span>Gebruikersnaam:</span>
         	<input type="text" name="Gebruikersnaam" value="<?= $data['Gebruikersnaam'] ?>" />
@@ -43,6 +43,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
         	<input type="email" name="Email" value="<?= $data['Email'] ?>" />
         </p>
         <p>
+        	<input type="hidden" value="<?= $data['idMedewerker'] ?>" name="idMedewerker" />
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> 
