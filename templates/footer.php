@@ -3,7 +3,7 @@
  * Author: Pascal Drewes
  */
 ?>
-        </div>
-        <!-- use this area for including javascript -->
+<!--        </div>
+         use this area for including javascript 
     </body>
-</html>
+</html>-->
