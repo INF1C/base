@@ -147,7 +147,7 @@ class edit {
 
         $where = array("idStatus" => $idStatus);
 
-        return $this->update($data, $where);
+        return $this->db->update($data, $where);
     }
 
 }
