@@ -7,7 +7,11 @@ if (isset($_POST['zoekterm']))
     $zoekterm = filter_input(INPUT_POST, 'zoekterm');
     $optie = 'MEDEWERKER';
     $db->db_table = $optie;
-    echo $db->select(array('*'), array('Achternaam' => $zoekterm));
+    foreach($db->select(array('*'), array('Achternaam' => $zoekterm)) as $result)
+    {
+        echo $result;
+        
+    }
 }
     
 echo "<p>" .
