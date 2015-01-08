@@ -29,7 +29,7 @@ class edit {
         }
 
         $where = array("idMedewerker" => $idMedewerker);
-        echo "<pre>"; var_dump($data); echo "</pre>";
+        echo "<pre>"; var_dump($where); echo "</pre>";
         return $this->db->update($data, $where);
     }
 
