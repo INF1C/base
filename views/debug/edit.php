@@ -37,12 +37,21 @@ $db = new db;
 }*/
 
 // TICKET
-if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
+/*if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
 	$idTicket = FILTER_INPUT(INPUT_GET, 'idTicket');
 	$db->db_table = "TICKET";
 	$data = $db->select(array('*'), array('idTicket' => $idTicket))[0];
 } else {
 	$data = array_fill_keys(array('idTicket', 'IncidentType', 'Probleemstelling', 'Oplossing'), '');
+}*/
+
+// STATUS_WIJZIGING
+if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
+	$idStatus = FILTER_INPUT(INPUT_GET, 'idStatus');
+	$db->db_table = "STATUS_WIJZIGING";
+	$data = $db->select(array('*'), array('idStatus' => $idStatus))[0];
+} else {
+	$data = array_fill_keys(array('idStatus', 'idBedrijfsMedewerker', 'idMedewerker', 'Status', 'SoortContact', 'Memo'), '');
 }
 
 ?>
@@ -127,7 +136,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- EDIT ticket -->
+    <!-- EDIT ticket (werkt)
     <form method="POST" action="/process/edit/ticket">
     	<p>
     		<span>IncidentType</span>
@@ -151,38 +160,43 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
 	    	<input type="hidden" value="<?= $idTicket ?>" name="idTicket" />
 	    	<input type="submit" value="submit" name="submit">
 	    </p> 
-    </form>
+    </form> -->
 
 
-	<!-- EDIT statuswijziging
-    <form method="POST" action="/process/create/statuswijziging">
+	<!-- EDIT statuswijziging -->
+    <form method="POST" action="/process/edit/statuswijziging">
 	    <p>
-		    <input type="hidden" name="Status" value="Nieuw" />
+		    <select name="Status">
+		    	<option value="Nieuw" 								<?= $data['Status'] == 'Nieuw' 								? 'selected' : '' ?>>Nieuw</option>
+		    	<option value="In behandeling" 						<?= $data['Status'] == 'In behandeling' 					? 'selected' : '' ?>>In behandeling</option>
+		    	<option value="Doorgestuurd naar engineer" 			<?= $data['Status'] == 'Doorgestuurd naar engineer' 		? 'selected' : '' ?>>Doorgestuurd naar engineer</option>
+		    	<option value="Doorgestuurd naar account manager" 	<?= $data['Status'] == 'Doorgestuurd naar account manager' 	? 'selected' : '' ?>>Doorgestuurd naar account manager</option>
+		    	<option value="opgelost" 							<?= $data['Status'] == 'opgelost' 							? 'selected' : '' ?>>opgelost</option>
+		    	<option value="afgemeld" 							<?= $data['Status'] == 'afgemeld' 							? 'selected' : '' ?>>afgemeld</option>
+		    </select>
 	    </p>
         <p>
-            <span>Ticket ID:</span>
-            <input type="number" name="idTicket" />
+            <span>Bedrijfsmedewerker ID: (In de toekomst kan het bewerken van de bedrijfsmedewerker mogelijk in een modal gedaan worden?)</span>
+            <input type="number" name="idBedrijfsmedewerker" value="<?= $data['idBedrijfsMedewerker'] ?>" />
         </p>
         <p>
-            <span>Bedrijfsmedewerker ID: (wordt normaal opgehaald uit de sessie)</span>
-            <input type="number" name="idBedrijfsmedewerker" />
-        </p>
-        <p>
-            <span>Medewerker ID ID: (wordt normaal opgehaald uit de sessie)(Wordt alleen weergegeven als de medewerker is ingelogd)</span>
-            <input type="number" name="idMedewerker" />
+            <span>Medewerker ID: (wordt normaal opgehaald uit de sessie)(Wordt alleen weergegeven als de medewerker is ingelogd)</span>
+            <input type="number" name="idMedewerker" value="<?= $data['idMedewerker'] ?>" />
         </p>
 	    <p>
 		    <span>Soort Contact: (bijv. telefonisch</span>
-		    <input type="text" name="SoortContact" />
+		    <input type="text" name="SoortContact" value="<?= $data['SoortContact'] ?>" />
 	    </p>
 	    <p>
 		    <span>Memo:</span>
-		    <textarea rows="5" cols="75"></textarea>
+		    <textarea rows="5" cols="75"><?= $data['Memo'] ?></textarea>
 	    </p>
 		<p>
+			<span>Moet de DatumTijd ook geupdate worden naar de wijziging van de statuswijziging?????</span>
+			<input type="hidden" name="idStatus" value="<?= $idStatus ?>" />
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
-    </form> -->
+    </form>
    
 	<!-- EDIT faq
 	<form method="POST" action="/process/create/faq">

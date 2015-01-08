@@ -128,7 +128,7 @@
 		    <input type="hidden" name="Status" value="Nieuw" />
 	    </p>
         <p>
-            <span>Ticket ID:</span>
+            <span>Ticket ID: (wordt normaal door gegeven via de get)</span>
             <input type="number" name="idTicket" />
         </p>
         <p>
