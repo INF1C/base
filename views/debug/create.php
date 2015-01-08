@@ -152,7 +152,7 @@
 	    </p>
     </form> -->
    
-	<!-- CREATE faq -->
+	<!-- CREATE faq (werkt)
 	<form method="POST" action="/process/create/faq">
 		<p>
 			<span>Vraag</span>
@@ -169,6 +169,6 @@
 	    <p>
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
-	</form>
+	</form> -->
 </div>
 
