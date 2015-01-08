@@ -125,7 +125,6 @@
 	<!-- CREATE statuswijziging -->
     <form method="POST" action="/process/create/statuswijziging">
 	    <p>
-            <span>Let op, dit formulier is bedoeld voor bedrijfsmedewerkers!</span>
 		    <input type="hidden" name="Status" value="Nieuw" />
 	    </p>
         <p>
@@ -135,6 +134,10 @@
         <p>
             <span>Bedrijfsmedewerker ID: (wordt normaal opgehaald uit de sessie)</span>
             <input type="number" name="idBedrijfsmedewerker" />
+        </p>
+        <p>
+            <span>Medewerker ID ID: (wordt normaal opgehaald uit de sessie)(Wordt alleen weergegeven als de medewerker is ingelogd)</span>
+            <input type="number" name="idMedewerker" />
         </p>
 	    <p>
 		    <span>Soort Contact: (bijv. telefonisch</span>
