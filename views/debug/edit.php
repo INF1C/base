@@ -28,12 +28,21 @@ $db = new db;
 }*/
 
 // BEDRIJFSMEDEWERKER
-if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
+/*if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
 	$idBedrijfsMedewerker = FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker');
 	$db->db_table = "BEDRIJFSMEDEWERKER";
 	$data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0];
 } else {
 	$data = array_fill_keys(array('idBedrijfsMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email', 'Functie'), '');
+}*/
+
+// TICKET
+if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
+	$idTicket = FILTER_INPUT(INPUT_GET, 'idTicket');
+	$db->db_table = "TICKET";
+	$data = $db->select(array('*'), array('idTicket' => $idTicket))[0];
+} else {
+	$data = array_fill_keys(array('idTicket', 'IncidentType', 'Probleemstelling', 'Oplossing'), '');
 }
 
 ?>
@@ -91,7 +100,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- EDIT BEDRIJFSMEDEWERKER -->
+    <!-- EDIT BEDRIJFSMEDEWERKER (werkt)
     <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <p>
         	<span>Voornaam:</span>
@@ -117,31 +126,32 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
         	<input type="hidden" value="<?= $idBedrijfsMedewerker ?>" name="idBedrijfsMedewerker">
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form>
-    <!-- EDIT ticket
-    <form method="POST" action="/process/create/ticket">
+    </form> -->
+    <!-- EDIT ticket -->
+    <form method="POST" action="/process/edit/ticket">
     	<p>
     		<span>IncidentType</span>
     		<select name="IncidentType">
-    			<option value="Vraag">Vraag</option>
-    			<option value="Wens">Wens</option>
-    			<option value="Uitval">Uitval</option>
-    			<option value="Functioneel probleem">Functioneel Probleem</option>
-    			<option value="Technisch probleem">Technisch Probleem</option>
+    			<option value="Vraag" <?= $data['IncidentType'] == 'Vraag' ? 'selected' : '' ?>>Vraag</option>
+    			<option value="Wens" <?= $data['IncidentType'] == 'Wens' ? 'selected' : '' ?>>Wens</option>
+    			<option value="Uitval" <?= $data['IncidentType'] == 'Uitval' ? 'selected' : '' ?>>Uitval</option>
+    			<option value="Functioneel probleem" <?= $data['IncidentType'] == 'Functioneel Probleem' ? 'selected' : '' ?>>Functioneel Probleem</option>
+    			<option value="Technisch probleem" <?= $data['IncidentType'] == 'Technisch Probleem' ? 'selected' : '' ?>>Technisch Probleem</option>
     		</select>
     	</p>
 	    <p>
 		    <span>Probleemstelling</span>
-			<textarea rows="5" cols="75" name="Probleemstelling"></textarea>
+			<textarea rows="5" cols="75" name="Probleemstelling"><?= $data['Probleemstelling'] ?></textarea>
 	    </p>
 	    <p>
 		    <span>Oplossing</span>
-		    <textarea rows="5" cols="75" name="Oplossing"></textarea>
+		    <textarea rows="5" cols="75" name="Oplossing"><?= $data['Oplossing'] ?></textarea>
 	    </p>
 	    <p>
+	    	<input type="hidden" value="<?= $idTicket ?>" name="idTicket" />
 	    	<input type="submit" value="submit" name="submit">
 	    </p> 
-    </form> -->
+    </form>
 
 
 	<!-- EDIT statuswijziging

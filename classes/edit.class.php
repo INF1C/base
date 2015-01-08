@@ -120,7 +120,7 @@ class edit {
 
 
         $where = array("idTicket" => $idTicket);
-
+        $this->db->db_table = "TICKET";
         return $this->db->update($data, $where);
     }
 
