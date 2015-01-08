@@ -140,8 +140,8 @@ class edit {
             }
         }
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
-        $data['idBedrijf'] = $this->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $data['idBedrijfsMedewerker']))[0]['idBedrijf'];
-        
+        $data['idBedrijf'] = $this->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $data['idBedrijfsMedewerker']));
+        var_dump($data);
         if($data['idMedewerker'] == '')
             $data['idMedewerker'] = NULL;
         $EnumCheck = array("Nieuw", "In behandeling", "Doorgestuurd naar engineer", "Doorgestuurd naar account manager", "opgelost", "afgemeld");
