@@ -139,7 +139,7 @@ class edit {
                 trigger_error("Lege input");
             }
         }
-
+        $this->db->db_table = "BEDRIJFSMEDEWERKER";
         $data['idBedrijf'] = $this->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $data['idBedrijfsMedewerker']))[0]['idBedrijf'];
 
         if($data['idMedewerker'] == '')
