@@ -146,7 +146,7 @@ class edit {
             die("Check failed");
 
         $where = array("idStatus" => $idStatus);
-
+        $this->db->db_table = "STATUS_WIJZIGING";
         return $this->db->update($data, $where);
     }
 
