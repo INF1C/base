@@ -7,11 +7,28 @@ if (isset($_POST['zoekterm']))
     $zoekterm = filter_input(INPUT_POST, 'zoekterm');
     $optie = 'BEDRIJF';
     $db->db_table = $optie;
-    foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . " WHERE Bedrijfsnaam LIKE '%" . $zoekterm . "%'")[0] as $key => $result)
+    echo "<table border='2'>";
+    echo "<tr><th> Link </th>";
+    echo "<th> Bedrijfsnaam </th>";
+    echo "<th> Adresgegevens </th>";
+    echo "<th> Telefoonnummer </th>";
+    echo "<th> E-mail </th>";
+    echo "<th> Licentie </th></tr>"
+    foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . " WHERE Bedrijfsnaam LIKE '%" . $zoekterm . "%'") as $result)
     {
-        echo $key . ":" . $result . "<br />";
-        
+        echo "<tr>";
+        foreach($result as $key => $subresult){
+            echo "<td>";
+            if($key == "idBedrijf"){
+                echo "<a href='" . $subresult . "'>Link</a>";
+            } else {
+                echo $subresult;
+            }
+            echo "</td>";
+        }
+        echo "</tr>";
     }
+    echo "</table>";
 }
     
 echo "<p>" .
