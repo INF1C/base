@@ -72,8 +72,8 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     	<p>
     		<span>Heeft een licentie?</span>
     		<select name="Licentie">
-    			<option value="1" <?= $data['Licentie'] == 1 ? "CHECKED" ?>>Nee</option>
-    			<option value="2" <?= $data['Licentie'] == 2 ? "CHECKED" ?>>Ja</option>
+    			<option value="1" <?= $data['Licentie'] == 1 ? "CHECKED" : ?>>Nee</option>
+    			<option value="2" <?= $data['Licentie'] == 2 ? "CHECKED" : ?>>Ja</option>
     		</select>
     	</p>
     	<p>
