@@ -139,7 +139,8 @@ class edit {
                 trigger_error("Lege input");
             }
         }
-
+        if($data['idMedewerker'] == '')
+            $data['idMedewerker'] = NULL;
         $EnumCheck = array("Nieuw", "In behandeling", "Doorgestuurd naar engineer", "Doorgestuurd naar account manager", "opgelost", "afgemeld");
 
         if (!in_array($data['Status'], $EnumCheck))
