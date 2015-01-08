@@ -21,7 +21,7 @@
     <link href="/base/templates/subCss/style.css" rel="stylesheet">
     <link href="/base/templates/subCss/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
+    <script src="/base/templates/subCss/js/chart-master/Chart.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
