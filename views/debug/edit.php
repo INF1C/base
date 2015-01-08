@@ -58,10 +58,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     		<input type="text" name="Bedrijfsnaam" />
     	</p>
     	<p>
-    		<span>idBedrijf --> !!!TIJDELIJK!!! Wordt vervangen door de zoekfunctie...</span>
-    		<input type="number" name="idBedrijf" />
-    	</p>
-    	<p>
     		<span>Adresgegevens:</span>
     		<textarea name="Adresgegevens"></textarea>
     	</p>
@@ -81,6 +77,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     		</select>
     	</p>
     	<p>
+    	    <input type="hidden" value="<?= $data['idBedrijf'] ?>" name="idBedrijf" />
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> 
