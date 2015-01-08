@@ -177,7 +177,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 	    </p>
         <p>
             <span>Bedrijfsmedewerker ID: (In de toekomst kan het bewerken van de bedrijfsmedewerker mogelijk in een modal gedaan worden?)</span>
-            <input type="number" name="idBedrijfsmedewerker" value="<?= $data['idBedrijfsMedewerker'] ?>" />
+            <input type="number" name="idBedrijfsMedewerker" value="<?= $data['idBedrijfsMedewerker'] ?>" />
         </p>
         <p>
             <span>Medewerker ID: (wordt normaal opgehaald uit de sessie)(Wordt alleen weergegeven als de medewerker is ingelogd)</span>
