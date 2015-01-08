@@ -189,7 +189,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 	    </p>
 	    <p>
 		    <span>Memo:</span>
-		    <textarea rows="5" cols="75"><?= $data['Memo'] ?></textarea>
+		    <textarea rows="5" cols="75" name="Memo"><?= $data['Memo'] ?></textarea>
 	    </p>
 		<p>
 			<span>Moet de DatumTijd ook geupdate worden naar de wijziging van de statuswijziging?????</span>
