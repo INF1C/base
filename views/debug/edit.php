@@ -55,25 +55,25 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     <form method="POST" action="/process/edit/bedrijf">
     	<p>
     		<span>Bedrijfsnaam:</span>
-    		<input type="text" name="Bedrijfsnaam" />
+    		<input type="text" name="Bedrijfsnaam" value="<?= echo $data['Bedrijfsnaam'] ?>" />
     	</p>
     	<p>
     		<span>Adresgegevens:</span>
-    		<textarea name="Adresgegevens"></textarea>
+    		<textarea name="Adresgegevens"><?= echo $data['Bedrijfsnaam'] ?></textarea>
     	</p>
     	<p>
     		<span>Telefoon:</span>
-    		<input type="text" name="Telefoon" />
+    		<input type="text" name="Telefoon" value="<?= echo $data['Telefoon'] ?>" />
     	</p>
     	<p>
     		<span>Email:</span>
-    		<input type="email" name="Email" />
+    		<input type="email" name="Email" value="<?= echo $data['Email'] ?>" />
     	</p>
     	<p>
     		<span>Heeft een licentie?</span>
     		<select name="Licentie">
-    			<option value="1">Nee</option>
-    			<option value="2">Ja</option>
+    			<option value="1" <?= $data['Licentie'] == 1 ? "CHECKED" ?>>Nee</option>
+    			<option value="2" <?= $data['Licentie'] == 2 ? "CHECKED" ?>>Ja</option>
     		</select>
     	</p>
     	<p>
