@@ -92,7 +92,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
         </p>
     </form> -->
     <!-- EDIT BEDRIJFSMEDEWERKER -->
-    <form method="POST" action="/process/create/bedrijfsmedewerker">
+    <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <p>
         	<span>Voornaam:</span>
         	<input type="text" name="Voornaam" value="<?= $data['Voornaam'] ?>" />
