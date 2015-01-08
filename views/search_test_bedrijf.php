@@ -13,7 +13,7 @@ if (isset($_POST['zoekterm']))
     echo "<th> Adresgegevens </th>";
     echo "<th> Telefoonnummer </th>";
     echo "<th> E-mail </th>";
-    echo "<th> Licentie </th></tr>"
+    echo "<th> Licentie </th></tr>";
     foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . " WHERE Bedrijfsnaam LIKE '%" . $zoekterm . "%'") as $result)
     {
         echo "<tr>";
