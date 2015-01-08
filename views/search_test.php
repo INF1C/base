@@ -7,9 +7,9 @@ if (isset($_POST['zoekterm']))
     $zoekterm = filter_input(INPUT_POST, 'zoekterm');
     $optie = 'MEDEWERKER';
     $db->db_table = $optie;
-    foreach($db->select(array('*'), array('Achternaam' => $zoekterm))[0] as $result)
+    foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . "WHERE Achternaam LIKE '%" . $zoekterm . "%'")[0] as $key => $result)
     {
-        echo $result;
+        echo $key . ":" . $result . "<br />";
         
     }
 }
