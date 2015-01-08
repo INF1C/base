@@ -4,7 +4,7 @@ $db = new db;
 
 
 // MEDEWERKER
-if(isset(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
+if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
 	$idMedewerker = FILTER_INPUT(INPUT_GET, 'idMedewerker');
 	$data = $db->select(array('*'), array('idMedewerker' => $idMedewerker))[0];
 } else {
