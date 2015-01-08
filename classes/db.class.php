@@ -59,14 +59,14 @@ class db {
             foreach ($where as $field => $value)
                 $fields[] = $field . "=?";
             $sql .= join(' AND ', $fields);
-            echo $sql . "<br />";
+
             // prepare the pdo statement
             $stmt = $this->link->prepare($sql);
             $i = 0;
             foreach ($data as $value)
-                $stmt->bindValue( ++$i, $value); echo $value . "<br/>";
+                $stmt->bindValue( ++$i, $value);
             foreach ($where as $value)
-                $stmt->bindValue( ++$i, $value); echo $value . "<br/>";
+                $stmt->bindValue( ++$i, $value);
             $stmt->execute();
             return $stmt->rowCount();
         } catch (PDOException $e) {

@@ -29,6 +29,7 @@ class edit {
         }
 
         $where = array("idMedewerker" => $idMedewerker);
+        $this->db->db_table = "MEDEWERKER";
         return $this->db->update($data, $where);
     }
 
