@@ -1,7 +1,7 @@
 <?php
 /* 	
 	!!!!! LET OP !!!!!
-	!!!!! wachtwoord wijzigen functie moet nog gemaakt worden
+	!!!!! wachtwoord en gebruikersnaam wijzigen functie moet nog gemaakt worden
 */
 
 
@@ -19,16 +19,26 @@ $db = new db;
 }*/
 
 // BEDRIJF
-if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
+/*if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
 	$idBedrijf = FILTER_INPUT(INPUT_GET, 'idBedrijf');
 	$db->db_table = "BEDRIJF";
 	$data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
 } else {
 	$data = array_fill_keys(array('idBedrijf', 'Bedrijfsnaam', 'Adresgegevens', 'Telefoon', 'Email', 'Licentie'), '');
+}*/
+
+// BEDRIJFSMEDEWERKER
+if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
+	$idBedrijfsMedewerker = FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker');
+	$db->db_table = "BEDRIJFSMEDEWERKER";
+	$data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0];
+} else {
+	$data = array_fill_keys(array('idBedrijfsMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email', 'Functie'), '');
 }
+
 ?>
 <div class="form">
-	<!--  EDIT MEDEWERKER 
+	<!--  EDIT MEDEWERKER (werkt)
     <form method="POST" action="/process/edit/medewerker">
         <p>
         	<span>Voornaam:</span>
@@ -51,7 +61,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
         	<input type="submit" value="submit" name="submit" />
         </p>
     </form> -->
-    <!-- EDIT BEDRIJF -->
+    <!-- EDIT BEDRIJF (werkt)
     <form method="POST" action="/process/edit/bedrijf">
     	<p>
     		<span>Bedrijfsnaam:</span>
@@ -80,43 +90,34 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     	    <input type="hidden" value="<?= $data['idBedrijf'] ?>" name="idBedrijf" />
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form> 
-    <!-- EDIT BEDRIJFSMEDEWERKER
+    </form> -->
+    <!-- EDIT BEDRIJFSMEDEWERKER -->
     <form method="POST" action="/process/create/bedrijfsmedewerker">
         <p>
-        	<span>Gebruikersnaam:</span>
-        	<input type="text" name="Gebruikersnaam" />
-        </p>
-        <p>
-        	<span>Wachtwoord:</span>
-        	<input type="password" name="Wachtwoord" />
-        </p>
-
-        <p>
         	<span>Voornaam:</span>
-        	<input type="text" name="Voornaam" />
+        	<input type="text" name="Voornaam" value="<?= $data['Voornaam'] ?>" />
         </p>
         <p>
         	<span>Tussenvoegsel:</span>
-        	<input type="text" name="Tussenvoegsel">
+        	<input type="text" name="Tussenvoegsel" value="<?= $data['Tussenvoegsel'] ?>" />
         </p>
         <p>
         	<span>Achternaam:</span>
-        	<input type="text" name="Achternaam" />
+        	<input type="text" name="Achternaam" value="<?= $data['Achternaam'] ?>" />
         </p>
         <p>
         	<span>Functie:</span>
-        	<input type="text" name="Functie" />
+        	<input type="text" name="Functie" value="<?= $data['Functie'] ?>" />
         </p>
         <p>
         	<span>Email:</span>
-        	<input type="email" name="Email" />
+        	<input type="email" name="Email" value="<?= $data['Email'] ?>" />
         </p>
         <p>
-        	<input type="hidden" value="3" name="Bedrijf" />
+        	<input type="hidden" value="" name="idBedrijfsMedewerker">
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form> -->
+    </form>
     <!-- EDIT ticket
     <form method="POST" action="/process/create/ticket">
     	<p>

@@ -36,7 +36,6 @@ class edit {
     public function bedrijfsMedewerker($idBedrijfsmedewerker) {
         //GEGEVENS TERUG VOEREN
         $fields = array(
-            "Gebruikersnaam",
             "Email",
             "Voornaam",
             "Achternaam",
@@ -51,7 +50,7 @@ class edit {
         }
 
         $where = array("idBedrijfsmedewerker" => $idBedrijfsmedewerker);
-
+        $this->db->db_table = "BEDRIJFSMEDEWERKER";
         return $this->db->update($data, $where);
     }
 
