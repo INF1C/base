@@ -139,6 +139,9 @@ class edit {
                 trigger_error("Lege input");
             }
         }
+
+        $data['idBedrijf'] = $this->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => , $data['idBedrijfsMedewerker']))[0]['idBedrijf'];
+
         if($data['idMedewerker'] == '')
             $data['idMedewerker'] = NULL;
         $EnumCheck = array("Nieuw", "In behandeling", "Doorgestuurd naar engineer", "Doorgestuurd naar account manager", "opgelost", "afgemeld");
