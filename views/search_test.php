@@ -11,7 +11,7 @@ if (isset($_POST['zoekterm']))
 }
     
 echo "<p>" .
-"<form action='Test123.php' method='POST'>" .
+"<form action='search_test.php' method='POST'>" .
     "<strong>test</strong><br />" .
     "<p>Zoekterm: <input type='text' name='zoekterm' /></p>" .
     "<p>" .
