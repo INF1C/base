@@ -135,8 +135,8 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
     			<option value="Vraag" <?= $data['IncidentType'] == 'Vraag' ? 'selected' : '' ?>>Vraag</option>
     			<option value="Wens" <?= $data['IncidentType'] == 'Wens' ? 'selected' : '' ?>>Wens</option>
     			<option value="Uitval" <?= $data['IncidentType'] == 'Uitval' ? 'selected' : '' ?>>Uitval</option>
-    			<option value="Functioneel probleem" <?= $data['IncidentType'] == 'Functioneel Probleem' ? 'selected' : '' ?>>Functioneel Probleem</option>
-    			<option value="Technisch probleem" <?= $data['IncidentType'] == 'Technisch Probleem' ? 'selected' : '' ?>>Technisch Probleem</option>
+    			<option value="Functioneel probleem" <?= $data['IncidentType'] == 'Functioneel probleem' ? 'selected' : '' ?>>Functioneel Probleem</option>
+    			<option value="Technisch probleem" <?= $data['IncidentType'] == 'Technisch probleem' ? 'selected' : '' ?>>Technisch Probleem</option>
     		</select>
     	</p>
 	    <p>
