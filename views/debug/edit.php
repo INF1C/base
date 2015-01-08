@@ -46,13 +46,13 @@ $db = new db;
 }*/
 
 // STATUS_WIJZIGING
-if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
+/*if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 	$idStatus = FILTER_INPUT(INPUT_GET, 'idStatus');
 	$db->db_table = "STATUS_WIJZIGING";
 	$data = $db->select(array('*'), array('idStatus' => $idStatus))[0];
 } else {
 	$data = array_fill_keys(array('idStatus', 'idBedrijfsMedewerker', 'idMedewerker', 'Status', 'SoortContact', 'Memo'), '');
-}
+}*/
 
 ?>
 <div class="form">
@@ -163,7 +163,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
     </form> -->
 
 
-	<!-- EDIT statuswijziging -->
+	<!-- EDIT statuswijziging (werkt)
     <form method="POST" action="/process/edit/statuswijziging">
 	    <p>
 		    <select name="Status">
@@ -196,7 +196,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 			<input type="hidden" name="idStatus" value="<?= $idStatus ?>" />
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
-    </form>
+    </form> -->
    
 	<!-- EDIT faq
 	<form method="POST" action="/process/create/faq">
