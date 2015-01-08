@@ -8,7 +8,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
 	$idMedewerker = FILTER_INPUT(INPUT_GET, 'idMedewerker');
 	$data = $db->select(array('*'), array('idMedewerker' => $idMedewerker))[0];
 } else {
-	array_fill_keys(array('Gebruikersnaam', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email'), '');
+	$data = array_fill_keys(array('Gebruikersnaam', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email'), '');
 }
 
 
