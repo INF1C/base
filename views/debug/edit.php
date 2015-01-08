@@ -10,18 +10,25 @@ $db = new db;
 
 
 // MEDEWERKER
-if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
+/*if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
 	$idMedewerker = FILTER_INPUT(INPUT_GET, 'idMedewerker');
 	$db->db_table = "MEDEWERKER";
 	$data = $db->select(array('*'), array('idMedewerker' => $idMedewerker))[0];
 } else {
 	$data = array_fill_keys(array('idMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email'), '');
+}*/
+
+// BEDRIJF
+if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
+	$idBedrijf = FILTER_INPUT(INPUT_GET, 'idBedrijf');
+	$db->db_table = "BEDRIJF";
+	$data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
+} else {
+	$data = array_fill_keys(array('idBedrijf', 'Bedrijfsnaam', 'Adresgegevens', 'Telefoon', 'Email', 'Licentie'), '');
 }
-
-
 ?>
 <div class="form">
-	<!--  EDIT MEDEWERKER -->
+	<!--  EDIT MEDEWERKER 
     <form method="POST" action="/process/edit/medewerker">
         <p>
         	<span>Voornaam:</span>
@@ -43,12 +50,16 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
         	<input type="hidden" value="<?= $data['idMedewerker'] ?>" name="idMedewerker" />
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form> 
-    <!-- EDIT BEDRIJF
-    <form method="POST" action="/process/create/bedrijf">
+    </form> -->
+    <!-- EDIT BEDRIJF -->
+    <form method="POST" action="/process/edit/bedrijf">
     	<p>
     		<span>Bedrijfsnaam:</span>
     		<input type="text" name="Bedrijfsnaam" />
+    	</p>
+    	<p>
+    		<span>idBedrijf --> !!!TIJDELIJK!!! Wordt vervangen door de zoekfunctie...</span>
+    		<input type="number" name="idBedrijf" />
     	</p>
     	<p>
     		<span>Adresgegevens:</span>
@@ -72,7 +83,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idMedewerker'))) {
     	<p>
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form> -->
+    </form> 
     <!-- EDIT BEDRIJFSMEDEWERKER
     <form method="POST" action="/process/create/bedrijfsmedewerker">
         <p>

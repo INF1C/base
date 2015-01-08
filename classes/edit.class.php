@@ -72,7 +72,7 @@ class edit {
         }
 
         $where = array("idBedrijf" => $idBedrijf);
-
+        $this->db->db_table = "BEDRIJF";
         return $this->db->update($data, $where);
     }
 
