@@ -98,11 +98,13 @@ class create {
             }
         }
         //↑Checken of er iets ingevuld is	
-
         $data["idTicket"] = $idTicket;
-        $data["idBedrijfsmedewerker"] = $idBedrijfsmedewerker;
-        $data["idBedrijf"] = $idBedrijf;
-        $data["idMedewerker"] = $idMedewerker;
+        if($idBedrijfsmedewerker !== NULL)
+            $data["idBedrijfsmedewerker"] = $idBedrijfsmedewerker;
+        if($idBedrijf !== NULL)
+            $data["idBedrijf"] = $idBedrijf;
+        if($idMedewerker !== NULL)
+            $data["idMedewerker"] = $idMedewerker;
 
         $status = array('Nieuw', 'In behandeling', 'Doorgestuurd naar engineer', 'Doorgestuurd naar account manager', 'Opgelost', 'Afgemeld');
         if (!in_array($data["Status"], $status)) {

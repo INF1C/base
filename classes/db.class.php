@@ -34,11 +34,7 @@ class db {
             $stmt = $this->link->prepare($sql . join(', ', $fields) . ") VALUES (" . join(', ', $params) . ")");
             $i = 0;
             foreach ($array as $value){
-                if($value === NULL) {
-                    $stmt->bindValue( ++$i, $value, PDO::PARAM_NULL);
-                } else {
-                    $stmt->bindValue( ++$i, $value);
-                }
+                $stmt->bindValue( ++$i, $value);
             }
             $stmt->execute();
             return $stmt->rowCount();
