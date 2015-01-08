@@ -140,7 +140,7 @@ class edit {
             }
         }
 
-        $data['idBedrijf'] = $this->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => , $data['idBedrijfsMedewerker']))[0]['idBedrijf'];
+        $data['idBedrijf'] = $this->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $data['idBedrijfsMedewerker']))[0]['idBedrijf'];
 
         if($data['idMedewerker'] == '')
             $data['idMedewerker'] = NULL;
