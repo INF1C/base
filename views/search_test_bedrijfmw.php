@@ -7,6 +7,15 @@ if (isset($_POST['zoekterm']))
     $zoekterm = filter_input(INPUT_POST, 'zoekterm');
     $optie = 'BEDRIJFSMEDEWERKER';
     $db->db_table = $optie;
+    echo "<table border='2'>";
+    echo "<tr><th> link </th>";
+    echo "<th> BedrijfsID </th>";
+    echo "<th> Gebruikersnaam </th>";
+    echo "<th> E-mail </th>";
+    echo "<th> Voornaam </th>";
+    echo "<th> Achternaam </th>";
+    echo "<th> Tussenvoegsel </th>";
+    echo "<th> Functie </th></tr>";
     foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . " WHERE Achternaam LIKE '%" . $zoekterm . "%'") as $result)
     {
         echo "<tr>";
@@ -21,6 +30,7 @@ if (isset($_POST['zoekterm']))
         }
         echo "</tr>";
     }
+    echo "</table>";
 }
     
 echo "<p>" .
