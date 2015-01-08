@@ -20,7 +20,7 @@ class create {
         $fields = array("idMedewerker");
         $where = array("Gebruikersnaam" => $_SESSION['gebruikersnaam']);
 
-        $idMedewerker = $this->db->select($fields, $where);
+        $idMedewerker = $this->db->select($fields, $where)[0]['idMedewerker'];
         //↑Medewerker id van de ingelogde gebruiker
 
 
