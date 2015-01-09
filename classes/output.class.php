@@ -178,10 +178,13 @@ class output {
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
         $fields = array(
             "idBedrijfsMedewerker",
+            "idBedrijf",
             "Voornaam",
             "Achternaam",
-            "Tussenvoegsel");
-        $where = array('Achternaam' => $Achternaam, 'idBedrijfsMedewerker' => $idBedrijfsMedewerker);
+            "Tussenvoegsel",
+            "Functie",
+            "Email");
+        $where = array('idBedrijfsMedewerker' => $idBedrijfsMedewerker);
         $BedrijfsMedewerker = $this->db->select($fields, $where);
         return $BedrijfsMedewerker;
     }
