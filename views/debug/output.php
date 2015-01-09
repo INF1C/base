@@ -1,7 +1,7 @@
 <?php
 $output = new output;
 
-$opentickets = $output->openTickets();
+$opentickets = $output->oplostijdTickets();
         echo "<table style='width:100%' border='1'>";
 foreach ($opentickets as $key => $value) {
     echo "<tr>";
