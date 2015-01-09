@@ -54,21 +54,21 @@ class output {
             $openticket = $openticketArray['idTicket'];
             $this->db->db_table = "TICKET";
 
-            $return[$openticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $openticket));
-            $return[$openticket]['ProbleemStelling'] = $this->db->select(array("ProbleemStelling"), array("idTicket" => $openticket));
+            $return[$openticket]['IncidentType'] = reset(reset($this->db->select(array("IncidentType"), array("idTicket" => $openticket))));
+            $return[$openticket]['ProbleemStelling'] = reset(reset($this->db->select(array("ProbleemStelling"), array("idTicket" => $openticket))));
 
             //Alle data uit STATUS_WIJZIGING wordt gehaald
 
             $this->db_table = "STATUS_WIJZIGING";
-            $return[$openticket]['HuidigeStatus'] = $this->db->select(NULL, NULL, "SELECT Status FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus DESC LIMIT 1");
-            $return[$openticket]['GeopendOp'] = $this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1");
+            $return[$openticket]['HuidigeStatus'] = reset(reset($this->db->select(NULL, NULL, "SELECT Status FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus DESC LIMIT 1")));
+            $return[$openticket]['GeopendOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1")));
 
             //Deze SQL moet uit STATUS_WIJZIGING GEHAALD worden voor bedrijf
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
             //Alle data uit BEDRIJF wordt gehaald
 
             $this->db->db_table = "BEDRIJF";
-            $return[$openticket]["Bedrijf"] = $this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf)); // HIER ZIT EEN ERROR
+            $return[$openticket]["Bedrijf"] = reset(reset($this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf)))); // HIER ZIT EEN ERROR
         }
 
         return $return;
