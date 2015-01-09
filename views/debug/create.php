@@ -1,6 +1,6 @@
 
 <div class="form">
-	<!--  CREATE MEDEWERKER (werkt)
+	  CREATE MEDEWERKER (werkt)
     <form method="POST" action="/process/create/medewerker">
         <p>
         	<span>Gebruikersnaam:</span>
@@ -30,7 +30,7 @@
         <p>
         	<input type="submit" value="submit" name="submit" />
         </p>
-    </form> -->
+    </form> 
     <!-- CREATE BEDRIJF (werkt)
     <form method="POST" action="/process/create/bedrijf">
     	<p>
