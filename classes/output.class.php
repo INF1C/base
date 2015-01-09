@@ -51,7 +51,7 @@ class output {
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
 
             $this->db_table = "BEDRIJF";
-            $return[$ticket]["Bedrijf"] = $this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf));
+            $return[$ticket]["Bedrijf"] = $this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf));
         }
 
         return $return;
