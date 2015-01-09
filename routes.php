@@ -22,7 +22,7 @@ $router->map("GET", "/css", function () {
 
 $router->map("GET", "/favicon", function () {
 	require DIR_TEMPLATE . 'favicon.png';
-},  "Favicon" 
+},  "Favicon");
 
 // Class demo
 $router->map("POST|GET", "/demo/", function () {
