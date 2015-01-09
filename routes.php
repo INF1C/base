@@ -58,6 +58,10 @@ $router->map("POST|GET", "/debug/output/", function () {
     openView("debug/output");
 }, "Debug -> Output");
 
+$router->map("POST|GET", "/debug/output/pascal", function () {
+    openView("debug/output.pascal");
+}, "Debug -> Output (pascal)");
+
 /*
  * END DEBUGGING
  */
