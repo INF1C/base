@@ -13,9 +13,26 @@ class output {
      * Description: public function tickets -> overzicht geven van alle tickets
      */
 
-    public function tickets($velden, $bedrijf = NULL, $periode = NULL) {
-
-        $alleTicketID = $this->db->select(array("idTicket"));
+    public function tickets($idBedrijf = NULL, $periode = NULL) {
+        if($bedrijf === NULL AND $periode === NULL) {
+            $this->db->db_table = "TICKET";
+            $alleTicketID = $this->db->select(array("idTicket"));
+        } elseif($periode === NULL AND $idBedrijf != NULL) {
+            $this->db->db_table = "STATUS_WIJZIGING";
+            $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE idBedrijf = ? GROUP BY idBedrijf, idBedrijf");
+            $stmt->bindValue(1, $idBedrijf);
+            $stmt->execute();
+            $alleTicketID = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } elseif($idBedrijf === NULL, $periode != NULL) {
+            $start = $periode['start'];
+            $stop = $periode['stop'];
+            $this->db->db_table = "STATUS_WIJZIGING";
+            $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE DatumTijd >= ? AND DatumTijd <= ? GROUP BY idBedrijf, idBedrijf");
+            $stmt->bindValue(1, $start);
+            $stmt->bindValue(2, $stop);
+            $stmt->execute();
+            $alleTicketID = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
         $return = array();
 
         foreach ($alleTicketID as $ticket) {

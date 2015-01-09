@@ -4,7 +4,7 @@
  */
 class db {
 
-    private $link;
+    public $link;
     private $db_host = "localhost";
     private $db_user = "c1stenden";
     private $db_pass = "hdzaIS#8P";
