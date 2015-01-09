@@ -28,7 +28,7 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
+
     </head>
 
     <body>
@@ -44,10 +44,10 @@
                 </div>
                 <!--logo start-->
                 <a href="index.php" class="logo"><b>Stenden eHelp</b></a>
-                
+
                 <!--logo end-->
                 <div class="nav notify-row" id="top_menu">
-                    
+
                     <!--  notification start -->
                     <ul class="nav top-menu">
 
@@ -241,7 +241,7 @@
 
                         <!--main content end-->
                         <span class="clearfix"></span>
-                        
+
                         <!--footer start-->
                         <footer id="footer" class="site-footer">
                             <div class="text-center">
@@ -251,7 +251,7 @@
                                 </a>
                             </div>
                         </footer>
-                        
+
                         <!--footer end-->                       
                 </section>
                 <!-- De scripts zijn onder de code geplaatst, zodat deze sneller gelezen kunnen worden. -->
@@ -273,7 +273,7 @@
                 <!--script for this page-->
                 <script src="/base/templates/subCss/js/sparkline-chart.js"></script>    
                 <script src="/base/templates/subCss/js/zabuto_calendar.js"></script>	
-                
+
                 <!--script voor de kalender, deze kan later verwijderd worden.-->
                 <script type="application/javascript">
                     $(document).ready(function () {
