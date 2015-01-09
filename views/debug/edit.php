@@ -56,7 +56,7 @@ $db = new db;
 
 // FAQ
 if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
-	$idStatus = FILTER_INPUT(INPUT_GET, 'idFAQ');
+	$idFAQ = FILTER_INPUT(INPUT_GET, 'idFAQ');
 	$db->db_table = "FAQ";
 	$data = $db->select(array('*'), array('idFAQ' => $idFAQ))[0];
 } else {
