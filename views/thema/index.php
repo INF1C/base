@@ -75,7 +75,7 @@
               	  <h5 class="centered">Lesley Jordan van Oostenrijk</h5>
               	  	
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                       </a>
@@ -281,7 +281,7 @@
       <footer class="site-footer">
           <div class="text-center">
               2014/2015 - Made by We-Help
-              <a href="index.html#" class="go-top">
+              <a href="index.php#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
