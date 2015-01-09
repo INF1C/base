@@ -23,7 +23,7 @@ class output {
             $stmt->bindValue(1, $idBedrijf);
             $stmt->execute();
             $alleTicketID = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        } elseif($idBedrijf === NULL, $periode != NULL) {
+        } elseif($idBedrijf === NULL AND $periode != NULL) {
             $start = $periode['start'];
             $stop = $periode['stop'];
             $this->db->db_table = "STATUS_WIJZIGING";
