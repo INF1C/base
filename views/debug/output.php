@@ -1,15 +1,15 @@
 <?php
-//Tickets test
-$output = new output;
-$Ticketinfo = $output->tickets('Drewes-Webdesign');
-                              echo "<table style='width:100%' border='1'>";
-foreach ($Ticketinfo as $key => $value) {
-    echo "<tr>";
-    echo "<td>" . $key . "</td>";
-    echo "<td>" . $value . "</td>";
-    echo "</tr>";
-}
-echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
+//Tickets test WERKT NIET
+//$output = new output;
+//$Ticketinfo = $output->tickets('Drewes-Webdesign');
+//                              echo "<table style='width:100%' border='1'>";
+//foreach ($Ticketinfo as $key => $value) {
+//    echo "<tr>";
+//    echo "<td>" . $key . "</td>";
+//    echo "<td>" . $value . "</td>";
+//    echo "</tr>";
+//}
+//echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
 //Open tickets checken
 //$output = new output;
 //$opentickets = $output->openTickets();
@@ -52,16 +52,16 @@ echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
 //}
 //echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
 //Bedrijfsmedewerker test WERKT NOG NIET
-//$output = new output;
-//$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
-//              echo "<table style='width:100%' border='1'>";
-//foreach ($bedrijfsmedewerkerinfo as $key => $value) {
-//    echo "<tr>";
-//    echo "<td>" . $key . "</td>";
-//    echo "<td>" . $value . "</td>";
-//    echo "</tr>";
-//}
-//echo "<pre>";var_dump($bedrijfsmedewerkerinfo); echo "</pre>";
+$output = new output;
+$bedrijfsmedewerkerinfo = $output->Bedrijfsmedewerker(5)[0];
+              echo "<table style='width:100%' border='1'>";
+foreach ($bedrijfsmedewerkerinfo as $key => $value) {
+    echo "<tr>";
+    echo "<td>" . $key . "</td>";
+    echo "<td>" . $value . "</td>";
+    echo "</tr>";
+}
+echo "<pre>";var_dump($bedrijfsmedewerkerinfo); echo "</pre>";
 //Medewerker test
 //$output = new output;
 //$medewerkerinfo = $output->Medewerker(1)[0];
