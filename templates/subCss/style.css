@@ -1024,13 +1024,13 @@ PANELS CONFIGURATIONS
 	text-align: center;
 	background: #ffffff;
 	color: #ccd1d9;
+        margin-left: 90px;
 }
 
 .white-panel p {
 	margin-top: 5px;
 	font-weight: 700;
-	margin-left: 105px;
-        //margin-left: 15px;
+	margin-left: 15px;
 }
 .white-panel .white-header {
 	background: #f4f4f4;
