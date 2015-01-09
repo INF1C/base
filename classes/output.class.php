@@ -49,10 +49,10 @@ class output {
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
         echo "<pre>"; var_dump($alleOpentickets); echo "</pre>";
-        foreach ($alleOpentickets as $openticket) {
+        foreach ($alleOpentickets as $openticketArray) {
 
             //Alle data uit Ticket wordt gehaald
-
+            $openticket = $openticketArray['idTicket'];
             $this->db->db_table = "TICKET";
 
             $return[$openticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $openticket));
