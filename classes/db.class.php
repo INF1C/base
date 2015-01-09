@@ -87,14 +87,15 @@ class db {
                 $params = array();
                 foreach ($fields as $field)
                     $params[] = $field;
-                $sql .= join(", ", $params) . " FROM " . $this->db_table . " WHERE ";
+                $sql .= join(", ", $params) . " FROM " . $this->db_table;
 
                 // prepare the sql with ? for the where clause
-                $params = array();
-                foreach ($where as $field => $value)
-                    $params[] = $field . "=?";
-                $sql .= join(" AND ", $params);
-
+                if($where != NULL) {
+                    $params = array();
+                    foreach ($where as $field => $value)
+                        $params[] = $field . "=?";
+                    $sql .= " WHERE " . join(" AND ", $params);
+                }
                 // PDO PREPARE
                 $stmt = $this->link->prepare($sql);
                 $i = 0;
