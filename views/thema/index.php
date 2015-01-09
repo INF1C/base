@@ -76,14 +76,14 @@
               	  	
                   <li class="mt">
                       <a class="active" href="index.php">
-                          <i class="fa fa-dashboard"></i>
+                          <i class="icon-home"></i>
                           <span>Home</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
+                          <i class="fa fa-cogs"></i>
                           <span>Instellingen</span>
                       </a>
                       <ul class="sub">
@@ -94,10 +94,8 @@
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-cogs"></i>
-                          <span>Toevoegen/<br />
-							  Wijzigen/<br />
-							  Verwijderen</span>
+                          <i class="fa fa-dashboard"></i>
+                          <span>Gebruikerspaneel</span>
                       </a>
                       <ul class="sub">
                           <li><a  href="#">Contactpersoon</a></li>
@@ -126,7 +124,7 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-tasks"></i>
+                          <i class="icon-th"></i>
                           <span>Klantpaneel</span>
                       </a>
                       <ul class="sub">
@@ -139,7 +137,7 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-th"></i>
+                          <i class="icon-wrench"></i>
                           <span>Wijzigen</span>
                       </a>
                       <ul class="sub">
