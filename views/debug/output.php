@@ -1,7 +1,7 @@
 <?php
 //Bedrijfsmedewerker test
 $output = new output;
-$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5);
+$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
               echo "<table style='width:100%' border='1'>";
 foreach ($bedrijfsmedewerkerinfo as $key => $value) {
     echo "<tr>";
