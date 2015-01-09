@@ -445,7 +445,7 @@ a.logo:hover, a.logo:focus {
 }
 
 a.logo span {
-    color: #68dff0;
+    color: #004084;
 }
 
 
@@ -1612,7 +1612,7 @@ label {
 }
 
 .panel-footer.revenue-foot {
-    background-color: #e6e7ec;
+    background-color: #004084;
     -webkit-border-radius: 0px 0px 4px 4px;
     border-radius: 0px 0px 4px 4px;
     border: none;
@@ -1740,9 +1740,11 @@ label {
 
 /*footer*/
 .site-footer {
-    background: gray;
+    background: #004084;
     color: #fff;
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
 }
 
 
