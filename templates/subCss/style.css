@@ -425,6 +425,7 @@ ul.sidebar-menu li a.active i {
     padding-bottom: 0px;
     padding-top: 0px;
     width: 100%;
+    min-height: 100%;
 }
 
 a.logo {
@@ -1743,6 +1744,8 @@ label {
     background: #004084;
     color: #fff;
     padding: 10px 0;
+/*    position: fixed;
+    bottom: 0;*/
 }
 
 
