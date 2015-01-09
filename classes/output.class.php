@@ -189,7 +189,7 @@ class output {
         return $BedrijfsMedewerker;
     }
 
-    public function Bedrijf($Bedrijfsnaam) {
+    public function Bedrijf($idBedrijf) {
         $this->db->db_table = "BEDRIJF";
         $fields = array(
             "idBedrijf",
@@ -198,7 +198,7 @@ class output {
             "Telefoon",
             "Email",
             "Licentie");
-        $where = array('Bedrijfsnaam' => $Bedrijfsnaam);
+        $where = array('idBedrijf' => $idBedrijf);
         $Bedrijf = $this->db->select($fields, $where);
         return $Bedrijf;
     }
