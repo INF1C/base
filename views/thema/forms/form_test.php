@@ -40,7 +40,7 @@
     <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="Achternaam">
   </div>
   <div class="form-group">
-	<label for="createBedrijfMedewerkerFunctie">Achternaam:</label>
+	<label for="createBedrijfMedewerkerFunctie">Functie:</label>
     <input type="text" class="form-control" id="createBedrijfMedewerkerFunctie" placeholder="Functie">
   </div>
   <div class="form-group">
