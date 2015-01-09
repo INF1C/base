@@ -1,7 +1,7 @@
 <?php
 //Tickets test
 $output = new output;
-$Ticketinfo = $output->tickets();
+$Ticketinfo = $output->tickets('Drewes-Webdesign');
                               echo "<table style='width:100%' border='1'>";
 foreach ($Ticketinfo as $key => $value) {
     echo "<tr>";
