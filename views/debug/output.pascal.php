@@ -2,7 +2,7 @@
 
 $output = new output;
 
-$result = $output->BedrijfsMededwerker();
+$result = $output->BedrijfsMededwerker(5);
 
 echo "<pre>";
 var_dump($result);
