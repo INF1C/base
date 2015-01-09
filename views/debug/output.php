@@ -9,7 +9,7 @@ echo "<td>" . $value . "</td>";
 echo "<td>" . $key . "</td>";
 echo "</tr>";
 }
-echo "<pre>";var_dump($opentickets); echo "</pre>";
+echo "<pre>";var_dump($medewerkerinfo); echo "</pre>";
 //Oplostijd tickets
 //$output = new output;
 
@@ -21,7 +21,7 @@ echo "<pre>";var_dump($opentickets); echo "</pre>";
     //echo "<td>" . $key . "</td>";
     //echo "</tr>";
 //}
-//echo "<pre>";var_dump($opentickets); echo "</pre>";
+//echo "<pre>";var_dump($oplostijdtickets); echo "</pre>";
 
 //Alle tickets weergeven
 //$output = new output;
