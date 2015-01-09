@@ -246,8 +246,7 @@ ul.top-menu > li > .logout {
 }
 
 #sidebar ul li {
-    //position: relative;
-    position: fixed;
+    position: relative;
 }
 
 #sidebar .sub-menu > .sub li  {
