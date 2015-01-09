@@ -215,7 +215,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
 		</p>
 		<p>
 			<span>Beschrijving</span>
-			<textarea rows="5" cols="75" name="Beschrijving"><?= $data['Vraag'] ?></textarea>
+			<textarea rows="5" cols="75" name="Beschrijving"><?= $data['Beschrijving'] ?></textarea>
 		</p>
 		<p>
 			<span>Oplossing</span>
