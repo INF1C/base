@@ -8,6 +8,7 @@ $opentickets = $output->openTickets();
         echo "<table style='width:100%' border='1'>";
 foreach ($opentickets as $key => $value) {
     echo "<tr>";
+    echo $key;
     foreach ($value as $ticket)
     {
         echo "<td>" . $ticket;
