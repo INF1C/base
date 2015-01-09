@@ -55,14 +55,14 @@ $db = new db;
 }*/
 
 // FAQ
-if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
+/*if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
 	$idFAQ = FILTER_INPUT(INPUT_GET, 'idFAQ');
 	$db->db_table = "FAQ";
 	$data = $db->select(array('*'), array('idFAQ' => $idFAQ))[0];
 } else {
 	$data = array_fill_keys(array('idFAQ', 'Vraag', 'Beschrijving', 'Oplossing'), '');
 }
-
+*/
 ?>
 <div class="form">
 	<!--  EDIT MEDEWERKER (werkt)
@@ -207,7 +207,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
 	    </p>
     </form> -->
    
-	<!-- EDIT faq -->
+	<!-- EDIT faq (werkt)
 	<form method="POST" action="/process/edit/faq">
 		<p>
 			<span>Vraag</span>
@@ -225,6 +225,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
 	    	<input type="hidden" value="<?= $idFAQ ?>" name="idFAQ">
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
-	</form>
+	</form> -->
 </div>
 
