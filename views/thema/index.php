@@ -114,7 +114,7 @@
                                 <li><a  href="#">Tickets</a></li>
                                 <li><a  href="#">Niet Behandelde Incidenten</a></li>
                                 <li><a  href="#">Alle Incidenten</a></li>
-                                <li><a  href="#">Alle Incidenten in bepaalde periode</a></li>
+                                <li><a  href="#">Alle Incidenten in een bepaalde periode</a></li>
                                 <li><a  href="#">Oplostijd van incidenten</a></li>
                                 <li><a  href="#">Enkele Ticket</a></li>
                                 <li><a  href="#">Bedrijfsmedewerker</a></li>
