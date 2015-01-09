@@ -137,7 +137,7 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="icon-wrench"></i>
+                          <i class="fa fa-wrench"></i>
                           <span>Wijzigen</span>
                       </a>
                       <ul class="sub">
