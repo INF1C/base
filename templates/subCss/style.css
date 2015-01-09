@@ -300,7 +300,7 @@ ul.sidebar-menu {
 }
 
 ul.sidebar-menu li ul.sub li{
-    background: #424a5d;
+    background: #428bca;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -330,7 +330,7 @@ ul.sidebar-menu li ul.sub li a:hover {
 }
 
 ul.sidebar-menu li ul.sub li.active a {
-    color: #68dff0;
+    color: #004084;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -359,7 +359,7 @@ ul.sidebar-menu li a{
     text-decoration: none;
     display: block;
     padding: 15px 0 15px 10px;
-    font-size: 12px;
+    font-size: 15px;
     outline: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -763,7 +763,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .sidebar-closed #sidebar {
-    margin-left: -180px;
+    margin-left: -270px;
 }
 
 
