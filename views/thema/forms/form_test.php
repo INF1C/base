@@ -28,20 +28,27 @@
 	<textarea class="form-control" rows="3" id="createBedrijfAdresGegevens" placeholder="Adresgegevens"></textarea>
   </div>
   <div class="form-group">
-	<label for="createMedewerkerVoornaam">Voornaam:</label>
-    <input type="text" class="form-control" id="createMedewerkerVoornaam" placeholder="Voornaam">
+	<label for="createBedrijfTelefoon">Voornaam:</label>
+    <input type="text" class="form-control" id="createBedrijfTelefoon" placeholder="Telefoon">
   </div>
   <div class="form-group">
-	<label for="createMedewerkerVoegsel">Tussenvoegsel:</label>
-    <input type="text" class="form-control" id="createMedewerkerVoegsel" placeholder="Tussenvoegsel">
+    <label for="createBedrijfEmail">Email-adres:</label>
+    <input type="email" class="form-control" id="createBedrijfEmail" placeholder="Email">
   </div>
   <div class="form-group">
-	<label for="createMedewerkerAchternaam">Voornaam:</label>
-    <input type="text" class="form-control" id="createMedewerkerAchternaam" placeholder="Achternaam">
-  </div>
-  <div class="form-group">
-    <label for="createMedewerkerEmail">Email-adres:</label>
-    <input type="email" class="form-control" id="createMedewerkerEmail" placeholder="Email">
+	<label for="createBedrijfLicentie">Heeft u een Licentie?:</label>
+    <div class="radio">
+		<label>
+		<input type="radio" name="Licentie" id="LicentieJa" value="bedrijfLicentieJa" checked>
+		Ja
+		</label>
+	</div>
+	<div class="radio">
+	<label>
+		<input type="radio" name="Licentie" id="LicentieNee" value="bedrijfLicentieNee">
+		Nee
+	</label>
+	</div>
   </div>
   <button type="submit" class="btn btn-default">Verzend</button>
 </form>
