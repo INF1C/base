@@ -222,7 +222,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
 			<textarea rows="5" cols="75" name="Oplossing"><?= $data['Oplossing'] ?></textarea>
 		</p>
 	    <p>
-	    	<input type="hidden" value="<?= $idFaq ?>" name="idFAQ">
+	    	<input type="hidden" value="<?= $idFAQ ?>" name="idFAQ">
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
 	</form>
