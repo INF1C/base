@@ -1743,7 +1743,7 @@ label {
     background: #004084;
     color: #fff;
     padding: 10px 0;
-    position: absolute;
+    //position: absolute;
     bottom: 0;
 }
 
