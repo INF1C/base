@@ -1,7 +1,7 @@
 <?php
 //Bedrijf test
 $output = new output;
-$bedrijfinfo = $output->BedrijfOphalen('Drewes-Webdesign');
+$bedrijfinfo = $output->BedrijfOphalen('Drewes-Webdesign')[0];
               echo "<table style='width:100%' border='1'>";
 foreach ($bedrijfinfo as $key => $value) {
     echo "<tr>";
