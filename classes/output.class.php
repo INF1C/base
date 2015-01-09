@@ -67,7 +67,7 @@ class output {
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
             //Alle data uit BEDRIJF wordt gehaald
 
-            $this->db_table = "BEDRIJF";
+            $this->db->db_table = "BEDRIJF";
             $return[$openticket]["Bedrijf"] = $this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf)); // HIER ZIT EEN ERROR
         }
 
