@@ -234,7 +234,7 @@ ul.top-menu > li > .logout {
 /*sidebar navigation*/
 
 #sidebar {
-    width: 210px;
+    width: 300px;
     height: 100%;
     position: fixed;
     background: white;
