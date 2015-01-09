@@ -94,7 +94,6 @@ class edit {
             }
         }
         $where = array("idFAQ" => $idFAQ);
-        echo "<pre>"; var_dump($data, $where); echo "</pre>";
         $this->db->db_table = "FAQ";
         return $this->db->update($data, $where);
     }
