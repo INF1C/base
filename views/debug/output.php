@@ -8,8 +8,9 @@ foreach ($medewerkerinfo as $key => $value) {
     echo "<td>" . $value . "</td>";
     echo "<td>" . $key . "</td>";
     echo "</tr>";
-
+}
 echo "<pre>";var_dump($medewerkerinfo); echo "</pre>";
+
 //Oplostijd tickets
 //$output = new output;
 
