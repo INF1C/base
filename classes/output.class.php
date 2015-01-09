@@ -159,7 +159,7 @@ class output {
      * Author: Remco Beikes
      */
     
-    public function Medewerker($Achternaam = NULL, $idMedewerker = NULL)  {   
+    public function Medewerker($idMedewerker = NULL)  {   
         //OPHALEN GEGEVENS
         $this->db->db_table = "MEDEWERKER";
         $fields = array(
@@ -167,11 +167,10 @@ class output {
             "Voornaam",
             "Achternaam",
             "Tussenvoegsel");
-        if ($Achternaam !== NULL) {
-            $where = array('Achternaam' => $Achternaam);
-        } elseif ($idMedewerker !== NULL) {
+
+
             $where = array('idMedewerker' => $idMedewerker);
-        }
+        
         $Medewerker = $this->db->select($fields, $where);
         return $Medewerker;
     }
