@@ -238,6 +238,7 @@ ul.top-menu > li > .logout {
     height: 100%;
     position: fixed;
     background: white;
+    padding-right: 90px;
 }
 
 #sidebar h5 {
@@ -1024,7 +1025,7 @@ PANELS CONFIGURATIONS
 	text-align: center;
 	background: #ffffff;
 	color: #ccd1d9;
-        margin-left: 90px;
+        //margin-left: 90px;
 }
 
 .white-panel p {
