@@ -276,7 +276,7 @@
       <!--main content end-->
 	  <span class="clearfix"></span>
       <!--footer start-->
-      <footer class="site-footer">
+      <footer id="footer" class="site-footer">
           <div class="text-center">
               2014/2015 - Made by We-Help
               <a href="index.php#" class="go-top">
