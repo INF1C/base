@@ -35,7 +35,7 @@
 	</div>
 	<div class="radio">
 		<label>
-		<input type="radio" name="IncidentType" id="createTicketTypeUitval" value="Uitval" checked>
+		<input type="radio" name="IncidentType" id="createTicketTypeUitval" value="Uitval">
 		Uitval
 		</label>
 	</div>
