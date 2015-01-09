@@ -18,38 +18,33 @@
 
 
 
-<form method="POST" action="/process/create/bedrijf">
-  <div class="form-group">
-	<label for="createMedewerkerUsername">Bedrijfsnaam:</label>
-    <input type="text" class="form-control" id="createMedewerkerUsername" placeholder="Bedrijfsnaam">
+<form method="POST" action="/process/create/bedrijfsmedewerker">
+ <div class="form-group">
+	<label for="createBedrijfMedewerkerUsername">Gebruikersnaam:</label>
+    <input type="text" class="form-control" id="createBedrijfMedewerkerUsername" placeholder="Gebruikersnaam">
   </div>
   <div class="form-group">
-    <label for="createBedrijfAdresGegevens">Adresgegevens:</label>
-	<textarea class="form-control" rows="3" id="createBedrijfAdresGegevens" placeholder="Adresgegevens"></textarea>
+    <label for="createBedrijfMedewerkerPassword">Wachtwoord:</label>
+    <input type="password" class="form-control" id="createBedrijfMedewerkerPassword" placeholder="Wachtwoord">
+  </div>
+    <div class="form-group">
+	<label for="createBedrijfMedewerkerVoornaam">Voornaam:</label>
+    <input type="text" class="form-control" id="createBedrijfMedewerkerVoornaam" placeholder="Voornaam">
   </div>
   <div class="form-group">
-	<label for="createBedrijfTelefoon">Telefoon:</label>
-    <input type="text" class="form-control" id="createBedrijfTelefoon" placeholder="Telefoon">
+	<label for="createBedrijfMedewerkerVoegsel">Tussenvoegsel:</label>
+    <input type="text" class="form-control" id="createBedrijfMedewerkerVoegsel" placeholder="Tussenvoegsel">
   </div>
   <div class="form-group">
-    <label for="createBedrijfEmail">Email-adres:</label>
-    <input type="email" class="form-control" id="createBedrijfEmail" placeholder="Email">
+	<label for="createBedrijfMedewerkerAchternaam">Achternaam:</label>
+    <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="Achternaam">
   </div>
   <div class="form-group">
-	<label for="createBedrijfLicentie">Heeft u een Licentie?:</label>
-    <div class="radio">
-		<label>
-		<input type="radio" name="Licentie" id="LicentieJa" value="bedrijfLicentieJa" checked>
-		Ja
-		</label>
-	</div>
-	<div class="radio">
-	<label>
-		<input type="radio" name="Licentie" id="LicentieNee" value="bedrijfLicentieNee">
-		Nee
-	</label>
-	</div>
+	<label for="createBedrijfMedewerkerEmail">E-Mail:</label>
+    <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="E-Mail">
   </div>
+  <!-- Value moet met een GET opgehaald worden -->
+  <input type="hidden" value="3" name="Bedrijf" />
   <button type="submit" class="btn btn-default">Verzend</button>
 </form>
 

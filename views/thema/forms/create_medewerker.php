@@ -17,7 +17,7 @@
     <input type="text" class="form-control" id="createMedewerkerVoegsel" placeholder="Tussenvoegsel">
   </div>
   <div class="form-group">
-	<label for="createMedewerkerAchternaam">Voornaam:</label>
+	<label for="createMedewerkerAchternaam">Achternaam:</label>
     <input type="text" class="form-control" id="createMedewerkerAchternaam" placeholder="Achternaam">
   </div>
   <div class="form-group">
