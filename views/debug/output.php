@@ -9,7 +9,8 @@ $opentickets = $output->openTickets();
     echo "<tr><th> Ticket ID </th>";
     echo "<th> Incident Type </th>";
     echo "<th> Probleemstelling </th>";
-    echo "<th> Oplossing </th></tr>";
+    echo "<th> Oplossing </th>";
+    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
     echo "<tr>";
     foreach ($value as $ticket)
