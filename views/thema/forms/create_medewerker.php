@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Tourist Information Amsterdam</title>
+		
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	</head>
+
+
+
+<body>
+
+
+
 <form method="POST" action="/process/create/medewerker">
   <div class="form-group">
 	<label for="createMedewerkerUsername">Gebruikersnaam:</label>
@@ -25,3 +41,10 @@
   </div>
   <button type="submit" class="btn btn-default">Verzend</button>
 </form>
+
+
+
+
+
+</body>
+</html>
