@@ -5,10 +5,13 @@
 //Open tickets checken
 $output = new output;
 $opentickets = $output->openTickets();
-        echo "<table style='width:100%' border='1'>";
+            echo "<table border='2'>";
+    echo "<tr><th> Ticket ID </th>";
+    echo "<th> Incident Type </th>";
+    echo "<th> Probleemstelling </th>";
+    echo "<th> Oplossing </th></tr>";
 foreach ($opentickets as $key => $value) {
     echo "<tr>";
-    echo $key;
     foreach ($value as $ticket)
     {
         echo "<td>" . $ticket;
