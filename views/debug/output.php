@@ -1,26 +1,34 @@
 <?php
 //Tickets test
-//$output = new output;
-//$faqinfo = $output->tickets()
-//Open tickets checken
 $output = new output;
-$opentickets = $output->openTickets();
-            echo "<table border='2'>";
-    echo "<tr><th> Ticket ID </th>";
-    echo "<th> Incident Type </th>";
-    echo "<th> Probleemstelling </th>";
-    echo "<th> Oplossing </th>";
-    echo "<th> Bedrijfsnaam </th></tr>";
-foreach ($opentickets as $key => $value) {
+$Ticketinfo = $output->tickets();
+                              echo "<table style='width:100%' border='1'>";
+foreach ($Ticketinfo as $key => $value) {
     echo "<tr>";
-    foreach ($value as $ticket)
-    {
-        echo "<td>" . $ticket;
-        echo "</td>";
-    }
+    echo "<td>" . $key . "</td>";
+    echo "<td>" . $value . "</td>";
     echo "</tr>";
 }
-echo "<pre>";var_dump($opentickets); echo "</pre>";
+echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
+//Open tickets checken
+//$output = new output;
+//$opentickets = $output->openTickets();
+//            echo "<table border='2'>";
+//    echo "<tr><th> Ticket ID </th>";
+//    echo "<th> Incident Type </th>";
+//    echo "<th> Probleemstelling </th>";
+//    echo "<th> Oplossing </th>";
+//    echo "<th> Bedrijfsnaam </th></tr>";
+//foreach ($opentickets as $key => $value) {
+//    echo "<tr>";
+//    foreach ($value as $ticket)
+//    {
+//        echo "<td>" . $ticket;
+//        echo "</td>";
+//    }
+//    echo "</tr>";
+//}
+//echo "<pre>";var_dump($opentickets); echo "</pre>";
 //FAQ test
 //$output = new output;
 //$faqinfo = $output->FaqOphalen();
