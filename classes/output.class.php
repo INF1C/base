@@ -48,7 +48,6 @@ class output {
         $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status != 'opgelost' OR Status != 'afgemeld' GROUP BY idTicket";
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
-        echo "<pre>"; var_dump($alleOpentickets); echo "</pre>";
         foreach ($alleOpentickets as $openticketArray) {
 
             //Alle data uit Ticket wordt gehaald
@@ -66,7 +65,7 @@ class output {
 
             //Deze SQL moet uit STATUS_WIJZIGING GEHAALD worden voor bedrijf
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1");
-
+            var_dump($idBedrijf);
             //Alle data uit BEDRIJF wordt gehaald
 
             $this->db_table = "BEDRIJF";
