@@ -878,7 +878,8 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* MAIN CHART CONFIGURATION */
 .main-chart {
 	padding-top: 20px;
-        min-height: 100%;
+        min-height: 100vh;
+        margin-bottom: -98px;
 }
 
 .mleft {
