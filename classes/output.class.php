@@ -36,7 +36,9 @@ class output {
         }
         $return = array();
 
-        foreach ($alleTicketID as $ticket) {
+        foreach ($alleTicketID as $ticketArray) {
+            $ticket = $ticketArray['idTicket'];
+
             $this->db->db_table = "TICKET";
 
             $return[$ticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $ticket));
