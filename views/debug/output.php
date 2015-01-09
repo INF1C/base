@@ -9,7 +9,7 @@ foreach ($opentickets as $key => $value) {
     echo "<td>" . $key . "</td>";
     echo "</tr>";
 }
-
+echo "<pre>";var_dump($opentickets); echo "</pre>";
 
 //$output = new output;
     
