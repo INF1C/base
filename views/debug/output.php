@@ -1,14 +1,14 @@
 <?php
 
 $output = new output;
-$medewerkerinfo = $output->Medewerker(1);
+$medewerkerinfo = $output->Medewerker(1)[0];
       echo "<table style='width:100%' border='1'>";
 foreach ($medewerkerinfo as $key => $value) {
-  echo "<tr>";
-echo "<td>" . $value . "</td>";
-echo "<td>" . $key . "</td>";
-echo "</tr>";
-}
+    echo "<tr>";
+    echo "<td>" . $value . "</td>";
+    echo "<td>" . $key . "</td>";
+    echo "</tr>";
+
 echo "<pre>";var_dump($medewerkerinfo); echo "</pre>";
 //Oplostijd tickets
 //$output = new output;
