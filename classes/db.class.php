@@ -98,9 +98,11 @@ class db {
                 }
                 // PDO PREPARE
                 $stmt = $this->link->prepare($sql);
-                $i = 0;
-                foreach ($where as $value)
-                    $stmt->bindValue( ++$i, $value);
+                if($where != NULL) {
+                    $i = 0;
+                    foreach ($where as $value)
+                        $stmt->bindValue( ++$i, $value);
+                }
                 $stmt->execute();
                 return $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
