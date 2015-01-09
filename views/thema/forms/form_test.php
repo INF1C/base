@@ -40,6 +40,10 @@
     <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="Achternaam">
   </div>
   <div class="form-group">
+	<label for="createBedrijfMedewerkerFunctie">Achternaam:</label>
+    <input type="text" class="form-control" id="createBedrijfMedewerkerFunctie" placeholder="Functie">
+  </div>
+  <div class="form-group">
 	<label for="createBedrijfMedewerkerEmail">E-Mail:</label>
     <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="E-Mail">
   </div>
