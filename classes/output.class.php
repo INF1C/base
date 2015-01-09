@@ -17,6 +17,7 @@ class output {
         if($bedrijf === NULL AND $periode === NULL) {
             $this->db->db_table = "TICKET";
             $alleTicketID = $this->db->select(array("idTicket"));
+            echo "<pre>"; var_dump($alleTicketID); echo "</pre>";
         } elseif($periode === NULL AND $idBedrijf != NULL) {
             $this->db->db_table = "STATUS_WIJZIGING";
             $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE idBedrijf = ? GROUP BY idBedrijf, idBedrijf");
