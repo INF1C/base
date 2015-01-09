@@ -65,6 +65,7 @@ class output {
 
             //Deze SQL moet uit STATUS_WIJZIGING GEHAALD worden voor bedrijf
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
+            var_dump($idBedrijf);
             //Alle data uit BEDRIJF wordt gehaald
 
             $this->db_table = "BEDRIJF";
