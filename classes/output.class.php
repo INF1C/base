@@ -64,8 +64,7 @@ class output {
             $return[$openticket]['GeopendOp'] = $this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1");
 
             //Deze SQL moet uit STATUS_WIJZIGING GEHAALD worden voor bedrijf
-            $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1");
-            var_dump($idBedrijf);
+            $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $openticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
             //Alle data uit BEDRIJF wordt gehaald
 
             $this->db_table = "BEDRIJF";
