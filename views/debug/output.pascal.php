@@ -2,8 +2,8 @@
 
 $output = new output;
 
-$FAQ = $output->FAQ();
+$result = $output->BedrijfsMededwerker();
 
 echo "<pre>";
-var_dump($FAQ);
+var_dump($result);
 echo "</pre>";
