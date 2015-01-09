@@ -48,7 +48,7 @@ class output {
         $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status != 'opgelost' OR Status != 'afgemeld' GROUP BY idTicket";
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
-
+        echo "<pre>"; var_dump($alleOpentickets); echo "</pre>";
         foreach ($alleOpentickets as $openticket) {
 
             //Alle data uit Ticket wordt gehaald
