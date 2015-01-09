@@ -1,15 +1,26 @@
 <?php
-//Bedrijfsmedewerker test
+//Bedrijf test
 $output = new output;
-$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
+$bedrijfinfo = $output->BedrijfOphalen(Drewes-Webdesign);
               echo "<table style='width:100%' border='1'>";
-foreach ($bedrijfsmedewerkerinfo as $key => $value) {
+foreach ($bedrijfinfo as $key => $value) {
     echo "<tr>";
     echo "<td>" . $key . "</td>";
     echo "<td>" . $value . "</td>";
     echo "</tr>";
 }
-echo "<pre>";var_dump($bedrijfsmedewerkerinfo); echo "</pre>";
+echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
+//Bedrijfsmedewerker test
+//$output = new output;
+//$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
+//              echo "<table style='width:100%' border='1'>";
+//foreach ($bedrijfsmedewerkerinfo as $key => $value) {
+//    echo "<tr>";
+//    echo "<td>" . $key . "</td>";
+//    echo "<td>" . $value . "</td>";
+//    echo "</tr>";
+//}
+//echo "<pre>";var_dump($bedrijfsmedewerkerinfo); echo "</pre>";
 //Medewerker test
 //$output = new output;
 //$medewerkerinfo = $output->Medewerker(1)[0];
