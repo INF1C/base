@@ -3,16 +3,16 @@
 //$output = new output;
 //$faqinfo = $output->tickets()
 //Open tickets checken
-//$output = new output;
-//$opentickets = $output->openTickets();
-//        echo "<table style='width:100%' border='1'>";
-//foreach ($faqinfo as $key => $value) {
-//    echo "<tr>";
-//    echo "<td>" . $key . "</td>";
-//    echo "<td>" . $value . "</td>";
-//    echo "</tr>";
-//}
-//echo "<pre>";var_dump($faqinfo); echo "</pre>";
+$output = new output;
+$opentickets = $output->openTickets();
+        echo "<table style='width:100%' border='1'>";
+foreach ($opentickets as $key => $value) {
+    echo "<tr>";
+    echo "<td>" . $key . "</td>";
+    echo "<td>" . $value . "</td>";
+    echo "</tr>";
+}
+echo "<pre>";var_dump($opentickets); echo "</pre>";
 //FAQ test
 //$output = new output;
 //$faqinfo = $output->FaqOphalen();
@@ -36,16 +36,16 @@
 //}
 //echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
 //Bedrijfsmedewerker test WERKT NOG NIET
-$output = new output;
-$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
-              echo "<table style='width:100%' border='1'>";
-foreach ($bedrijfsmedewerkerinfo as $key => $value) {
-    echo "<tr>";
-    echo "<td>" . $key . "</td>";
-    echo "<td>" . $value . "</td>";
-    echo "</tr>";
-}
-echo "<pre>";var_dump($bedrijfsmedewerkerinfo); echo "</pre>";
+//$output = new output;
+//$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
+//              echo "<table style='width:100%' border='1'>";
+//foreach ($bedrijfsmedewerkerinfo as $key => $value) {
+//    echo "<tr>";
+//    echo "<td>" . $key . "</td>";
+//    echo "<td>" . $value . "</td>";
+//    echo "</tr>";
+//}
+//echo "<pre>";var_dump($bedrijfsmedewerkerinfo); echo "</pre>";
 //Medewerker test
 //$output = new output;
 //$medewerkerinfo = $output->Medewerker(1)[0];
