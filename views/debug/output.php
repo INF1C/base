@@ -1,16 +1,27 @@
 <?php
-//Bedrijf test
+//FAQ test
 $output = new output;
-$bedrijfinfo = $output->BedrijfOphalen('Drewes-Webdesign')[0];
-              echo "<table style='width:100%' border='1'>";
-foreach ($bedrijfinfo as $key => $value) {
+$faqinfo = $output->FaqOphalen();
+                      echo "<table style='width:100%' border='1'>";
+foreach ($faqinfo as $key => $value) {
     echo "<tr>";
     echo "<td>" . $key . "</td>";
     echo "<td>" . $value . "</td>";
     echo "</tr>";
 }
-echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
-//Bedrijfsmedewerker test
+echo "<pre>";var_dump($faqinfo); echo "</pre>";
+//Bedrijf test
+//$output = new output;
+//$bedrijfinfo = $output->BedrijfOphalen('Drewes-Webdesign')[0];
+//              echo "<table style='width:100%' border='1'>";
+//foreach ($bedrijfinfo as $key => $value) {
+//    echo "<tr>";
+//    echo "<td>" . $key . "</td>";
+//    echo "<td>" . $value . "</td>";
+//    echo "</tr>";
+//}
+//echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
+//Bedrijfsmedewerker test WERKT NOG NIET
 //$output = new output;
 //$bedrijfsmedewerkerinfo = $output->BedrijfsmedewerkerOphalen(5)[0];
 //              echo "<table style='width:100%' border='1'>";
