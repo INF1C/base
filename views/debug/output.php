@@ -8,8 +8,11 @@ $opentickets = $output->openTickets();
         echo "<table style='width:100%' border='1'>";
 foreach ($opentickets as $key => $value) {
     echo "<tr>";
-    echo "<td>" . $key . "</td>";
-    echo "<td>" . $value . "</td>";
+    foreach ($value as $ticket)
+    {
+        echo "<td>" . $ticket;
+        echo "</td>";
+    }
     echo "</tr>";
 }
 echo "<pre>";var_dump($opentickets); echo "</pre>";
