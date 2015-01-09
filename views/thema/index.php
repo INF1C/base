@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>Stenden E-Help</title>
+    <title>Stenden eHelp</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/base/templates/subCss/bootstrap.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.php" class="logo"><b>Stenden E-Help</b></a>
+            <a href="index.php" class="logo"><b>Stenden eHelp</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
