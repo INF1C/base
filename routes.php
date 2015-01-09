@@ -20,6 +20,10 @@ $router->map("GET", "/css", function () {
     require DIR_TEMPLATE . 'main.css';
 }, "CSS MAIN");
 
+$router->map("GET", "/favicon", function () {
+	require DIR_TEMPLATE . 'favicon.png';
+},  "Favicon" 
+
 // Class demo
 $router->map("POST|GET", "/demo/", function () {
     openView("demo");
