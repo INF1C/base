@@ -79,7 +79,7 @@ class edit {
      * Author: Rene Cordes
      */
 
-    public function FAQ($Vraag, $idMedewerker) {
+    public function FAQ($idFAQ) {
         //GEGEVENS TERUG VOEREN
         $fields = array(
             "Vraag",
@@ -93,9 +93,8 @@ class edit {
                 trigger_error("Lege input");
             }
         }
-        $where = array("idMedewerker" => $idMedewerker,
-            "Vraag" => $Vraag);
-
+        $where = array("idFAQ" => $idFAQ);
+        $this->db->db_table = "FAQ";
         return $this->db->update($data, $where);
     }
 

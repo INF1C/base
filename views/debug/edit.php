@@ -54,6 +54,15 @@ $db = new db;
 	$data = array_fill_keys(array('idStatus', 'idBedrijfsMedewerker', 'idMedewerker', 'Status', 'SoortContact', 'Memo'), '');
 }*/
 
+// FAQ
+if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
+	$idStatus = FILTER_INPUT(INPUT_GET, 'idFAQ');
+	$db->db_table = "FAQ";
+	$data = $db->select(array('*'), array('idFAQ' => $idFAQ))[0];
+} else {
+	$data = array_fill_keys(array('idFAQ', 'Vraag', 'Beschrijving', 'Oplossing'), '');
+}
+
 ?>
 <div class="form">
 	<!--  EDIT MEDEWERKER (werkt)
@@ -198,23 +207,24 @@ $db = new db;
 	    </p>
     </form> -->
    
-	<!-- EDIT faq
-	<form method="POST" action="/process/create/faq">
+	<!-- EDIT faq -->
+	<form method="POST" action="/process/edit/faq">
 		<p>
 			<span>Vraag</span>
-			<input type="text" name="Vraag" />
+			<input type="text" name="Vraag" value="<?= $data['Vraag'] ?>" />
 		</p>
 		<p>
 			<span>Beschrijving</span>
-			<textarea rows="5" cols="75" name="Beschrijving"></textarea>
+			<textarea rows="5" cols="75" name="Beschrijving"><?= $data['Vraag'] ?></textarea>
 		</p>
 		<p>
 			<span>Oplossing</span>
-			<textarea rows="5" cols="75" name="Oplossing"></textarea>
+			<textarea rows="5" cols="75" name="Oplossing"><?= $data['Oplossing'] ?></textarea>
 		</p>
 	    <p>
+	    	<input type="hidden" value="<?= $idFaq ?>" name="idFaq">
 	    	<input type="submit" value="submit" name="submit">
 	    </p>
-	</form> -->
+	</form>
 </div>
 
