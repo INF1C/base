@@ -425,7 +425,6 @@ ul.sidebar-menu li a.active i {
     padding-bottom: 0px;
     padding-top: 0px;
     width: 100%;
-    min-height: 100%;
 }
 
 a.logo {
@@ -874,6 +873,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* MAIN CHART CONFIGURATION */
 .main-chart {
 	padding-top: 20px;
+        min-height: 100%;
 }
 
 .mleft {
