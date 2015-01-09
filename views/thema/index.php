@@ -76,7 +76,7 @@
               	  	
                   <li class="mt">
                       <a class="active" href="index.php">
-                          <i class="icon-home"></i>
+                          <i class="fa fa-home"></i>
                           <span>Home</span>
                       </a>
                   </li>
@@ -124,7 +124,7 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="icon-th"></i>
+                          <i class="fa fa-th"></i>
                           <span>Klantpaneel</span>
                       </a>
                       <ul class="sub">
