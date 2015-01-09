@@ -93,8 +93,8 @@ class edit {
                 trigger_error("Lege input");
             }
         }
-        echo "<pre>"; var_dump($data, $where); echo "</pre>";
         $where = array("idFAQ" => $idFAQ);
+        echo "<pre>"; var_dump($data, $where); echo "</pre>";
         $this->db->db_table = "FAQ";
         return $this->db->update($data, $where);
     }
