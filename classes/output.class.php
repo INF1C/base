@@ -70,7 +70,7 @@ class output {
             //Alle data uit BEDRIJF wordt gehaald
 
             $this->db_table = "BEDRIJF";
-            $return[$openticket]["Bedrijf"] = $this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf));
+            $return[$openticket]["Bedrijf"] = $this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf));
         }
 
         return $return;
