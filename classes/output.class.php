@@ -173,7 +173,7 @@ class output {
         return $Medewerker;
     }
 
-    public function BedrijfsmedewerkerOphalen($idBedrijfsMedewerker) {   
+    public function BedrijfsMedewerker($idBedrijfsMedewerker) {   
         //OPHALEN GEGEVENS
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
         $fields = array(
@@ -186,7 +186,7 @@ class output {
         return $BedrijfsMedewerker;
     }
 
-    public function BedrijfOphalen($Bedrijfsnaam) {
+    public function Bedrijf($Bedrijfsnaam) {
         $this->db->db_table = "BEDRIJF";
         $fields = array(
             "idBedrijf",
@@ -200,7 +200,7 @@ class output {
         return $Bedrijf;
     }
 
-    public function FaqOphalen() {
+    public function FAQ() {
         $this->db->db_table = "FAQ";
         $fields = array(
             "Vraag",

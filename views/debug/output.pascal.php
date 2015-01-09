@@ -2,8 +2,8 @@
 
 $output = new output;
 
-$tickets = $output->openTickets();
+$FAQ = $output->FAQ();
 
 echo "<pre>";
-var_dump($tickets);
+var_dump($FAQ);
 echo "</pre>";
