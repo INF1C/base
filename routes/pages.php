@@ -36,9 +36,9 @@ $router->map("POST|GET", "/search4/", function () {
 
 	// Ticket
 	$router->map("POST|GET", "/ticket/", function () {
-		openView("gebruikerspaneel/overview/ticket");
+		openView("gebruikerspaneel/overview/ticket", array('Medewerker', 'Teamleider'));
 	}, "Ticket Knoppen");
 		// Nieuw
 		$router->map("POST|GET", "/ticket/nieuw/", function () {
-			openView("gebruikerspaneel/nieuw/ticket");
+			openView("gebruikerspaneel/nieuw/ticket", array('Medewerker', 'Teamleider'));
 		}, "Nieuwe ticket");
