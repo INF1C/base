@@ -12,7 +12,7 @@ function openView($name) {
 
 // Home page
 $router->map("GET", "/", function () {
-    openView("root");
+    require DIR_VIEW . 'login.php';
 }, "Home");
 
 // Styling
