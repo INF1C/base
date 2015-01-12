@@ -1,7 +1,7 @@
 <?php
 //Tickets test WERKT NIET
 $output = new output;
-$Ticketinfo = $output->tickets('2');
+$Ticketinfo = $output->tickets('2')[0];
                               echo "<table style='width:100%' border='1'>";
 foreach ($Ticketinfo as $key => $value) {
     echo "<tr>";
