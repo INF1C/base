@@ -28,7 +28,7 @@
 <!--script voor de kalender, deze kan later verwijderd worden.-->
 <script type="application/javascript">
     $(document).ready(function () {
-        $(".sub li.active").parent().parent().$(".dcjq-parent").addClass('active');
+        $(".sub li.active").parent().parent().(".dcjq-parent").addClass('active');
     });
 </script>
 </section>
