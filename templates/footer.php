@@ -1,3 +1,5 @@
+</section>
+
 <span class="clearfix"></span>
 
 <!--footer start-->
@@ -11,7 +13,6 @@
 </footer>
 
 <!--footer end-->         
-</section>
 </section>
 <!-- De scripts zijn onder de code geplaatst, zodat deze sneller gelezen kunnen worden. -->
 <script src="/base/templates/subCss/js/jquery.js"></script>
