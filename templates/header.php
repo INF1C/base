@@ -1,9 +1,137 @@
 <?php
 /*
- * Author: Pascal Drewes
+ * Authors: Pascal Drewes, Lesley Jordan van Oostenrijk en Martijn Posthuma
  */
 ?>
-<!--        </div>
-         use this area for including javascript 
+<html>
+    <head>
+        <title>Stenden E-Help :: <?= PAGE_NAME ?></title>
+       
+        <!-- Bootstrap core CSS -->
+        <link href="/base/templates/subCss/bootstrap.css" rel="stylesheet">
+        
+        <!--External CSS-->
+        <link href="/base/templates/subCss/font-awesome/font-awesome.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/jquery.gritter.css" />
+        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/style.css">   
+        
+        <!--Favicon-->
+        <link rel="icon" href="/favicon" type="image/png">
+        
+    </head>
+    <body>
+           <section id="container" >
+               
+            <!--header start-->
+            <header class="header black-bg">
+                <div class="sidebar-toggle-box">
+                    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                </div>
+                
+                <!--logo start-->
+                <a href="index.php" class="logo"><b>Stenden eHelp</b></a>
+
+                <!--logo end-->
+                <div class="nav notify-row" id="top_menu">
+
+                    <!--  notification start -->
+                    <ul class="nav top-menu">
+
+                        <!--  notification end -->
+                </div>
+                <div class="top-menu">
+                    <ul class="nav pull-right top-menu">
+                        <li><a class="logout" href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+            </header>
+            <!--header end-->
+
+            <!--sidebar start-->
+            <aside>
+                <div id="sidebar"  class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none; margin-left: 0px;">
+                    <!-- sidebar menu start-->
+                    <ul class="sidebar-menu" id="nav-accordion">
+
+                        <p class="centered"><a href="profile.html"></a></p>
+                        <h5 class="centered">[Gebruikersnaam]</h5>
+
+                        <li class="mt">
+                            <a class="active" href="index.php">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;" >
+                                <i class="fa fa-cogs"></i>
+                                <span>Instellingen</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a  href="#">Systeeminstellingen</a></li>
+                                <li><a  href="#">Autorisatie</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;" >
+                                <i class="fa fa-dashboard"></i>
+                                <span>Gebruikerspaneel</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a  href="#">Contactpersoon</a></li>
+                                <li><a  href="#">Medewerker</a></li>
+                                <li><a  href="#">Bedrijfsmedewerker</a></li>
+                                <li><a  href="#">Ticket</a></li>
+                                <li><a  href="#">FAQ</a></li>
+                                <li><a  href="#">Wachtwoord</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;" >
+                                <i class="fa fa-book"></i>
+                                <span>Rapporten</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a  href="#">Tickets</a></li>
+                                <li><a  href="#">Niet Behandelde Incidenten</a></li>
+                                <li><a  href="#">Alle Incidenten</a></li>
+                                <li><a  href="#">Alle Incidenten in een bepaalde periode</a></li>
+                                <li><a  href="#">Oplostijd van incidenten</a></li>
+                                <li><a  href="#">Enkele Ticket</a></li>
+                                <li><a  href="#">Bedrijfsmedewerker</a></li>
+                                <li><a  href="#">Een bedrijf</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;" >
+                                <i class="fa fa-th"></i>
+                                <span>Klantpaneel</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a  href="#">FAQ Bekijken</a></li>
+                                <li><a  href="#">Ticket indienen/wijzigen</a></li>
+                                <li><a  href="#">Ingediende tickets bekijken</a></li>
+                                <li><a  href="#">Wachtwoord Wijzigen</a></li>
+                                <li><a  href="#">Contactgegevens Wijzigen</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;" >
+                                <i class="fa fa-wrench"></i>
+                                <span>Wijzigen</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a  href="#">Wachtwoord</a></li>
+                                <li><a  href="#">Contactgegevens</a></li>
+                                <li><a  href="#">Status ticket</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- sidebar menu end-->
+                </div>
+            </aside>
+            <!--sidebar end-->     
     </body>
-</html>-->
+</html>

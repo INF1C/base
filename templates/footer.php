@@ -1,6 +1,6 @@
 <?php
 /*
- * Author: Pascal Drewes
+ * Author: Pascal Drewes & Lesley Jordan van Oostenrijk 
  */
 ?>
 <html>
