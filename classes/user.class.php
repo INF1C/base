@@ -53,7 +53,7 @@ class user {
 	
 		// Check if user exists
 		$result = $this->db->select(array("Wachtwoord", "Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
-		if (count($result) === 0) {
+		if (count($result) === 0)
 			return "Gebruikersnaam niet gevonden!";
 
 		// Store hash and check if password is correct
