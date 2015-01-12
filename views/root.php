@@ -83,6 +83,7 @@ MAIN CONTENT
         <div class="row mt">
         </div>        
     </div>
+</div>
 
     <!--main content end-->
 
