@@ -36,9 +36,19 @@ $router->map("POST|GET", "/search4/", function () {
 
 	// Ticket
 	$router->map("POST|GET", "/ticket/", function () {
-		openView("gebruikerspaneel/overview/ticket", array('Medewerker', 'Teamleider'));
-	}, "Ticket Knoppen");
-		// Nieuw
+		openView("gebruikerspaneel/ticket", array('Medewerker', 'Teamleider'));
+	}, "Ticket (knoppen)");
 		$router->map("POST|GET", "/ticket/nieuw/", function () {
-			openView("gebruikerspaneel/nieuw/ticket", array('Medewerker', 'Teamleider'));
+			openView("gebruikerspaneel/ticket/nieuw", array('Medewerker', 'Teamleider'));
 		}, "Nieuwe ticket");
+
+	// Medewerker
+	$router->map("POST|GET", "/medewerker/", function () {
+		openView("gebruikerspaneel/medewerker", array('Teamleider'));
+	}, "Medewerker (knoppen)");
+		$router->map("POST|GET", "/medewerker/nieuw/", function () {
+			openView("gebruikerspaneel/medewerker/nieuw", array('Teamleider'));
+		}, "Nieuwe medewerker");
+		$router->map("POST|GET", "/medewerker/zoek/", function () {
+			openView("gebruikerspaneel/medewerker/zoek", array('Teamleider'));
+		}, "Zoek medewerker");
