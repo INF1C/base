@@ -71,7 +71,7 @@
                     <ul class="sidebar-menu" id="nav-accordion">
 
                         <p class="centered"><a href="profile.html"></a></p>
-                        <h5 class="centered">Lesley Jordan van Oostenrijk</h5>
+                        <h5 class="centered">[Gebruikersnaam]</h5>
 
                         <li class="mt">
                             <a class="active" href="index.php">
