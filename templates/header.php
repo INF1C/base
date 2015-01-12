@@ -1,3 +1,9 @@
+<?php
+function isActive($param) {
+    if(PAGE_NAME === $param)
+        echo " class='active' ";
+}
+?>
 <!DOCTYPE html>
 <html lang="NL">
     <head>
@@ -82,7 +88,7 @@
                                 <li><a  href="#">Contactpersoon</a></li>
                                 <li><a  href="#">Medewerker</a></li>
                                 <li><a  href="#">Bedrijfsmedewerker</a></li>
-                                <li><a  href="/ticket/">Ticket</a></li>
+                                <li><a <?php isActive("Ticket Knoppen"); isActive("Nieuwe ticket") ?> href="/ticket/">Ticket</a></li>
                                 <li><a  href="#">FAQ</a></li>
                                 <li><a  href="#">Wachtwoord</a></li>
                             </ul>
