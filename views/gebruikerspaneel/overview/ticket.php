@@ -1,5 +1,6 @@
 <div class="row">
-	<div class="col-lg-9 main-chart">
+	<div class="col-lg-12 main-chart">
+		<h2>Ticket</h2>
 		<div class="well well-lg">
 			<a role="button" href="/ticket/nieuw/" class="btn btn-primary btn-lg btn-block">Nieuw</a>
 			<a role="button" href="" class="btn btn-primary btn-lg btn-block">Bewerk</a>
