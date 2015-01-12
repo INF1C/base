@@ -32,7 +32,6 @@ class output {
             $stmt->bindValue(2, $stop);
             $stmt->execute();
             $alleTicketID = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            echo "<pre>"; var_dump($alleTicketID); echo "</pre>";
         }
         $return = array();
 
