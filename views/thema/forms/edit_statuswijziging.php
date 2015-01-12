@@ -1,4 +1,13 @@
-<div class="col-md-6">
+<?php
+$db = new db;
+if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
+	$idStatus = FILTER_INPUT(INPUT_GET, 'idStatus');
+	$db->db_table = "STATUS_WIJZIGING";
+	$data = $db->select(array('*'), array('idStatus' => $idStatus))[0];
+} else {
+	$data = array_fill_keys(array('idStatus', 'idBedrijfsMedewerker', 'idMedewerker', 'Status', 'SoortContact', 'Memo'), '');
+}
+?>
 <form method="POST" action="/process/edit/statuswijziging">
     <div class="form-group">
 	<label for="editStatusWijzigingStatus">Status:</label>
@@ -66,4 +75,3 @@
 	<input type="hidden" name="idStatus" value="<?= $idStatus ?>" />
 	<button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
 </form>
-</div>
