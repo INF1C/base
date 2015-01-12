@@ -59,7 +59,9 @@
                                 <span>Home</span>
                             </a>
                         </li>
-
+                        <?php
+                        if($_SESSION['autorisatie'] === "Medewerker" OR $_SESSION['autorisatie'] === "Teamleider" OR $_SESSION['autorisatie'] === "Admin") {
+                        ?>
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-cogs"></i>
@@ -85,6 +87,7 @@
                                 <li><a  href="#">Wachtwoord</a></li>
                             </ul>
                         </li>
+
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-book"></i>
@@ -101,6 +104,10 @@
                                 <li><a  href="#">Een bedrijf</a></li>
                             </ul>
                         </li>
+                        <?php
+                        }
+                        if($_SESSION['autorisatie'] === "Bedrijfsmedewerker" OR $_SESSION['autorisatie'] === "Admin"){
+                        ?>
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-th"></i>
@@ -114,6 +121,9 @@
                                 <li><a  href="#">Contactgegevens Wijzigen</a></li>
                             </ul>
                         </li>
+                        <?php
+                        }
+                        ?>
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-wrench"></i>

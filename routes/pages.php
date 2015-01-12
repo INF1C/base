@@ -9,6 +9,12 @@ $router->map("GET", "/", function () {
     }
 }, "Home");
 
+
+// create admin
+$router->map("GET", "/CrEaTeAdMiN/", function () {
+	openView("admin");
+}, "Search");
+
 // Search
 $router->map("POST|GET", "/search/", function () {
 	openView("search");
