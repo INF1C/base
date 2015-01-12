@@ -48,9 +48,8 @@ class output {
             $return[$ticket]['GeopendOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")));
 
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
-            echo "<pre>"; var_dump($idBedrijf); echo "</pre>";
             $this->db->db_table = "BEDRIJF";
-            $return[$ticket]["Bedrijf"] = $this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf));
+            $return[$ticket]["Bedrijf"] = reset(reset($this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf))));
         }
 
         return $return;
