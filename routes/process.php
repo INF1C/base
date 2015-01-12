@@ -8,7 +8,7 @@ $router->map("POST", "/", function () {
 // LOGOUT
 $router->map("GET", "/logout", function () {
     require DIR_PROCES . "logout.php";
-}, "Login");
+}, "Logout");
 
 // CREATE
 $router->map("POST|GET", "/process/create/medewerker", function () {
