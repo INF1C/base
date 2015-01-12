@@ -71,9 +71,9 @@ var Script = function () {
     });
 
 // custom scrollbar
-    $("#sidebar").niceScroll({styler:"fb",cursorcolor:"#808080", cursorwidth: '3', cursorborderradius: '10px', background: '#F2F2F2', spacebarenabled:false, cursorborder: ''});
+    $("#sidebar").niceScroll({styler:"fb",cursorcolor:"#808080", cursorwidth: '3', cursorborderradius: '10px', spacebarenabled:false, cursorborder: ''});
 
-    $("html").niceScroll({styler:"fb",cursorcolor:"#808080", cursorwidth: '6', cursorborderradius: '10px', background: '#F2F2F2', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
+    $("html").niceScroll({styler:"fb",cursorcolor:"#808080", cursorwidth: '6', cursorborderradius: '10px', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
 
 // widget tools
 
