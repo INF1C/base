@@ -341,7 +341,7 @@ ul.sidebar-menu li ul.sub li.active a {
 
 .sub li a:focus, .sub li a:active, .sub li a.active{
     background: #002144 !important;
-    color: white;
+    color: white !important;
 }
 
 ul.sidebar-menu li{
