@@ -1,15 +1,15 @@
 <?php
 //Tickets test WERKT NIET
-//$output = new output;
-//$Ticketinfo = $output->tickets('Drewes-Webdesign');
-//                              echo "<table style='width:100%' border='1'>";
-//foreach ($Ticketinfo as $key => $value) {
-//    echo "<tr>";
-//    echo "<td>" . $key . "</td>";
-//    echo "<td>" . $value . "</td>";
-//    echo "</tr>";
-//}
-//echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
+$output = new output;
+$Ticketinfo = $output->tickets('1');
+                              echo "<table style='width:100%' border='1'>";
+foreach ($Ticketinfo as $key => $value) {
+    echo "<tr>";
+    echo "<td>" . $key . "</td>";
+    echo "<td>" . $value . "</td>";
+    echo "</tr>";
+}
+echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
 //Open tickets checken
 //$output = new output;
 //$opentickets = $output->openTickets();
@@ -41,16 +41,16 @@
 //}
 //echo "<pre>";var_dump($faqinfo); echo "</pre>";
 //Bedrijf test
-$output = new output;
-$bedrijfinfo = $output->Bedrijf(1)[0];
-              echo "<table style='width:100%' border='1'>";
-foreach ($bedrijfinfo as $key => $value) {
-    echo "<tr>";
-    echo "<td>" . $key . "</td>";
-    echo "<td>" . $value . "</td>";
-    echo "</tr>";
-}
-echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
+//$output = new output;
+//$bedrijfinfo = $output->Bedrijf(1)[0];
+//              echo "<table style='width:100%' border='1'>";
+//foreach ($bedrijfinfo as $key => $value) {
+//    echo "<tr>";
+//    echo "<td>" . $key . "</td>";
+//    echo "<td>" . $value . "</td>";
+//    echo "</tr>";
+//}
+//echo "<pre>";var_dump($bedrijfinfo); echo "</pre>";
 //Bedrijfsmedewerker test
 //$output = new output;
 //$bedrijfsmedewerkerinfo = $output->Bedrijfsmedewerker(5)[0];
