@@ -15,34 +15,20 @@
 <div class="container">
 <div class="row">
 <div class="col-md-6">
-<form method="POST" action="/process/create/statuswijziging">
+<form method="POST" action="/process/create/faq">
+    <div class="form-group">
+	<label for="createFaqVraag">Soort Contact:</label>
+    <input type="text" class="form-control" id="createFaqVraag" placeholder="Vraag">
+  </div>
+  
 <div class="form-group">
-	<input type="hidden" name="Status" value="Nieuw" />
-</div> 
+    <label for="createFaqBeschrijving">Beschrijving:</label>
+	<textarea class="form-control" rows="5" id="createFaqBeschrijving" placeholder="Beschrijving"></textarea>
+</div>
 
 <div class="form-group">
-	<label for="createStatusWijzigingTicketID">Ticket ID:</label>
-    <input type="number" class="form-control" id="createStatusWijzigingTicketID">
-  </div>
-  
- <div class="form-group">
-	<label for="createStatusWijzigingBedrijfsMedewerkerID">Bedrijfsmedewerker ID:</label>
-    <input type="number" class="form-control" id="createStatusWijzigingBedrijfsMedewerkerID">
-  </div>
-  
-   <div class="form-group">
-	<label for="createStatusWijzigingMedewerkerID">Medewerker ID:</label>
-    <input type="number" class="form-control" id="createStatusWijzigingMedewerkerID">
-  </div>
-  
-   <div class="form-group">
-	<label for="createStatusWijzigingBedrijfsContact">Soort Contact:</label>
-    <input type="text" class="form-control" id="createStatusWijzigingBedrijfsContact">
-  </div>
-  
-<div class="form-group">
-    <label for="createStatusWijzigingMemo">Memo:</label>
-	<textarea class="form-control" rows="5" id="createStatusWijzigingMemo" placeholder="Memo" resize="none"></textarea>
+    <label for="createFaqOplossing">Oplossing:</label>
+	<textarea class="form-control" rows="5" id="createFaqOplossing" placeholder="Oplossing"></textarea>
 </div>
 
   <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
