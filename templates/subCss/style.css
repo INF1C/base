@@ -340,7 +340,7 @@ ul.sidebar-menu li ul.sub li.active a {
 }
 
 #active-sub{
-    color: yellow;
+    background: yellow;
 }
 
 ul.sidebar-menu li{
