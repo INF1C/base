@@ -16,8 +16,8 @@
 </section>
 <!-- De scripts zijn onder de code geplaatst, zodat deze sneller gelezen kunnen worden. -->
 <script src="/base/templates/subCss/js/jquery.js"></script>
-<script type="text/javascript" src="/base/templates/subCss/js/jquery.cookie.js"></script>
 <script src="/base/templates/subCss/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/base/templates/subCss/js/jquery.cookie.js"></script>
 <script src="/base/templates/subCss/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="/base/templates/subCss/js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="/base/templates/subCss/js/jquery.scrollTo.min.js"></script>
