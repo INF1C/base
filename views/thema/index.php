@@ -253,7 +253,7 @@
 
                         <!--footer end-->                       
                 </section>
-                
+
                 <!-- De scripts zijn onder de code geplaatst, zodat deze sneller gelezen kunnen worden. -->
                 <script src="/base/templates/subCss/js/jquery.js"></script>
                 <script src="/base/templates/subCss/js/jquery-1.8.3.min.js"></script>

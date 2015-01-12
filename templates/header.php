@@ -12,28 +12,28 @@
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
         <title>Stenden E-Help :: <?= PAGE_NAME ?></title>
-       
+
         <!-- Bootstrap core CSS -->
         <link href="/base/templates/subCss/bootstrap.css" rel="stylesheet">
-        
+
         <!--External CSS-->
         <link href="/base/templates/subCss/font-awesome/font-awesome.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="/base/templates/subCss/jquery.gritter.css" />
         <link rel="stylesheet" type="text/css" href="/base/templates/subCss/style.css">   
-        
+
         <!--Favicon-->
         <link rel="icon" href="/favicon" type="image/png">
-        
+
     </head>
     <body>
-           <section id="container" >
-               
+        <section id="container" >
+
             <!--header start-->
             <header class="header black-bg">
                 <div class="sidebar-toggle-box">
                     <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
                 </div>
-                
+
                 <!--logo start-->
                 <a href="index.php" class="logo"><b>Stenden eHelp</b></a>
 
