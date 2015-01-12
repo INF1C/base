@@ -6,7 +6,7 @@
 <footer id="footer" class="site-footer">
     <div class="text-center">
         2014/2015 - Made by We-Help
-        <a href="index.php#" class="go-top">
+        <a href="#" class="go-top">
             <i class="fa fa-angle-up"></i>
         </a>
     </div>
