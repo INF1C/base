@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Tourist Information Amsterdam</title>
-		
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	</head>
-
-
-
-<body>
-
-<div class="container">
-<div class="row">
 <div class="col-md-6">
 <form method="POST" action="/process/create/statuswijziging">
 <div class="form-group">
@@ -45,14 +29,37 @@
 	<textarea class="form-control" rows="5" id="createStatusWijzigingMemo" placeholder="Memo" resize="none"></textarea>
 </div>
 
-  <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
+  <button type="submit" value="submit" class="btn btn-default">Verzend</button>
 </form>
 </div>
 
 
-
-
-</div>
-</div>
-</body>
-</html>
+	<!-- CREATE statuswijziging (werkt) -->
+<!--     <form method="POST" action="/process/create/statuswijziging">
+	    <p>
+		    <input type="hidden" name="Status" value="Nieuw" />
+	    </p>
+        <p>
+            <span>Ticket ID: (wordt normaal door gegeven via de get)</span>
+            <input type="number" name="idTicket" />
+        </p>
+        <p>
+            <span>Bedrijfsmedewerker ID: (wordt normaal opgehaald uit de sessie)</span>
+            <input type="number" name="idBedrijfsmedewerker" />
+        </p>
+        <p>
+            <span>Medewerker ID ID: (wordt normaal opgehaald uit de sessie)(Wordt alleen weergegeven als de medewerker is ingelogd)</span>
+            <input type="number" name="idMedewerker" />
+        </p>
+	    <p>
+		    <span>Soort Contact: (bijv. telefonisch</span>
+		    <input type="text" name="SoortContact" />
+	    </p>
+	    <p>
+		    <span>Memo:</span>
+		    <textarea rows="5" cols="75"></textarea>
+	    </p>
+		<p>
+	    	<input type="submit" value="submit" name="submit">
+	    </p>
+    </form>  -->
