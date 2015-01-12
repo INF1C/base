@@ -49,7 +49,7 @@ class user {
 		$wachtwoord = filter_input(INPUT_POST, "Wachtwoord");
 		// Check if data exists
 		if ($gebruikersnaam == '' OR $wachtwoord == '') {
-			return "Niet genoeg gegevens ingevoerd!");
+			return "Niet genoeg gegevens ingevoerd!";
 	
 		// Check if user exists
 		$result = $this->db->select(array("Wachtwoord", "Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
