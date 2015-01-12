@@ -1,12 +1,3 @@
-<?php
-/*
- * Author: Pascal Drewes & Lesley Jordan van Oostenrijk 
- */
-?>
-<html>
-    <head>
-    </head>
-    <body>
         <span class="clearfix"></span>
 
         <!--footer start-->

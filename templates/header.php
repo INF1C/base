@@ -1,9 +1,5 @@
-<?php
-/*
- * Authors: Pascal Drewes, Lesley Jordan van Oostenrijk en Martijn Posthuma
- */
-?>
-<html>
+<!DOCTYPE html>
+<html lang="NL">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,5 +135,3 @@
                 </div>
             </aside>
             <!--sidebar end-->     
-    </body>
-</html>
