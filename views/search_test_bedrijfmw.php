@@ -34,6 +34,7 @@ if (isset($_POST['zoekterm']))
 }
     
 echo "<p>" .
+"<div class='col-md-6'>" .
 "<form action='' method='POST' class='in-line'>" .
     "<div class='form-group'>
 		<label class='sr-only' for='searchBedrijfMedewerkerZoekterm'>\</label>
@@ -51,6 +52,7 @@ echo "<p>" .
 	</div>" .
 	"</p>" .
 "</form>" .
+"</div>" .
 "</p>";
 
 	
