@@ -883,7 +883,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 /* MAIN CHART CONFIGURATION */
 .main-chart {
 	padding-top: 20px;
-        min-height: calc(100vh - 100px);
+        min-height: calc(100vh - 102px);
 }
 
 .mleft {
