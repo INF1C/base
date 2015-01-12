@@ -36,10 +36,6 @@
                 <!--logo end-->
                 <div class="nav notify-row" id="top_menu">
 
-                    <!--  notification start -->
-                    <ul class="nav top-menu">
-
-                        <!--  notification end -->
                 </div>
                 <div class="top-menu">
                     <ul class="nav pull-right top-menu">
