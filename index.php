@@ -13,6 +13,9 @@ define("DIR_PROCES", "process/");
 define("DIR_UPLOAD", "upload/");
 define("DIR_ROUTE", "routes/");
 
+// Start session for later user
+session_start();
+
 // require the classes used in the application
 require_once DIR_CLASS . 'route.class.php';     // takes care of serving the right page
 require_once DIR_CLASS . 'db.class.php';        // takes care of the db connection
