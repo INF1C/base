@@ -24,11 +24,6 @@ $router->map("GET", "/favicon", function () {
 	require DIR_TEMPLATE . 'favicon.png';
 },  "Favicon");
 
-// Class demo
-$router->map("POST|GET", "/demo/", function () {
-    openView("demo");
-}, "Demo");
-
 // Search
 $router->map("POST|GET", "/search/", function () {
 	openView("search");
