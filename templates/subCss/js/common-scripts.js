@@ -1,9 +1,7 @@
 /*---LEFT BAR ACCORDION----*/
 $(function() {
-    var index = $("li.currentPage").parents("li").last().index();
     console.log(index);
     $('#nav-accordion').dcAccordion({
-        active: index,
         eventType: 'click',
         autoClose: true,
         saveState: true,
