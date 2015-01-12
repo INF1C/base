@@ -10,9 +10,9 @@ $Ticketinfo = $output->tickets('2');
     echo "<th> Bedrijf </th></tr>";
 foreach ($Ticketinfo as $key => $value) {
     echo "<tr>";
-    foreach ($value as $ticketinfo)
+    foreach ($value as $ticketinf)
     {
-        echo "<td>" . $ticketinfo;
+        echo "<td>" . $ticketinf;
         echo "</td>";
     }
     echo "</tr>";
