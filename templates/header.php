@@ -60,7 +60,7 @@ function isActive($param) {
                         <h5 class="centered"><?= $_SESSION['autorisatie'] ?></h5>
 
                         <li class="mt">
-                            <a class="active" href="/">
+                            <a class="" href="/">
                                 <i class="fa fa-home"></i>
                                 <span>Home</span>
                             </a>
