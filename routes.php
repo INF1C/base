@@ -2,7 +2,7 @@
 // make a openView function to combine header, footer and content
 function openView($name, $autorisatie = NULL) {
     require DIR_TEMPLATE . 'header.php';
-    if($autorisatie === NULL OR in_array($_SESSION['autorisatie'], $autorisatie) OR $_SESSION === 'Admin'){
+    if($autorisatie === NULL OR in_array($_SESSION['autorisatie'], $autorisatie) OR $_SESSION['autorisatie'] === 'Admin'){
         require DIR_VIEW . $name . ".php";
     } else {
         echo "<div class='alert alert-danger' role='alert'>U bent niet geautoriseerd om deze pagina te bekijken!</div>";
