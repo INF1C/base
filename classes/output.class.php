@@ -14,7 +14,7 @@ class output {
      */
 
     public function tickets($idBedrijf = NULL, $periode = NULL) {
-        if($bedrijf === NULL AND $periode === NULL) {
+        if($idBedrijf === NULL AND $periode === NULL) {
             $this->db->db_table = "TICKET";
             $alleTicketID = $this->db->select(array("idTicket"));
         } elseif($periode === NULL AND $idBedrijf != NULL) {
@@ -50,7 +50,7 @@ class output {
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
             
             $this->db_table = "BEDRIJF";
-            $return[$ticket]["Bedrijf"] = reset(reset($this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf))));
+            $return[$ticket]["Bedrijf"] = $this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf));
         }
 
         return $return;
