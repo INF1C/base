@@ -19,7 +19,6 @@
 
         <!--Favicon-->
         <link rel="icon" href="/favicon" type="image/png">
-
     </head>
     <body>
         <section id="container" >

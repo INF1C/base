@@ -14,7 +14,6 @@ MAIN CONTENT
                         <div class="col-sm-6 col-xs-6 goleft">
                         </div>
                     </div>
-                    <canvas id="serverstatus01" height="120" width="120"></canvas>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 mb">
@@ -26,7 +25,6 @@ MAIN CONTENT
                         <div class="col-sm-6 col-xs-6 goleft">
                         </div>
                     </div>
-                    <canvas id="serverstatus01" height="120" width="120"></canvas>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 mb">
@@ -38,7 +36,6 @@ MAIN CONTENT
                         <div class="col-sm-6 col-xs-6 goleft">
                         </div>
                     </div>
-                    <canvas id="serverstatus01" height="120" width="120"></canvas>
                 </div>
             </div>
         </div>
@@ -52,7 +49,6 @@ MAIN CONTENT
                         <div class="col-sm-6 col-xs-6 goleft">
                         </div>
                     </div>
-                    <canvas id="serverstatus01" height="120" width="120"></canvas>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 mb">
@@ -64,7 +60,6 @@ MAIN CONTENT
                         <div class="col-sm-6 col-xs-6 goleft">
                         </div>
                     </div>
-                    <canvas id="serverstatus01" height="120" width="120"></canvas>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 mb">
@@ -76,7 +71,6 @@ MAIN CONTENT
                         <div class="col-sm-6 col-xs-6 goleft">
                         </div>
                     </div>
-                    <canvas id="serverstatus01" height="120" width="120"></canvas>
                 </div>
             </div>
         </div>
