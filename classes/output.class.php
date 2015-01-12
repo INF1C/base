@@ -28,8 +28,8 @@ class output {
             $stop = $periode['stop'];
             $this->db->db_table = "STATUS_WIJZIGING";
             $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE DatumTijd >= ? AND DatumTijd <= ? GROUP BY idBedrijf, idBedrijf");
-            $stmt->bindValue(1, $stop);
-            $stmt->bindValue(2, $start);
+            $stmt->bindValue(1, $start);
+            $stmt->bindValue(2, $stop);
             $stmt->execute();
             $alleTicketID = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo "<pre>"; var_dump($alleTicketID); echo "</pre>";
