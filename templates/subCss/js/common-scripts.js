@@ -1,6 +1,6 @@
 /*---LEFT BAR ACCORDION----*/
 $(function() {
-    var index = $("li.selected").parents("li").last().index();
+    var index = $("li.currentPage").parents("li").last().index();
     $('#nav-accordion').dcAccordion({
         active: index,
         eventType: 'click',
