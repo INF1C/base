@@ -141,4 +141,4 @@
             </aside>
             <!--sidebar end-->     
             <section id="main-content">
-                <section class="wrapper">
+                <section class="wrapper main-chart">

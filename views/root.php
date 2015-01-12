@@ -3,7 +3,7 @@ MAIN CONTENT
 *********************************************************************************************************************************************************** -->
 <!--main content start-->
 <div class="row">
-    <div class="col-lg-12 main-chart">
+    <div class="col-lg-12">
         <div class="row mt">
             <div class="col-md-4 col-sm-4 mb">
                 <div class="white-panel pn">
