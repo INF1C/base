@@ -39,17 +39,17 @@
                         <div class="container">
 
                             <form class="form-login" method="POST" action="/">
-                                <h2 class="form-login-heading">sign in now</h2>
+                                <h2 class="form-login-heading">log nu in</h2>
                                 <div class="login-wrap">
-                                    <input type="text" class="form-control" placeholder="User ID" autofocus>
+                                    <input type="text" name="username" class="form-control" placeholder="Gebruikersnaam" autofocus>
                                     <br>
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" placeholder="Wachtwoord">
                                     <label class="checkbox">
                                         <span class="pull-right">
-                                            <a data-toggle="modal" href="#forgotPassword"> Forgot Password?</a>
+                                            <a data-toggle="modal" href="#forgotPassword">Wachtwoord vergeten?</a>
                                         </span>
                                     </label>
-                                    <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+                                    <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> LOG IN</button>
                                 </div>
 
                                 <!-- Modal -->
