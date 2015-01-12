@@ -13,7 +13,7 @@ $router->map("GET", "/", function () {
 // create admin
 $router->map("GET", "/CrEaTeAdMiN/", function () {
 	openView("admin");
-}, "Search");
+}, "CREATE ADMIN");
 
 // Search
 $router->map("POST|GET", "/search/", function () {
