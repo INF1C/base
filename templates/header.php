@@ -38,7 +38,7 @@
                 </div>
                 <div class="top-menu">
                     <ul class="nav pull-right top-menu">
-                        <li><a class="logout" href="login.html">Logout</a></li>
+                        <li><a class="logout" href="/logout">Logout</a></li>
                     </ul>
                 </div>
             </header>
@@ -50,7 +50,7 @@
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
                         <p class="centered"><a href="profile.html"></a></p>
-                        <h5 class="centered">[Gebruikersnaam]</h5>
+                        <h5 class="centered"><?= $_SESSION['gebruikersnaam'] ?></h5>
 
                         <li class="mt">
                             <a class="active" href="index.php">
