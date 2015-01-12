@@ -25,3 +25,14 @@ $router->map("POST|GET", "/search3/", function () {
 $router->map("POST|GET", "/search4/", function () {
 	openView("search_test_bedrijfmw");
 }, "Search4");
+
+// Gebruikerspaneel
+
+	// Ticket
+	$router->map("POST|GET", "/ticket/", function () {
+		openView("gebruikerspaneel/overview/ticket");
+	}, "Ticket Knoppen");
+		// Nieuw
+		$router->map("POST|GET", "/ticket/nieuw/", function () {
+			openView("gebruikerspaneel/nieuw/ticket");
+		}, "Nieuwe ticket");

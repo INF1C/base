@@ -79,7 +79,7 @@
                                 <li><a  href="#">Contactpersoon</a></li>
                                 <li><a  href="#">Medewerker</a></li>
                                 <li><a  href="#">Bedrijfsmedewerker</a></li>
-                                <li><a  href="#">Ticket</a></li>
+                                <li><a  href="/ticket/">Ticket</a></li>
                                 <li><a  href="#">FAQ</a></li>
                                 <li><a  href="#">Wachtwoord</a></li>
                             </ul>
