@@ -1460,6 +1460,11 @@ label {
     border-color: #41cac0;
 }
 
+/*LOGIN HEIGHT OF PAGE*/
+#login-page {
+    height: calc(100vh - 102px);
+}
+
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
 	max-width: 330px;
