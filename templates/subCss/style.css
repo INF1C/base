@@ -1462,7 +1462,7 @@ label {
 
 /*LOGIN HEIGHT OF PAGE*/
 #login-page {
-    height: calc(100vh - 47px);
+    height: calc(100vh - 38px);
 }
 
 /*LOGIN CONFIGURATION PAGE*/
