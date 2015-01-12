@@ -1,7 +1,7 @@
 <?php
 function isActive($param) {
     if(PAGE_NAME === $param)
-        echo " class='active' ";
+        echo " class='currentPage' ";
 }
 ?>
 <!DOCTYPE html>

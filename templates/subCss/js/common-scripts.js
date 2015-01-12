@@ -1,6 +1,8 @@
 /*---LEFT BAR ACCORDION----*/
 $(function() {
+    var index = $("li.selected").parents("li").last().index();
     $('#nav-accordion').dcAccordion({
+        active: index,
         eventType: 'click',
         autoClose: true,
         saveState: true,
@@ -8,7 +10,7 @@ $(function() {
         speed: 'slow',
         showCount: false,
         autoExpand: true,
-//        cookie: 'dcjq-accordion-1',
+        cookie: 'dcjq-accordion-1',
         classExpand: 'dcjq-current-parent'
     });
 });
