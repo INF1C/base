@@ -1,23 +1,23 @@
 <?php
-////Tickets test
-//$output = new output;
-//$Ticketinfo = $output->tickets('2');
-//                              echo "<table border='2'>";
-//    echo "<tr><th> Incident Type </th>";
-//    echo "<th> Probleemstelling </th>";
-//    echo "<th> Huidige Status </th>";
-//    echo "<th> Geopend op </th>";
-//    echo "<th> Bedrijf </th></tr>";
-//foreach ($Ticketinfo as $key => $value) {
-//    echo "<tr>";
-//    foreach ($value as $ticketinf)
-//    {
-//        echo "<td>" . $ticketinf;
-//        echo "</td>";
-//    }
-//    echo "</tr>";
-//}
-//echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
+//Tickets test
+$output = new output;
+$Ticketinfo = $output->tickets(NULL, array('start' => '2015-01-07 00:00:00', 'stop' => date('Y-m-d H-i-s')));
+                              echo "<table border='2'>";
+    echo "<tr><th> Incident Type </th>";
+    echo "<th> Probleemstelling </th>";
+    echo "<th> Huidige Status </th>";
+    echo "<th> Geopend op </th>";
+    echo "<th> Bedrijf </th></tr>";
+foreach ($Ticketinfo as $key => $value) {
+    echo "<tr>";
+    foreach ($value as $ticketinf)
+    {
+        echo "<td>" . $ticketinf;
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
 //Open tickets checken
 //$output = new output;
 //$opentickets = $output->openTickets();
