@@ -1,6 +1,5 @@
 /*---LEFT BAR ACCORDION----*/
 $(function() {
-    console.log(index);
     $('#nav-accordion').dcAccordion({
         eventType: 'click',
         autoClose: true,
