@@ -6,30 +6,30 @@
 
 <div class="form-group">
 	<label for="createStatusWijzigingTicketID">Ticket ID:</label>
-    <input type="number" class="form-control" id="createStatusWijzigingTicketID">
+    <input type="number" class="form-control" id="createStatusWijzigingTicketID" name="idTicket">
   </div>
   
  <div class="form-group">
 	<label for="createStatusWijzigingBedrijfsMedewerkerID">Bedrijfsmedewerker ID:</label>
-    <input type="number" class="form-control" id="createStatusWijzigingBedrijfsMedewerkerID">
+    <input type="number" class="form-control" id="createStatusWijzigingBedrijfsMedewerkerID" name="idBedrijfsmedewerker">
   </div>
   
    <div class="form-group">
 	<label for="createStatusWijzigingMedewerkerID">Medewerker ID:</label>
-    <input type="number" class="form-control" id="createStatusWijzigingMedewerkerID">
+    <input type="number" class="form-control" id="createStatusWijzigingMedewerkerID" name="idMedewerker">
   </div>
   
    <div class="form-group">
 	<label for="createStatusWijzigingBedrijfsContact">Soort Contact:</label>
-    <input type="text" class="form-control" id="createStatusWijzigingBedrijfsContact">
+    <input type="text" class="form-control" id="createStatusWijzigingBedrijfsContact" name="SoortContact">
   </div>
   
 <div class="form-group">
     <label for="createStatusWijzigingMemo">Memo:</label>
-	<textarea class="form-control" rows="5" id="createStatusWijzigingMemo" placeholder="Memo" resize="none"></textarea>
+	<textarea class="form-control" rows="5" id="createStatusWijzigingMemo" placeholder="Memo" name="Memo"></textarea>
 </div>
 
-  <button type="submit" value="submit" class="btn btn-default">Verzend</button>
+  <button type="submit" value="submit" name="submit" class="btn btn-default">Verzend</button>
 </form>
 </div>
 
