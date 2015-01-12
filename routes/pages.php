@@ -2,7 +2,7 @@
 
 // Home page
 $router->map("GET", "/", function () {
-    if($_SESSION['loggedIn'] === TRUE){
+    if(isset($_SESSION['loggedIn'])){
         openView('root');
     } else {
         require DIR_VIEW . 'login.php';
