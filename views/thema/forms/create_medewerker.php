@@ -24,6 +24,6 @@
     <label for="createMedewerkerEmail">Email-adres:</label>
     <input type="email" class="form-control" id="createMedewerkerEmail" placeholder="Email">
   </div>
-  <button type="submit" class="btn btn-default">Verzend</button>
+  <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
 </form>
 </div>

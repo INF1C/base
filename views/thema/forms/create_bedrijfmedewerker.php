@@ -30,6 +30,6 @@
   </div>
   <!-- Value moet met een GET opgehaald worden -->
   <input type="hidden" value="3" name="Bedrijf" />
-  <button type="submit" class="btn btn-default">Verzend</button>
+  <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
 </form>
 </div>

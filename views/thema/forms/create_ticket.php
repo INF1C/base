@@ -41,6 +41,6 @@
     <label for="createTicketOplossing">Oplossing:</label>
 	<textarea class="form-control" rows="5" id="createTicketOplossing" placeholder="Oplossing" resize="none"></textarea>
   </div>
-  <button type="submit" value="submit" class="btn btn-default">Verzend</button>
+  <button type="submit" value="submit" name="submit" class="btn btn-default">Verzend</button>
 </form>
 </div>
