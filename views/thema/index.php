@@ -20,7 +20,6 @@
         <!-- Custom styles for this template -->
         <link href="/base/templates/subCss/style.css" rel="stylesheet">
         <link href="/base/templates/subCss/style-responsive.css" rel="stylesheet">
-
         <script src="/base/templates/subCss/js/chart-master/Chart.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -254,6 +253,7 @@
 
                         <!--footer end-->                       
                 </section>
+                
                 <!-- De scripts zijn onder de code geplaatst, zodat deze sneller gelezen kunnen worden. -->
                 <script src="/base/templates/subCss/js/jquery.js"></script>
                 <script src="/base/templates/subCss/js/jquery-1.8.3.min.js"></script>
@@ -261,18 +261,9 @@
                 <script class="include" type="text/javascript" src="/base/templates/subCss/js/jquery.dcjqaccordion.2.7.js"></script>
                 <script src="/base/templates/subCss/js/jquery.scrollTo.min.js"></script>
                 <script src="/base/templates/subCss/js/jquery.nicescroll.js" type="text/javascript"></script>
-                <script src="/base/templates/subCss/js/jquery.sparkline.js"></script>
-
 
                 <!--common script for all pages-->
-                <script src="/base/templates/subCss/js/common-scripts.js"></script>
-
-                <script type="text/javascript" src="/base/templates/subCss/js/gritter/js/jquery.gritter.js"></script>
-                <script type="text/javascript" src="/base/templates/subCss/js/gritter-conf.js"></script>
-
-                <!--script for this page-->
-                <script src="/base/templates/subCss/js/sparkline-chart.js"></script>    
-                <script src="/base/templates/subCss/js/zabuto_calendar.js"></script>	
+                <script src="/base/templates/subCss/js/common-scripts.js"></script>	
 
                 <!--script voor de kalender, deze kan later verwijderd worden.-->
                 <script type="application/javascript">
