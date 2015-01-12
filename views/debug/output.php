@@ -2,11 +2,19 @@
 //Tickets test WERKT NIET
 $output = new output;
 $Ticketinfo = $output->tickets('2');
-                              echo "<table style='width:100%' border='1'>";
+                              echo "<table border='2'>";
+    echo "<tr><th> Incident Type </th>";
+    echo "<th> Probleemstelling </th>";
+    echo "<th> Huidige Status </th>";
+    echo "<th> Geopend op </th>";
+    echo "<th> Bedrijf </th></tr>";
 foreach ($Ticketinfo as $key => $value) {
     echo "<tr>";
-    echo "<td>" . $key . "</td>";
-    echo "<td>" . $value . "</td>";
+    foreach ($value as $ticketinfo)
+    {
+        echo "<td>" . $ticketinfo;
+        echo "</td>";
+    }
     echo "</tr>";
 }
 echo "<pre>";var_dump($Ticketinfo); echo "</pre>";
