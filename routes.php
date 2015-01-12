@@ -10,40 +10,10 @@ function openView($name) {
  * Syntax: http://altorouter.com/usage/mapping-routes.html
  */
 
-// Home page
-$router->map("GET", "/", function () {
-    require DIR_VIEW . 'login.php';
-}, "Home");
-
-// Styling
-$router->map("GET", "/css", function () {
-    require DIR_TEMPLATE . 'main.css';
-}, "CSS MAIN");
-
-$router->map("GET", "/favicon", function () {
-	require DIR_TEMPLATE . 'favicon.png';
-},  "Favicon");
-
-// Search
-$router->map("POST|GET", "/search/", function () {
-	openView("search");
-}, "Search");
-// Search medewerker
-$router->map("POST|GET", "/search2/", function () {
-	openView("search_test");
-}, "Search2");
-// Search bedrijf
-$router->map("POST|GET", "/search3/", function () {
-	openView("search_test_bedrijf");
-}, "Search3");
-// Search bedrijfmw
-$router->map("POST|GET", "/search4/", function () {
-	openView("search_test_bedrijfmw");
-}, "Search4");
 
 /*
  * START DEBUGGING
- */
+ *
 
 $router->map("POST|GET", "/debug/create/", function () {
     openView("debug/create");
@@ -61,12 +31,13 @@ $router->map("POST|GET", "/debug/output/pascal", function () {
     openView("debug/output.pascal");
 }, "Debug -> Output (pascal)");
 
-/*
+ *
  * END DEBUGGING
  */
 
-require_once 'routes/process_create.php';
-require_once 'routes/process_edit.php';
+require_once DIR_ROUTE . 'theme.php';
+require_once DIR_ROUTE . 'pages.php';
+require_once DIR_ROUTE . 'process.php';
 
 // match the current page to all the routes
 $page = $router->match();

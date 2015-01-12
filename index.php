@@ -9,7 +9,9 @@
 define("DIR_CLASS", "classes/");
 define("DIR_TEMPLATE", "templates/");
 define("DIR_VIEW", "views/");
+define("DIR_PROCES", "process/");
 define("DIR_UPLOAD", "upload/");
+define("DIR_ROUTE", "routes/");
 
 // require the classes used in the application
 require_once DIR_CLASS . 'route.class.php';     // takes care of serving the right page
