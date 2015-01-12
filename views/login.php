@@ -41,9 +41,16 @@
                             <form class="form-login" method="POST" action="/">
                                 <h2 class="form-login-heading">log nu in</h2>
                                 <div class="login-wrap">
-                                    <input type="text" name="username" class="form-control" placeholder="Gebruikersnaam" autofocus>
+                                    <?php
+                                    if(isset($_SESSION['error'])){
+                                        echo "<div class='alert alert-danger'>";
+                                        echo $_SESSION['error'];
+                                        echo "</div>";
+                                    }
+                                    ?>
+                                    <input type="text" name="Gebruikersnaam" class="form-control" placeholder="Gebruikersnaam" autofocus>
                                     <br>
-                                    <input type="password" name="password" class="form-control" placeholder="Wachtwoord">
+                                    <input type="password" name="Wachtwoord" class="form-control" placeholder="Wachtwoord">
                                     <label class="checkbox">
                                         <span class="pull-right">
                                             <a data-toggle="modal" href="#forgotPassword">Wachtwoord vergeten?</a>

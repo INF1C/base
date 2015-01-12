@@ -1,4 +1,7 @@
 <?php
-echo "<pre>";
-var_dump($_POST);
-echo "</pre>";
+$user = new user;
+if($user->login() === TRUE){
+	header("Location: /");
+} else {
+	$_SESSION['error'] = $user->login();
+}
