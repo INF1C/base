@@ -49,7 +49,6 @@
                 <div id="sidebar"  class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none; margin-left: 0px;">
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
-
                         <p class="centered"><a href="profile.html"></a></p>
                         <h5 class="centered">[Gebruikersnaam]</h5>
 
