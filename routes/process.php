@@ -2,7 +2,7 @@
 
 // LOGIN
 $router->map("POST", "/", function () {
-    require DIR_PROCES . "login.php"
+    require DIR_PROCES . "login.php";
 }, "Login");
 
 // CREATE
