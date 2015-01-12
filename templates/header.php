@@ -50,7 +50,7 @@
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
                         <p class="centered"><a href="profile.html"></a></p>
-                        <h4 class="centered"><?= $_SESSION['gebruikersnaam'] ?></h4>
+                        <h3 class="centered"><?= $_SESSION['gebruikersnaam'] ?></h3>
                         <h5 class="centered"><?= $_SESSION['autorisatie'] ?></h5>
 
                         <li class="mt">

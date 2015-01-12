@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    color: white;
+    color: black;
     background: #f2f2f2;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
@@ -756,6 +756,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     cursor: pointer;
     display: inline-block;
     font-size: 20px;
+    color: white;
 }
 
 
