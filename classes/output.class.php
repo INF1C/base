@@ -17,7 +17,6 @@ class output {
         if($bedrijf === NULL AND $periode === NULL) {
             $this->db->db_table = "TICKET";
             $alleTicketID = $this->db->select(array("idTicket"));
-            echo "<pre>"; var_dump($alleTicketID); echo "</pre>";
         } elseif($periode === NULL AND $idBedrijf != NULL) {
             $this->db->db_table = "STATUS_WIJZIGING";
             $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE idBedrijf = ? GROUP BY idBedrijf, idBedrijf");
@@ -41,17 +40,17 @@ class output {
 
             $this->db->db_table = "TICKET";
 
-            $return[$ticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $ticket));
-            $return[$ticket]['ProbleemStelling'] = $this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket));
+            $return[$ticket]['IncidentType'] = reset(reset($this->db->select(array("IncidentType"), array("idTicket" => $ticket))));
+            $return[$ticket]['ProbleemStelling'] = reset(reset($this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket))));
 
             $this->db->db_table = "STATUS_WIJZIGING";
-            $return[$ticket]['HuidigeStatus'] = $this->db->select(NULL, NULL, "SELECT Status FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1");
-            $return[$ticket]['GeopendOp'] = $this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
+            $return[$ticket]['HuidigeStatus'] = reset(reset($this->db->select(NULL, NULL, "SELECT Status FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1")));
+            $return[$ticket]['GeopendOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")));
 
             $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")[0]['idBedrijf'];
             
             $this->db_table = "BEDRIJF";
-            $return[$ticket]["Bedrijf"] = $this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf));
+            $return[$ticket]["Bedrijf"] = reset(reset($this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf))));
         }
 
         return $return;
