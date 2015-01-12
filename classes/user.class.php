@@ -48,7 +48,7 @@ class user {
 		$gebruikersnaam = filter_input(INPUT_POST, "Gebruikersnaam");
 		$wachtwoord = filter_input(INPUT_POST, "Wachtwoord");
 		// Check if data exists
-		if ($gebruikersnaam == '' OR $wachtwoord == '') {
+		if ($gebruikersnaam == '' OR $wachtwoord == '')
 			return "Niet genoeg gegevens ingevoerd!";
 	
 		// Check if user exists
