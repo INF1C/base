@@ -1,3 +1,13 @@
+<?php
+$db = new db;
+if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker'))) {
+    $idBedrijfsMedewerker = FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker');
+    $db->db_table = "BEDRIJFSMEDEWERKER";
+    $data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0];
+} else {
+    $data = array_fill_keys(array('idBedrijfsMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email', 'Functie'), '');
+}
+?>
 <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <div class="form-group">
             <label for="Voornaam">Voornaam:</label>

@@ -1,4 +1,13 @@
-<div class="col-md-6">
+<?php
+$db = new db;
+if(!empty(FILTER_INPUT(INPUT_GET, 'idFAQ'))) {
+	$idFAQ = FILTER_INPUT(INPUT_GET, 'idFAQ');
+	$db->db_table = "FAQ";
+	$data = $db->select(array('*'), array('idFAQ' => $idFAQ))[0];
+} else {
+	$data = array_fill_keys(array('idFAQ', 'Vraag', 'Beschrijving', 'Oplossing'), '');
+}
+?>
 <form method="POST" action="/process/edit/faq">
     <div class="form-group">
 	<label for="editFaqVraag">Soort Contact:</label>
@@ -17,4 +26,3 @@
 
   <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
 </form>
-</div>
