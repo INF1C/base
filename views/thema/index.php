@@ -85,7 +85,7 @@
                                 <span>Instellingen</span>
                             </a>
                             <ul class="sub">
-                                <li class="active-sub"><a  href="#">Systeeminstellingen</a></li>
+                                <li><a  href="#">Systeeminstellingen</a></li>
                                 <li><a  href="#">Autorisatie</a></li>
                             </ul>
                         </li>

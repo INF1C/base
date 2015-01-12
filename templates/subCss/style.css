@@ -339,7 +339,7 @@ ul.sidebar-menu li ul.sub li.active a {
     display: block;
 }
 
-.active-sub{
+.sub li a:focus{
     background: #002144 !important;
     color: white;
 }
