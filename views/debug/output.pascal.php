@@ -2,7 +2,7 @@
 
 $output = new output;
 
-$result = $output->tickets();
+$result = $output->tickets(2);
 
 echo "<pre>";
 var_dump($result);
