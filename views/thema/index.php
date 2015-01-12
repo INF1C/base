@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="NL">
     <head>
-        <?php
-        echo "hoi ik ben angela en houd van pijpen";
-        ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
