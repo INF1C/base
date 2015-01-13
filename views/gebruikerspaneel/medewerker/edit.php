@@ -32,4 +32,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
             	<input type="submit" value="submit" name="submit" />
             </div>
     </form>
+    <noscript>
+    <?= get_defined_vars() ?>
+    </noscript>
 </div>
