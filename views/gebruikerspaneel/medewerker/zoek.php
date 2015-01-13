@@ -4,7 +4,7 @@ $db = new db();
 if (isset($_POST['zoekterm']))
 {
 	$zoekterm = "%" . filter_input(INPUT_POST, 'zoekterm') . "%";
-	$stmt = $this->db->link->prepare("SELECT * FROM MEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
+	$stmt = $db->link->prepare("SELECT * FROM MEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
 	$stmt->bindValue(1, $zoekterm);
 	$stmt->bindValue(2, $zoekterm);
 	$stmt->execute();
