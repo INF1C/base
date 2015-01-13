@@ -20,7 +20,7 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	$router->map("POST|GET", "/autorisatie/", function () {
 		openView("instellingen/autorisatie", array());
 	}, "Wijzigen van autorisatie");
-		$router->map("POST", "/autorisatie/edit/[:user]", function ($user) {
+		$router->map("GET", "/autorisatie/edit/[:user]", function ($user) {
 			openView("instellingen/edit.autorisatie", array(), $user);
 		}, "Wijzigen van autorisatie1");
 
