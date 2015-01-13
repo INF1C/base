@@ -46,7 +46,7 @@ $zoekterm = "";
 						echo "</td>";
 					}
 				}
-				echo "<td><a href='/medewerker/edit/?idMedewerker=" . $id . "'>Klik hier om te bewerken</a></td>";
+				echo "<td><a href='/medewerker/edit/" . $id . "'>Klik hier om te bewerken</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";
