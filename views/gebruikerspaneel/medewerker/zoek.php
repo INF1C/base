@@ -23,7 +23,7 @@ if (isset($_POST['zoekterm']))
 		foreach($result as $key => $subresult){
 			echo "<td>";
 			if($key == "idMedewerker"){
-				$id = $subresult
+				$id = $subresult;
 			} else {
 				echo $subresult;
 			}
