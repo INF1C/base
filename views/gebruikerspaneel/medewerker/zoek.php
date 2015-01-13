@@ -1,13 +1,13 @@
 <div class="col-lg-12">
-	<div class="form-panel">
+	<div class="content-panel">
 		<?php
 		if (isset($_POST['zoekterm']))
 		{
 			$db = new db();
-			$zoekterm = "%" . filter_input(INPUT_POST, 'zoekterm') . "%";
+			$zoekterm = filter_input(INPUT_POST, 'zoekterm');
 			$stmt = $db->link->prepare("SELECT * FROM MEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
-			$stmt->bindValue(1, $zoekterm);
-			$stmt->bindValue(2, $zoekterm);
+			$stmt->bindValue(1, "%" . $zoekterm . "%");
+			$stmt->bindValue(2, "%" . $zoekterm . "%");
 			$stmt->execute();
 			$returnArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			echo "<table class='table table-hover'>";
@@ -35,6 +35,7 @@
 				echo "<td><a href='/medewerker/edit/?idMedewerker=" . $id . "'>Klik hier om te bewerken</a></td>";
 				echo "</tr>";
 			}
+			echo "</table>";
 		} else {
 			$zoekterm = "";
 		}
