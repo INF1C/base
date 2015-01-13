@@ -1,6 +1,6 @@
 <?php
 // make a openView function to combine header, footer and content
-function openView($name, $autorisatie = NULL) {
+function openView($name, $autorisatie = NULL, $params = NULL) {
     require DIR_TEMPLATE . 'header.php';
     if($autorisatie === NULL OR in_array($_SESSION['autorisatie'], $autorisatie) OR $_SESSION['autorisatie'] === 'Admin'){
         require DIR_VIEW . $name . ".php";

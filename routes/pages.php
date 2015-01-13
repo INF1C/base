@@ -53,5 +53,5 @@ $router->map("POST|GET", "/search4/", function () {
 			openView("gebruikerspaneel/medewerker/zoek", array('Teamleider'));
 		}, "Zoek medewerker");
 		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
-			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'));
+			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'), $id);
 		}, "Bewerk medewerker");
