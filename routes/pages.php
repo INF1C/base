@@ -15,22 +15,11 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	openView("admin");
 }, "CREATE ADMIN");
 
-// Search
-$router->map("POST|GET", "/search/", function () {
-	openView("search");
-}, "Search");
-// Search medewerker
-$router->map("POST|GET", "/search2/", function () {
-	openView("search_test");
-}, "Search2");
-// Search bedrijf
-$router->map("POST|GET", "/search3/", function () {
-	openView("search_test_bedrijf");
-}, "Search3");
-// Search bedrijfmw
-$router->map("POST|GET", "/search4/", function () {
-	openView("search_test_bedrijfmw");
-}, "Search4");
+// Instellingen
+	// Autorisatie
+	$router->map("POST|GET", "/autorisatie/", function () {
+		openView("autorisatie", array());
+	}, "Wijzigen van autorisatie");
 
 // Gebruikerspaneel
 

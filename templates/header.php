@@ -69,7 +69,7 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="#">Systeeminstellingen</a></li>
-                                <li><a  href="#">Autorisatie</a></li>
+                                <li><a  href="/autorisatie/">Autorisatie</a></li>
                             </ul>
                         </li>
 
