@@ -27,7 +27,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			$returnArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			echo "<table class='table table-hover'>";
 			echo "<tr>";
-			echo "<th> Gebruikersnaam </th>";
+			echo "<th> Huidige autorisatie </th>";
 			echo "<th> E-mail </th>";
 			echo "<th> Voornaam </th>";
 			echo "<th> Achternaam </th>";
@@ -44,10 +44,10 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 					if($key == "Gebruikersnaam") {
 						$gebruikersnaam = $subresult;
 						$db->db_table = "ACCOUNT";
-						$autorisatie = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam))[0]['Gebruikersnaam'];
+						$subresult = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
 					}
 					echo "<td>";
-					echo $subresult;
+					var_dump $subresult;
 					echo "</td>";
 				}
 				echo "<td><a href='/autorisatie/edit/" . $gebruikersnaam . "'>Klik hier om te bewerken</a></td>";
