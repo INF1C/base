@@ -44,10 +44,10 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 					if($key == "Gebruikersnaam") {
 						$gebruikersnaam = $subresult;
 						$db->db_table = "ACCOUNT";
-						$subresult = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
+						$subresult = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam))[0]['Autorisatie'];
 					}
 					echo "<td>";
-					var_dump($subresult);
+					echo $subresult;
 					echo "</td>";
 				}
 				echo "<td><a href='/autorisatie/edit/" . $gebruikersnaam . "'>Klik hier om te bewerken</a></td>";
