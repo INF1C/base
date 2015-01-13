@@ -43,12 +43,15 @@ $router->map("POST|GET", "/search4/", function () {
 		}, "Nieuwe ticket");
 
 	// Medewerker
-	$router->map("POST|GET", "/medewerker/", function () {
+	$router->map("GET", "/medewerker/", function () {
 		openView("gebruikerspaneel/medewerker", array('Teamleider'));
 	}, "Medewerker (knoppen)");
-		$router->map("POST|GET", "/medewerker/nieuw/", function () {
+		$router->map("GET", "/medewerker/nieuw/", function () {
 			openView("gebruikerspaneel/medewerker/nieuw", array('Teamleider'));
 		}, "Nieuwe medewerker");
 		$router->map("POST|GET", "/medewerker/zoek/", function () {
 			openView("gebruikerspaneel/medewerker/zoek", array('Teamleider'));
+		}, "Zoek medewerker");
+		$router->map("GET", "/medewerker/edit/[i:id]", function () {
+			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'));
 		}, "Zoek medewerker");
