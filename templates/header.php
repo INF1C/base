@@ -80,7 +80,7 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="#">Contactpersoon</a></li>
-                                <li><a  href="#">Medewerker</a></li>
+                                <li><a  href="/medewerker/">Medewerker</a></li>
                                 <li><a  href="#">Bedrijfsmedewerker</a></li>
                                 <li><a href="/ticket/">Ticket</a></li>
                                 <li><a  href="#">FAQ</a></li>
