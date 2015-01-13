@@ -1,8 +1,8 @@
 <div class="col-lg-12">
-	<div class="content-panel">
 		<?php
 		if (isset($_POST['zoekterm']))
 		{
+			echo "<div class='content-panel'>";
 			$db = new db();
 			$zoekterm = filter_input(INPUT_POST, 'zoekterm');
 			$stmt = $db->link->prepare("SELECT * FROM MEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
@@ -24,23 +24,25 @@
 			{
 				echo "<tr>";
 				foreach($result as $key => $subresult){
-					echo "<td>";
+					
 					if($key == "idMedewerker"){
 						$id = $subresult;
 					} else {
+						echo "<td>";
 						echo $subresult;
+						echo "</td>";
 					}
-					echo "</td>";
 				}
 				echo "<td><a href='/medewerker/edit/?idMedewerker=" . $id . "'>Klik hier om te bewerken</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";
+echo "	</div><!-- /form-panel -->"
+
 		} else {
 			$zoekterm = "";
 		}
 		?>
-	</div><!-- /form-panel -->
 	<div class="form-panel">
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek medewerker</h4>
 		<form class="form-inline" method="POST" action="" role="form">
