@@ -1,5 +1,5 @@
 <?php
-var_dump($idMedewerker);
+var_dump(PAGE_PARAMS);
 $db = new db;
 if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     $idBedrijf = FILTER_INPUT(INPUT_GET, 'idBedrijf');
