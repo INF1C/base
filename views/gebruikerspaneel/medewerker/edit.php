@@ -1,11 +1,11 @@
 <?php
 $db = new db;
-if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
-    $idBedrijf = FILTER_INPUT(INPUT_GET, 'idBedrijf');
-    $db->db_table = "BEDRIJF";
-    $data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
+$idMedewerker = $params;
+if($idMedewerker !== NULL) {
+    $db->db_table = "MEDEWERKER";
+    $data = $db->select(array('*'), array('idMedewerker' => $idMedewerker))[0];
 } else {
-    $data = array_fill_keys(array('idBedrijf', 'Bedrijfsnaam', 'Adresgegevens', 'Telefoon', 'Email', 'Licentie'), '');
+    $data = array_fill_keys(array('idMedewerker', 'Voornaam', 'Achternaam', 'Tussenvoegsel', 'Email'), '');
 }
 ?>
 <div class="col-md-6 showback">
