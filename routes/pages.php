@@ -18,7 +18,7 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 // Instellingen
 	// Autorisatie
 	$router->map("POST|GET", "/autorisatie/", function () {
-		openView("autorisatie", array());
+		openView("instellingen/autorisatie", array());
 	}, "Wijzigen van autorisatie");
 
 // Gebruikerspaneel
