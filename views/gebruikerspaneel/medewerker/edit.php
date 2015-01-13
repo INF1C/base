@@ -33,6 +33,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
             </div>
     </form>
     <noscript>
-    <?= get_defined_vars() ?>
+    <?= var_dump(get_defined_vars()) ?>
     </noscript>
 </div>
