@@ -1,5 +1,5 @@
 <?php
-$zoekterm = "";
+isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $zoekterm = '';
 ?>
 <div class="col-lg-12">
 	<div class="form-panel">
