@@ -3,7 +3,7 @@ $userName = $params;
 $db = new db;
 
 $db->db_table = "ACCOUNT";
-$autorisatie = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam))[0]['Autorisatie'];
+$autorisatie = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $userName))[0]['Autorisatie'];
 ?>
 
 <form method="POST" action="/process/edit/autorisatie">
