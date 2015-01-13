@@ -40,7 +40,7 @@ if (isset($_POST['zoekterm']))
 <div class="col-lg-12">
 	<div class="form-panel">
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek medewerker</h4>
-		<form class="form-inline" role="form">
+		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
 				<label class="sr-only" for="zoekterm">Voor of achternaam:</label>
 				<input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Zoekterm">
