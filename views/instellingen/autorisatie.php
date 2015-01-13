@@ -47,7 +47,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 						$subresult = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
 					}
 					echo "<td>";
-					var_dump $subresult;
+					var_dump($subresult);
 					echo "</td>";
 				}
 				echo "<td><a href='/autorisatie/edit/" . $gebruikersnaam . "'>Klik hier om te bewerken</a></td>";
