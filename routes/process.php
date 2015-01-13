@@ -84,3 +84,9 @@ $router->map("POST|GET", "/process/edit/faq", function () {
     require DIR_PROCES . "edit_faq.php";
     require DIR_TEMPLATE . 'footer.php';
 },  "Edit -> FAQ");
+
+$router->map("POST|GET", "/process/edit/autorisatie", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require DIR_PROCES . "edit_autorisatie.php";
+    require DIR_TEMPLATE . 'footer.php';
+},  "Edit -> Autorisatie");

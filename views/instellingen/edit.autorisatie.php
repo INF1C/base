@@ -5,7 +5,7 @@ $db = new db;
 $db->db_table = "ACCOUNT";
 $autorisatie = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $userName))[0]['Autorisatie'];
 ?>
-
+<div class="col-md-12 showback">
 <form method="POST" action="/process/edit/autorisatie">
 	<div class="form-group">
 		<label>Selecteer de nieuwe autorisatie voor <?= $userName ?>:</label>
@@ -28,5 +28,7 @@ $autorisatie = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $user
 			Medewerker
 		</label>
 	</div>
+	<input type="hidden" name="Gebruikersnaam" value="<?= $userName ?>">
 	<button type="submit" name="submit" value="submit" class="btn btn-theme">Zoek</button>
 </form>
+</div>
