@@ -47,6 +47,7 @@ require_once DIR_ROUTE . 'process.php';
 $page = $router->match();
 if ($page && is_callable($page['target'])) {
     define("PAGE_NAME", $page['name']);
+    var_dump($page['params']);
     call_user_func_array($page['target'], $page['params']);
 } else {
     // no route was matched
