@@ -45,7 +45,7 @@
 		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
 				<label class="sr-only" for="zoekterm">Voor of achternaam:</label>
-				<input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Zoekterm">
+				<input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Zoekterm" value="<?= $zoekterm ?>">
 			</div>
 			<button type="submit" class="btn btn-theme">Zoek</button>
 		</form>
