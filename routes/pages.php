@@ -59,7 +59,10 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	 $router->map("GET", "/klantpaneel/ticket/", function () {
 		openView("klantpaneel/ticket", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Klantpaneel -> ticket");
-	
+		//Ingediende tickets bekijken
+	 $router->map("GET", "/klantpaneel/ticketbekijken/", function () {
+		openView("klantpaneel/ticketbekijken", array('Medewerker', 'Bedrijfsmedewerker'));
+	}, "Klantpaneel -> ticketbekijken");
 	
 
 // Rapporten
