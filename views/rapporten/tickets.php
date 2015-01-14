@@ -29,7 +29,7 @@ if(isset($_POST['start']) && isset($_POST['stop'])){
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
-    		<br/>
+    		<br/><br/>
 			<button type="submit" class="btn btn-theme">Zoek</button>
 		</form>
 	</div><!-- /form-panel -->

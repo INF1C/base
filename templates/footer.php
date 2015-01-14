@@ -30,14 +30,14 @@
 <script type="application/javascript">
 	$(function () {
 		$('#start').datetimepicker({
-			autoclose: true,
+			autoclose: false,
         	todayBtn: true,
         	startView: '4',
         	minView: '2',
         	pickerPosition: "bottom-left"
 		});
 		$('#stop').datetimepicker({
-			autoclose: true,
+			autoclose: false,
         	todayBtn: true,
         	startView: '4',
         	minView: '2',
