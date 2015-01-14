@@ -33,13 +33,13 @@ $router->map("POST|GET", "/process/create/ticket/beheerderspaneel", function () 
     require DIR_TEMPLATE . 'header.php';
     require DIR_PROCES . "create_ticket_beheerder.php";
     require DIR_TEMPLATE . 'footer.php';
-}, "Create -> Ticket");
+}, "Create -> Ticket (beheerder)");
 
 $router->map("POST|GET", "/process/create/ticket/klantpaneel", function () {
     require DIR_TEMPLATE . 'header.php';
     require DIR_PROCES . "create_ticket_klant.php";
     require DIR_TEMPLATE . 'footer.php';
-}, "Create -> Ticket");
+}, "Create -> Ticket (klant)");
 
 $router->map("POST|GET", "/process/create/statuswijziging", function () {
     require DIR_TEMPLATE . 'header.php';
