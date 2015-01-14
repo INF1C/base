@@ -25,7 +25,7 @@ $router->map("GET", "/", function () {
 		openView("beheerderspaneel/ticket/zoek", array('Medewerker', 'Teamleider'));
 	}, "Ticket -> zoek bedrijfsmedewerker");
 		$router->map("POST|GET", "/beheerderspaneel/ticket/create/[i:id]", function ($id) {
-			openView("beheerderspaneel/ticket/zoek", array('Medewerker', 'Teamleider'), $id);
+			openView("beheerderspaneel/ticket/create", array('Medewerker', 'Teamleider'), $id);
 		}, "Nieuwe ticket");
 	// Medewerker
 	$router->map("GET", "/beheerderspaneel/medewerker/", function () {
