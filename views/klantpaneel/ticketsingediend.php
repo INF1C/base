@@ -5,13 +5,7 @@ $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf
                                  FROM BEDRIJFSMEDEWERKER
                                  WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
 var_dump($idBedrijf);
-foreach($idBedrijf as $key => $result)
-{
-    foreach($result as $ID)
-    {
-        var_dump($ID);
-    }
-}
+$result = mysqli_result($idBedrijf, 0);
 var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
                                  FROM STATUS_WIJZIGING, TICKET, BEDRIJF
