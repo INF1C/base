@@ -2,11 +2,9 @@
     <?php
         $db = new db;
         $idBedrijfsMedewerker = $params;
-        if($idBedrijfsMedewerker !== NULL) {    $idBedrijfsMedewerker = FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker');
+        if($idBedrijfsMedewerker !== NULL) {    
             $db->db_table = "BEDRIJFSMEDEWERKER";
-            echo $idBedrijfsMedewerker;
-            $data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker));
-            var_dump($data);
+            $data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0];
         } else {
             $data = array_fill_keys(array('idBedrijfsMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email', 'Functie'), '');
         }
