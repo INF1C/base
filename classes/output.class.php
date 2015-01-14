@@ -149,7 +149,7 @@ class output {
             $open = new DateTime($return[$ticket]['GeopendOp']);
             $sluit = new DateTime($return[$ticket]['GeslotenOp']);
             $verschil = $sluit->diff($open);
-            $return[$ticket]['OplosTijd'] = $verschil['days'];
+            $return[$ticket]['OplosTijd'] = $verschil->format('%a');
             
 
             // End of test
