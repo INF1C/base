@@ -189,20 +189,20 @@ class output {
         $allestatusid = $this->db->select(array("idStatus"), array("idTicket" => $idticket));
         $return = array();
         foreach ($allestatusid as $statusid) {
-            $return[$statusid]['DatumTijd'] = $this->db->select(array("DatumTijd"), array("idStatus" => $statusid));
-            $return[$statusid]['Status'] = $this->db->select(array("Status"), array("idStatus" => $statusid));
-            $return[$statusid]['SoortContact'] = $this->db->select(array("SoortContact"), array("idStatus" => $statusid));
-            $return[$statusid]['Memo'] = $this->db->select(array("Memo"), array("idStatus" => $statusid));
+            $return[$statusid]['DatumTijd'] = reset(reset($this->db->select(array("DatumTijd"), array("idStatus" => $statusid)));
+            $return[$statusid]['Status'] = reset(reset($this->db->select(array("Status"), array("idStatus" => $statusid))));
+            $return[$statusid]['SoortContact'] = reset(reset($this->db->select(array("SoortContact"), array("idStatus" => $statusid))));
+            $return[$statusid]['Memo'] = reset(reset($this->db->select(array("Memo"), array("idStatus" => $statusid))));
                     
-            $idbedrijfsmedewerker = $this->db->select(array("idBedrijfsMedewerker"), array("idStatus" => $statusid));
+            $idbedrijfsmedewerker = reset(reset($this->db->select(array("idBedrijfsMedewerker"), array("idStatus" => $statusid))));
             $this->db->db_table = "BEDRIJFSMEDEWERKER";
             //ophalen achternaam van de bedrijfsmedewerker
-            $return[$statusid]['Bedrijfsmedewerker'] = $this->db->select(array("Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker));
+            $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset(reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker))));
             
-            $idmedewerker = $this->db->select(array("idMedewerker"), array("idStatus" => $statusid));
+            $idmedewerker = reset(reset($this->db->select(array("idMedewerker"), array("idStatus" => $statusid))));
             $this->db->db_table = "MEDEWERKER";
             //ophalen achternaam van de medewerker
-            $return[$statusid]['Medewerker'] = $this->db->select(array("Achternaam"), array("idMedewerker" => $idmedewerker));
+            $return[$statusid]['Medewerker'] = reset(reset($this->db->select(array("Achternaam"), array("idMedewerker" => $idmedewerker))));
         }
     }
 
