@@ -184,9 +184,13 @@ class output {
         return $this->db->select($fields, $where)[0];
     }
 
-    public function Statuswijziging($idticket) {
+    public function Statuswijziging($idticket = NULL, $idBedrijfsMedewerker = NULL) {
         $this->db->db_table = "STATUS_WIJZIGING";
-        $allestatusid = $this->db->select(array("idStatus"), array("idTicket" => $idticket));
+        if($idBedrijfsMedewerker === NULL){
+            $allestatusid = $this->db->select(array("idStatus"), array("idTicket" => $idticket));
+        } else {
+            $allestatusid = $this->db->select(array("idStatus"), array("idBedrijfsMedewerker" => $idBedrijfsMedewerker));
+        }
         $return = array();
         foreach ($allestatusid as $statusarray) {
             $this->db->db_table = "STATUS_WIJZIGING";

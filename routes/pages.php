@@ -114,8 +114,11 @@ $router->map("POST", "/ticket/", function () {
 	}, "Rapporten -> Bedrijf");
 	// Bedrijfsmedewerker
 	$router->map("GET", "/rapporten/bedrijfsmedewerker/", function () {
-		openView("rapporten/bedrijfsmedewerker", array('Medewerker', 'Teamleider'));
-	}, "Rapporten -> Bedrijfsmedewerker");
+		openView("rapporten/bedrijfsmedewerker_zoek", array('Medewerker', 'Teamleider'));
+	}, "Rapporten -> Bedrijfsmedewerker zoek");
+		$router->map("GET", "/rapporten/bedrijfsmedewerker/[i:id]", function ($id) {
+			openView("rapporten/bedrijfsmedewerker", array('Medewerker', 'Teamleider'), $id);
+		}, "Rapporten -> Bedrijfsmedewerker");
 
 // Wijzigen
 	// Wachtwoord
