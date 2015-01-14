@@ -11,7 +11,7 @@ if($idFAQ !== NULL) {
 <div class="col-lg-10 showback">
 <form method="POST" action="/process/edit/faq">
     <div class="form-group">
-	<label for="editFaqVraag">Soort Contact:</label>
+	<label for="editFaqVraag">Vraag:</label>
     <input type="text" class="form-control" id="editFaqVraag" name="Vraag" placeholder="Vraag" value="<?= $data['Vraag'] ?>">
   </div>
   
