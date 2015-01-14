@@ -31,10 +31,10 @@
     $(document).ready(function () {
 	   	$(function () {
 			$('#start').datetimepicker({
-				pickTime: true
+				pickTime: false
 			});
 			$('#stop').datetimepicker({
-				pickTime: true
+				pickTime: false
 			});
 		});
     });
