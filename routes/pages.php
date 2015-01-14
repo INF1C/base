@@ -64,7 +64,7 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 
 // Rapporten
 	// Tickets
-	$router->map("GET", "/rapporten/tickets/", function () {
+	$router->map("POST|GET", "/rapporten/tickets/", function () {
 		openView("rapporten/tickets", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> alle tickets");
         
