@@ -4,7 +4,7 @@ $Gebruikersnaam = $_SESSION['gebruikersnaam'];
 $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf 
                                  FROM BEDRIJFSMEDEWERKER
                                  WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
-var_dump($idBedrijf);
+
 $result = mysql_result($idBedrijf, 0);
 var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
