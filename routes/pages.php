@@ -100,7 +100,7 @@ $router->map("GET", "/", function () {
 		openView("rapporten/bedrijf", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> Bedrijf");
 	// Bedrijfsmedewerker
-	$router->map("GET", "/rapporten/bedrijfsmedewerer/", function () {
+	$router->map("GET", "/rapporten/bedrijfsmedewerker/", function () {
 		openView("rapporten/bedrijfsmedewerker", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> Bedrijfsmedewerker");
 
