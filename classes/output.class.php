@@ -197,7 +197,7 @@ class output {
             $idbedrijfsmedewerker = reset(reset($this->db->select(array("idBedrijfsMedewerker"), array("idStatus" => $statusid))));
             $this->db->db_table = "BEDRIJFSMEDEWERKER";
             //ophalen achternaam van de bedrijfsmedewerker
-            $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset(reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker))));
+            $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset(reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker)))));
             
             $idmedewerker = reset(reset($this->db->select(array("idMedewerker"), array("idStatus" => $statusid))));
             $this->db->db_table = "MEDEWERKER";
