@@ -20,7 +20,7 @@ foreach ($opentickets as $key => $value) {
    echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Nieuwe status</a></td>";
    echo "</tr>";
 }
-
+echo "</table>";
 	?>
 </div>
 
