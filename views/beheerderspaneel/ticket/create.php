@@ -1,5 +1,5 @@
 <div class="col-md-6 showback">
-	<form method="POST" action="/process/create/ticket">
+	<form method="POST" action="/process/create/ticket/beheerderspaneel">
 		<div class="form-group">
 			<label for="createTicketType">IncidentType:</label>
 			<div class="radio">

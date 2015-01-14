@@ -29,9 +29,15 @@ $router->map("POST|GET", "/process/create/bedrijfsmedewerker", function () {
     require DIR_TEMPLATE . 'footer.php';
 }, "Create -> Bedrijfsmedewerker");
 
-$router->map("POST|GET", "/process/create/ticket", function () {
+$router->map("POST|GET", "/process/create/ticket/beheerderspaneel", function () {
     require DIR_TEMPLATE . 'header.php';
-    require DIR_PROCES . "create_ticket.php";
+    require DIR_PROCES . "create_ticket_beheerder.php";
+    require DIR_TEMPLATE . 'footer.php';
+}, "Create -> Ticket");
+
+$router->map("POST|GET", "/process/create/ticket/klantpaneel", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require DIR_PROCES . "create_ticket_klant.php";
     require DIR_TEMPLATE . 'footer.php';
 }, "Create -> Ticket");
 
