@@ -8,6 +8,8 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
 	$data = array_fill_keys(array('idTicket', 'IncidentType', 'Probleemstelling', 'Oplossing'), '');
 }
 ?>
+<div class="form-panel">
+<h4 class="mb"><i class="fa fa-angle-right"></i>Ticket indienen/wijzigen</h4>
 <form method="POST" action="/process/edit/ticket">
     	<div class="form-group">
     		<label for="editTicketIncidentType">IncidentType:</label>
@@ -62,3 +64,4 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
 	    	<input type="submit" value="Gereed" name="submit">
 	    </div>
 </form>
+</div>
