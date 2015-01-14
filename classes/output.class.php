@@ -206,6 +206,7 @@ class output {
             //ophalen achternaam van de medewerker
             $return[$statusid]['Medewerker'] = $this->db->select(array("Achternaam"), array("idMedewerker" => $idmedewerker));
         }
+        return $return;
     }
 
     /*
