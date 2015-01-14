@@ -189,7 +189,7 @@ class output {
         $allestatusid = $this->db->select(array("idStatus"), array("idTicket" => $idticket));
         $return = array();
         foreach ($allestatusid as $statusid) {
-            $return[$statusid]['DatumTijd'] = reset(reset($this->db->select(array("DatumTijd"), array("idStatus" => $statusid)));
+            $return[$statusid]['DatumTijd'] = reset(reset($this->db->select(array("DatumTijd"), array("idStatus" => $statusid))));
             $return[$statusid]['Status'] = reset(reset($this->db->select(array("Status"), array("idStatus" => $statusid))));
             $return[$statusid]['SoortContact'] = reset(reset($this->db->select(array("SoortContact"), array("idStatus" => $statusid))));
             $return[$statusid]['Memo'] = reset(reset($this->db->select(array("Memo"), array("idStatus" => $statusid))));
