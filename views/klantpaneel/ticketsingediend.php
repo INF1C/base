@@ -1,4 +1,5 @@
 <?php
+$db = new db;
 $Gebruikersnaam = $_SESSION['gebruikersnaam'];
 $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf 
                                  FROM BEDRIJFSMEDEWERKER
