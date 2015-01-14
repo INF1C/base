@@ -9,7 +9,7 @@ foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossin
                                  FROM STATUS_WIJZIGING, TICKET, BEDRIJF
                                  WHERE TICKET.idTicket = STATUS_WIJZIGING.idTicket
                                  AND STATUS_WIJZIGING.idBedrijf = BEDRIJF.idBedrijf
-                                 AND BEDRIJF.idBedrijf = '%" . $result . "%'") as $key => $value)
+                                 AND BEDRIJF.idBedrijf = '%" . $idBedrijf . "%'") as $key => $value)
 {
     echo "<tr>";
     foreach ($value as $tickets)
