@@ -65,10 +65,10 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                <h4 class="modal-title">Forgot Password ?</h4>
+                                                <h4 class="modal-title">Forgot Password?</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Bel naar [telefoonnummer] om uw wachtwoord te resetten!</p>
+                                                <p>Bel naar [telefoonnummer] om uw wachtwoord te resetten</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>

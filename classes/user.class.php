@@ -30,7 +30,7 @@ class user {
 		// Check if the username allready exists
 		$check = $this->db->select(array("Gebruikersnaam"), array("Gebruikersnaam" => $data["Gebruikersnaam"]));
 		if (count($check) >= 1) {
-			trigger_error("Gebruikersnaam bestaat al!");
+			trigger_error("Gebruikersnaam bestaat al");
 			return false;
 		} else {
 			// Insert the data into the database
@@ -38,7 +38,7 @@ class user {
 			if ($check === 1) {
 				return TRUE;
 			} else {
-				trigger_error("Error bij het aanmaken van uw account!");
+				trigger_error("Error bij het aanmaken van uw account");
 			}
 		}
 	}
@@ -49,12 +49,12 @@ class user {
 		$wachtwoord = filter_input(INPUT_POST, "Wachtwoord");
 		// Check if data exists
 		if ($gebruikersnaam == '' OR $wachtwoord == '')
-			return "Niet genoeg gegevens ingevoerd!";
+			return "Niet genoeg gegevens ingevoerd";
 	
 		// Check if user exists
 		$result = $this->db->select(array("Wachtwoord", "Autorisatie"), array("Gebruikersnaam" => $gebruikersnaam));
 		if (count($result) === 0)
-			return "Gebruikersnaam niet gevonden!";
+			return "Gebruikersnaam niet gevonden";
 
 		// Store hash and check if password is correct
 		$hash = $result[0]["Wachtwoord"];
@@ -65,16 +65,16 @@ class user {
 			$_SESSION['gebruikersnaam'] = $gebruikersnaam;
 			return TRUE;
 		} 
-		return "Verkeerd wachtwoord!";
+		return "Verkeerd wachtwoord";
 	}
 
 	public function changePassword($gebruikersnaam) {
 		$wachtwoord = filter_input(INPUT_POST, "Wachtwoord");
 		if ($gebruikersnaam == '' OR $wachtwoord == '')
-			return "Niet genoeg gegevens ingevoerd!";
+			return "Niet genoeg gegevens ingevoerd";
 		$check = $this->db->select(array("Gebruikersnaam"), array('Gebruikersnaam' => $gebruikersnaam));
 		if(count($check) === 0)
-			return "Gebruikersnaam niet gevonden!";
+			return "Gebruikersnaam niet gevonden";
 
 		$wachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
 		$check = $this->db->update(array('Wachtwoord' => $wachtwoord), array('Gebruikersnaam' => $gebruikersnaam));
