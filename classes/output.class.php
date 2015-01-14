@@ -63,7 +63,7 @@ class output {
 
     public function openTickets() {
 
-        $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status != 'opgelost' OR Status != 'afgemeld' GROUP BY idTicket";
+        $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status <> 'opgelost' OR Status <> 'afgemeld' GROUP BY idTicket";
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
         foreach ($alleOpentickets as $openticketArray) {
