@@ -70,7 +70,7 @@
                                 <span>Instellingen</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">Systeeminstellingen*</a></li>
+                                <li><a  href="#"><del>Systeeminstellingen*</del></a></li>
                                 <li><a  href="/autorisatie/">Autorisatie</a></li>
                             </ul>
                         </li>
@@ -81,7 +81,7 @@
                                 <span>Beheerderspaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">Contactpersoon*</a></li>
+                                <li><a  href="#"><del>Contactpersoon*</del></a></li>
                                 <li><a  href="/medewerker/">Medewerker</a></li>
                                 <li><a  href="#">Bedrijfsmedewerker*</a></li>
                                 <li><a href="/ticket/">Ticket</a></li>
@@ -98,8 +98,8 @@
                             <ul class="sub">
                                 <li><a  href="/rapporten/tickets/">Tickets</a></li>
                                 <li><a  href="/rapporten/tickets/open">Niet Behandelde Incidenten</a></li>
-                                <li><a  href="#">Alle Incidenten*</a></li>
-                                <li><a  href="#">Alle Incidenten in een bepaalde periode*</a></li>
+                                <li><a  href="#"><del>Alle Incidenten*</del></a></li>
+                                <li><a  href="#"><del>Alle Incidenten in een bepaalde periode*</del></a></li>
                                 <li><a  href="/rapporten/tickets/oplostijd/">Oplostijd van incidenten</a></li>
                                 <li><a  href="/rapporten/ticket/">Enkele Ticket</a></li>
                                 <li><a  href="/rapporten/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
@@ -117,14 +117,15 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="#">FAQ Bekijken*</a></li>
-                                <li><a  href="#">Ticket indienen/wijzigen*</a></li>
+                                <li><a  href="#">Ticket indienen*</a></li>
                                 <li><a  href="#">Ingediende tickets bekijken*</a></li>
-                                <li><a  href="#">Wachtwoord Wijzigen*</a></li>
+                                <li><a  href="/wijzigen/wachtwoord/">Wachtwoord Wijzigen</a></li>
                                 <li><a  href="#">Contactgegevens Wijzigen*</a></li>
                             </ul>
                         </li>
                         <?php
                         }
+						if($_SESSION['autorisatie'] === "Medewerker" OR $_SESSION['autorisatie'] === "Teamleider" OR $_SESSION['autorisatie'] === "Admin") {
                         ?>
                         <li class="sub-menu">
                             <a href="javascript:;" >
@@ -137,6 +138,9 @@
                                 <li><a  href="#">Status ticket*</a></li>
                             </ul>
                         </li>
+                        <?php
+                    	}
+                    	?>
                     </ul>
                     <!-- sidebar menu end-->
                 </div>
