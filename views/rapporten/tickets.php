@@ -15,7 +15,7 @@ if(isset($_POST['start']) && isset($_POST['stop'])){
 	<div class="form-panel">
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Selecteer periode</h4>
 		<form class="form-inline" method="POST" action="" role="form">
-			<!-- <div class="form-group">
+			<div class="form-group">
 				<label>Start:</label>
 	    		<div class="input-append date form_datetime" id="start" data-date-format="yyyy-mm-dd hh:mm:ss">
 	    			<input class="form-control" name="start" type="text"  value="<?= $start ?>" readonly placeholder="YYYY-MM-DD HH:MM:SS">
@@ -28,14 +28,6 @@ if(isset($_POST['start']) && isset($_POST['stop'])){
 	    			<input class="form-control" name="stop" type="text" value="<?= $stop ?>" readonly placeholder="YYYY-MM-DD HH:MM:SS">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
-    		</div> -->
-    		<div class="input-append date start">
-    			<input type="text" value="" readonly>
-    			<span class="add-on"><i class="icon-th"></i></span>
-    		</div>
-    		<div class="input-append date stop">
-    			<input type="text" value="" readonly>
-    			<span class="add-on"><i class="icon-th"></i></span>
     		</div>
     		<br/><br/>
 			<button type="submit" class="btn btn-theme">Zoek</button>
