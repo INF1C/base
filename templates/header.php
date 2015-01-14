@@ -68,7 +68,7 @@
                                 <span>Instellingen</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">Systeeminstellingen</a></li>
+                                <li><a  href="#">Systeeminstellingen*</a></li>
                                 <li><a  href="/autorisatie/">Autorisatie</a></li>
                             </ul>
                         </li>
@@ -79,12 +79,12 @@
                                 <span>Gebruikerspaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">Contactpersoon</a></li>
+                                <li><a  href="#">Contactpersoon*</a></li>
                                 <li><a  href="/medewerker/">Medewerker</a></li>
-                                <li><a  href="#">Bedrijfsmedewerker</a></li>
+                                <li><a  href="#">Bedrijfsmedewerker*</a></li>
                                 <li><a href="/ticket/">Ticket</a></li>
-                                <li><a  href="#">FAQ</a></li>
-                                <li><a  href="#">Wachtwoord</a></li>
+                                <li><a  href="#">FAQ*</a></li>
+                                <li><a  href="#">Wachtwoord*</a></li>
                             </ul>
                         </li>
 
@@ -94,14 +94,14 @@
                                 <span>Rapporten</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">Tickets</a></li>
-                                <li><a  href="#">Niet Behandelde Incidenten</a></li>
-                                <li><a  href="#">Alle Incidenten</a></li>
-                                <li><a  href="#">Alle Incidenten in een bepaalde periode</a></li>
-                                <li><a  href="#">Oplostijd van incidenten</a></li>
-                                <li><a  href="#">Enkele Ticket</a></li>
-                                <li><a  href="#">Bedrijfsmedewerker</a></li>
-                                <li><a  href="#">Een bedrijf</a></li>
+                                <li><a  href="/rapporten/tickets/">Tickets</a></li>
+                                <li><a  href="/rapporten/tickets/open">Niet Behandelde Incidenten</a></li>
+                                <li><a  href="#">Alle Incidenten*</a></li>
+                                <li><a  href="#">Alle Incidenten in een bepaalde periode*</a></li>
+                                <li><a  href="/rapporten/tickets/oplostijd/">Oplostijd van incidenten</a></li>
+                                <li><a  href="/rapporten/ticket/">Enkele Ticket</a></li>
+                                <li><a  href="/rapporten/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
+                                <li><a  href="/rapporten/bedrijf/">Een bedrijf</a></li>
                             </ul>
                         </li>
                         <?php
@@ -114,11 +114,11 @@
                                 <span>Klantpaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">FAQ Bekijken</a></li>
-                                <li><a  href="#">Ticket indienen/wijzigen</a></li>
-                                <li><a  href="#">Ingediende tickets bekijken</a></li>
-                                <li><a  href="#">Wachtwoord Wijzigen</a></li>
-                                <li><a  href="#">Contactgegevens Wijzigen</a></li>
+                                <li><a  href="#">FAQ Bekijken*</a></li>
+                                <li><a  href="#">Ticket indienen/wijzigen*</a></li>
+                                <li><a  href="#">Ingediende tickets bekijken*</a></li>
+                                <li><a  href="#">Wachtwoord Wijzigen*</a></li>
+                                <li><a  href="#">Contactgegevens Wijzigen*</a></li>
                             </ul>
                         </li>
                         <?php
@@ -131,8 +131,8 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="/wijzigen/wachtwoord/">Wachtwoord</a></li>
-                                <li><a  href="#">Contactgegevens</a></li>
-                                <li><a  href="#">Status ticket</a></li>
+                                <li><a  href="#">Contactgegevens*</a></li>
+                                <li><a  href="#">Status ticket*</a></li>
                             </ul>
                         </li>
                     </ul>

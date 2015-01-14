@@ -48,6 +48,31 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'), $id);
 		}, "Bewerk medewerker");
 
+// Rapporten
+	// Tickets
+	$router->map("GET", "/rapporten/tickets/", function () {
+		openView("rapporten/tickets", array('Medewerker', 'Teamleider'));
+	}, "Rapporten -> alle tickets");
+	// Enkele ticket
+	$router->map("GET", "/rapporten/ticket/", function () {
+		openView("rapporten/ticket", array('Medewerker', 'Teamleider'));
+	}, "Rapporten -> enkele ticket");
+		// Open Tickets
+		$router->map("GET", "/rapporten/tickets/open/", function () {
+			openView("rapporten/open_tickets", array('Medewerker', 'Teamleider'));
+		}, "Rapporten -> open tickets");
+		// Oplostijd Tickets
+		$router->map("GET", "/rapporten/tickets/oplostijd/", function () {
+			openView("rapporten/oplostijd_tickets", array('Medewerker', 'Teamleider'));
+		}, "Rapporten -> oplostijd tickets");
+	// Bedrijf
+	$router->map("GET", "/rapporten/bedrijf/", function () {
+		openView("rapporten/bedrijf", array('Medewerker', 'Teamleider'));
+	}, "Rapporten -> Bedrijf");
+	// Bedrijfsmedewerker
+	$router->map("GET", "/rapporten/bedrijfsmedewerer/", function () {
+		openView("rapporten/bedrijfsmedewerker", array('Medewerker', 'Teamleider'));
+	}, "Rapporten -> Bedrijfsmedewerker");
 
 // Wijzigen
 	// Wachtwoord
