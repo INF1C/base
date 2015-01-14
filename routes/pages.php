@@ -50,16 +50,16 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	$router->map("GET", "/bedrijfsmedewerker/", function () {
 		openView("beheerderspaneel/bedrijfsmedewerker", array('Teamleider', 'Medewerker'));
 	}, "Bedrijfsmedewerker (knoppen)");
-		$router->map("GET", "/medewerker/nieuw/", function () {
+		$router->map("GET", "/bedrijfsmedewerker/nieuw/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/nieuw", array('Teamleider', 'Medewerker'));
 		}, "Nieuwe Bedrijfsmedewerker");
-		$router->map("POST|GET", "/medewerker/zoekbedrijf/", function () {
+		$router->map("POST|GET", "/bedrijfsmedewerker/zoekbedrijf/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoekbedrijf", array('Teamleider', 'Medewerker'));
 		}, "Zoek Bedrijfsmedewerker");
-		$router->map("POST|GET", "/medewerker/zoek/", function () {
+		$router->map("POST|GET", "/bedrijfsmedewerker/zoek/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoek", array('Teamleider', 'Medewerker'));
 		}, "Zoek Bedrijfsmedewerker.");
-		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
+		$router->map("GET", "/bedrijfsmedewerker/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/bedrijfsmedewerker/edit", array('Teamleider', 'Medewerker'), $id);
 		}, "Bewerk Bedrijfsmedewerker");
 
