@@ -28,16 +28,14 @@
 
 <!--script voor de kalender, deze kan later verwijderd worden.-->
 <script type="application/javascript">
-    $(document).ready(function () {
-	   	$(function () {
-			$('#start').datetimepicker({
-				pickTime: false
-			});
-			$('#stop').datetimepicker({
-				pickTime: false
-			});
+	$(function () {
+		$('#start').datetimepicker({
+			pickTime: false
 		});
-    });
+		$('#stop').datetimepicker({
+			pickTime: false
+		});
+	});
 </script>
 </section>
 </body>
