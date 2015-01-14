@@ -4,13 +4,13 @@
 		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
 	    		<div class="input-append date form_datetime" id="start" data-date-format="yyyy-mm-dd hh:mm:ss">
-	    			<input class="span2" name="start" type="text">
+	    			<input class="form-input" name="start" type="text">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
 			<div class="form-group">
 	    		<div class="input-append date form_datetime" id="stop" data-date-format="yyyy-mm-dd hh:mm:ss">
-	    			<input class="span2" name="stop" type="text">
+	    			<input class="form-input" name="stop" type="text">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
