@@ -15,8 +15,9 @@
         <!--External CSS-->
         <link href="/base/templates/subCss/font-awesome/font-awesome.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="/base/templates/subCss/jquery.gritter.css" />
-        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/style.css">
-        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/bootstrap-datetimepicker.min.css">   
+        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/style.css" />
+        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/style-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="/base/templates/subCss/bootstrap-datetimepicker.min.css" />   
 
         <!--Favicon-->
         <link rel="icon" href="/favicon" type="image/png">
