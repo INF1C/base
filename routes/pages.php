@@ -51,6 +51,6 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 
 // Wijzigen
 	// Wachtwoord
-	$router->map("POST|GET", "/wijzigen/wachtwoord", function () {
+	$router->map("POST|GET", "/wijzigen/wachtwoord/", function () {
 		openView("wijzigen/wachtwoord", array());
 	}, "Wijzigen van wachtwoord");
