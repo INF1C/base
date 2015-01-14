@@ -189,6 +189,7 @@ class output {
         $allestatusid = $this->db->select(array("idStatus"), array("idTicket" => $idticket));
         $return = array();
         foreach ($allestatusid as $statusarray) {
+            $this->db->db_table = "STATUS_WIJZIGING";
             $statusid = $statusarray['idStatus'];
             $return[$statusid]['DatumTijd'] = reset(reset($this->db->select(array("DatumTijd"), array("idStatus" => $statusid))));
             $return[$statusid]['Status'] = reset(reset($this->db->select(array("Status"), array("idStatus" => $statusid))));
