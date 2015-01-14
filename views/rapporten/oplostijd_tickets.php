@@ -9,7 +9,7 @@ $oplostijd = $output->oplostijdTickets();
    echo "<th> Oplossing </th>";
    echo "<th> Geopen op </th>";
    echo "<th> Gesloten op </th>";
-   echo "<th> Oplostijd </th>";
+   echo "<th> Oplostijd (dagen) </th>";
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($oplostijd as $key => $value) {
    echo "<tr>";

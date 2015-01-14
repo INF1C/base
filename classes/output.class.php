@@ -146,9 +146,13 @@ class output {
             $return[$ticket]['GeslotenOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1")));
 
             // Hieronder is een test, dit is niet definitief (ik twijfel of het zal werken namelijk)
-            $return[$ticket]['OplosTijd'] = ($return[$ticket]['GeslotenOp'] - $return[$ticket]['GeopendOp']);
-            // End of test
+            $open = new DateTime($return[$ticket]['GeopendOp']);
+            $sluit = new DateTime($return[$ticket]['GeslotenOp']);
+            $verschil = $sluit->diff($open);
+            $return[$ticket]['OplosTijd'] = $verschil['days'];
+            
 
+            // End of test
             $idBedrijf = reset(reset($this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")));
 
             $this->db->db_table = "BEDRIJF";
