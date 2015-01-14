@@ -96,8 +96,8 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="/rapporten/tickets/">Tickets</a></li>
-                                <li><a  href="/rapporten/tickets/open/">Niet Behandelde Incidenten</a></li>
-                                <li><a  href="/rapporten/tickets/oplostijd/">Oplostijd van incidenten</a></li>
+                                <li><a  href="/rapporten/tickets/open/">Niet behandelde & open tickets</a></li>
+                                <li><a  href="/rapporten/tickets/oplostijd/">Oplostijd van tickets</a></li>
                                 <li><a  href="/rapporten/ticket/">Enkele Ticket</a></li>
                                 <li><a  href="/rapporten/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
                                 <li><a  href="/rapporten/bedrijf/">Een bedrijf</a></li>
