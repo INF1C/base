@@ -7,7 +7,7 @@ if(isset($_POST['idTicket'])){
 	$laatsteStatus = array_pop($status);
 
 	?>
-	<div class="col-lg-8 showback">
+	<div class="col-lg-7 showback">
 		<table class="table">
 			<tr>
 				<td>Ticket ID:</td>
@@ -31,9 +31,9 @@ if(isset($_POST['idTicket'])){
 			</tr>
 		</table>
 	</div>
-	<div class="col-lg-4 showback">
+	<div class="col-lg-3 showback">
 		<img class="img-responsive img-circle" src="https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png" alt="Anonymous">
-		<p>Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
+		<p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
 	</div>
 
 	<?php
