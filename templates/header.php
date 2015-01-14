@@ -85,7 +85,7 @@
                                 <li><a  href="/beheerderspaneel/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
                                 <li><a  href="/beheerderspaneel/ticket/">Maak nieuwe ticket</a></li>
                                 <li><a  href="/beheerderspaneel/faq/">FAQ</a></li>
-                                <li><a  href="#">Wachtwoord*</a></li>
+                                <li><a  href="/wijzigen/wachtwoord/">Wachtwoord</a></li>
                             </ul>
                         </li>
 
