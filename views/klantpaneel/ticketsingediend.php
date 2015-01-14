@@ -16,7 +16,7 @@ $tickets = $output->tickets($idBedrijf);
                         <th>Bedrijfsnaam</th>
                     </tr>
     <?php
-foreach($tickets) as $key => $value)
+foreach($tickets as $key => $value)
 {
     echo "<tr>";
     foreach($value as $ticket)
