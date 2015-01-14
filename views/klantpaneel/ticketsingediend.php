@@ -5,7 +5,7 @@ $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf
                                  FROM BEDRIJFSMEDEWERKER
                                  WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
 var_dump($idBedrijf);
-foreach($idBedrijf as $result)
+foreach($idBedrijf as $key => $result)
 {
     
 }
