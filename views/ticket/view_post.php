@@ -4,7 +4,8 @@ if(isset($_POST['idTicket'])){
 	$output = new output;
 	$ticket = $output->ticket($idTicket);
 	$status = $output->Statuswijziging($idTicket);
-	$laatsteStatus = $status[count(array_keys($status))-1]
+	$laatsteStatus = end($status);
+	reset($status);
 
 	?>
 	<div class="col-lg-8 showback">
