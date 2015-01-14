@@ -46,7 +46,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 						echo "</td>";
 					}
 				}
-				echo "<td><a href='/medewerker/edit/" . $id . "'>Klik hier om te bewerken</a></td>";
+				echo "<td><a href='/beheerderspaneel/medewerker/edit/" . $id . "'>Klik hier om te bewerken</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";

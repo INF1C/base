@@ -21,39 +21,36 @@ $router->map("GET", "/", function () {
 // beheerderspaneel
 
 	// Ticket
-	$router->map("POST|GET", "/ticket/", function () {
+	$router->map("POST|GET", "/beheerderspaneel/ticket/", function () {
 		openView("beheerderspaneel/ticket", array('Medewerker', 'Teamleider'));
 	}, "Ticket (knoppen)");
-		$router->map("POST|GET", "/ticket/nieuw/", function () {
-			openView("beheerderspaneel/ticket/nieuw", array('Medewerker', 'Teamleider'));
-		}, "Nieuwe ticket");
 	// Medewerker
-	$router->map("GET", "/medewerker/", function () {
+	$router->map("GET", "/beheerderspaneel/medewerker/", function () {
 		openView("beheerderspaneel/medewerker", array('Teamleider'));
 	}, "Medewerker (knoppen)");
-		$router->map("GET", "/medewerker/nieuw/", function () {
+		$router->map("GET", "/beheerderspaneel/medewerker/nieuw/", function () {
 			openView("beheerderspaneel/medewerker/nieuw", array('Teamleider'));
 		}, "Nieuwe medewerker");
-		$router->map("POST|GET", "/medewerker/zoek/", function () {
+		$router->map("POST|GET", "/beheerderspaneel/medewerker/zoek/", function () {
 			openView("beheerderspaneel/medewerker/zoek", array('Teamleider'));
 		}, "Zoek medewerker");
-		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
+		$router->map("GET", "/beheerderspaneel/medewerker/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/medewerker/edit", array('Teamleider'), $id);
 		}, "Bewerk medewerker");
 	// Bedrijfsmedewerker
-	$router->map("GET", "/bedrijfsmedewerker/", function () {
+	$router->map("GET", "/beheerderspaneel/bedrijfsmedewerker/", function () {
 		openView("beheerderspaneel/bedrijfsmedewerker", array('Teamleider', 'Medewerker'));
 	}, "Bedrijfsmedewerker (knoppen)");
-		$router->map("GET", "/bedrijfsmedewerker/nieuw/[i:id]", function ($id) {
+		$router->map("GET", "/beheerderspaneel/bedrijfsmedewerker/nieuw/[i:id]", function ($id) {
 			openView("beheerderspaneel/bedrijfsmedewerker/nieuw", array('Teamleider', 'Medewerker'), $id);
 		}, "Nieuwe Bedrijfsmedewerker");
-		$router->map("POST|GET", "/bedrijfsmedewerker/zoekbedrijf/", function () {
+		$router->map("POST|GET", "/beheerderspaneel/bedrijfsmedewerker/zoekbedrijf/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoekbedrijf", array('Teamleider', 'Medewerker'));
 		}, "Zoek Bedrijfsmedewerker");
-		$router->map("POST|GET", "/bedrijfsmedewerker/zoek/", function () {
+		$router->map("POST|GET", "/beheerderspaneel/bedrijfsmedewerker/zoek/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoek", array('Teamleider', 'Medewerker'));
 		}, "Zoek Bedrijfsmedewerker.");
-		$router->map("GET", "/bedrijfsmedewerker/edit/[i:id]", function ($id) {
+		$router->map("GET", "/beheerderspaneel/bedrijfsmedewerker/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/bedrijfsmedewerker/edit", array('Teamleider', 'Medewerker'), $id);
 		}, "Bewerk Bedrijfsmedewerker");
 
@@ -82,11 +79,10 @@ $router->map("GET", "/", function () {
 	$router->map("POST|GET", "/rapporten/tickets/", function () {
 		openView("rapporten/tickets", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> alle tickets");
-        
-	// Enkele ticket
-	$router->map("GET", "/rapporten/ticket/", function () {
-		openView("rapporten/ticket", array('Medewerker', 'Teamleider'));
-	}, "Rapporten -> enkele ticket");
+		// Enkele ticket
+		$router->map("GET", "/rapporten/ticket/", function () {
+			openView("rapporten/ticket", array('Medewerker', 'Teamleider'));
+		}, "Rapporten -> enkele ticket");
 		// Open Tickets
 		$router->map("GET", "/rapporten/tickets/open/", function () {
 			openView("rapporten/open_tickets", array('Medewerker', 'Teamleider'));

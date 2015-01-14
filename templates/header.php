@@ -81,9 +81,9 @@
                                 <span>Beheerderspaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="/medewerker/">Medewerker</a></li>
-                                <li><a  href="/bedrijfsmedewerker/">Bedrijfsmedewerker*</a></li>
-                                <li><a  href="/ticket/">Ticket</a></li>
+                                <li><a  href="/beheerderspaneel/medewerker/">Medewerker</a></li>
+                                <li><a  href="/beheerderspaneel/bedrijfsmedewerker/">Bedrijfsmedewerker*</a></li>
+                                <li><a  href="/beheerderspaneel/ticket/">Ticket</a></li>
                                 <li><a  href="#">FAQ*</a></li>
                                 <li><a  href="#">Wachtwoord*</a></li>
                             </ul>
