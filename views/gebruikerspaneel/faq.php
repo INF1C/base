@@ -1,6 +1,6 @@
 <?php
 $output = new output;
-$faqinfo = $output->FaqOphalen();
+$faqinfo = $output->FAQ();
                       echo "<table style='width:100%' border='1'>";
 foreach ($faqinfo as $key => $value) {
     echo "<tr>";
