@@ -43,7 +43,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 					} elseif($key == "idBedrijf") {
 						echo "<td>";
 						$db->db_table = "BEDRIJF";
-						echo $db->link->select(array('Bedrijfsnaam'), array('idBedrijf' => $subresult))[0]['Bedrijfsnaam'];
+						echo $db->select(array('Bedrijfsnaam'), array('idBedrijf' => $subresult))[0]['Bedrijfsnaam'];
 					} else {
 						echo "<td>";
 						echo $subresult;
