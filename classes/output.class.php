@@ -200,7 +200,7 @@ class output {
 
             $this->db->db_table = "BEDRIJFSMEDEWERKER";
             //ophalen achternaam van de bedrijfsmedewerker
-            $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker)));
+            $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker))));
             
             $this->db->db_table = "MEDEWERKER";
             //ophalen achternaam van de medewerker
