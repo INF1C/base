@@ -4,7 +4,7 @@ $create = new create;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	var_dump($create->ticket());
-	echo "<br>";		<input type="hidden" name="idBedrijfsMedewerker" value="<?= $params ?>">
+	echo "<br>";
 	$_POST['Status'] = "Nieuw";
 	$ticketID = $create->db->link->lastInsertID();
 	$create->db->db_table = 'BEDRIJFSMEDEWERKER';
