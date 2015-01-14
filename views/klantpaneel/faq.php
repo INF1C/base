@@ -17,7 +17,7 @@ foreach ($faqinfo as $value) {
         if($key == "idFAQ"){
             $idFAQ = $subvalue;
         } elseif($key == "idMedewerker") {
-            continue;
+            $idMedewerker = $subvalue;
         } 
         echo "<td>" . $subvalue . "</td>";
     }
