@@ -1,3 +1,4 @@
+<div class="col-lg-12">
 <?php
 $output = new output;
 $faqinfo = $output->FAQ();
@@ -22,3 +23,5 @@ foreach ($faqinfo as $key => $value) {
     echo "</tr>";
 }
 ?>
+</div>
+</div>

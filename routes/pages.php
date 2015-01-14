@@ -60,8 +60,8 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 		openView("klantpaneel/ticket", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Klantpaneel -> ticket");
 		//Ingediende tickets bekijken
-	 $router->map("GET", "/klantpaneel/ticketbekijken/", function () {
-		openView("klantpaneel/ticketbekijken", array('Medewerker', 'Bedrijfsmedewerker'));
+	 $router->map("GET", "/klantpaneel/ticketingediend/", function () {
+		openView("klantpaneel/ticketsingediend", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Klantpaneel -> ticketbekijken");
 			//Wachtwoord wijzigen
 	 $router->map("GET", "/klantpaneel/wachtwoord/", function () {
