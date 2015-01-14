@@ -81,6 +81,10 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	 $router->map("GET", "/klantpaneel/wachtwoord/", function () {
 		openView("klantpaneel/wachtwoord", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Klantpaneel -> wachtwoord");
+        //Contact gegevens aanpassen
+	 $router->map("GET", "/klantpaneel/contactgegevensedit/", function () {
+		openView("klantpaneel/contactgegevensedit", array('Medewerker', 'Bedrijfsmedewerker'));
+	}, "Klantpaneel -> contactgegevensedit");
 	
 
 // Rapporten
