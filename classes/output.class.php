@@ -202,10 +202,13 @@ class output {
             $this->db->db_table = "BEDRIJFSMEDEWERKER";
             //ophalen achternaam van de bedrijfsmedewerker
             $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker))));
-            
-            $this->db->db_table = "MEDEWERKER";
-            //ophalen achternaam van de medewerker
-            $return[$statusid]['Medewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idMedewerker" => $idmedewerker))));
+            if($return[$statusid]['Status'] !== 'Nieuw') {
+                $this->db->db_table = "MEDEWERKER";
+                //ophalen achternaam van de medewerker
+                $return[$statusid]['Medewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idMedewerker" => $idmedewerker))));
+            } else {
+                $return[$statusid]['Medewerker'] = '-';
+            }
         }
         return $return;
     }
