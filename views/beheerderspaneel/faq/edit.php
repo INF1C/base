@@ -8,6 +8,7 @@ if($idFAQ !== NULL) {
 	$data = array_fill_keys(array('idFAQ', 'Vraag', 'Beschrijving', 'Oplossing'), '');
 }
 ?>
+<div class="col-lg-10 showback">
 <form method="POST" action="/process/edit/faq">
     <div class="form-group">
 	<label for="editFaqVraag">Soort Contact:</label>
@@ -25,4 +26,4 @@ if($idFAQ !== NULL) {
 </div> 
 <input type="hidden" name="idFAQ" value="<?= $idFAQ ?>">
   <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
-</form>
+</form></div>
