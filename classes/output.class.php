@@ -138,22 +138,22 @@ class output {
             $this->db_table = "TICKET";
             $ticket = $ticketArray['idTicket'];
 
-            $return[$ticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $ticket));
-            $return[$ticket]['ProbleemStelling'] = $this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket));
-            $return[$ticket]['Oplossing'] = $this->db->select(array("Oplossing"), array("idTicket" => $ticket));
+            $return[$ticket]['IncidentType'] = reset(reset($this->db->select(array("IncidentType"), array("idTicket" => $ticket))));
+            $return[$ticket]['ProbleemStelling'] = reset(reset($this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket))));
+            $return[$ticket]['Oplossing'] = reset(reset($this->db->select(array("Oplossing"), array("idTicket" => $ticket))));
 
             $this->db_table = "STATUS_WIJZIGING";
-            $return[$ticket]['GeopendOp'] = $this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
-            $return[$ticket]['GeslotenOp'] = $this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1");
+            $return[$ticket]['GeopendOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")));
+            $return[$ticket]['GeslotenOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1")));
 
             // Hieronder is een test, dit is niet definitief (ik twijfel of het zal werken namelijk)
             $return[$ticket]['OplosTijd'] = ($return[$ticket]['GeopenOp'] - $return['GeslotenOp']);
             // End of test
 
-            $idBedrijf = $this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1");
+            $idBedrijf = reset(reset($this->db->select(NULL, NULL, "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")));
 
             $this->db->db_table = "BEDRIJF";
-            $return[$ticket]["Bedrijf"] = $this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf));
+            $return[$ticket]["Bedrijf"] = reset(reset($this->db->select(array("BedrijfsNaam"), array("idBedrijf" => $idBedrijf))));
         }
 
         return $return;
