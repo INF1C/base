@@ -135,14 +135,13 @@ class output {
         $return = array();
 
         foreach ($solvetimetickets as $ticketArray) {
-            $this->db_table = "TICKET";
+            $this->db->db_table = "TICKET";
             $ticket = $ticketArray['idTicket'];
 
             $return[$ticket]['IncidentType'] = reset(reset($this->db->select(array("IncidentType"), array("idTicket" => $ticket))));
             $return[$ticket]['ProbleemStelling'] = reset(reset($this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket))));
             $return[$ticket]['Oplossing'] = reset(reset($this->db->select(array("Oplossing"), array("idTicket" => $ticket))));
 
-            $this->db_table = "STATUS_WIJZIGING";
             $return[$ticket]['GeopendOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus ASC LIMIT 1")));
             $return[$ticket]['GeslotenOp'] = reset(reset($this->db->select(NULL, NULL, "SELECT DatumTijd FROM STATUS_WIJZIGING WHERE idTicket = " . $ticket . " ORDER BY idStatus DESC LIMIT 1")));
 
