@@ -22,14 +22,21 @@
 <script class="include" type="text/javascript" src="/base/templates/subCss/js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="/base/templates/subCss/js/jquery.scrollTo.min.js"></script>
 <script src="/base/templates/subCss/js/jquery.nicescroll.js" type="text/javascript"></script>
-
+<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
 <!--common script for all pages-->
 <script src="/base/templates/subCss/js/common-scripts.js"></script>	
 
 <!--script voor de kalender, deze kan later verwijderd worden.-->
 <script type="application/javascript">
     $(document).ready(function () {
-
+	   	$(function () {
+			$('#start').datetimepicker({
+				pickTime: true
+			});
+			$('#stop').datetimepicker({
+				pickTime: true
+			});
+		});
     });
 </script>
 </section>

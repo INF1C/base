@@ -20,7 +20,7 @@
 			</div>
 			<button type="submit" class="btn btn-theme">Zoek</button>
 		</form>
-		<script type="text/javascript">
+	<!--	<script type="text/javascript">
 			$(function () {
 				$('#start').datetimepicker({
 					pickTime: true
@@ -29,7 +29,7 @@
 					pickTime: true
 				});
 			});
-		</script>
+		</script> -->
 	</div><!-- /form-panel -->
 	<?php
 
