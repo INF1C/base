@@ -49,19 +49,19 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	// Bedrijfsmedewerker
 	$router->map("GET", "/bedrijfsmedewerker/", function () {
 		openView("beheerderspaneel/bedrijfsmedewerker", array('Teamleider', 'Medewerker'));
-	}, "Medewerker (knoppen)");
+	}, "Bedrijfsmedewerker (knoppen)");
 		$router->map("GET", "/medewerker/nieuw/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/nieuw", array('Teamleider', 'Medewerker'));
-		}, "Nieuwe medewerker");
+		}, "Nieuwe Bedrijfsmedewerker");
 		$router->map("POST|GET", "/medewerker/zoekbedrijf/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoekbedrijf", array('Teamleider', 'Medewerker'));
-		}, "Zoek medewerker");
+		}, "Zoek Bedrijfsmedewerker");
 		$router->map("POST|GET", "/medewerker/zoek/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoek", array('Teamleider', 'Medewerker'));
-		}, "Zoek medewerker");
+		}, "Zoek Bedrijfsmedewerker.");
 		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/bedrijfsmedewerker/edit", array('Teamleider', 'Medewerker'), $id);
-		}, "Bewerk medewerker");
+		}, "Bewerk Bedrijfsmedewerker");
 
 	   
 // Klantpaneel
