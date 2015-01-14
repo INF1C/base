@@ -130,7 +130,7 @@
                                 <span>Wijzigen</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">Wachtwoord</a></li>
+                                <li><a  href="/user/wachtwoord/">Wachtwoord</a></li>
                                 <li><a  href="#">Contactgegevens</a></li>
                                 <li><a  href="#">Status ticket</a></li>
                             </ul>

@@ -47,3 +47,10 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
 			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'), $id);
 		}, "Bewerk medewerker");
+
+
+// Wijzigen
+	// Wachtwoord
+	$router->map("POST|GET", "/wijzigen/wachtwoord", function () {
+		openView("wijzigen/wachtwoord", array());
+	}, "Wijzigen van wachtwoord");

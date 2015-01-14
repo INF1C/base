@@ -68,6 +68,21 @@ class user {
 		return "Verkeerd wachtwoord!";
 	}
 
+	public function changePassword($gebruikersnaam) {
+		$wachtwoord = filter_input(INPUT_POST, "Wachtwoord");
+		if ($gebruikersnaam == '' OR $wachtwoord == '')
+			return "Niet genoeg gegevens ingevoerd!";
+		$check = $this->db->select(array("Gebruikersnaam"), array('Gebruikersnaam' => $gebruikersnaam));
+		if(count($check) === 0)
+			return "Gebruikersnaam niet gevonden!";
+
+		$wachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
+		$check = $this->db->update(array('Wachtwoord' => $wachtwoord), array('Gebruikersnaam' => $gebruikersnaam));
+		if($check === 1)
+			return TRUE;
+		return FALSE;
+	}
+
 	public function isLoggedIn() {
 		if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === TRUE) {
 			return TRUE;

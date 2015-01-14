@@ -90,3 +90,9 @@ $router->map("POST|GET", "/process/edit/autorisatie", function () {
     require DIR_PROCES . "edit_autorisatie.php";
     require DIR_TEMPLATE . 'footer.php';
 },  "Edit -> Autorisatie");
+
+$router->map("POST|GET", "/process/edit/wachtwoord", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require DIR_PROCES . "edit_wachtwoord.php";
+    require DIR_TEMPLATE . 'footer.php';
+},  "Edit -> Wachtwoord");
