@@ -3,7 +3,7 @@
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Selecteer periode</h4>
 		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
-				<div class='input-group date' id='start'>
+				<div class='input-group input-append' id='start'>
 					<input type='text' name="start" class="form-control" data-date-format="YYYY-MM-DD HH:II:SS"/>
 					<span class="input-group-addon">
 						<span class="glyphicon glyphicon-calendar"></span>
@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<div class='input-group date' id='stop'>
+				<div class='input-group input-append' id='stop'>
 					<input type='text' name="stop" class="form-control" data-date-format="YYYY-MM-DD HH:II:SS"/>
 					<span class="input-group-addon">
 						<span class="glyphicon glyphicon-calendar"></span>
