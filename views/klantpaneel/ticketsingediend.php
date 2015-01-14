@@ -5,11 +5,13 @@ $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf
                                  FROM BEDRIJFSMEDEWERKER
                                  WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
 var_dump($idBedrijf);
+$result = mysql_result($idBedrijf, 0);
+var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
                                  FROM STATUS_WIJZIGING, TICKET, BEDRIJF
                                  WHERE TICKET.idTicket = STATUS_WIJZIGING.idTicket
                                  AND STATUS_WIJZIGING.idBedrijf = BEDRIJF.idBedrijf
-                                 AND BEDRIJF.idBedrijf = '%" . $idBedrijf . "%'") as $key => $value)
+                                 AND BEDRIJF.idBedrijf = '%" . $result . "%'") as $key => $value)
 {
     echo "<tr>";
     foreach ($value as $tickets)
