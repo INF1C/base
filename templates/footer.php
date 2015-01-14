@@ -32,15 +32,15 @@
 		$('#start').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
-        	startView: '1',
-        	minView: '3',
+        	startView: '4',
+        	minView: '2',
         	pickerPosition: "bottom-right"
 		});
 		$('#stop').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
-        	startView: '1',
-        	minView: '3',
+        	startView: '4',
+        	minView: '2',
         	pickerPosition: "bottom-right"
 		});
 	});
