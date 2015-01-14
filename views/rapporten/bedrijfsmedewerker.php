@@ -37,7 +37,7 @@ $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 		</tr>
 	</table>
 </div>
-<div class="col-lg-5 showback">
+<div class="col-lg-5 showback pull-right">
 	<p class="text-center">Bedrijfsinformatie</p>
 	<table class="table">
 		<tr>
@@ -69,7 +69,7 @@ $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 				<th>Medewerker</th>
 			</tr>
 			<?php
-			foreach ($statuswijziging as $value) {
+			foreach ($statuswijziging as $key => $value) {
 				echo "<tr>";
 				foreach($value as $subvalue){
 					if($key == 'Bedrijfsmedewerker')
