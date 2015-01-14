@@ -130,7 +130,7 @@ class output {
      */
 
     public function oplostijdTickets() {
-        $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status = 'Nieuw' OR Status = 'afgemeld' GROUP BY idTicket";
+        $sql = "SELECT idTicket FROM STATUS_WIJZIGING WHERE Status IN ('Nieuw', 'afgemeld') GROUP BY idTicket";
         $solvetimetickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
 
