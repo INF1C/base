@@ -56,7 +56,10 @@ $router->map("GET", "/", function () {
 		$router->map("GET", "/beheerderspaneel/bedrijfsmedewerker/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/bedrijfsmedewerker/edit", array('Teamleider', 'Medewerker'), $id);
 		}, "Bewerk Bedrijfsmedewerker");
-
+	// FAQ
+	$router->map("GET", "/beheerderspaneel/faq/", function () {
+		openView("beheerderspaneel/faq", array('Medewerker', 'Teamleider'));
+	}, "FAQ");
 	   
 // Klantpaneel
 		//FAQ Bekijken

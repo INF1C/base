@@ -82,9 +82,9 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="/beheerderspaneel/medewerker/">Medewerker</a></li>
-                                <li><a  href="/beheerderspaneel/bedrijfsmedewerker/">Bedrijfsmedewerker*</a></li>
-                                <li><a  href="/beheerderspaneel/ticket/">Ticket</a></li>
-                                <li><a  href="#">FAQ*</a></li>
+                                <li><a  href="/beheerderspaneel/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
+                                <li><a  href="/beheerderspaneel/ticket/">Maak nieuwe ticket</a></li>
+                                <li><a  href="/bheerderspaneel/faq/">FAQ*</a></li>
                                 <li><a  href="#">Wachtwoord*</a></li>
                             </ul>
                         </li>

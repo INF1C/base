@@ -224,6 +224,7 @@ class output {
     public function FAQ() {
         $this->db->db_table = "FAQ";
         $fields = array(
+            "idFAQ",
             "Vraag",
             "Beschrijving",
             "Oplossing",
