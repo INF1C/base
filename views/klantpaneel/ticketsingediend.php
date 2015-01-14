@@ -5,8 +5,10 @@ $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf
                                  FROM BEDRIJFSMEDEWERKER
                                  WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
 var_dump($idBedrijf);
-
-   $result = $idBedrijf['idBedrijf'];
+   
+   $row = mysqli_fetch_array($idBedrijf);
+   var_dump($row);
+   $result = $row['idBedrijf'];
 
 var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
