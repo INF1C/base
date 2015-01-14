@@ -59,6 +59,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
       
 	    <div class="form-group">
 	    	<input type="hidden" value="<?= $idTicket ?>" name="idTicket" />
-	    	<input type="submit" value="submit" name="submit">
+	    	<input type="submit" value="Gereed" name="submit">
 	    </div>
 </form>
