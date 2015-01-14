@@ -1308,7 +1308,7 @@ label {
 	box-shadow: none;
 }
 
-.add-on {
+/*.add-on {
 	float: right;
 	margin-top: -37px;
 	padding: 3px;
@@ -1317,7 +1317,7 @@ label {
 
 .add-on .btn {
 	height: 34px;
-}
+}*/
 
 /* TOGGLE CONFIGURATION */
 .has-switch {
