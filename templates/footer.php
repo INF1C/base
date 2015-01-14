@@ -32,16 +32,16 @@
 		$('#start').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
-        	startView: 'year',
-        	minView: 'day',
-        	pickerPosition: "bottom-left"
+        	startView: '3',
+        	minView: '1',
+        	pickerPosition: "bottom-right"
 		});
 		$('#stop').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
-        	startView: 'year',
-        	minView: 'day',
-        	pickerPosition: "bottom-left"
+        	startView: '3',
+        	minView: '1',
+        	pickerPosition: "bottom-right"
 		});
 	});
 </script>
