@@ -23,5 +23,6 @@ foreach ($faqinfo as $key => $value) {
     echo "</tr>";
 }
 ?>
+</table>
 </div>
 </div>
