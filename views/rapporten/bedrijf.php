@@ -1,7 +1,7 @@
 <?php
 $output = new output;
 $idBedrijf = $params;
-$bedrijf = $output->Bedrijf($idBedrijf);
+$bedrijf = $output->Bedrijf($idBedrijf)[0];
 $tickets = $output->tickets($idBedrijf);
 ?>
 <div class="col-lg-12 showback">
