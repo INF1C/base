@@ -30,10 +30,14 @@
 <script type="application/javascript">
 	$(function () {
 		$('#start').datetimepicker({
-			pickTime: false
+			autoclose: true,
+        	todayBtn: true,
+        	pickerPosition: "bottom-left"
 		});
 		$('#stop').datetimepicker({
-			pickTime: false
+			autoclose: true,
+        	todayBtn: true,
+        	pickerPosition: "bottom-left"
 		});
 	});
 </script>
