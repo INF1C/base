@@ -1,6 +1,6 @@
 <?php
 $output = new output;
-if(isset($_POST['start'] && isset($_POST['stop']))){
+if(isset($_POST['start']) && isset($_POST['stop'])){
 	$start = filter_input(INPUT_POST, 'start');
 	$stop = filter_input(INPUT_POST, 'stop');
 
