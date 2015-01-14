@@ -1,0 +1,26 @@
+<div class="col-lg-12 showback">
+<?php
+$output = new output;
+
+$oplostijd = $output->oplostijdTickets();
+   echo "<table class='table table-hover'>";
+   echo "<tr><th> Incident type </th>";
+   echo "<th> Probleemstelling </th>";
+   echo "<th> Oplossing </th>";
+   echo "<th> Geopen op </th>";
+   echo "<th> Gesloten op </th>";
+   echo "<th> Oplostijd </th>";
+   echo "<th> Bedrijfsnaam </th></tr>";
+foreach ($oplostijd as $key => $value) {
+   echo "<tr>";
+   foreach ($value as $ticket)
+   {
+       echo "<td>" . $ticket;
+       echo "</td>";
+   }
+   echo "</tr>";
+}
+echo "</table>";
+?>
+
+</div>
