@@ -83,7 +83,7 @@
                             <ul class="sub">
                                 <li><a  href="#"><del>Contactpersoon*</del></a></li>
                                 <li><a  href="/medewerker/">Medewerker</a></li>
-                                <li><a  href="#">Bedrijfsmedewerker*</a></li>
+                                <li><a  href="/bedrijfsmedewerker/">Bedrijfsmedewerker*</a></li>
                                 <li><a href="/ticket/">Ticket</a></li>
                                 <li><a  href="#">FAQ*</a></li>
                                 <li><a  href="#">Wachtwoord*</a></li>

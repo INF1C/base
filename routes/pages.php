@@ -24,30 +24,44 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 			openView("instellingen/edit.autorisatie", array(), $user);
 		}, "Wijzigen van autorisatie1");
 
-// Gebruikerspaneel
+// beheerderspaneel
 
 	// Ticket
 	$router->map("POST|GET", "/ticket/", function () {
-		openView("gebruikerspaneel/ticket", array('Medewerker', 'Teamleider'));
+		openView("beheerderspaneel/ticket", array('Medewerker', 'Teamleider'));
 	}, "Ticket (knoppen)");
 		$router->map("POST|GET", "/ticket/nieuw/", function () {
-			openView("gebruikerspaneel/ticket/nieuw", array('Medewerker', 'Teamleider'));
+			openView("beheerderspaneel/ticket/nieuw", array('Medewerker', 'Teamleider'));
 		}, "Nieuwe ticket");
-
 	// Medewerker
 	$router->map("GET", "/medewerker/", function () {
-		openView("gebruikerspaneel/medewerker", array('Teamleider'));
+		openView("beheerderspaneel/medewerker", array('Teamleider'));
 	}, "Medewerker (knoppen)");
 		$router->map("GET", "/medewerker/nieuw/", function () {
-			openView("gebruikerspaneel/medewerker/nieuw", array('Teamleider'));
+			openView("beheerderspaneel/medewerker/nieuw", array('Teamleider'));
 		}, "Nieuwe medewerker");
 		$router->map("POST|GET", "/medewerker/zoek/", function () {
-			openView("gebruikerspaneel/medewerker/zoek", array('Teamleider'));
+			openView("beheerderspaneel/medewerker/zoek", array('Teamleider'));
 		}, "Zoek medewerker");
 		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
-			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'), $id);
+			openView("beheerderspaneel/medewerker/edit", array('Teamleider'), $id);
 		}, "Bewerk medewerker");
-       
+	// Bedrijfsmedewerker
+	$router->map("GET", "/bedrijfsmedewerker/", function () {
+		openView("beheerderspaneel/bedrijfsmedewerker", array('Teamleider', 'Medewerker'));
+	}, "Medewerker (knoppen)");
+		$router->map("GET", "/medewerker/nieuw/", function () {
+			openView("beheerderspaneel/bedrijfsmedewerker/nieuw", array('Teamleider', 'Medewerker'));
+		}, "Nieuwe medewerker");
+		$router->map("POST|GET", "/medewerker/zoekbedrijf/", function () {
+			openView("beheerderspaneel/bedrijfsmedewerker/zoekbedrijf", array('Teamleider', 'Medewerker'));
+		}, "Zoek medewerker");
+		$router->map("POST|GET", "/medewerker/zoek/", function () {
+			openView("beheerderspaneel/bedrijfsmedewerker/zoek", array('Teamleider', 'Medewerker'));
+		}, "Zoek medewerker");
+		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
+			openView("beheerderspaneel/bedrijfsmedewerker/edit", array('Teamleider', 'Medewerker'), $id);
+		}, "Bewerk medewerker");
 
 	   
 // Klantpaneel
