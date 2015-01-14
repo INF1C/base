@@ -11,13 +11,14 @@ foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossin
                                  AND STATUS_WIJZIGING.idBedrijf = BEDRIJF.idBedrijf
                                  AND BEDRIJF.idBedrijf = '" . $idBedrijf . "'") as $key => $value)
 {
+    echo "<tr>";
     foreach($value as $ticket)
     {
     var_dump($ticket);
-    echo "<tr>";
+    
     echo "<td>" . $ticket;
     echo "</td>";
-    echo "</tr>";
     }
+    echo "</tr>";
 }
 ?>
