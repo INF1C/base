@@ -33,14 +33,14 @@
 			autoclose: true,
         	todayBtn: true,
         	startView: '4',
-        	minView: '2',
+        	minView: '1',
         	pickerPosition: "bottom-left"
 		});
 		$('#stop').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
         	startView: '4',
-        	minView: '2',
+        	minView: '1',
         	pickerPosition: "bottom-left"
 		});
 	});
