@@ -7,7 +7,10 @@ $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf
 var_dump($idBedrijf);
 foreach($idBedrijf as $key => $result)
 {
-    echo $result;
+    foreach($result as $ID)
+    {
+        var_dump($ID);
+    }
 }
 var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
