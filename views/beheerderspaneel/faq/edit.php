@@ -22,7 +22,7 @@ if($idFAQ !== NULL) {
 <div class="form-group">
     <label for="editFaqOplossing">Oplossing:</label>
 	<textarea class="form-control" rows="5" id="editFaqOplossing" name="Oplossing" placeholder="Oplossing"><?= $data['Oplossing'] ?></textarea>
-</div>
-
+</div> 
+<input type="hidden" name="idFAQ" value="<?= $idFAQ ?>">
   <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
 </form>
