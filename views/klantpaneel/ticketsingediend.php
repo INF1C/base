@@ -13,9 +13,7 @@ foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossin
 {
     echo "<tr>";
     foreach($value as $ticket)
-    {
-    var_dump($ticket);
-    
+    {    
     echo "<td>" . $ticket;
     echo "</td>";
     }
