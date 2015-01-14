@@ -47,11 +47,20 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 		$router->map("GET", "/medewerker/edit/[i:id]", function ($id) {
 			openView("gebruikerspaneel/medewerker/edit", array('Teamleider'), $id);
 		}, "Bewerk medewerker");
-                
-        // FAQ
-        $router->map("GET", "/gebruikerspaneel/faq/", function () {
-		openView("gebruikerspaneel/faq", array('Medewerker', 'Bedrijfsmedewerker'));
-	}, "Gebruikerspaneel -> faq");
+       
+
+	   
+// Klantpaneel
+		//FAQ Bekijken
+        $router->map("GET", "/klantpaneel/faq/", function () {
+		openView("klantpaneel/faq", array('Medewerker', 'Bedrijfsmedewerker'));
+	}, "Klantpaneel -> faq");
+		//Ticket Aanmaken/Wijzigen
+	 $router->map("GET", "/klantpaneel/ticket/", function () {
+		openView("klantpaneel/ticket", array('Medewerker', 'Bedrijfsmedewerker'));
+	}, "Klantpaneel -> ticket");
+	
+	
 
 // Rapporten
 	// Tickets
