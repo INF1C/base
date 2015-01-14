@@ -16,7 +16,7 @@ echo "<th> Beschrijving </th>";
 echo "<th> Oplossing </ht>";
 echo "<th> Auteur </th>";
 echo "</tr>";
-$outpu->db->db_table = "MEDEWERKER";
+$output->db->db_table = "MEDEWERKER";
 foreach ($faqinfo as $value) {
 	echo "<tr>";
 	foreach ($value as $key => $subvalue) {
