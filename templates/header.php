@@ -77,7 +77,7 @@
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-dashboard"></i>
-                                <span>Gebruikerspaneel</span>
+                                <span>Beheerderspaneel</span>
                             </a>
                             <ul class="sub">
                                 <li><a  href="#">Contactpersoon*</a></li>
