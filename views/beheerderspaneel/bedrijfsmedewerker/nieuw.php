@@ -1,35 +1,32 @@
 <div class="col-md-6 showback">
-	<form method="POST" action="/process/create/medewerker">
-		<div class="form-group">
-			<label for="createMedewerkerUsername">Gebruikersnaam:</label>
-			<input type="text" class="form-control" id="createMedewerkerUsername" placeholder="Gebruikersnaam" name="Gebruikersnaam">
-		</div>
+    <form method="POST" action="/process/create/bedrijfsmedewerker">          
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerVoornaam">Voornaam:</label>
+            <input type="text" class="form-control" id="createBedrijfMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam">
+        </div>
+          
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerVoegsel">Tussenvoegsel:</label>
+            <input type="text" class="form-control" id="createBedrijfMedewerkerVoegsel" placeholder="Tussenvoegsel" name="Tussenvoegsel">
+        </div>
+          
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerAchternaam">Achternaam:</label>
+            <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="Achternaam" name="Achternaam">
+        </div>
 
-		<div class="form-group">
-			<label for="createMedewerkerPassword">Wachtwoord:</label>
-			<input type="password" class="form-control" id="createMedewerkerPassword" placeholder="Wachtwoord" name="Wachtwoord">
-		</div>
-		  
-		<div class="form-group">
-			<label for="createMedewerkerVoornaam">Voornaam:</label>
-			<input type="text" class="form-control" id="createMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam">
-		</div>
-		  
-		<div class="form-group">
-			<label for="createMedewerkerVoegsel">Tussenvoegsel:</label>
-			<input type="text" class="form-control" id="createMedewerkerVoegsel" placeholder="Tussenvoegsel" name="Tussenvoegsel">
-		</div>
-		  
-		<div class="form-group">
-			<label for="createMedewerkerAchternaam">Achternaam:</label>
-			<input type="text" class="form-control" id="createMedewerkerAchternaam" placeholder="Achternaam" name="Achternaam">
-		</div>
-
-		<div class="form-group">
-			<label for="createMedewerkerEmail">E-mail:</label>
-			<input type="email" class="form-control" id="createMedewerkerEmail" placeholder="Email" name="Email">
-		</div>
-		  
-		<button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
-	</form>
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerFunctie">Functie:</label>
+            <input type="text" class="form-control" id="createBedrijfMedewerkerFunctie" placeholder="Functie" name="Functie">
+        </div>
+          
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerEmail">E-Mail:</label>
+            <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="E-Mail" name="Email">
+        </div>
+          
+        <!-- Value moet met een GET opgehaald worden -->
+        <input type="hidden" value="<?= $params ?>" name="Bedrijf" />
+        <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
+    </form>
 </div>

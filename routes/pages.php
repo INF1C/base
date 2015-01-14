@@ -50,8 +50,8 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	$router->map("GET", "/bedrijfsmedewerker/", function () {
 		openView("beheerderspaneel/bedrijfsmedewerker", array('Teamleider', 'Medewerker'));
 	}, "Bedrijfsmedewerker (knoppen)");
-		$router->map("GET", "/bedrijfsmedewerker/nieuw/", function () {
-			openView("beheerderspaneel/bedrijfsmedewerker/nieuw", array('Teamleider', 'Medewerker'));
+		$router->map("GET", "/bedrijfsmedewerker/nieuw/[i:id]", function () {
+			openView("beheerderspaneel/bedrijfsmedewerker/nieuw", array('Teamleider', 'Medewerker'), $id);
 		}, "Nieuwe Bedrijfsmedewerker");
 		$router->map("POST|GET", "/bedrijfsmedewerker/zoekbedrijf/", function () {
 			openView("beheerderspaneel/bedrijfsmedewerker/zoekbedrijf", array('Teamleider', 'Medewerker'));
