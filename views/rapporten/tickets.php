@@ -1,7 +1,7 @@
 <div class="col-lg-12">
 	<div class="form-panel">
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Selecteer periode</h4>
-		<form class="form" method="POST" action="" role="form">
+		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
 				<label>Start:</label>
 	    		<div class="input-append date form_datetime" id="start" data-date-format="yyyy-mm-dd hh:mm:ss">
