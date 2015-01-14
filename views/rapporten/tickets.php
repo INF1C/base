@@ -1,16 +1,18 @@
 <div class="col-lg-12">
 	<div class="form-panel">
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Selecteer periode</h4>
-		<form class="form-inline" method="POST" action="" role="form">
+		<form class="form" method="POST" action="" role="form">
 			<div class="form-group">
+				<label>Start:</label>
 	    		<div class="input-append date form_datetime" id="start" data-date-format="yyyy-mm-dd hh:mm:ss">
-	    			<input class="form-control" name="start" type="text">
+	    			<input class="form-control" name="start" type="text" placeholder="YYYY-MM-DD HH:MM:SS">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
 			<div class="form-group">
+				<label>Stop:</label>
 	    		<div class="input-append date form_datetime" id="stop" data-date-format="yyyy-mm-dd hh:mm:ss">
-	    			<input class="form-control" name="stop" type="text">
+	    			<input class="form-control" name="stop" type="text" placeholder="YYYY-MM-DD HH:MM:SS">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
