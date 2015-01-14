@@ -3,7 +3,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 ?>
 <div class="col-lg-12">
 	<div class="form-panel">
-		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek medewerker</h4>
+		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek bedrijfsmedewerker</h4>
 		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
 				<label class="sr-only" for="zoekterm">Voor of achternaam:</label>
@@ -18,27 +18,27 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			echo "<div class='content-panel'>";
 			$db = new db();
 			$zoekterm = filter_input(INPUT_POST, 'zoekterm');
-			$stmt = $db->link->prepare("SELECT * FROM MEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
+			$stmt = $db->link->prepare("SELECT * FROM BEDRIJFSMEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
 			$stmt->bindValue(1, "%" . $zoekterm . "%");
 			$stmt->bindValue(2, "%" . $zoekterm . "%");
 			$stmt->execute();
 			$returnArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			echo "<table class='table table-hover'>";
 			echo "<tr>";
+			echo "<th> idBedrijf </th>";
 			echo "<th> Gebruikersnaam </th>";
-			echo "<th> E-mail </th>";
+			echo "<th> Email </th>";
 			echo "<th> Voornaam </th>";
 			echo "<th> Achternaam </th>";
 			echo "<th> Tussenvoegsel </th>";
-			echo "<th> Afbeelding </th>";
-			echo "<th> Link </th>";
+			echo "<th> Functie </th>";
 			echo "</tr>";
 			foreach($returnArray as $result)
 			{
 				echo "<tr>";
 				foreach($result as $key => $subresult){
 					
-					if($key == "idMedewerker"){
+					if($key == "idBedrijfsMedewerker"){
 						$id = $subresult;
 					} else {
 						echo "<td>";
@@ -46,7 +46,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 						echo "</td>";
 					}
 				}
-				echo "<td><a href='/medewerker/edit/" . $id . "'>Klik hier om te bewerken</a></td>";
+				echo "<td><a href='/bedrijfsmedewerker/edit/" . $id . "'>Klik hier om te bewerken</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";
