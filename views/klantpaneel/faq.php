@@ -18,8 +18,9 @@ foreach ($faqinfo as $value) {
             $idFAQ = $subvalue;
         } elseif($key == "idMedewerker") {
             $idMedewerker = $subvalue;
-        } 
-        echo "<td>" . $subvalue . "</td>";
+        } else {
+            echo "<td>" . $subvalue . "</td>";
+        }
     }
     echo "<td>" . implode(' ', $output->db->select(array('Voornaam', 'Achternaam'), array('idMedewerker' => $idMedewerker))[0]) . "</td>";
     echo "</tr>";
