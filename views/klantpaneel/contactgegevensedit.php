@@ -3,9 +3,6 @@
         $db = new db;
 		$db->db_table = "BEDRIJFSMEDEWERKER";
         $data = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
-        } else {
-            $data = array_fill_keys(array('idBedrijfsMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email', 'Functie'), '');
-        }
         ?>
     <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <div class="form-group">
