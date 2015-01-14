@@ -114,8 +114,8 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="/klantpaneel/faq/">FAQ Bekijken</a></li>
-                                <li><a  href="/klantpaneel/ticket/">Ticket indienen*</a></li>
-                                <li><a  href="/klantpaneel/ticketingedient/">Ingediende tickets bekijken*</a></li>
+                                <li><a  href="/klantpaneel/ticket/">Ticket indienen</a></li>
+                                <li><a  href="/klantpaneel/ticketingediend/">Ingediende tickets bekijken*</a></li>
                                 <li><a  href="/wijzigen/wachtwoord/">Wachtwoord Wijzigen</a></li>
                                 <li><a  href="/klantpaneel/contactgegevensedit/">Contactgegevens Wijzigen*</a></li>
                             </ul>

@@ -1,24 +1,22 @@
 <div class="col-lg-12">
 <?php
-$db = new db;
+$output = new output;
 $Gebruikersnaam = $_SESSION['gebruikersnaam'];
-$idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf 
-                                 FROM BEDRIJFSMEDEWERKER
-                                 WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'")[0]['idBedrijf'];
+$sql = "SELECT idBedrijf FROM BEDRIJFSMEDEWERKER WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'";
+$idBedrijf = $output->db->select(NULL, NULL, $sql)[0]['idBedrijf'];
+$tickets = $output->tickets($idBedrijf);
 ?>
     <div class="content-panel">
 		<table class="table table-hover">
                     <tr>
                         <th>Incident Type</th>
                         <th>Probleemstelling</th>
-                        <th>Oplossing</th>
+                        <th>Huidige status</th>
+                        <th>Geopend op</th>
+                        <th>Bedrijfsnaam</th>
                     </tr>
     <?php
-foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
-                                 FROM STATUS_WIJZIGING, TICKET, BEDRIJF
-                                 WHERE TICKET.idTicket = STATUS_WIJZIGING.idTicket
-                                 AND STATUS_WIJZIGING.idBedrijf = BEDRIJF.idBedrijf
-                                 AND BEDRIJF.idBedrijf = '" . $idBedrijf . "'") as $key => $value)
+foreach($tickets) as $key => $value)
 {
     echo "<tr>";
     foreach($value as $ticket)
@@ -29,5 +27,6 @@ foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossin
     echo "</tr>";
 }
 ?>
+</table>
 </div>
 </div>
