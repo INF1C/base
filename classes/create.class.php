@@ -81,7 +81,7 @@ class create {
         //↑Velden naar database sturen
     }
 
-    public function statusWijziging($idTicket, $idBedrijfsmedewerker = NULL, $idBedrijf = NULL, $idMedewerker = NULL) {
+    public function statusWijziging($idTicket, $idBedrijfsmedewerker = NULL, $idBedrijf = NULL, $idMedewerker = NULL, $status = NULL) {
         $this->db->db_table = "STATUS_WIJZIGING";
 
         $fields = array(
@@ -106,6 +106,8 @@ class create {
             $data["idBedrijf"] = $idBedrijf;
         if($idMedewerker !== NULL)
             $data["idMedewerker"] = $idMedewerker;
+        if($status !== NULL)
+            $data["Status"] = $status;
 
         $status = array('Nieuw', 'In behandeling', 'Doorgestuurd naar engineer', 'Doorgestuurd naar account manager', 'Opgelost', 'Afgemeld');
         if (!in_array($data["Status"], $status)) {
