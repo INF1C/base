@@ -29,14 +29,14 @@
 <!--script voor de kalender, deze kan later verwijderd worden.-->
 <script type="application/javascript">
 	$(function () {
-		$('#start').datetimepicker({
+		$('.start').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
         	startView: '4',
         	minView: '2',
         	pickerPosition: "bottom-left"
 		});
-		$('#stop').datetimepicker({
+		$('.stop').datetimepicker({
 			autoclose: true,
         	todayBtn: true,
         	startView: '4',
