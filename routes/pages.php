@@ -113,7 +113,7 @@ $router->map("POST", "/ticket/", function () {
 		openView("rapporten/bedrijf", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> Bedrijf");
 	// Bedrijfsmedewerker
-	$router->map("GET", "/rapporten/bedrijfsmedewerker/", function () {
+	$router->map("GET|POST", "/rapporten/bedrijfsmedewerker/", function () {
 		openView("rapporten/bedrijfsmedewerker_zoek", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> Bedrijfsmedewerker zoek");
 		$router->map("GET", "/rapporten/bedrijfsmedewerker/[i:id]", function ($id) {
