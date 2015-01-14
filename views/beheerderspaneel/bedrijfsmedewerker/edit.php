@@ -4,7 +4,9 @@
         $idBedrijfsMedewerker = $params;
         if($idBedrijfsMedewerker !== NULL) {    $idBedrijfsMedewerker = FILTER_INPUT(INPUT_GET, 'idBedrijfsMedewerker');
             $db->db_table = "BEDRIJFSMEDEWERKER";
-            $data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0];
+            echo $idBedrijfsMedewerker;
+            $data = $db->select(array('*'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker));
+            var_dump($data);
         } else {
             $data = array_fill_keys(array('idBedrijfsMedewerker', 'Voornaam', 'Tussenvoegsel', 'Achternaam', 'Email', 'Functie'), '');
         }
