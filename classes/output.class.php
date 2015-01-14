@@ -134,8 +134,9 @@ class output {
         $solvetimetickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
 
-        foreach ($solvetimetickets as $ticket) {
+        foreach ($solvetimetickets as $ticketArray) {
             $this->db_table = "TICKET";
+            $ticket = $ticketArray['idTicket'];
 
             $return[$ticket]['IncidentType'] = $this->db->select(array("IncidentType"), array("idTicket" => $ticket));
             $return[$ticket]['ProbleemStelling'] = $this->db->select(array("ProbleemStelling"), array("idTicket" => $ticket));
