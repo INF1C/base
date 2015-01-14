@@ -31,11 +31,11 @@ if(isset($_POST['idTicket'])){
 			</tr>
 		</table>
 	</div>
-	<div class="col-lg-3 showback">
+	<div class="col-lg-3 showback pull-right">
 		<img class="img-responsive img-circle" src="https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png" alt="Anonymous">
 		<p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
 	</div>
-
+	<span class="clearfix"></span>
 	<?php
 	echo "<pre>"; var_dump(get_defined_vars()); echo "</pre>";
 
