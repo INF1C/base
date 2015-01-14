@@ -5,9 +5,9 @@ $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf
                                  FROM BEDRIJFSMEDEWERKER
                                  WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
 var_dump($idBedrijf);
-while($row = mysqli_fetch_assoc($idBedrijf)) {
-   $result = $row['idBedrijf'];
-}
+
+   $result = $idBedrijf['idBedrijf'];
+
 var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
                                  FROM STATUS_WIJZIGING, TICKET, BEDRIJF
