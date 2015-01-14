@@ -53,6 +53,11 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	$router->map("GET", "/rapporten/tickets/", function () {
 		openView("rapporten/tickets", array('Medewerker', 'Teamleider'));
 	}, "Rapporten -> alle tickets");
+        // FAQ
+        $router->map("GET", "/gebruikerspaneel/faq/", function () {
+		openView("gebruikerspaneel/faq", array('Medewerker', 'Bedrijfsmedewerker'));
+	}, "Gebruikerspaneel -> faq");
+        
 	// Enkele ticket
 	$router->map("GET", "/rapporten/ticket/", function () {
 		openView("rapporten/ticket", array('Medewerker', 'Teamleider'));
