@@ -37,7 +37,13 @@
 		<div class="form-group">
 			<label for="createTicketProbleemstelling">Probleemstelling:</label>
 			<textarea class="form-control" rows="5" id="createTicketProbleemstelling" placeholder="Probleemstelling" name="Probleemstelling"></textarea>
-		</div>		
+		</div>
+		<div class="form-group">
+			<label for="createTicketSoortContact">Soort contact:</label>
+			<input type="text" class="form-control" id="createTicketSoortContact" name="SoortContact" placeholder="E-mail">
+		</div>
+		<input type="hidden" name="idBedrijfsMedewerker" value="<?= $params ?>">
+		<input type="hidden" name="Status" value="Nieuw">
 		<button type="submit" value="submit" name="submit" class="btn btn-default">Verzend</button>
 	</form>
 </div>
