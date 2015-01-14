@@ -81,4 +81,3 @@ $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 			?>
 		</table>
 	</div>
-<pre><?php var_dump(get_defined_vars()); ?></pre>

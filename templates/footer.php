@@ -44,5 +44,8 @@
 	});
 </script>
 </section>
+<!-- DUMPS ALL PHP VARIABLES DOWN HERE FOR DEBUGGING -->
+<noscript>
+<?php var_dump(get_defined_vars()); ?>
 </body>
 </html>
