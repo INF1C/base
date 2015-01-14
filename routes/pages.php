@@ -9,6 +9,11 @@ $router->map("GET", "/", function () {
     }
 }, "Home");
 
+// Enkele ticket
+$router->map("POST", "/ticket/", function () {
+	openView("ticket/view_post", array('Bedrijfsmedewerker', 'Medewerker', 'Teamleider'));
+}, "Ticket");
+
 // Instellingen
 	// Autorisatie
 	$router->map("POST|GET", "/autorisatie/", function () {
