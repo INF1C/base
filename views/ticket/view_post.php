@@ -7,7 +7,7 @@ if(isset($_POST['idTicket'])){
 	$laatsteStatus = array_pop($status);
 
 	?>
-	<div class="col-lg-7 showback">
+	<div class="col-lg-8 showback">
 		<table class="table">
 			<tr>
 				<td>Ticket ID:</td>
@@ -36,6 +36,27 @@ if(isset($_POST['idTicket'])){
 		<p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
 	</div>
 	<span class="clearfix"></span>
+	<div class="col-lg-12 showback">
+		<table class="table table-hover">
+			<tr>
+				<th>Datum - Tijd</th>
+				<th>Status</th>
+				<th>Soort contact</th>
+				<th>Memo</th>
+				<th>Bedrijfsmedewerker</th>
+				<th>Medewerker</th>
+			</tr>
+			<?php
+			foreach ($status as $key => $value) {
+				echo "<tr>";
+				foreach($value as $subvalue){
+					echo "<td>" . $subvalue . "</td>";
+				}
+				echo "</tr>";
+			}
+			?>
+		</table>
+	</div>
 	<?php
 	echo "<pre>"; var_dump(get_defined_vars()); echo "</pre>";
 
