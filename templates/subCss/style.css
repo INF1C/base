@@ -106,8 +106,8 @@ a, a:hover, a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #48bcb4;
-  border-color: #48bcb4;
+  background-color: #002144;
+  border-color: #002144;
 }
 
 .btn-theme02 {
@@ -1498,74 +1498,6 @@ label {
 	display: block;
 	margin-top: 20px;
 	margin-bottom: 15px;
-}
-
-
-/*LOCK SCREEN CONF*/
-#showtime {
-	width: 100%;
-	color: #fff;
-	font-size: 90px;
-	margin-bottom: 30px;
-	margin-top: 250px;
-	display: inline-block;
-	text-align: center;
-	font-weight: 400;
-}
-
-.lock-screen {
-	text-align: center;
-}
-
-.lock-screen a {
-	color: white;
-}
-
-.lock-screen a:hover {
-	color: #48cfad
-}
-
-.lock-screen i {
-	font-size: 60px;
-}
-
-.lock-screen .modal-content {
-	position: relative;
-	background-color: #f2f2f2;
-	background-clip: padding-box;
-	border: 1px solid #999;
-	border: 1px solid rgba(0, 0, 0, .2);
-	border-radius: 5px;
-}
-
-.btn-facebook {
-  color: #fff;
-  background-color: #5193ea;
-  border-color: #2775e2;
-}
-.btn-facebook:hover,
-.btn-facebook:focus,
-.btn-facebook:active,
-.btn-facebook.active,
-.open .dropdown-toggle.btn-facebook {
-  color: #fff;
-  background-color: #2775e2;
-  border-color: #2775e2;
-}
-
-.btn-twitter {
-  color: #fff;
-  background-color: #44ccfe;
-  border-color: #2bb4e8;
-}
-.btn-twitter:hover,
-.btn-twitter:focus,
-.btn-twitter:active,
-.btn-twitter.active,
-.open .dropdown-toggle.btn-twitter {
-  color: #fff;
-  background-color: #2bb4e8;
-  border-color: #2bb4e8;
 }
 
 
