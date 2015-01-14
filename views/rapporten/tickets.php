@@ -18,14 +18,14 @@ if(isset($_POST['start']) && isset($_POST['stop'])){
 			<div class="form-group">
 				<label>Start:</label>
 	    		<div class="input-append date form_datetime" id="start" data-date-format="yyyy-mm-dd hh:mm:ss">
-	    			<input class="form-control" name="start" type="text"  value="<?= $start ?>" readonly placeholder="YYYY-MM-DD HH:MM:SS">
+	    			<input class="span2 form-control" name="start" type="text"  value="<?= $start ?>" readonly placeholder="YYYY-MM-DD HH:MM:SS">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
 			<div class="form-group">
 				<label>Stop:</label>
 	    		<div class="input-append date form_datetime" id="stop" data-date-format="yyyy-mm-dd hh:mm:ss">
-	    			<input class="form-control" name="stop" type="text" value="<?= $stop ?>" readonly placeholder="YYYY-MM-DD HH:MM:SS">
+	    			<input class="span2 form-control" name="stop" type="text" value="<?= $stop ?>" readonly placeholder="YYYY-MM-DD HH:MM:SS">
 	    			<span class="add-on"><i class="icon-th"></i></span>
 	    		</div>
     		</div>
