@@ -37,7 +37,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			foreach($returnArray as $result)
 			{
 				$id = $result['idBedrijfsMedewerker'];
-				echo "<tr><a href='/beheerderspaneel/bedrijfsmedewerker/edit/" . $id . "'>";
+				?><tr onclick="window.document.location='/beheerderspaneel/bedrijfsmedewerker/edit/<?= $id ?>'"> <?php
 				foreach($result as $key => $subresult){
 					if($key == "idBedrijfsMedewerker")
 						continue;
