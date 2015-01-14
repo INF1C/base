@@ -1,12 +1,11 @@
-<div class="row">
-	<div class="col-lg-6 showback">
-		<h2>FAQ</h2>
-		<div class="well well-lg center-block">
-			<a role="button" href="/beheerderspaneel/faq/nieuw/" class="btn btn-primary btn-lg btn-block">Nieuw</a>
-		</div>
+<div class="col-lg-6 showback">
+	<h2>FAQ</h2>
+	<div class="well well-lg center-block">
+		<a role="button" href="/beheerderspaneel/faq/nieuw/" class="btn btn-primary btn-lg btn-block">Nieuw</a>
 	</div>
-	<span class="clearfix"></span>
-	<div class="col-lg-12 showback">
+</div>
+<span class="clearfix"></span>
+<div class="col-lg-12 showback">
 <?php
 $output = new output;
 $faqinfo = $output->FAQ();
@@ -17,6 +16,7 @@ echo "<th> Beschrijving </th>";
 echo "<th> Oplossing </ht>";
 echo "<th> Auteur </th>";
 echo "</tr>";
+$outpu->db->db_table = "MEDEWERKER";
 foreach ($faqinfo as $value) {
 	echo "<tr>";
 	foreach ($value as $key => $subvalue) {
@@ -34,5 +34,4 @@ foreach ($faqinfo as $value) {
 }
 echo "</table>";
 ?>
-	</div>
 </div>
