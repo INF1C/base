@@ -9,12 +9,6 @@ $router->map("GET", "/", function () {
     }
 }, "Home");
 
-
-// create admin
-$router->map("GET", "/CrEaTeAdMiN/", function () {
-	openView("admin");
-}, "CREATE ADMIN");
-
 // Instellingen
 	// Autorisatie
 	$router->map("POST|GET", "/autorisatie/", function () {
@@ -77,10 +71,6 @@ $router->map("GET", "/CrEaTeAdMiN/", function () {
 	 $router->map("GET", "/klantpaneel/ticketingediend/", function () {
 		openView("klantpaneel/ticketsingediend", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Klantpaneel -> ticketbekijken");
-			//Wachtwoord wijzigen
-	 $router->map("GET", "/klantpaneel/wachtwoord/", function () {
-		openView("klantpaneel/wachtwoord", array('Medewerker', 'Bedrijfsmedewerker'));
-	}, "Klantpaneel -> wachtwoord");
         //Contact gegevens aanpassen
 	 $router->map("GET", "/klantpaneel/contactgegevensedit/", function () {
 		openView("klantpaneel/contactgegevensedit", array('Medewerker', 'Bedrijfsmedewerker'));

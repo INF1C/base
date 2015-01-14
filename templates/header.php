@@ -81,10 +81,9 @@
                                 <span>Beheerderspaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#"><del>Contactpersoon*</del></a></li>
                                 <li><a  href="/medewerker/">Medewerker</a></li>
                                 <li><a  href="/bedrijfsmedewerker/">Bedrijfsmedewerker*</a></li>
-                                <li><a href="/ticket/">Ticket</a></li>
+                                <li><a  href="/ticket/">Ticket</a></li>
                                 <li><a  href="#">FAQ*</a></li>
                                 <li><a  href="#">Wachtwoord*</a></li>
                             </ul>
@@ -98,8 +97,6 @@
                             <ul class="sub">
                                 <li><a  href="/rapporten/tickets/">Tickets</a></li>
                                 <li><a  href="/rapporten/tickets/open">Niet Behandelde Incidenten</a></li>
-                                <li><a  href="#"><del>Alle Incidenten*</del></a></li>
-                                <li><a  href="#"><del>Alle Incidenten in een bepaalde periode*</del></a></li>
                                 <li><a  href="/rapporten/tickets/oplostijd/">Oplostijd van incidenten</a></li>
                                 <li><a  href="/rapporten/ticket/">Enkele Ticket</a></li>
                                 <li><a  href="/rapporten/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
@@ -116,11 +113,11 @@
                                 <span>Klantpaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#">FAQ Bekijken*</a></li>
-                                <li><a  href="#">Ticket indienen*</a></li>
-                                <li><a  href="#">Ingediende tickets bekijken*</a></li>
+                                <li><a  href="/klantpaneel/faq/">FAQ Bekijken*</a></li>
+                                <li><a  href="/klantpaneel/ticket/">Ticket indienen*</a></li>
+                                <li><a  href="/klantpaneel/ticketingedient/">Ingediende tickets bekijken*</a></li>
                                 <li><a  href="/wijzigen/wachtwoord/">Wachtwoord Wijzigen</a></li>
-                                <li><a  href="#">Contactgegevens Wijzigen*</a></li>
+                                <li><a  href="/klantpaneel/contactgegevensedit/">Contactgegevens Wijzigen*</a></li>
                             </ul>
                         </li>
                         <?php
