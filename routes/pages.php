@@ -22,8 +22,11 @@ $router->map("GET", "/", function () {
 
 	// Ticket
 	$router->map("POST|GET", "/beheerderspaneel/ticket/", function () {
-		openView("beheerderspaneel/ticket", array('Medewerker', 'Teamleider'));
-	}, "Ticket (knoppen)");
+		openView("beheerderspaneel/ticket/zoek", array('Medewerker', 'Teamleider'));
+	}, "Ticket -> zoek bedrijfsmedewerker");
+		$router->map("POST|GET", "/beheerderspaneel/ticket/create/[i:id]", function ($id) {
+			openView("beheerderspaneel/ticket/zoek", array('Medewerker', 'Teamleider'), $id);
+		}, "Nieuwe ticket");
 	// Medewerker
 	$router->map("GET", "/beheerderspaneel/medewerker/", function () {
 		openView("beheerderspaneel/medewerker", array('Teamleider'));
