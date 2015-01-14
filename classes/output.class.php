@@ -195,7 +195,7 @@ class output {
             $return[$statusid]['SoortContact'] = reset(reset($this->db->select(array("SoortContact"), array("idStatus" => $statusid))));
             $return[$statusid]['Memo'] = reset(reset($this->db->select(array("Memo"), array("idStatus" => $statusid))));
                     
-            $idbedrijfsmedewerker = reset(reset($this->db->select(array("idBedrijfsMedewerker"), array("idStatus" => $statusid))));.
+            $idbedrijfsmedewerker = reset(reset($this->db->select(array("idBedrijfsMedewerker"), array("idStatus" => $statusid))));
             $idmedewerker = reset(reset($this->db->select(array("idMedewerker"), array("idStatus" => $statusid))));
 
             $this->db->db_table = "BEDRIJFSMEDEWERKER";
