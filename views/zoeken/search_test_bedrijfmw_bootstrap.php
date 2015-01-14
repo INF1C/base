@@ -16,7 +16,7 @@ if (isset($_POST['zoekterm']))
     echo "<th> Achternaam </th>";
     echo "<th> Tussenvoegsel </th>";
     echo "<th> Functie </th></tr>";
-    foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . " WHERE Achternaam LIKE '%" . $zoekterm . "%'") as $result)
+    foreach($db->select(NULL, NULL, "SELECT * FROM " . $optie . " WHERE Achternaam LIKE '%" . $zoekterm . "%'" . " OR Voornaam LIKE '%" . $zoekterm . "%'") as $result)
     {
         echo "<tr>";
         foreach($result as $key => $subresult){
