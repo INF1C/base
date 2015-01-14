@@ -10,8 +10,8 @@ foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossin
                                  WHERE TICKET.idTicket = STATUS_WIJZIGING.idTicket
                                  AND STATUS_WIJZIGING.idBedrijf = BEDRIJF.idBedrijf
                                  AND BEDRIJF.idBedrijf = '%" . $idBedrijf . "%'") as $key => $value)
-        var_dump($value);
 {
+    var_dump($value);
     echo "<tr>";
     foreach ($value as $tickets)
     {
