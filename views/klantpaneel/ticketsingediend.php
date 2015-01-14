@@ -3,14 +3,8 @@ $db = new db;
 $Gebruikersnaam = $_SESSION['gebruikersnaam'];
 $idBedrijf = $db->select(NULL, NULL, "SELECT idBedrijf 
                                  FROM BEDRIJFSMEDEWERKER
-                                 WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'");
-var_dump($idBedrijf);
-   
-   $row = mysqli_fetch_array($idBedrijf);
-   var_dump($row);
-   $result = $row['idBedrijf'];
+                                 WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'")[0]['idBedrijf'];
 
-var_dump($result);
 foreach($db->select(NULL, NULL, "SELECT IncidentType, Probleemstelling, Oplossing 
                                  FROM STATUS_WIJZIGING, TICKET, BEDRIJF
                                  WHERE TICKET.idTicket = STATUS_WIJZIGING.idTicket
