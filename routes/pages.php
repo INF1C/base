@@ -68,6 +68,24 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 		$router->map("GET", "/beheerderspaneel/bedrijfsmedewerker/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/bedrijfsmedewerker/edit", array('Teamleider', 'Medewerker'), $id);
 		}, "Bewerk Bedrijfsmedewerker");
+		
+		// Bedrijf
+	$router->map("GET", "/beheerderspaneel/bedrijf/", function () {
+		openView("beheerderspaneel/bedrijf", array('Teamleider', 'Medewerker'));
+	}, "Bedrijf (knoppen)");
+		$router->map("GET", "/beheerderspaneel/bedrijf/nieuw/[i:id]", function ($id) {
+			openView("beheerderspaneel/bedrijf/nieuw", array('Teamleider', 'Medewerker'), $id);
+		}, "Nieuwe Bedrijf");
+		$router->map("POST|GET", "/beheerderspaneel/bedrijf/zoek/", function () {
+			openView("beheerderspaneel/bedrijf/zoek", array('Teamleider', 'Medewerker'));
+		}, "Zoek Bedrijf");
+		$router->map("GET", "/beheerderspaneel/bedrijf/edit/[i:id]", function ($id) {
+			openView("beheerderspaneel/bedrijf/edit", array('Teamleider', 'Medewerker'), $id);
+		}, "Bewerk Bedrijf");
+		
+		
+		
+		
 	// FAQ
 	$router->map("GET", "/beheerderspaneel/faq/", function () {
 		openView("beheerderspaneel/faq", array('Medewerker', 'Teamleider'));
