@@ -167,10 +167,10 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 // Statuswijziging
 	$router->map("GET", "/ticket/statuswijziging/behandeling/[i:id]", function ($id) {
 		openView("ticket/statuswijziging_behandeling", array('Medewerker', 'Bedrijfsmedewerker'), $id);
-	}, "Klantpaneel -> statuswijziging");
+	}, "Ticket -> Statuswijziging");
 	$router->map("GET", "/ticket/statuswijziging/[i:id]", function ($id) {
 		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'), $id);
-	}, "Klantpaneel -> statuswijziging");
+	}, "Ticket -> in behandeling nemen");
 	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/", function () {
 		require DIR_VIEW . "ticket/zoekbedrijfsmedewerker.php";
 	}, "Klantpaneel -> zoek");
