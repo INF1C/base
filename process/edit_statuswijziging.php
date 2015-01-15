@@ -28,3 +28,4 @@ setInterval(function(){countdown();}, 1000);
 } else {
 	echo "Please post the next time!";
 }
+?>
