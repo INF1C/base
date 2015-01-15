@@ -59,7 +59,7 @@ if(isset($_POST['idTicket'])){
 		}
 		?>
 	</table>
-        <td><a href=/nieuwestatus/>Nieuwe status</a></td>
+        <td><a href='/beheerderspaneel/statuswijziging/nieuw/"<?phpecho $key?>"'>Nieuwe status</a></td>
         </div>
 	<?php
 }
