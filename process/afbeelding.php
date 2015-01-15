@@ -21,18 +21,18 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 
 	// Check file size
 	if ($_FILES["avatar-image"]["size"] > 500000) {
-	    echo "Sorry, de afbeelding die u probeert te uploaden is te groot.";
+	    echo "De afbeelding die u probeert te uploaden is te groot.";
 	    $uploadOk = 0;
 	}
 	// Allow certain file formats
 	$fileTypes = array('jpg', 'png', 'jpeg', 'gif', 'JPG', 'PNG', 'JPEG', 'GIF');
 	if(!in_array($imageFileType, $fileTypes)) {
-	    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+	    echo "Alleen afbeeldingen met bestandstype JPG, JPEG, PNG & GIF mogen worden geupload.";
 	    $uploadOk = 0;
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-	    echo "Sorry, your file was not uploaded.";
+	    echo "Het uploaden is niet gelukt.";
 	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($_FILES["avatar-image"]["tmp_name"], $target_file)) {
@@ -40,8 +40,22 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	    	$db->db_table = "MEDEWERKER";
 	    	$db->update(array('Afbeelding' => $save_file), array('gebruikersnaam' => $_SESSION['gebruikersnaam']));
 	        echo "The file ". $newFileName. " has been uploaded.";
+                    echo'<div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <strong>Succes!</strong> Het bedrijf is aangemaakt.</div>';
+                    ?><p>U word terug gestuurd naar de bedrijfs pagina in <span id="counter">5</span> seconden.</p>
+                    <script type="text/javascript">
+                    function countdown() {
+                    var i = document.getElementById('counter');
+                    if (parseInt(i.innerHTML)<=1) {
+                    location.href = '/instellingen/afbeelding/';
+                    }
+                    i.innerHTML = parseInt(i . innerHTML) - 1;
+                }
+                setInterval(function(){countdown();}, 1000);
+            </script><?php
 	    } else {
-	        echo "Sorry, there was an error uploading your file.";
+	        echo "er is een probleem opgetreden tijdens het uploaden van de afbeelding.";
 	    }
 	}
 }

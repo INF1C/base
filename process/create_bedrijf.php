@@ -3,7 +3,6 @@
 $create = new create;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
-	var_dump($create->bedrijf());
         if($create->bedrijf()== True){  
         echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
