@@ -7,7 +7,7 @@ if($user->changePassword($gebruikersnaam) == TRUE){
 
 	echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Succes!</strong> Het ticket is ingevoerd in de FAQ.</div>';
+        <strong>Succes!</strong> Het wachtwoord is aangepast.</div>';
         ?><p>U word terug gestuurd naar de wachtwoord reset pagina in <span id="counter">5</span> seconden.</p>
         <script type="text/javascript">
         function countdown() {
@@ -17,7 +17,7 @@ if($user->changePassword($gebruikersnaam) == TRUE){
     }
     i.innerHTML = parseInt(i . innerHTML) - 1;
 }
-setInterval(function(){countdown();}, 500);
+setInterval(function(){countdown();}, 1000);
 </script><?php
 
 }
