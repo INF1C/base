@@ -38,26 +38,27 @@ if(isset($_POST['idTicket'])){
 	</div>
 	<span class="clearfix"></span>
 	<div class="col-lg-12 showback">
-		<table class="table table-hover">
-			<tr>
-				<th>Datum - Tijd</th>
-				<th>Status</th>
-				<th>Soort contact</th>
-				<th>Memo</th>
-				<th>Bedrijfsmedewerker</th>
-				<th>Medewerker</th>
-			</tr>
-			<?php
-			foreach ($status as $key => $value) {
-				echo "<tr>";
-				foreach($value as $subvalue){
-					echo "<td>" . $subvalue . "</td>";
-				}
-				echo "</tr>";
+	<table class="table table-hover">
+		<tr>
+			<th>Datum - Tijd</th>
+			<th>Status</th>
+			<th>Soort contact</th>
+			<th>Memo</th>
+			<th>Bedrijfsmedewerker</th>
+			<th>Medewerker</th>
+		</tr>
+		<?php
+		foreach ($status as $key => $value) {
+			echo "<tr>";
+			foreach($value as $key => $subvalue){
+				if($key == "Bedrijf")
+					continue;
+				echo "<td>" . $subvalue . "</td>";
 			}
-			?>
-		</table>
-	</div>
+			echo "</tr>";
+		}
+		?>
+	</table>	</div>
 	<?php
 }
 

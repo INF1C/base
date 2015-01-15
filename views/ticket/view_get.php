@@ -48,7 +48,9 @@ reset($status);
 		<?php
 		foreach ($status as $key => $value) {
 			echo "<tr>";
-			foreach($value as $subvalue){
+			foreach($value as $key => $subvalue){
+				if($key == "Bedrijf")
+					continue;
 				echo "<td>" . $subvalue . "</td>";
 			}
 			echo "</tr>";

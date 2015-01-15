@@ -72,7 +72,7 @@ $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 			foreach ($statuswijziging as $value) {
 				echo "<tr>";
 				foreach($value as $key => $subvalue){
-					if($key == 'Bedrijfsmedewerker')
+					if($key == 'Bedrijfsmedewerker' OR $key == 'Bedrijf')
 						continue;
 					echo "<td>" . $subvalue . "</td>";
 				}
