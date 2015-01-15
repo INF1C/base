@@ -9,8 +9,8 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 	$data = array_fill_keys(array('idStatus', 'idBedrijfsMedewerker', 'idMedewerker', 'Status', 'SoortContact', 'Memo'), '');
 }
 $db->db_table = "MEDEWERKER";
-        $data2 = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
-        var_dump($data2);
+        $data2 = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idMedewerker'];
+        
 ?>
 <form method="POST" action="/process/edit/statuswijziging">
     <div class="form-group">
