@@ -12,7 +12,9 @@ $oplostijd = $output->oplostijdTickets();
    echo "<th> Oplostijd (dagen) </th>";
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($oplostijd as $key => $value) {
-   echo "<tr>";
+   ?>
+   <tr onclick="window.document.location='/ticket/<?= $key ?>'">;
+   <?php
    foreach ($value as $ticket)
    {
        echo "<td>" . $ticket;
