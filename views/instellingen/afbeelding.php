@@ -1,6 +1,6 @@
 <div class="col-lg-10 showback">
 	<form action="/process/afbeelding/" method="POST">
-		<div class="fileinput fileinput-exists" data-provides="fileinput">
+		<div class="fileinput" data-provides="fileinput">
 			<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
 				<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" />
 			</div>
