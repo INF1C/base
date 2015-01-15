@@ -36,6 +36,7 @@ class create {
             $data[$key] = filter_input(INPUT_POST, $key);
             if ($data[$key] === '') {
                 trigger_error("U heeft niets ingevuld!");
+                return FALSE;
             }
         }
         //↑Vullen van de benodige velden
@@ -64,11 +65,13 @@ class create {
             $data[$key] = filter_input(INPUT_POST, $key);
             if ($data[$key] === '') {
                 trigger_error("U heeft niets ingevuld!");
+                return FALSE;
             }
         }
         $incident = array('Vraag', 'Wens', 'Uitval', 'Functioneel probleem', 'Technisch probleem');
         if (!in_array($data["IncidentType"], $incident)) {
             trigger_error("De invulmogelijkheden zijn: Vraag, Wens, Uitval, Functioneel probleem, Technisch probleem. Uw ingevulde incidenttype voldoet hier niet aan!");
+            return FALSE;
         }
         //↑Vullen van de benodige velden
 
