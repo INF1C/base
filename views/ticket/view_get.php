@@ -1,5 +1,5 @@
 <?php
-$idTicket = $params
+$idTicket = $params;
 $output = new output;
 $ticket = $output->ticket($idTicket);
 $status = $output->Statuswijziging($idTicket);
