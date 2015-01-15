@@ -18,7 +18,7 @@ $tickets = $output->tickets($idBedrijf);
     <?php
 foreach($tickets as $key => $value)
 { ?>
-   <tr onclick= "window.document.location='/ticket/<?= $key ?>'">;
+   <tr onclick= "window.document.location='/ticket/<?= $key ?>'">
 <?php
     foreach($value as $ticket)
     {    
