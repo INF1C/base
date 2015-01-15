@@ -10,7 +10,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
         echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
         <strong>Succes!</strong> De bedrijfs medewerker is aangemaakt.</div>';
-        ?><p>U word terug gestuurd naar de bedrijfs pagina in <span id="counter">5</span> seconden.</p>
+        ?><p>U wordt terug gestuurd naar de vorige pagina in <span id="counter">5</span> seconden.</p>
         <script type="text/javascript">
             function countdown() {
                 var i = document.getElementById('counter');
