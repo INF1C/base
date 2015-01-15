@@ -59,7 +59,7 @@ reset($status);
 	</table>
     <?php
   //  echo "<td><a href='/ticket/statuswijziging/'>Nieuwe status</a></td>";
-    echo "<td><a href='/ticket/statuswijziging/nieuw/" . $idTicket . "'>Nieuwe status</a></td>";
+    echo "<td><a href='/ticket/statuswijziging/" . $idTicket . "'>Nieuwe status</a></td>";
     ?>
 </div>
 
