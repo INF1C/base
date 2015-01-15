@@ -1,11 +1,17 @@
 <?php
 $idTicket = $params;
-echo "<pre>"; var_dump($idTicket); echo "</pre>";
 $output = new output;
-echo "<pre>"; var_dump($output); "</pre>";
 $ticketinfo = $output->ticket(5);
-echo "<pre>"; var_dump($ticketinfo); echo "</pre>";
-echo $ticketinfo;
+
+foreach($ticketinfo as $test)
+{
+    echo "<th>";
+    foreach($test as $key)
+    {
+        echo "<tr>" . $key . "</tr>";
+    }
+    echo "</th>";
+}
 
 ?>
 
