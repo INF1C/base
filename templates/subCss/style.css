@@ -1824,3 +1824,10 @@ label {
 .input-group-addon:not(:first-child) {
   border-left: 0;
 }
+.form-control[readonly] {
+    cursor: pointer;
+}
+tr[onclick] {
+    cursor: pointer;
+}
+
