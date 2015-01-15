@@ -42,7 +42,7 @@
         	minView: '2',
         	pickerPosition: "bottom-left"
 		});
-        $("#idForm").submit(function() {
+        $("#zoekBedrijfsMedewerker").submit(function() {
 
             var url = "/statuswijziging/zoekbedrijfsmedewerker/"; // the script where you handle the form input.
 
