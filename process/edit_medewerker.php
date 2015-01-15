@@ -13,7 +13,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
         function countdown() {
         var i = document.getElementById('counter');
         if (parseInt(i.innerHTML)<=1) {
-        location.href = '/process/edit/medewerker/';
+        location.href = 'beheerderspaneel/medewerker/';
     }
     i.innerHTML = parseInt(i . innerHTML) - 1;
 }
