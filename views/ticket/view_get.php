@@ -58,7 +58,7 @@ reset($status);
 		?>
 	</table>
     <?php
-    echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Nieuwe status</a></td>";
+    echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $idTicket . "'>Nieuwe status</a></td>";
     ?>
 </div>
 
