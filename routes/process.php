@@ -115,4 +115,4 @@ $router->map("POST", "/process/afbeelding/", function () {
     require DIR_TEMPLATE . 'header.php';
     require DIR_PROCES . "afbeelding.php";
     require DIR_TEMPLATE . 'footer.php';
-})
+});
