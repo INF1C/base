@@ -168,6 +168,6 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	$router->map("GET", "/ticket/statuswijziging/[i:id]", function ($id) {
 		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'), $id);
 	}, "Klantpaneel -> statuswijziging");
-	$router->map("GET", "/ticket/zoekbedrijfsmedewerker/", function () {
+	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/", function () {
 		openView("ticket/zoekbedrijfsmedewerker", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Klantpaneel -> zoek");
