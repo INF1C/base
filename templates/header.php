@@ -52,12 +52,16 @@
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
                         <?php
+                        if($_SESSION['autorisatie'] !== 'Bedrijfsmedewerker'){
                         $db = new db;
                         $db->db_table = "MEDEWERKER";
                         $afbeelding = $db->select(array('Afbeelding'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['Afbeelding'];
                         $db = NULL;
                         ?>
                         <p class="centered"><img src="<?= $afbeelding ?>" alt="avatar" style="max-width: 50%" class="center-block img-responsive img-circle" onError="this.onerror=null;this.src='https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';"/></p>
+                        <?php
+                        }
+                        ?>
                         <h3 class="centered"><?= $_SESSION['gebruikersnaam'] ?></h3>
                         <h5 class="centered"><?= $_SESSION['autorisatie'] ?></h5>
 
