@@ -104,7 +104,7 @@ class edit {
         }
         $where = array("idFAQ" => $idFAQ);
         $this->db->db_table = "FAQ";
-        $ckeck = $this->db->update($data, $where);
+        $check = $this->db->update($data, $where);
         if ($check === 1) {
             return TRUE;
         } else {
@@ -132,7 +132,7 @@ class edit {
 
         $where = array("idTicket" => $idTicket);
         $this->db->db_table = "TICKET";
-        $ckeck = $this->db->update($data, $where);
+        $check = $this->db->update($data, $where);
         if ($check === 1) {
             return TRUE;
         } else {
@@ -166,7 +166,7 @@ class edit {
 
         $where = array("idStatus" => $idStatus);
         $this->db->db_table = "STATUS_WIJZIGING";
-        $ckeck = $this->db->update($data, $where);
+        $check = $this->db->update($data, $where);
         if ($check === 1) {
             return TRUE;
         } else {
