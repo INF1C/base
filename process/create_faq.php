@@ -16,7 +16,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
     }
     i.innerHTML = parseInt(i . innerHTML) - 1;
 }
-setInterval(function(){countdown();}, 500);
+setInterval(function(){countdown();}, 1000);
 </script><?php
 }
 } else

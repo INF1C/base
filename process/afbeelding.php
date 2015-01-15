@@ -15,13 +15,13 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        echo "Dit is geen afbeelding.";
         $uploadOk = 0;
     }
 
 	// Check file size
 	if ($_FILES["avatar-image"]["size"] > 500000) {
-	    echo "Sorry, your file is too large.";
+	    echo "Sorry, de afbeelding die u probeert te uploaden is te groot.";
 	    $uploadOk = 0;
 	}
 	// Allow certain file formats
