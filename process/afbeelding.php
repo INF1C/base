@@ -39,10 +39,9 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	    	$db = new db;
 	    	$db->db_table = "MEDEWERKER";
 	    	$db->update(array('Afbeelding' => $save_file), array('gebruikersnaam' => $_SESSION['gebruikersnaam']));
-	        echo "The file ". $newFileName. " has been uploaded.";
                     echo'<div class="alert alert-success">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
-                    <strong>Succes!</strong> Het bedrijf is aangemaakt.</div>';
+                    <strong>Succes!</strong>echo De afbeelding met' . $newFileName . 'is geupload.</div>';
                     ?><p>U word terug gestuurd naar de bedrijfs pagina in <span id="counter">5</span> seconden.</p>
                     <script type="text/javascript">
                     function countdown() {
