@@ -9,7 +9,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$create->db->db_table = 'BEDRIJFSMEDEWERKER';
 	$idBedrijfsMedewerker = $create->db->select(array('idBedrijfsMedewerker'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idBedrijfsMedewerker'];
 	$idBedrijf = $create->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0]['idBedrijf'];
-	var_dump($create->statusWijziging($ticketID, $idBedrijfsMedewerker, $idBedrijf, NULL, "Nieuw"));
+
 	if($create->statusWijziging($ticketID, $idBedrijfsMedewerker, $idBedrijf, NULL, "Nieuw") == TRUE){
 	
 	echo'<div class="alert alert-success">
