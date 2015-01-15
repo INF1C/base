@@ -1,12 +1,10 @@
 <?php
 $create = new create;
 
-if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
-{
+if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     $bedrijfsID = $_POST['Bedrijf'];
     $result = $create->bedrijfsMedewerker($bedrijfsID);
-    if ($result === True)
-    {
+    if ($result === True) {
         echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
         <strong>Succes!</strong> De bedrijfs medewerker is aangemaakt.</div>';
@@ -25,8 +23,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
         </script><?php
     } else {
         echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
-        echo $result . "</div>";    }
-} else
-{
+        echo $result . "</div>";
+    }
+} else {
     echo "Probeer het opnieuw alstublieft.";
 }
