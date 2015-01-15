@@ -31,7 +31,7 @@
 						echo "</td>";
 					}
 				}
-				echo "<td><a href='' onclick=\"$('#VeldBedrijfsMedewerker').val('" . $id . "'); return false;\">Klik hier om te bewerken</a></td>";
+				echo "<td><a href='' onclick=\"$('#VeldBedrijfsMedewerker').val('" . $id . "'); $('#bedrijfsmedewerkermodal').modal('hide'); return false;\">Selecteer</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";
