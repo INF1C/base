@@ -77,10 +77,10 @@ $router->map("POST", "/ticket/", function () {
 	}, "Wachtwoord Reset");
 		$router->map("POST|GET", "/beheerderspaneel/wachtwoord/medewerker/[i:id]", function ($id) {
 			openView("beheerderspaneel/wachtwoord_zoek", array(), $id);
-		}, "Wachtwoord Reset");
+		}, "Medewerker wachtwoord Reset");
 		$router->map("POST|GET", "/beheerderspaneel/wachtwoord/bedrijfsmedewerker/[i:id]", function ($id) {
 			openView("beheerderspaneel/wachtwoord_zoek", array('Teamleider'), $id);
-		}, "Wachtwoord Reset");
+		}, "Bedrijfsmedewerker wachtwoord Reset");
 	   
 // Klantpaneel
 		//FAQ Bekijken
