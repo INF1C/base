@@ -9,8 +9,9 @@ $opentickets = $output->NietBehandeldeTickets();
    echo "<th> Geopend op </th>";
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
-   echo "<tronclick="window.document.location='/ticket/<?= $key ?>'">";
-   foreach ($value as $ticket)
+  ?>
+   <tr onclick="window.document.location='/ticket/<?= $key ?>'">;
+   <?php foreach ($value as $ticket)
    {
        echo "<td>" . $ticket;
        echo "</td>";
