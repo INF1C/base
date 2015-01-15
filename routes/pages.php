@@ -73,9 +73,9 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	$router->map("GET", "/beheerderspaneel/bedrijf/", function () {
 		openView("beheerderspaneel/bedrijf", array('Teamleider', 'Medewerker'));
 	}, "Bedrijf (knoppen)");
-		$router->map("GET", "/beheerderspaneel/bedrijf/nieuw/[i:id]", function ($id) {
-			openView("beheerderspaneel/bedrijf/nieuw", array('Teamleider', 'Medewerker'), $id);
-		}, "Nieuwe Bedrijf");
+		$router->map("GET", "/beheerderspaneel/bedrijf/nieuw/", function () {
+			openView("beheerderspaneel/bedrijf/nieuw", array('Teamleider', 'Medewerker'));
+		}, "Nieuw Bedrijf");
 		$router->map("POST|GET", "/beheerderspaneel/bedrijf/zoek/", function () {
 			openView("beheerderspaneel/bedrijf/zoek", array('Teamleider', 'Medewerker'));
 		}, "Zoek Bedrijf");
