@@ -24,13 +24,13 @@
             <label for="createBedrijfLicentie">Heeft u een Licentie?:</label>
             <div class="radio">
                 <label>
-                    <input type="radio" name="Licentie" id="LicentieJa" value="bedrijfLicentieJa" name="Licentie" checked>
+                    <input type="radio" name="Licentie" id="LicentieJa" value="2" name="Licentie" checked>
                     Ja
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" name="Licentie" id="LicentieNee" value="bedrijfLicentieNee" name="Licentie">
+                    <input type="radio" name="Licentie" id="LicentieNee" value="1" name="Licentie">
                     Nee
                 </label>
             </div>
