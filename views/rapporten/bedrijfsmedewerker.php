@@ -69,7 +69,7 @@ $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 				<th>Medewerker</th>
 			</tr>
 			<?php
-			foreach ($statuswijziging as $value) {
+			foreach ($statuswijziging as $key => $value) {
 				?>
 				<tr onclick="window.document.location='/ticket/<?= $key ?>'">
 				<?php
