@@ -72,7 +72,7 @@ $router->map("POST", "/ticket/", function () {
 			openView("beheerderspaneel/faq/edit", array('Medewerker', 'Teamleider'), $id);
 		}, "FAQ -> Edit");
 	// Wachtwoord
-	$router->map("POST|GET", "/beheerderspaneel/bedrijfsmedewerker/zoek/", function () {
+	$router->map("POST|GET", "/beheerderspaneel/wachtwoord/", function () {
 		openView("beheerderspaneel/wachtwoord_zoek", array('Teamleider'));
 	}, "Wachtwoord Reset");
 	   
