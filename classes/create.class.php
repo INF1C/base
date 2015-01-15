@@ -147,8 +147,8 @@ class create {
                 "Tussenvoegsel");
             foreach ($fields as $field) {
                 $data[$field] = filter_input(INPUT_POST, $field);
-                if ($data[$field] === '' && $key !== "Tussenvoegsel") {
-                    return "U heeft " . $key . " niet ingevuld!";
+                if ($data[$field] === '' && $field !== "Tussenvoegsel") {
+                    return "U heeft " . $field . " niet ingevuld!";
                 }
             }
             // Insert the data into the database
@@ -179,8 +179,8 @@ class create {
                     "Functie");
                 foreach ($fields as $field) {
                     $data[$field] = filter_input(INPUT_POST, $field);
-                    if ($data[$field] === '' && $key !== "Tussenvoegsel") {
-                        return "U heeft " . $key . " niet ingevuld!";
+                    if ($data[$field] === '' && $field !== "Tussenvoegsel") {
+                        return "U heeft " . $field . " niet ingevuld!";
                     }
                 }
                 $data['idBedrijf'] = $idBedrijf;
@@ -211,7 +211,7 @@ class create {
         foreach ($fields as $field) {
             $data[$field] = filter_input(INPUT_POST, $field);
             if ($data[$field] === '') {
-                return "U heeft " . $key . " niet ingevuld!";
+                return "U heeft " . $field . " niet ingevuld!";
             }
         }
         // Insert the data into the database
