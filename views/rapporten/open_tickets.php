@@ -9,7 +9,7 @@ $opentickets = $output->NietBehandeldeTickets();
    echo "<th> Geopend op </th>";
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
-   echo "<tr>";
+   echo "<tronclick="window.document.location='/ticket/<?= $key ?>'">";
    foreach ($value as $ticket)
    {
        echo "<td>" . $ticket;
@@ -18,15 +18,6 @@ foreach ($opentickets as $key => $value) {
    echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Neem in behandeling</a></td>";
    echo "</tr>";
 } 
-  
-    foreach ($result as $key => $value) {
-        ?><tr onclick="window.document.location='/ticket/<?= $key ?>'"><?php
-        foreach ($value as $subvalue)
-        {
-            echo "<td>" . $subvalue . "</td>";
-        }
-        echo "</tr>";
-    }
       
 echo "</table>";
 	?>
