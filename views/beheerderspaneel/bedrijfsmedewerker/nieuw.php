@@ -1,5 +1,15 @@
 <div class="col-md-6 showback">
-    <form method="POST" action="/process/create/bedrijfsmedewerker">          
+    <form method="POST" action="/process/create/bedrijfsmedewerker">
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerUsername">Gebruikersnaam:</label>
+            <input type="text" class="form-control" id="createBedrijfMedewerkerUsername" placeholder="Gebruikersnaam" name="Gebruikersnaam">
+        </div>
+
+        <div class="form-group">
+            <label for="createBedrijfMedewerkerPassword">Wachtwoord:</label>
+            <input type="password" class="form-control" id="createBedrijfMedewerkerPassword" placeholder="Wachtwoord" name="Wachtwoord">
+        </div>
+          
         <div class="form-group">
             <label for="createBedrijfMedewerkerVoornaam">Voornaam:</label>
             <input type="text" class="form-control" id="createBedrijfMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam">
@@ -26,7 +36,7 @@
         </div>
           
         <!-- Value moet met een GET opgehaald worden -->
-        <input type="hidden" value="<?= $params ?>" name="Bedrijf" />
+        <input type="hidden" value="<?= $params; ?>" name="Bedrijf" />
         <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>
     </form>
 </div>
