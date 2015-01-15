@@ -98,5 +98,6 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			}
 			echo "</table>";
 			echo "	</div>";
+		}
 		?>
 </div>
