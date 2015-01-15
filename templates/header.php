@@ -70,8 +70,9 @@
                                 <span>Instellingen</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="#"><del>Systeeminstellingen*</del></a></li>
-                                <li><a  href="/autorisatie/">Autorisatie</a></li>
+                                <li><a  href="/instellingen/autorisatie/">Autorisatie</a></li>
+                                <li><a  href="/instellingen/afbeelding/">Afbeelding wijzigen*</a></li>
+                                <li><a  href="/wijzigen/wachtwoord/">Wijzig uw wachtwoord</a></li>
                             </ul>
                         </li>
 
@@ -85,7 +86,7 @@
                                 <li><a  href="/beheerderspaneel/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
                                 <li><a  href="/beheerderspaneel/ticket/">Maak nieuwe ticket</a></li>
                                 <li><a  href="/beheerderspaneel/faq/">FAQ</a></li>
-                                <li><a  href="/wijzigen/wachtwoord/">Wachtwoord</a></li>
+                                <li><a  href="/beheerderspaneel/wachtwoord/">Wachtwoord</a></li>
                             </ul>
                         </li>
 
@@ -124,7 +125,7 @@
                         }
 						if($_SESSION['autorisatie'] === "Medewerker" OR $_SESSION['autorisatie'] === "Teamleider" OR $_SESSION['autorisatie'] === "Admin") {
                         ?>
-                        <li class="sub-menu">
+                        <!-- <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-wrench"></i>
                                 <span>Wijzigen</span>
@@ -134,7 +135,7 @@
                                 <li><a  href="#">Contactgegevens*</a></li>
                                 <li><a  href="#">Status ticket*</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <?php
                     	}
                     	?>

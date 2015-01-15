@@ -16,10 +16,10 @@ $router->map("POST", "/ticket/", function () {
 
 // Instellingen
 	// Autorisatie
-	$router->map("POST|GET", "/autorisatie/", function () {
+	$router->map("POST|GET", "/instellingen/autorisatie/", function () {
 		openView("instellingen/autorisatie", array());
 	}, "Wijzigen van autorisatie");
-		$router->map("GET", "/autorisatie/edit/[:user]", function ($user) {
+		$router->map("GET", "/instellingen/autorisatie/edit/[:user]", function ($user) {
 			openView("instellingen/edit.autorisatie", array(), $user);
 		}, "Wijzigen van autorisatie1");
 
@@ -71,6 +71,10 @@ $router->map("POST", "/ticket/", function () {
 		$router->map("GET", "/beheerderspaneel/faq/edit/[i:id]", function ($id) {
 			openView("beheerderspaneel/faq/edit", array('Medewerker', 'Teamleider'), $id);
 		}, "FAQ -> Edit");
+	// Wachtwoord
+	$router->map("POST|GET", "/beheerderspaneel/bedrijfsmedewerker/zoek/", function () {
+		openView("beheerderspaneel/wachtwoord_zoek", array('Teamleider'));
+	}, "Wachtwoord Reset");
 	   
 // Klantpaneel
 		//FAQ Bekijken

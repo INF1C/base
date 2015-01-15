@@ -50,7 +50,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 					echo $subresult;
 					echo "</td>";
 				}
-				echo "<td><a href='/autorisatie/edit/" . $gebruikersnaam . "'>Klik hier om te bewerken</a></td>";
+				echo "<td><a href='/instellingen/autorisatie/edit/" . $gebruikersnaam . "'>Klik hier om te bewerken</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";
