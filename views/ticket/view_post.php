@@ -16,7 +16,7 @@ if(isset($_POST['idTicket'])){
 			</tr>
 			<tr>
 				<td>Bedrijf:</td>
-				<td><?= $laatsteStatus['Medewerker'] ?></td>
+				<td><?= $laatsteStatus['Bedrijf'] ?></td>
 			</tr>
 			<tr>
 				<td>Incident type:</td>

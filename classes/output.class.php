@@ -201,11 +201,15 @@ class output {
             $return[$statusid]['Memo'] = reset(reset($this->db->select(array("Memo"), array("idStatus" => $statusid))));
                     
             $idbedrijfsmedewerker = reset(reset($this->db->select(array("idBedrijfsMedewerker"), array("idStatus" => $statusid))));
+            $idbedrijf = reset(reset($this->db->select(array("idBedrijf"), array("idStatus" => $statusid))));
             $idmedewerker = reset(reset($this->db->select(array("idMedewerker"), array("idStatus" => $statusid))));
 
             $this->db->db_table = "BEDRIJFSMEDEWERKER";
             //ophalen achternaam van de bedrijfsmedewerker
             $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker))));
+
+            $this->db->db_table = "BEDRIJF";
+            $return[$statusid]['Bedrijf'] = reset(reset($this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf))));            
             if($return[$statusid]['Status'] !== 'Nieuw') {
                 $this->db->db_table = "MEDEWERKER";
                 //ophalen achternaam van de medewerker
