@@ -1,8 +1,7 @@
 <?php
 isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $zoekterm = '';
 ?>
-<div class="row">
-	<div class="col-lg-12 content-panel">
+	<div class="col-lg-12 showback">
 		<h2>Wijzig de autorisatie</h2>
 		<p>Deze functie is bedoeld op de autorisatie van een medewerker te wijzigen.</p>
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek medewerker</h4>
@@ -17,7 +16,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 	<?php
 		if (isset($_POST['zoekterm']))
 		{
-			echo "<div class='col-lg-12 content-panel'>";
+			echo "<div class='col-lg-12 showback'>";
 			$db = new db();
 			$zoekterm = filter_input(INPUT_POST, 'zoekterm');
 			$stmt = $db->link->prepare("SELECT * FROM MEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
@@ -57,4 +56,3 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			echo "	</div>";
 		}
 		?>
-</div>

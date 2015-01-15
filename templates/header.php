@@ -81,7 +81,7 @@
                             </a>
                             <ul class="sub">
                                 <li><a  href="/instellingen/autorisatie/">Autorisatie</a></li>
-                                <li><a  href="/instellingen/afbeelding/">Afbeelding wijzigen*</a></li>
+                                <li><a  href="/instellingen/afbeelding/">Afbeelding wijzigen</a></li>
                                 <li><a  href="/wijzigen/wachtwoord/">Wijzig uw wachtwoord</a></li>
                             </ul>
                         </li>

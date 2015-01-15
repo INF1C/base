@@ -5,7 +5,9 @@
 				<img src="https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png" />
 			</div>
 			<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;">
-				<!--<img src="/images/example.png">-->
+				<?php if($afbeelding != '') { ?>
+					<img src="<?= $afbeelding ?>">
+				<?php } ?>
 			</div> 
 			<div>
 				<span class="btn btn-default btn-file">
