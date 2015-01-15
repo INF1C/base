@@ -5,7 +5,7 @@ $db = new db;
     $data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
 
 ?>
-
+<div class="col-lg-6 showback">
 <form method="POST" action="/process/edit/bedrijf">
     <div class="form-group">
         <label for="Bedrijfsnaam">Bedrijfsnaam:</label>
@@ -38,6 +38,6 @@ $db = new db;
 </div>
     <div class="form-group">
         <input type="hidden" value="<?= $data['idBedrijf'] ?>" name="idBedrijf" />
-        <input type="submit" value="submit" name="submit" />
-    </div>
+<button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>    </div>
 </form>
+</div>
