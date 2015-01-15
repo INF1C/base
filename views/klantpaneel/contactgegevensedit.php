@@ -4,6 +4,7 @@
 		$db->db_table = "BEDRIJFSMEDEWERKER";
         $data = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
         ?>
+        <h2>Contactgegevens wijzigen</h2>
     <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <div class="form-group">
             <label for="Voornaam">Voornaam:</label>
@@ -27,7 +28,7 @@
         </div>
         <div class="form-group">
             <input type="hidden" value="<?= $data['idBedrijfsMedewerker'] ?>" name="idBedrijfsMedewerker">
-            <input type="submit" value="submit" name="submit" />
+            <button class="btn btn-default" type="submit" name="submit" value="submit">Bewerk</button>
         </div>
     </form>
 </div>
