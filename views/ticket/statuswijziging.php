@@ -83,7 +83,6 @@
         <h4 class="modal-title" id="BedrijfsMedewerkerLabel">Kies een bedrijfsmedewerker</h4>
       </div>
       <div class="modal-body">
-        <div class="form-panel">
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek bedrijfsmedewerker</h4>
 		<form class="form-inline" id="zoekBedrijfsMedewerker" role="form">
 			<div class="form-group">
@@ -92,7 +91,9 @@
 			</div>
 			<button type="submit" class="btn btn-theme">Zoek</button>
 		</form>
-	</div>
+		<div id="searchContent">
+			
+		</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

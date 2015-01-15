@@ -169,5 +169,5 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'), $id);
 	}, "Klantpaneel -> statuswijziging");
 	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/", function () {
-		openView("ticket/zoekbedrijfsmedewerker", array('Medewerker', 'Bedrijfsmedewerker'));
+		require DIR_VIEW . "ticket/zoekbedrijfsmedewerker.php";
 	}, "Klantpaneel -> zoek");
