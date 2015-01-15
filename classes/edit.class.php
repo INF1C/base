@@ -51,8 +51,12 @@ class edit {
 
         $where = array("idBedrijfsmedewerker" => $idBedrijfsmedewerker);
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
-        return $this->db->update($data, $where);
-    }
+        $ckeck = $this->db->update($data, $where);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            return "Fout bij het bewerken.";
+        }    }
 
     public function bedrijf($idBedrijf) {
         //GEGEVENS TERUG VOEREN
@@ -72,7 +76,12 @@ class edit {
 
         $where = array("idBedrijf" => $idBedrijf);
         $this->db->db_table = "BEDRIJF";
-        return $this->db->update($data, $where);
+        $check = $this->db->update($data, $where);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            return "Fout bij het bewerken.";
+        }
     }
 
     /*
@@ -95,8 +104,12 @@ class edit {
         }
         $where = array("idFAQ" => $idFAQ);
         $this->db->db_table = "FAQ";
-        return $this->db->update($data, $where);
-    }
+        $ckeck = $this->db->update($data, $where);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            return "Fout bij het bewerken.";
+        }    }
 
     public function Ticket($idTicket) {   //GEGEVENS TERUG VOEREN
         $fields = array(
@@ -119,8 +132,12 @@ class edit {
 
         $where = array("idTicket" => $idTicket);
         $this->db->db_table = "TICKET";
-        return $this->db->update($data, $where);
-    }
+        $ckeck = $this->db->update($data, $where);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            return "Fout bij het bewerken.";
+        }    }
 
     public function StatusWijziging($idStatus) { //GEGEVENS TERUG VOEREN
         $fields = array(
@@ -149,7 +166,11 @@ class edit {
 
         $where = array("idStatus" => $idStatus);
         $this->db->db_table = "STATUS_WIJZIGING";
-        return $this->db->update($data, $where);
-    }
+        $ckeck = $this->db->update($data, $where);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            return "Fout bij het bewerken.";
+        }    }
 
 }
