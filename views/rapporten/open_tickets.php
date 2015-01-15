@@ -37,7 +37,11 @@ $opentickets = $output->openTickets();
    echo "<th> Geopend op </th>";
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
-   echo "<tr><td>" . $key . "</td>";
+  ?>
+   <tr onclick="window.document.location='/ticket/<?= $key ?>'">;
+   <?php
+   
+   echo "<td>" . $key . "</td>";
    foreach ($value as $ticket)
    {
        echo "<td>" . $ticket;
