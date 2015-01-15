@@ -33,6 +33,7 @@ if(isset($_POST['start']) && isset($_POST['stop'])){
 	</form>
 </div><!-- /form-panel -->
 <div class="col-lg-12 showback">
+<h2>Tickets</h2>
 	<table class="table table-hover">
 		<tr>
 			<th> Incident Type </th>

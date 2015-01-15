@@ -1,8 +1,6 @@
 <div class="col-lg-6 showback">
 	<h2>FAQ</h2>
-	<div class="well well-lg center-block">
 		<a role="button" href="/beheerderspaneel/faq/nieuw/" class="btn btn-primary btn-lg btn-block">Nieuw</a>
-	</div>
 </div>
 <span class="clearfix"></span>
 <div class="col-lg-12 showback">
