@@ -10,7 +10,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			</div>
 			<button type="submit" class="btn btn-theme">Zoek</button>
 			<span class="clearfix"></span>
-			<small>Klik op de rij om meer informatie over de specifieke bedrijfsmedewerker te krijgen.</small>
+			<small>Klik op de rij om meer informatie over het specifieke bedrijf te krijgen.</small>
 		</form>
 	</div>
 		<?php
@@ -34,18 +34,20 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			echo "</tr>";
 			foreach($returnArray as $result)
 			{
-				echo "<tr>";
+				$id = $result['idBedrijf'];
+				?><tr onclick="window.document.location='/rapporten/bedrijf/<?= $id ?>'"> <?php
 				foreach($result as $key => $subresult){
 					
 					if($key == "idBedrijf"){
 						$id = $subresult;
-					} else {
+					} elseif ($key == "Licentie") {
+						echo "<td>" . $subresult == 1 ? 'Nee' : 'Ja' . "</td>";
+					} else {	
 						echo "<td>";
 						echo $subresult;
 						echo "</td>";
 					}
 				}
-				echo "<td><a href='/rapporten/bedrijf/" . $id . "'>Klik hier voor meer informatie</a></td>";
 				echo "</tr>";
 			}
 			echo "</table>";
