@@ -1,5 +1,5 @@
 <div class="col-lg-10 showback">
-	<form action="/process/afbeelding/" method="POST">
+	<form action="/process/afbeelding/" method="POST" enctype="multipart/form-data">
 		<div class="fileinput fileinput-new" data-provides="fileinput">
 			<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
 				<img src="https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png" />
