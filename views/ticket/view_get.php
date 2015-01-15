@@ -57,5 +57,6 @@ reset($status);
 		}
 		?>
 	</table>
+    <td><a href=/nieuwestatus/>Nieuwe status</a></td>
 </div>
 

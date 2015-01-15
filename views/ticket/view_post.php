@@ -58,7 +58,9 @@ if(isset($_POST['idTicket'])){
 			echo "</tr>";
 		}
 		?>
-	</table>	</div>
+	</table>
+        <td><a href=/nieuwestatus/>Nieuwe status</a></td>
+        </div>
 	<?php
 }
 
