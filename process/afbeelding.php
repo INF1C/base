@@ -2,7 +2,7 @@
 if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	echo "Delete file";
 } elseif ($_FILES['avatar-image']['error'] == 0)  {
-	$target_dir = "upload/";
+	$target_dir = "/base/upload/";
 	$fileName = explode(".", basename($_FILES["avatar-image"]["name"]));
 	$newFileName = $_SESSION['gebruikersnaam'] . "." . end($fileName);
 	$target_file = $target_dir . $newFileName;
