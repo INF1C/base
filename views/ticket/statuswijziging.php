@@ -76,7 +76,7 @@
     </form>
 </div>
 <div class="modal fade" id="bedrijfsmedewerkermodal" tabindex="-1" role="dialog" aria-labelledby="BedrijfsMedewerkerLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -91,13 +91,10 @@
 			</div>
 			<button type="submit" class="btn btn-theme">Zoek</button>
 		</form>
+		<br><br>
 		<div id="searchContent">
 			
 		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
