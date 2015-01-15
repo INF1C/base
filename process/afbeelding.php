@@ -40,6 +40,9 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($_FILES["avatar-image"]["tmp_name"], $target_file)) {
+	    	$db = new db;
+	    	$db->db_table = "MEDEWERKER";
+	    	$db->update(array('Afbeelding' => $target_file), array('gebruikersnaam' => $_SESSION['gebruikersnaam']));
 	        echo "The file ". $newFileName. " has been uploaded.";
 	    } else {
 	        echo "Sorry, there was an error uploading your file.";
