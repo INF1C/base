@@ -10,7 +10,7 @@ $opentickets = $output->NietBehandeldeTickets();
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
   ?>
-   <tr onclick="window.document.location='/ticket/<?= $key ?>'">;
+   <tr onclick="window.document.location='/ticket/<?= $key ?>'">
    <?php foreach ($value as $ticket)
    {
        echo "<td>" . $ticket;
@@ -38,7 +38,7 @@ $opentickets = $output->openTickets();
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
   ?>
-   <tr onclick="window.document.location='/ticket/<?= $key ?>'">;
+   <tr onclick="window.document.location='/ticket/<?= $key ?>'">
    <?php
    
    echo "<td>" . $key . "</td>";
