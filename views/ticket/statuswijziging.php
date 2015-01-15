@@ -3,15 +3,15 @@ $idTicket = $params;
 $output = new output;
 $ticketinfo = $output->ticket(5);
 var_dump($ticketinfo);
-foreach($ticketinfo as $test1 => $test)
-{
-    echo "<tr><td>" . $test1 . "</td>";
-    foreach($test as $key)
-    {
-        echo "<tr>" . $key . "</tr>";
-    }
-    echo "</th>";
-}
+foreach ($ticketinfo as $key => $value) {
+			echo "<tr>";
+			foreach($value as $key => $subvalue){
+				if($key == "Bedrijf")
+					continue;
+				echo "<td>" . $subvalue . "</td>";
+			}
+			echo "</tr>";
+		}
 
 ?>
 
