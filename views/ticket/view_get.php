@@ -4,6 +4,7 @@ $output = new output;
 $ticket = $output->ticket($idTicket);
 $status = $output->Statuswijziging($idTicket);
 $laatsteStatus = end($status);
+$laatsteStatusID = key($status);
 reset($status);
 ?>
 <div class="col-lg-8 showback">
@@ -31,7 +32,14 @@ reset($status);
 	</table>
 </div>
 <div class="col-lg-3 showback pull-right">
-	<img class="img-responsive img-circle" src="https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png" alt="Anonymous">
+	<?php
+ 	$db = new db;
+    $db->db_table = "MEDEWERKER";
+    $afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $laatsteStatusID))[0]['Afbeelding'];
+    if($afbeelding == '')
+    	$afbeelding = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+    ?>
+	<img class="img-responsive img-circle" src="<?= $afbeelding ?>" alt="Anonymous">
 	<p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
 </div>
 <span class="clearfix"></span>
