@@ -51,7 +51,7 @@ class edit {
 
         $where = array("idBedrijfsmedewerker" => $idBedrijfsmedewerker);
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
-        $ckeck = $this->db->update($data, $where);
+        $check = $this->db->update($data, $where);
         if ($check === 1) {
             return TRUE;
         } else {
