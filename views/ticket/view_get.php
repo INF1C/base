@@ -34,8 +34,10 @@ reset($status);
 <div class="col-lg-3 showback pull-right">
 	<?php
  	$db = new db;
+ 	$db->db_table = "STATUS_WIJZIGING";
+ 	$idMedewerker = $db->select(array('idMedewerker'), array('idStatus' => $laatsteStatusID))[0]['idMedewerker'];
     $db->db_table = "MEDEWERKER";
-    $afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $laatsteStatusID))[0]['Afbeelding'];
+    $afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
     if($afbeelding == '')
     	$afbeelding = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
     ?>
