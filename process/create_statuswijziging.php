@@ -9,7 +9,8 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$idMedewerker = filter_input(INPUT_POST, 'idMedewerker');
 	$db->db_table = "BEDRIJFSMEDEWERKER";
 	$idBedrijf = $db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $idBedrijfsmedewerker))[0]['idBedrijf'];
-	if($create->statusWijziging($idTicket, $idBedrijfsmedewerker, $idBedrijf, $idMedewerker) == TRUE){
+	$result = $create->statusWijziging($idTicket, $idBedrijfsmedewerker, $idBedrijf, $idMedewerker);
+    if($result === TRUE){
 		echo'<div class="alert alert-success">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
             <strong>Succes!</strong> Het account voor de medewerker is aangemaakt.</div>';
@@ -27,7 +28,8 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
                 }, 1000);
             </script><?php
 	} else {
-		echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
+        echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
+        echo $result . "</div>";    }
 	}
 } else {
 	echo "U mag deze pagina niet zo opvragen!";

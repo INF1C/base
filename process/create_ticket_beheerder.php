@@ -11,7 +11,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$create->db->db_table = 'MEDEWERKER';
 	$idMedewerker = $create->db->select(array('idMedewerker'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idMedewerker'];
 	$result2 = $create->statusWijziging($ticketID, $idBedrijfsMedewerker, $idBedrijf, $idMedewerker);
-	if($result1 == TRUE AND $result2 == TRUE){
+	if($result1 === TRUE AND $result2 === TRUE){
 	
 		echo'<div class="alert alert-success">
 	        <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -29,7 +29,9 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 			</script><?php
 	
 	} else {
-		echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
+        echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
+        echo $result1 . "<br>";
+        echo $result2 . "</div>";    }
 	}
 } else {
 	echo "Please post the next time!";
