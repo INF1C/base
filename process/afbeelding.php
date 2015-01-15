@@ -31,7 +31,7 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-	    $error[] "Het uploaden is niet gelukt.";
+	    $error[] = "Het uploaden is niet gelukt.";
 	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($_FILES["avatar-image"]["tmp_name"], $target_file)) {
