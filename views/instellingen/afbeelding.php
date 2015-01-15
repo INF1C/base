@@ -8,7 +8,11 @@
 				<!--<img src="/images/example.png">-->
 			</div> 
 			<div>
-				<span class="btn btn-default btn-file"><span class="fileinput-new" data-trigger="fileinput">Selecteer afbeelding</span><span class="fileinput-exists" data-trigger="fileinput">Verander</span><input type="file" name="avatar-image" /></span>
+				<span class="btn btn-default btn-file">
+					<span class="fileinput-new" data-trigger="fileinput">Selecteer afbeelding</span>
+					<span class="fileinput-exists" data-trigger="fileinput">Verander</span>
+					<input type="file" name="avatar-image" />
+				</span>
 				<a href="#" class="btn fileinput-exists" data-dismiss="fileinput">Verwijder</a>
 			</div>
 			<div class="input-group">
