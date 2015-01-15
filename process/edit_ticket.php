@@ -4,8 +4,7 @@ $edit = new edit;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$idTicket = $_POST['idTicket'];
-	var_dump($edit->ticket($idTicket));
-	if($edit->ticket($idTicket) == TRUE)){
+	if($edit->ticket($idTicket) == TRUE){
 	
 	cho'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
