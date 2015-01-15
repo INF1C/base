@@ -109,3 +109,10 @@ $router->map("POST|GET", "/process/resetpassword/", function () {
     require DIR_PROCES . "reset_wachtwoord.php";
     require DIR_TEMPLATE . 'footer.php';
 },  "Reset -> Wachtwoord");
+
+// SET USER IMAGE
+$router->map("POST", "/process/afbeelding/", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require DIR_PROCES . "afbeelding.php";
+    require DIR_TEMPLATE . 'footer.php';
+})

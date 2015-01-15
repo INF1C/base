@@ -84,6 +84,7 @@
                             <ul class="sub">
                                 <li><a  href="/beheerderspaneel/medewerker/">Medewerker</a></li>
                                 <li><a  href="/beheerderspaneel/bedrijfsmedewerker/">Bedrijfsmedewerker</a></li>
+                                <li><a  href="/beheerderspaneel/bedrijf/">Bedrijf*</a></li>
                                 <li><a  href="/beheerderspaneel/ticket/">Maak nieuwe ticket</a></li>
                                 <li><a  href="/beheerderspaneel/faq/">FAQ</a></li>
                                 <li><a  href="/beheerderspaneel/wachtwoord/">Wachtwoord</a></li>

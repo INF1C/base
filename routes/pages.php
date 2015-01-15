@@ -25,6 +25,10 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 		$router->map("GET", "/instellingen/autorisatie/edit/[:user]", function ($user) {
 			openView("instellingen/edit.autorisatie", array(), $user);
 		}, "Wijzigen van autorisatie1");
+	// Afbeelding
+	$router->map("POST|GET", "/instellingen/afbeelding/", function () {
+		openView("instellingen/afbeelding", array());
+	}, "Wijzigen van uw afbeelding");
 
 // beheerderspaneel
 
