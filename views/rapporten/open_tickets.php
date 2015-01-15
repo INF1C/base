@@ -1,6 +1,7 @@
 <div class="col-lg-12 showback">
 	<h2>Niet behandelde Tickets</h2>
 	<?php
+$result = $output->tickets(NULL, array('start' => $start, 'stop' => $stop));
 
 $output = new output;
 $opentickets = $output->NietBehandeldeTickets();
