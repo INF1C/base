@@ -12,10 +12,10 @@ $router->map("GET", "/", function () {
 // Enkele ticket
 $router->map("POST", "/ticket/", function () {
 	openView("ticket/view_post", array('Bedrijfsmedewerker', 'Medewerker', 'Teamleider'));
-}, "Ticket");
+}, "Ticket 1");
 $router->map("GET", "/ticket/", function () {
 	openView("ticket/view_get", array('Bedrijfsmedewerker', 'Medewerker', 'Teamleider'));
-}, "Ticket");
+}, "Ticket 2");
 
 // Instellingen
 	// Autorisatie
