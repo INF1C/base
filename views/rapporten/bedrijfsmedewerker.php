@@ -70,7 +70,9 @@ $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 			</tr>
 			<?php
 			foreach ($statuswijziging as $value) {
-				echo "<tr>";
+				?>
+				<tr onclick="window.document.location='/ticket/<?= $key ?>'">
+				<?php
 				foreach($value as $key => $subvalue){
 					if($key == 'Bedrijfsmedewerker' OR $key == 'Bedrijf')
 						continue;

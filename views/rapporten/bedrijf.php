@@ -46,7 +46,9 @@ $tickets = $output->tickets($idBedrijf);
 		</tr>
 		<?php
 		foreach ($tickets as $key => $value) {
-		    echo "<tr>";
+		    ?>
+		    <tr onclick="window.document.location='/ticket/<?= $key ?>'">
+		    <?php
 		    foreach ($value as $subvalue)
 		    {
 		        echo "<td>" . $subvalue . "</td>";
