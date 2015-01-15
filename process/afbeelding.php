@@ -18,11 +18,6 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
         $uploadOk = 0;
     }
 
-	// Check if file already exists
-	if (file_exists($target_file)) {
-	    echo "Sorry, file already exists.";
-	    $uploadOk = 0;
-	}
 	// Check file size
 	if ($_FILES["avatar-image"]["size"] > 500000) {
 	    echo "Sorry, your file is too large.";
