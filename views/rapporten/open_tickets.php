@@ -16,7 +16,7 @@ foreach ($opentickets as $key => $value) {
        echo "<td>" . $ticket;
        echo "</td>";
    }
-   echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Neem in behandeling</a></td>";
+   echo "<td><a href='/ticket/statuswijziging/behandeling/" . $key . "'>Neem in behandeling</a></td>";
    echo "</tr>";
 } 
       
@@ -47,7 +47,7 @@ foreach ($opentickets as $key => $value) {
        echo "<td>" . $ticket;
        echo "</td>";
    }
-   echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Nieuwe status</a></td>";
+   echo "<td><a href='/ticket/statuswijziging/" . $key . "'>Nieuwe status</a></td>";
    echo "</tr>";
 }
 echo "</table>";
