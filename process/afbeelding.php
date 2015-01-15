@@ -39,7 +39,7 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	    echo "Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
-	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+	    if (move_uploaded_file($_FILES["avatar-image"]["tmp_name"], $target_file)) {
 	        echo "The file ". $newFileName. " has been uploaded.";
 	    } else {
 	        echo "Sorry, there was an error uploading your file.";
