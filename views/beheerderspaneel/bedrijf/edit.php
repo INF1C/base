@@ -1,12 +1,9 @@
 <?php
 $db = new db;
-if(!empty(FILTER_INPUT(INPUT_GET, 'idBedrijf'))) {
     $idBedrijf = $params;
     $db->db_table = "BEDRIJF";
     $data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
-} else {
-    $data = array_fill_keys(array('idBedrijf', 'Bedrijfsnaam', 'Adresgegevens', 'Telefoon', 'Email', 'Licentie'), '');
-}
+
 ?>
 
 <form method="POST" action="/process/edit/bedrijf">
