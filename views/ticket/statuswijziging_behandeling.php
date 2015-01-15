@@ -1,7 +1,7 @@
 <div class="col-md-6 showback">
 <h2>Nieuwe statuswijziging</h2>
     <form method="POST" action="/process/create/statuswijziging">
-		<input type="hidden" value="Nieuw" name="Status">
+		<input type="hidden" value="In behandeling" name="Status">
             <input type="hidden" class="form-control" id="createStatusWijzigingTicketID" name="idTicket" value="<?= $params ?>">
         <div class="form-group">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bedrijfsmedewerkermodal">Kies een bedrijfsmedewerker</button>
