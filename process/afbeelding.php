@@ -2,7 +2,7 @@
 if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	echo "Delete file";
 } elseif ($_FILES['avatar-image']['error'] == 0)  {
-	$target_dir = "/base/upload/";
+	$target_dir = "base/upload/";
 	$fileName = explode(".", basename($_FILES["avatar-image"]["name"]));
 	$newFileName = $_SESSION['gebruikersnaam'] . "." . end($fileName);
 	$target_file = $target_dir . $newFileName;
@@ -37,7 +37,7 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	    if (move_uploaded_file($_FILES["avatar-image"]["tmp_name"], $target_file)) {
 	    	$db = new db;
 	    	$db->db_table = "MEDEWERKER";
-	    	$db->update(array('Afbeelding' => $target_file), array('gebruikersnaam' => $_SESSION['gebruikersnaam']));
+	    	$db->update(array('Afbeelding' => "/" . $target_file), array('gebruikersnaam' => $_SESSION['gebruikersnaam']));
 	        echo "The file ". $newFileName. " has been uploaded.";
 	    } else {
 	        echo "Sorry, there was an error uploading your file.";
