@@ -209,7 +209,7 @@ class output {
             $return[$statusid]['Bedrijfsmedewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idBedrijfsMedewerker" => $idbedrijfsmedewerker))));
 
             $this->db->db_table = "BEDRIJF";
-            $return[$statusid]['Bedrijf'] = reset(reset($this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idBedrijf))));            
+            $return[$statusid]['Bedrijf'] = reset(reset($this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idbedrijf))));            
             if($return[$statusid]['Status'] !== 'Nieuw') {
                 $this->db->db_table = "MEDEWERKER";
                 //ophalen achternaam van de medewerker
