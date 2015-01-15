@@ -60,8 +60,8 @@ if(isset($_POST['idTicket'])){
 		?>
 	</table>
         <?php
-        echo "<td><a href='/ticket/statuswijziging/'>Nieuwe status</a></td>";
-   // echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $idTicket . "'>Nieuwe status</a></td>";
+        //echo "<td><a href='/ticket/statuswijziging/'>Nieuwe status</a></td>";
+   echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $idTicket . "'>Nieuwe status</a></td>";
     ?>
         </div>
 	<?php
