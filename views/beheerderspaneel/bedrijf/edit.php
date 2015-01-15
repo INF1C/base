@@ -26,13 +26,13 @@ $db = new db;
        <label>Licentie</label>
     <div class="radio">
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios1" name="Licentie" value="2" <?= $data['Licentie'] == 2 ? "selected" : '' ?>>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" name="Licentie" value="2" <?= $data['Licentie'] == 2 ? "checked" : '' ?>>
        Ja
       </label>
     </div>
      <div class="radio">
     <label>
-     <input type="radio" name="optionsRadios" id="optionsRadios2" name="Licentie" value="1" <?= $data['Licentie'] == 1 ? "selected" : '' ?>>
+     <input type="radio" name="optionsRadios" id="optionsRadios2" name="Licentie" value="1" <?= $data['Licentie'] == 1 ? "checked" : '' ?>>
       Nee
     </label>
 </div>
