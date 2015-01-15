@@ -13,12 +13,15 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
         var i = document.getElementById('counter');
         if (parseInt(i.innerHTML)<=1) {
         location.href = '/beheerderspaneel/faq/';
+        }
+        i.innerHTML = parseInt(i . innerHTML) - 1;
+        }
+        setInterval(function(){countdown();}, 1000);
+        </script>
+        <?php
+    } else {
+         echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
     }
-    i.innerHTML = parseInt(i . innerHTML) - 1;
-}
-setInterval(function(){countdown();}, 1000);
-</script><?php
-}
 } else
 {
 echo "Probeer het opnieuw alstublieft.";

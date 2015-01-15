@@ -4,7 +4,6 @@ $edit = new edit;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$idBedrijf = $_POST['idBedrijf'];
-	var_dump($edit->bedrijf($idBedrijf));
 	if($edit->bedrijf($idBedrijf) == TRUE){
 	
 	echo'<div class="alert alert-success">
@@ -24,7 +23,9 @@ setInterval(function(){countdown();}, 1000);
 
 	
 	
-	}
+	} else {
+        echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
+    }
 } else {
 	echo "Please post the next time!";
 }

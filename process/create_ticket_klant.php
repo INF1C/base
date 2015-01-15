@@ -3,12 +3,13 @@
 $create = new create;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
+	$result1 = $create->ticket();
 	$ticketID = $create->db->link->lastInsertID();
 	$create->db->db_table = 'BEDRIJFSMEDEWERKER';
 	$idBedrijfsMedewerker = $create->db->select(array('idBedrijfsMedewerker'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idBedrijfsMedewerker'];
 	$idBedrijf = $create->db->select(array('idBedrijf'), array('idBedrijfsMedewerker' => $idBedrijfsMedewerker))[0]['idBedrijf'];
-
-	if($create->statusWijziging($ticketID, $idBedrijfsMedewerker, $idBedrijf, NULL, "Nieuw") == TRUE){
+	$result2 = $create->statusWijziging($ticketID, $idBedrijfsMedewerker, $idBedrijf, NULL, "Nieuw");
+	if($result1 == TRUE AND $result2 == TRUE){
 	
 	echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -26,7 +27,9 @@ setInterval(function(){countdown();}, 1000);
 </script><?php
 	
 
-	} 
+	} else {
+		echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
+	}
 } else {
 	echo "Please post the next time!";
 }

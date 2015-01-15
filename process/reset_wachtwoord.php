@@ -20,6 +20,8 @@ if($user->changePassword($gebruikersnaam) == TRUE){
 setInterval(function(){countdown();}, 1000);
 </script><?php
 
+} else {
+    echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
 }
 
 }else {

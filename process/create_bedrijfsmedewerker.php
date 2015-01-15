@@ -4,7 +4,6 @@ $create = new create;
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
 {
     $bedrijfsID = $_POST['Bedrijf'];
-    var_dump($create->bedrijfsMedewerker($bedrijfsID));
     if ($create->bedrijfsMedewerker($bedrijfsID) == True)
     {
         echo'<div class="alert alert-success">
@@ -23,6 +22,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
                 countdown();
             }, 1000);
         </script><?php
+    } else {
+        echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
     }
 } else
 {

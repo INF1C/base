@@ -21,7 +21,9 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 setInterval(function(){countdown();}, 1000);
 </script><?php
 	
-	}
+	} else {
+        echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
+    }
 }else{
 	echo "Please post the next time!";
 }

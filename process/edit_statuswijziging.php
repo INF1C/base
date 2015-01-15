@@ -4,7 +4,6 @@ $edit = new edit;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$idStatus = $_POST['idStatus'];
-	var_dump($edit->StatusWijziging($idStatus));
 	if($edit->StatusWijziging($idStatus) == TRUE){
 	
 	echo'<div class="alert alert-success">
@@ -24,6 +23,8 @@ setInterval(function(){countdown();}, 1000);
 	
 	
 	
+	} else {
+		echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
 	}
 } else {
 	echo "Please post the next time!";
