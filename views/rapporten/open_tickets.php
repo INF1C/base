@@ -18,7 +18,7 @@ foreach ($opentickets as $key => $value) {
    echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Neem in behandeling</a></td>";
    echo "</tr>";
 } 
-    $result = $output->tickets(NULL, array('start' => $start, 'stop' => $stop));
+  
     foreach ($result as $key => $value) {
         ?><tr onclick="window.document.location='/ticket/<?= $key ?>'"><?php
         foreach ($value as $subvalue)
