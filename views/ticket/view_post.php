@@ -5,6 +5,7 @@ if(isset($_POST['idTicket'])){
 	$ticket = $output->ticket($idTicket);
 	$status = $output->Statuswijziging($idTicket);
 	$laatsteStatus = end($status);
+	$laatsteStatusID = key($status);
 	reset($status);
 
 	?>
@@ -33,7 +34,16 @@ if(isset($_POST['idTicket'])){
 		</table>
 	</div>
 	<div class="col-lg-3 showback pull-right">
-		<img class="img-responsive img-circle" src="https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png" alt="Anonymous">
+	<?php
+ 	$db = new db;
+ 	$db->db_table = "STATUS_WIJZIGING";
+ 	$idMedewerker = $db->select(array('idMedewerker'), array('idStatus' => $laatsteStatusID))[0]['idMedewerker'];
+    $db->db_table = "MEDEWERKER";
+    $afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
+    if($afbeelding == '')
+    	$afbeelding = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+    ?>
+	<img class="img-responsive img-circle" src="<?= $afbeelding ?>" alt="Anonymous">
 		<p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
 	</div>
 	<span class="clearfix"></span>
