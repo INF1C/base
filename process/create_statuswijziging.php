@@ -29,7 +29,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
             </script><?php
 	} else {
         echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
-        echo $result . "</div>";    }
+        echo $result . "</div>";
 	}
 } else {
 	echo "U mag deze pagina niet zo opvragen!";
