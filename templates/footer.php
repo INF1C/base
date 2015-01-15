@@ -44,7 +44,7 @@
 		});
         $("#zoekBedrijfsMedewerker").submit(function() {
 
-            var url = "/statuswijziging/zoekbedrijfsmedewerker/"; // the script where you handle the form input.
+            var url = "/ticket/zoekbedrijfsmedewerker/"; // the script where you handle the form input.
 
             $.ajax({
                    type: "POST",
