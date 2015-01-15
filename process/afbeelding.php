@@ -12,7 +12,6 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	// Check if image file is a actual image or fake image
     $check = getimagesize($_FILES["avatar-image"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
         echo "Dit is geen afbeelding.";
