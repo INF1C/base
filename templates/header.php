@@ -125,11 +125,11 @@
                                 <span>Klantpaneel</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="/klantpaneel/faq/">FAQ Bekijken</a></li>
-                                <li><a  href="/klantpaneel/ticket/">Ticket indienen</a></li>
-                                <li><a  href="/klantpaneel/ticketingediend/">Ingediende tickets bekijken</a></li>
+                                <li><a  href="<?= $_SESSION['autorisatie'] == 'Bedrijfsmedewerker' ? '/klantpaneel/faq/' : '/beheerderspaneel/faq/' ?>">FAQ Bekijken</a></li>
+                                <li><a  href="<?= $_SESSION['autorisatie'] == 'Bedrijfsmedewerker' ? '/klantpaneel/ticket/' : '/beheerderspaneel/ticket/' ?>">Ticket indienen</a></li>
+                                <li><a  href="<?= $_SESSION['autorisatie'] == 'Bedrijfsmedewerker' ? '/klantpaneel/ticketingediend/' : '" onclick="alert("Sorry bro, you cant do this as a admin. You are not god' ?>">Ingediende tickets bekijken</a></li>
                                 <li><a  href="/wijzigen/wachtwoord/">Wachtwoord Wijzigen</a></li>
-                                <li><a  href="/klantpaneel/contactgegevensedit/">Contactgegevens Wijzigen</a></li>
+                                <li><a  href="<?= $_SESSION['autorisatie'] == 'Bedrijfsmedewerker' ? '/klantpaneel/contactgegevensedit/' : '" onclick="alert("Sorry bro, you cant do this as a admin. You are not god' ?>">Contactgegevens Wijzigen</a></li>
                             </ul>
                         </li>
                         <?php
