@@ -4,7 +4,8 @@ $edit = new edit;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	$idBedrijf = $_POST['idBedrijf'];
-	if($edit->bedrijf($idBedrijf) == TRUE){
+    $result = $edit->bedrijf($idBedrijf);
+	if($result === TRUE){
 	
 	echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -24,7 +25,8 @@ setInterval(function(){countdown();}, 1000);
 	
 	
 	} else {
-        echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
+            echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
+            echo $result . "</div>";
     }
 } else {
 	echo "Please post the next time!";

@@ -23,8 +23,8 @@ class edit {
 
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
-            if ($data[$key] === '') {
-                trigger_error("Lege input");
+            if ($data[$key] === '' && $key !== "Tussenvoegsel") {
+                return "U heeft " . $key . " niet ingevuld.";
             }
         }
 
@@ -44,8 +44,8 @@ class edit {
 
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
-            if ($data[$key] === '') {
-                trigger_error("Lege input");
+            if ($data[$key] === '' && $key !== "Tussenvoegsel") {
+                return "U heeft " . $key . " niet ingevuld.";
             }
         }
 
@@ -66,7 +66,7 @@ class edit {
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
             if ($data[$key] === '') {
-                trigger_error("Lege input");
+                return "U heeft " . $key . " niet ingevuld.";
             }
         }
 
@@ -90,7 +90,7 @@ class edit {
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
             if ($data[$key] === '') {
-                trigger_error("Lege input");
+                return "U heeft " . $key . " niet ingevuld.";
             }
         }
         $where = array("idFAQ" => $idFAQ);
@@ -107,16 +107,15 @@ class edit {
 
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
-            if ($data[$key] === '') {
-                trigger_error("Lege input");
+            if ($data[$key] === '' && $key !== "Oplossing") {
+                return "U heeft " . $key . " niet ingevuld.";
             }
         }
 
         $EnumCheck = array("Vraag", "Wens", "Uitval", "Functioneel probleem", "Technisch probleem");
 
         if (!in_array($data['IncidentType'], $EnumCheck))
-            die("Check failed");
-
+            return "Waarde " . $data['IncidentType'] . " is hier niet toegestaan.";
 
         $where = array("idTicket" => $idTicket);
         $this->db->db_table = "TICKET";
@@ -134,8 +133,8 @@ class edit {
 
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
-            if ($data[$key] === '') {
-                trigger_error("Lege input, " . $key);
+            if (($data[$key] === '' && $key !== "Memo") OR ($data[$key] === '' && $key !== "idMedewerker")) {
+                return "U heeft " . $key . " niet ingevuld.";
             }
         }
         $this->db->db_table = "BEDRIJFSMEDEWERKER";
@@ -146,7 +145,7 @@ class edit {
         $EnumCheck = array("Nieuw", "In behandeling", "Doorgestuurd naar engineer", "Doorgestuurd naar account manager", "opgelost", "afgemeld");
 
         if (!in_array($data['Status'], $EnumCheck))
-            die("Check failed");
+            return "Waarde " . $data['IncidentType'] . " is hier niet toegestaan.";
 
         $where = array("idStatus" => $idStatus);
         $this->db->db_table = "STATUS_WIJZIGING";
