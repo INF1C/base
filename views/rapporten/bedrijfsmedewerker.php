@@ -8,6 +8,9 @@ $bedrijf = $output->Bedrijf($idBedrijf)[0];
 
 $statuswijziging = $output->Statuswijziging(NULL, $idBedrijfsmedewerker);
 ?>
+<div class="col-lg-12">
+	<h2 class="text-center">Bedrijfsmedewerker</h2>
+</div>
 <div class="col-lg-6 showback">
 	<p class="text-center">Bedrijfsmedewerker:</p>
 	<table class="table">
