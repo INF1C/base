@@ -35,8 +35,7 @@ class create {
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
             if ($data[$key] === '') {
-                trigger_error("U heeft niets ingevuld!");
-                return FALSE;
+                return "U heeft het veld " . $key . " niet ingevuld!";
             }
         }
         //↑Vullen van de benodige velden
@@ -46,7 +45,7 @@ class create {
         if ($check === 1) {
             return TRUE;
         } else {
-            trigger_error("Fout tijdens het aanmaken van uw FAQ");
+            return "Fout tijdens het aanmaken van uw FAQ";
         }
         //↑Velden naar database sturen
     }
@@ -63,15 +62,13 @@ class create {
         $data = array();
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
-            if ($data[$key] === '') {
-                trigger_error("U heeft niets ingevuld!");
-                return FALSE;
+            if ($data[$key] === '' && $key !== "Oplossing") {
+                return "U heeft niets ingevuld!";
             }
         }
         $incident = array('Vraag', 'Wens', 'Uitval', 'Functioneel probleem', 'Technisch probleem');
         if (!in_array($data["IncidentType"], $incident)) {
-            trigger_error("De invulmogelijkheden zijn: Vraag, Wens, Uitval, Functioneel probleem, Technisch probleem. Uw ingevulde incidenttype voldoet hier niet aan!");
-            return FALSE;
+            return "De invulmogelijkheden zijn: Vraag, Wens, Uitval, Functioneel probleem, Technisch probleem. Uw ingevulde incidenttype voldoet hier niet aan!";
         }
         //↑Vullen van de benodige velden
 
@@ -79,7 +76,7 @@ class create {
         if ($check === 1) {
             return TRUE;
         } else {
-            trigger_error("Fout tijdens het aanmaken van uw ticket");
+            return "Fout tijdens het aanmaken van uw ticket";
         }
         //↑Velden naar database sturen
     }
@@ -97,8 +94,8 @@ class create {
         $data = array();
         foreach ($fields as $key) {
             $data[$key] = filter_input(INPUT_POST, $key);
-            if ($data[$key] === '') {
-                trigger_error("U heeft niets ingevuld!");
+            if ($data[$key] === '' && $key !== "Memo") {
+                return "U heeft " . $key . " niet ingevuld!";
             }
         }
         //↑Checken of er iets ingevuld is	
@@ -114,7 +111,7 @@ class create {
 
         $status = array('Nieuw', 'In behandeling', 'Doorgestuurd naar engineer', 'Doorgestuurd naar account manager', 'Opgelost', 'Afgemeld');
         if (!in_array($data["Status"], $status)) {
-            trigger_error("De invulmogelijkheden zijn: Nieuw, In behandeling, Doorgestuurd naar engineer, Doorgestuurd naar account manager, Opgelost , Afgemeld. Uw ingevulde incidenttype voldoet hier niet aan!");
+            return "De invulmogelijkheden zijn: Nieuw, In behandeling, Doorgestuurd naar engineer, Doorgestuurd naar account manager, Opgelost , Afgemeld. Uw ingevulde incidenttype voldoet hier niet aan!";
         }
         //↑Checken of status voldoet aan de voorwaarden		
 
@@ -128,7 +125,7 @@ class create {
         if ($check === 1) {
             return TRUE;
         } else {
-            trigger_error("Fout tijdens het wijzigigen van de status");
+            return "Fout tijdens het wijzigigen van de status";
         }
         //↑Velden naar database sturen			
     }
@@ -150,8 +147,8 @@ class create {
                 "Tussenvoegsel");
             foreach ($fields as $field) {
                 $data[$field] = filter_input(INPUT_POST, $field);
-                if ($data[$field] === '') {
-                    trigger_error("Nog niet alle velden zijn ingevuld");
+                if ($data[$field] === '' && $key !== "Tussenvoegsel") {
+                    return "U heeft " . $key . " niet ingevuld!";
                 }
             }
             // Insert the data into the database
@@ -160,7 +157,7 @@ class create {
             if ($check === 1) {
                 return TRUE;
             } else {
-                trigger_error("Error bij het aanmaken van uw account");
+                return "Error bij het aanmaken van uw account";
             }
         }
     }
@@ -182,8 +179,8 @@ class create {
                     "Functie");
                 foreach ($fields as $field) {
                     $data[$field] = filter_input(INPUT_POST, $field);
-                    if ($data[$field] === '') {
-                        trigger_error("Nog niet alle velden zijn ingevuld");
+                    if ($data[$field] === '' && $key !== "Tussenvoegsel") {
+                        return "U heeft " . $key . " niet ingevuld!";
                     }
                 }
                 $data['idBedrijf'] = $idBedrijf;
@@ -193,7 +190,7 @@ class create {
                 if ($check === 1) {
                     return TRUE;
                 } else {
-                    trigger_error("Error bij het aanmaken van uw account");
+                    return "Error bij het aanmaken van uw account";
                 }
             }
         } else {
@@ -214,7 +211,7 @@ class create {
         foreach ($fields as $field) {
             $data[$field] = filter_input(INPUT_POST, $field);
             if ($data[$field] === '') {
-                trigger_error("Nog niet alle velden zijn ingevuld");
+                return "U heeft " . $key . " niet ingevuld!";
             }
         }
         // Insert the data into the database
@@ -223,7 +220,7 @@ class create {
         if ($check === 1) {
             return TRUE;
         } else {
-            trigger_error("Error bij het aanmaken van uw account");
+            return "Error bij het aanmaken van uw account";
         }
     }
 
