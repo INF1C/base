@@ -10,7 +10,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 }
 $db->db_table = "MEDEWERKER";
         $data = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
-        var_dump($data);
+        $idMedewerker = array_values($data)['idMedewerker'];
 ?>
 <form method="POST" action="/process/edit/statuswijziging">
     <div class="form-group">
