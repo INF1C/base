@@ -19,14 +19,14 @@ foreach ($opentickets as $key => $value) {
    echo "<td><a href='/beheerderspaneel/statuswijziging/nieuw/" . $key . "'>Neem in behandeling</a></td>";
    echo "</tr>";
 }
-      foreach ($result as $key => $value) {
-          echo "<tr>";
-          foreach ($value as $subvalue)
-          {
-              echo "<td>" . $subvalue . "</td>";
-          }
-          echo "</tr>";
-      }
+    foreach ($result as $key => $value) {
+        ?><tr onclick="window.document.location='/ticket/<?= $key ?>'"><?php
+        foreach ($value as $subvalue)
+        {
+            echo "<td>" . $subvalue . "</td>";
+        }
+        echo "</tr>";
+    }
       
 echo "</table>";
 	?>
