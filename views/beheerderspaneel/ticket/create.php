@@ -22,13 +22,13 @@
 			</div>
 			<div class="radio">
 				<label>
-					<input type="radio" name="IncidentType" id="createTicketTypeFunctioneelProbleem" value="Functioneel Probleem" name="IncidentType">
+					<input type="radio" name="IncidentType" id="createTicketTypeFunctioneelProbleem" value="Functioneel probleem" name="IncidentType">
 					Functioneel probleem
 				</label>
 			</div>
 			<div class="radio">
 				<label>
-					<input type="radio" name="IncidentType" id="createTicketTypeTechnischProbleem" value="Technisch Probleem" name="IncidentType">
+					<input type="radio" name="IncidentType" id="createTicketTypeTechnischProbleem" value="Technisch probleem" name="IncidentType">
 					Technisch probleem
 				</label>
 			</div>
