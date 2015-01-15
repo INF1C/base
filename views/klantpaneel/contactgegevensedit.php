@@ -1,10 +1,10 @@
 <div class="col-md-6 showback">
     <?php
-        $db = new db;
-		$db->db_table = "BEDRIJFSMEDEWERKER";
-        $data = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
-        ?>
-        <h2>Contactgegevens wijzigen</h2>
+    $db = new db;
+    $db->db_table = "BEDRIJFSMEDEWERKER";
+    $data = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
+    ?>
+    <h2>Contactgegevens wijzigen</h2>
     <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <div class="form-group">
             <label for="Voornaam">Voornaam:</label>
