@@ -3,8 +3,6 @@
 $create = new create;
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
-	var_dump($create->ticket());
-	echo "<br>";
 	$ticketID = $create->db->link->lastInsertID();
 	$create->db->db_table = 'BEDRIJFSMEDEWERKER';
 	$idBedrijfsMedewerker = $create->db->select(array('idBedrijfsMedewerker'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idBedrijfsMedewerker'];
