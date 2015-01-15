@@ -7,7 +7,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
     {
         echo'<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Succes!</strong> De FAQ is succesvol geupload.</div>';
+        <strong>Succes!</strong> Het ticket is ingevoerd in de FAQ.</div>';
     }
 } else
 {
