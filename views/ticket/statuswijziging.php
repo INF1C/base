@@ -10,7 +10,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
 }
 $db->db_table = "MEDEWERKER";
         $data2 = $db->select(array('*'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idMedewerker'];
-        var_dump($data2);
 ?>
 <form method="POST" action="/process/edit/statuswijziging">
     <div class="form-group">
@@ -64,7 +63,7 @@ $db->db_table = "MEDEWERKER";
 		
 	<div class="form-group">
             <label for="editStatusWijzigingMedewerkerId">Medewerker ID:</label>
-            <input type="number" class="form-control" id="editStatusWijzigingBedrijfsmedewerkerId" name="idMedewerker" value="<?= $data['idMedewerker'] ?>">
+            <input type="number" class="form-control" id="editStatusWijzigingBedrijfsmedewerkerId" name="idMedewerker" value="<?= $data2 ?>">
     </div>
 	
 	<div class="form-group">
