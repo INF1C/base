@@ -56,7 +56,7 @@
         if($_SESSION['autorisatie'] == 'Medewerker' OR $_SESSION['autorisatie'] == 'Teamleider' OR $_SESSION['autorisatie'] == 'Admin'){
         	$db = new db;
             $db->db_table = "MEDEWERKER";
-            $id2 = $db->select(array('idMedewerker'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0];
+            $id2 = $db->select(array('idMedewerker'), array('Gebruikersnaam' => $_SESSION['gebruikersnaam']))[0]['idMedewerker'];
             ?>
             <div class="form-group">
                 <!-- <label for="createStatusWijzigingMedewerkerID">Medewerker ID:</label> -->
