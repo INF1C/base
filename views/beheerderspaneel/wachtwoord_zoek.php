@@ -10,6 +10,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			</div>
 			<button type="submit" name="bedrijfsmedewerker" class="btn btn-theme">Zoek</button>
 		</form>
+		<br>
 		<?php
 		if (isset($_POST['bedrijfsmedewerker']))
 		{
@@ -60,6 +61,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			</div>
 			<button type="submit" name="medewerker" class="btn btn-theme">Zoek</button>
 		</form>
+		<br>
 		<?php
 		if (isset($_POST['medewerker']))
 		{

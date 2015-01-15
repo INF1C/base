@@ -102,3 +102,10 @@ $router->map("POST|GET", "/process/edit/wachtwoord", function () {
     require DIR_PROCES . "edit_wachtwoord.php";
     require DIR_TEMPLATE . 'footer.php';
 },  "Edit -> Wachtwoord");
+
+// RESET
+$router->map("POST|GET", "/process/resetpassword/", function () {
+    require DIR_TEMPLATE . 'header.php';
+    require DIR_PROCES . "reset_wachtwoord.php";
+    require DIR_TEMPLATE . 'footer.php';
+},  "Edit -> Wachtwoord");
