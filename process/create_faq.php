@@ -6,9 +6,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit')
     if ($create->faq() == TRUE)
     {
         echo'<div class="alert alert-success">
-    <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> Your message has been sent successfully.
-</div>';
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Succes!</strong> De FAQ is succesvol geupload.</div>';
     }
 } else
 {
