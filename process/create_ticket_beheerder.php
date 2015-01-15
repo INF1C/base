@@ -31,7 +31,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit'){
 	} else {
         echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
         echo $result1 . "<br>";
-        echo $result2 . "</div>";    }
+        echo $result2 . "</div>";
 	}
 } else {
 	echo "Please post the next time!";
