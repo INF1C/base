@@ -166,5 +166,5 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
         
         //test
         	 $router->map("GET", "/ticket/statuswijziging/[i:id]", function ($id) {
-		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'). $id);
+		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'), $id);
 	}, "Klantpaneel -> statuswijziging");

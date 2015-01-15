@@ -1,7 +1,8 @@
 <?php
+
 $db = new db;
 if(!empty(FILTER_INPUT(INPUT_GET, 'idStatus'))) {
-	$idStatus = FILTER_INPUT(INPUT_GET, 'idStatus');
+	$idStatus = $params;
 	$db->db_table = "STATUS_WIJZIGING";
 	$data = $db->select(array('*'), array('idStatus' => $idStatus))[0];
 } else {
