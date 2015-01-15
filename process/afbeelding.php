@@ -41,7 +41,7 @@ if (isset($_POST['avatar-image']) && $_POST['avatar-image'] == '') {
 	    	$db->update(array('Afbeelding' => $save_file), array('gebruikersnaam' => $_SESSION['gebruikersnaam']));
                     echo'<div class="alert alert-success">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
-                    <strong>Succes!</strong>echo De afbeelding met' . $newFileName . 'is geupload.</div>';
+                    <strong>Succes!</strong> De afbeelding met' . $newFileName . 'is geupload.</div>';
                     ?><p>U word terug gestuurd naar de bedrijfs pagina in <span id="counter">5</span> seconden.</p>
                     <script type="text/javascript">
                     function countdown() {
