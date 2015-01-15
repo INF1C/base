@@ -29,6 +29,6 @@ $autorisatie = $db->select(array("Autorisatie"), array("Gebruikersnaam" => $user
 		</label>
 	</div>
 	<input type="hidden" name="Gebruikersnaam" value="<?= $userName ?>">
-	<button type="submit" name="submit" value="submit" class="btn btn-theme">Zoek</button>
+	<button type="submit" name="submit" value="submit" class="btn btn-theme">Verander</button>
 </form>
 </div>

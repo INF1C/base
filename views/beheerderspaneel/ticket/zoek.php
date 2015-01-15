@@ -1,8 +1,8 @@
 <?php
 isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $zoekterm = '';
 ?>
-<div class="col-lg-12">
-	<div class="form-panel">
+	<div class="col-lg-12 showback">
+		<h2>Nieuwe ticket</h2>
 		<h4 class="mb"><i class="fa fa-angle-right"></i> Zoek bedrijfsmedewerker</h4>
 		<form class="form-inline" method="POST" action="" role="form">
 			<div class="form-group">
@@ -15,7 +15,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 		<?php
 		if (isset($_POST['zoekterm']))
 		{
-			echo "<div class='content-panel'>";
+			echo "<div class='col-lg-12 showback'>";
 			$db = new db();
 			$zoekterm = filter_input(INPUT_POST, 'zoekterm');
 			$stmt = $db->link->prepare("SELECT * FROM BEDRIJFSMEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
@@ -57,4 +57,3 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 			echo "	</div>";
 		}
 		?>
-</div><!-- /col-lg-12 -->
