@@ -28,14 +28,15 @@ echo "</table>";
 
 $output = new output;
 $opentickets = $output->openTickets();
-           echo "<table class='table table-hover'>";
-   echo "<tr><th> Incident type </th>";
+   echo "<table class='table table-hover'>";
+   echo "<tr><th> ticket ID </th>";
+   echo "<th> Incident type </th>";
    echo "<th> Probleemstelling </th>";
    echo "<th> Huidige status </th>";
    echo "<th> Geopend op </th>";
    echo "<th> Bedrijfsnaam </th></tr>";
 foreach ($opentickets as $key => $value) {
-   echo "<tr>";
+   echo "<tr><td>" . $key . "</td>";
    foreach ($value as $ticket)
    {
        echo "<td>" . $ticket;
