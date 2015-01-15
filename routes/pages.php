@@ -163,3 +163,8 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	$router->map("POST|GET", "/wijzigen/wachtwoord/", function () {
 		openView("wijzigen/wachtwoord", array());
 	}, "Wijzigen van wachtwoord");
+        
+        //test
+        	 $router->map("GET", "/beheerderspaneel/ticket/statuswijziging/", function () {
+		openView("beheerderspaneel/ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'));
+	}, "Klantpaneel -> statuswijziging");
