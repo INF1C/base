@@ -6,7 +6,7 @@
             	<input type="password" class="form-control" id="Wachtwoord" name="Wachtwoord" placeholder="PassWord123" />
             </div>
             <div class="form-group">
-            	<input type="submit" value="submit" name="submit" />
+<button type="submit" class="btn btn-default" name="submit" value="submit">Verstuur</button>
             </div>
     </form>
 </div>
