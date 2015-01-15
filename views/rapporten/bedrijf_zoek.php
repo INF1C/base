@@ -41,7 +41,9 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 					if($key == "idBedrijf"){
 						$id = $subresult;
 					} elseif ($key == "Licentie") {
-						echo "<td>" . $subresult == 1 ? 'Nee' : 'Ja' . "</td>";
+						echo "<td>" 
+						echo $subresult == 1 ? 'Nee' : 'Ja';
+						echo "</td>";
 					} else {	
 						echo "<td>";
 						echo $subresult;
