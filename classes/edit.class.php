@@ -30,7 +30,12 @@ class edit {
 
         $where = array("idMedewerker" => $idMedewerker);
         $this->db->db_table = "MEDEWERKER";
-        return $this->db->update($data, $where);
+        $check = $this->db->update($data, $where);
+        if ($check === 1) {
+            return TRUE;
+        } else {
+            return "Fout bij het bewerken.";
+        }
     }
 
     public function bedrijfsMedewerker($idBedrijfsmedewerker) {
