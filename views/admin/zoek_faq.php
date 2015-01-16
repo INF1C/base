@@ -24,7 +24,7 @@
             }
         }
         echo "<td>" . implode(' ', $output->db->select(array('Voornaam', 'Achternaam'), array('idMedewerker' => $idMedewerker))[0]) . "</td>";
-        echo "<td><a href='/beheerderspaneel/faq/edit/" . $idFAQ . "'>Bewerk</a></td>";
+        echo "<td><a href='/beheerderspaneel/verwijder/faq/" . $idFAQ . "'>Bewerk</a></td>";
         echo "</tr>";
     }
     echo "</table>";
