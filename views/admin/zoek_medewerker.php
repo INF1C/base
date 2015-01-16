@@ -1,7 +1,7 @@
 <?php
 isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $zoekterm = '';
 ?>
-<div class="col-lg-12">
+<div class="col-lg-12 showback">
     <div class="form-panel">
 		<h2> Verwijder Medewerker</h2><br />
         <h4 class="mb"><i class="fa fa-angle-right"></i> Zoek medewerker</h4>
