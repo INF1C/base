@@ -3,7 +3,7 @@
 if (isset($_POST['zoekterm'])) {
     $db = new db();
     $zoekterm = filter_input(INPUT_POST, 'zoekterm');
-    $stmt = $db->link->prepare("SELECT * FROM BEDRIJFSMEDEWERKER WHERE (Voornaam LIKE ? OR Achternaam LIKE ?) OR idBedrijfsMedewerker = ?");
+    $stmt = $db->link->prepare("SELECT * FROM BEDRIJFSMEDEWERKER WHERE (Voornaam LIKE ? OR Achternaam LIKE ?) AND idBedrijfsMedewerker = ?");
     $stmt->bindValue(1, "%" . $zoekterm . "%");
     $stmt->bindValue(2, "%" . $zoekterm . "%");
     $stmt->bindValue(3, $params);
