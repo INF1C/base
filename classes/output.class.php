@@ -19,7 +19,7 @@ class output {
             $alleTicketID = $this->db->select(array("idTicket"));
         } elseif($periode === NULL AND $idBedrijf != NULL) {
             $this->db->db_table = "STATUS_WIJZIGING";
-            $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE idBedrijf = ? GROUP BY idBedrijf");
+            $stmt = $this->db->link->prepare("SELECT idTicket FROM STATUS_WIJZIGING WHERE idBedrijf = ? GROUP BY idTicket");
             $stmt->bindValue(1, $idBedrijf);
             $stmt->execute();
             $alleTicketID = $stmt->fetchAll(PDO::FETCH_ASSOC);
