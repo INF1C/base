@@ -2,6 +2,7 @@
 isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $zoekterm = '';
 ?>
 <div class="col-lg-12 showback">
+    <h2> Wachtwoord wijzigen medewerker</h2><br />
     <h4 class="mb"><i class="fa fa-angle-right"></i> Zoek bedrijfsmedewerker</h4>
     <form class="form-inline" method="POST" action="" role="form">
         <div class="form-group">
