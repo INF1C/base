@@ -210,10 +210,11 @@ class output {
 
             $this->db->db_table = "BEDRIJF";
             $return[$statusid]['Bedrijf'] = reset(reset($this->db->select(array("Bedrijfsnaam"), array("idBedrijf" => $idbedrijf))));            
-            if($return[$statusid]['Status'] !== 'Nieuw') {
-                $this->db->db_table = "MEDEWERKER";
-                //ophalen achternaam van de medewerker
-                $return[$statusid]['Medewerker'] = implode(' ', reset($this->db->select(array("Voornaam", "Achternaam"), array("idMedewerker" => $idmedewerker))));
+            $this->db->db_table = "MEDEWERKER";
+            //ophalen achternaam van de medewerker
+			$medewerker = reset($this->db->select(array("Voornaam", "Achternaam"), array("idMedewerker" => $idmedewerker)));
+			if($medewerker != '') {
+                $return[$statusid]['Medewerker'] = implode(' ', $medewerker);
             } else {
                 $return[$statusid]['Medewerker'] = '-';
             }
