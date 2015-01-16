@@ -71,6 +71,7 @@ if (isset($_POST['idTicket'])) {
         <?php
         //echo "<td><a href='/ticket/statuswijziging/'>Nieuwe status</a></td>";
         echo "<td><a href='/ticket/statuswijziging/" . $idTicket . "'>Nieuwe status</a></td>";
+        echo "<td><a href='/ticket/editticket/'>Ticket bewerken</a></td>";
         ?>
     </div>
     <?php
