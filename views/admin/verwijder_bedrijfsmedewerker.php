@@ -1,7 +1,7 @@
 <?php
 $db = new db;
 $id = $params;
-$sql = "DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?";
+$sql = "SET @naam := (SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?); DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; DELETE FROM ACCOUNT WHERE Gebruikersnaam = @user;";
 $stmt = $db->link->prepare($sql);
 $stmt->bindValue(1, $id);
 $check = $stmt->execute();
