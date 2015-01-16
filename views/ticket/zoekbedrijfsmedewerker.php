@@ -36,8 +36,5 @@ if (isset($_POST['zoekterm'])) {
         echo "</tr>";
     }
     echo "</table>";
-echo "<p> <pre>";
-var_dump($params);
-echo "</pre> <p>";
 }
 ?>
