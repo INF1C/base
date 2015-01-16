@@ -198,5 +198,5 @@ $router->map("GET|POST", "/ticket/editticket/[i:id]", function ($id) {
 		openView("admin/zoek_medewerker", array('Medewerker', 'Bedrijfsmedewerker'));
 	}, "Verwijder -> Medewerker");
 	$router->map("GET", "/beheerderspaneel/verwijder/medewerker/[i:id]", function ($id) {
-		openView("admin/verwijder_bedrijfsmedewerker", array('Medewerker', 'Bedrijfsmedewerker'), $id);
+		openView("admin/verwijder_medewerker", array('Medewerker', 'Bedrijfsmedewerker'), $id);
 	}, "Verwijder -> Medewerker.");
