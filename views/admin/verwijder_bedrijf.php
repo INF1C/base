@@ -4,6 +4,7 @@ $id = $params;
 $stmt = $db->link->prepare("DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijf = ?");
 $stmt->bindValue(1, $id);
 $stmt->execute();
+$db->link->commit();
 $check = $stmt->rowCount();
 if($check == 1){
 	echo'<div class="alert alert-success">
