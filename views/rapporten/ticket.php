@@ -4,7 +4,7 @@
     <form class="form-inline" method="POST" action="/ticket/" role="form">
         <div class="form-group">
             <label class="sr-only" for="zoekterm">TicketID:</label>
-            <input type="text" name="idTicket" class="form-control" id="zoekterm" placeholder="0000">
+            <input type="text" name="idTicket" class="form-control" id="zoekterm" placeholder="Ticket ID">
         </div>
         <button type="submit" class="btn btn-theme">Ga</button>
     </form>
