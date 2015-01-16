@@ -1,22 +1,5 @@
-<!-- **********************************************************************************************************************************************************
-MAIN CONTENT
-*********************************************************************************************************************************************************** -->
-<!--main content start-->
-<div class="row">
-    <div class="col-lg-12">
-        <div class="row mt">
-            
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-6 goleft">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt">
-        </div>        
-    </div>
-</div>
+<section class="wrapper main-chart">
+    <a href="/base/templates/subCss/"><img src="wehelp.png"></a>
+</section>
 
-    <!--main content end-->
-
+   
