@@ -1,7 +1,7 @@
 <?php
 $db = new db;
 $id = $params;
-$stmt1 = $db->prepare("SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?");
+$stmt1 = $db->link->prepare("SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?");
 $stmt1->bindValue(1, $id);
 $stmt1->execute();
 $result = $stmt1->fetch(PDO::FETCH_ASSOC)['Gebruikersnaam'];
