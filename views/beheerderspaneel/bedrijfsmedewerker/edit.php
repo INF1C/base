@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             <input type="hidden" value="<?= $idBedrijfsMedewerker ?>" name="idBedrijfsMedewerker">
-            <input type="submit" value="submit" name="submit" />
+            <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button> 
         </div>
     </form>
 </div>
