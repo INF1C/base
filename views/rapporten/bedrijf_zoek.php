@@ -6,7 +6,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
     <form class="form-inline" method="POST" action="" role="form">
         <div class="form-group">
             <label class="sr-only" for="zoekterm">Bedrijfsnaam of telefoonnummer:</label>
-            <input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Zoekterm" value="<?= $zoekterm ?>">
+            <input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Voer een bedrijfsnaam in" value="<?= $zoekterm ?>">
         </div>
         <button type="submit" class="btn btn-theme">Zoek</button>
         <span class="clearfix"></span>
