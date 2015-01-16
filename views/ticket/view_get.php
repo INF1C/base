@@ -40,8 +40,7 @@ reset($status);
 		$db->db_table = "MEDEWERKER";
 		$afbeelding1 = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
 	}else{
-		if ($afbeelding1 == '')
-			$afbeelding1 = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+		$afbeelding1 = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
 	}
     ?>
     <img class="img-responsive img-circle" src="<?= $afbeelding1 ?>" alt="Anonymous">
