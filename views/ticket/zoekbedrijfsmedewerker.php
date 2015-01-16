@@ -7,9 +7,6 @@ if (isset($_POST['zoekterm'])) {
     $stmt->bindValue(1, "%" . $zoekterm . "%");
     $stmt->bindValue(2, "%" . $zoekterm . "%");
     $stmt->bindValue(3, $params);
-    echo "<pre>";
-    var_dump($params);
-    echo "</pre>";
 
     $stmt->execute();
     $returnArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -39,5 +36,8 @@ if (isset($_POST['zoekterm'])) {
         echo "</tr>";
     }
     echo "</table>";
+echo "<p> <pre>";
+var_dump($params);
+echo "</pre> <p>";
 }
 ?>
