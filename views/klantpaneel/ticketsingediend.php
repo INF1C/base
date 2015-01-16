@@ -7,6 +7,7 @@
     $tickets = $output->tickets($idBedrijf);
     ?>
     <div class="content-panel">
+        <h2> Ingediende tickets </h2> <br />
         <table class="table table-hover">
             <tr>
                 <th>Incident Type</th>
