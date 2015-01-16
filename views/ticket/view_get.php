@@ -30,6 +30,8 @@ reset($status);
             <td><?= $ticket['Oplossing'] ?></td>
         </tr>
     </table>
+    <a href='/ticket/editticket/" . $idTicket . "'>Ticket bewerken</a>
+    <a class="pull-right" href='/beheerderspaneel/verwijder/ticket/" . $idTicket . "'>Ticket verwijderen</a>
 </div>
 <div class="col-lg-3 showback pull-right">
     <?php
@@ -72,7 +74,6 @@ reset($status);
     <?php
     //  echo "<td><a href='/ticket/statuswijziging/'>Nieuwe status</a></td>";
     echo "<a href='/ticket/statuswijziging/" . $idTicket . "'>Nieuwe status</a>";
-    echo "<a class='pull-right' href='/ticket/editticket/" . $idTicket . "'>Ticket bewerken</a>";
     ?>
 </div>
 
