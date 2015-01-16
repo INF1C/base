@@ -2,8 +2,7 @@
 $db = new db;
 $id = $params;
 $stmt = $db->link->prepare("DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijf = ?");
-$stmt->bindValue(1, $id);
-$stmt->execute();
+$stmt->execute(array($id));
 $check = $stmt->rowCount();
 if($check == 1){
 	echo'<div class="alert alert-success">
