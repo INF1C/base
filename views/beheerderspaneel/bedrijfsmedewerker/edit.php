@@ -11,6 +11,7 @@
     ?>
     <form method="POST" action="/process/edit/bedrijfsmedewerker">
         <div class="form-group">
+            <h2> Bedrijfsmedewerker aanpassen </h2><br />
             <label for="Voornaam">Voornaam:</label>
             <input type="text" class="form-control" id="Voornaam" name="Voornaam" value="<?= $data['Voornaam'] ?>" placeholder="Voornaam" />
         </div>

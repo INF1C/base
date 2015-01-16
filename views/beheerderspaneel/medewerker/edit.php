@@ -11,6 +11,7 @@ if ($idMedewerker !== NULL) {
 <div class="col-md-6 showback">
     <form method="POST" action="/process/edit/medewerker">
         <div class="form-group">
+            <h2>Medewerker bewerken</h2><br />
             <label for="Voornaam">Voornaam:</label>
             <input type="text" class="form-control" id="Voornaam" name="Voornaam" value="<?= $data['Voornaam'] ?>" placeholder="Voornaam" />
         </div>
