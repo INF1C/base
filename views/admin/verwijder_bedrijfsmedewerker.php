@@ -5,14 +5,15 @@ $stmt1 = $db->link->prepare("SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE
 $stmt1->bindValue(1, $id);
 $stmt1->execute();
 $result = $stmt1->fetch(PDO::FETCH_ASSOC)['Gebruikersnaam'];
-var_dump($result);
-$sql = 	" DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; " .
-		" DELETE FROM ACCOUNT WHERE Gebruikersnaam = ?;";
-$stmt = $db->link->prepare($sql);
+
+$stmt = $db->link->prepare("DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?");
 $stmt->bindValue(1, $id);
-$stmt->bindValue(2, $result);
 $check = $stmt->execute();
-if($check == 1){
+
+$stmt2 = $db->link->prepare("DELETE FROM ACCOUNT WHERE Gebruikersnaam = ?");
+$stmt2->bindValue(1, $result);
+$check2 = $stmt2->execute();
+if($check == 1 && $check2 == 1){
 	echo'<div class="alert alert-success">
 	<a href="#" class="close" data-dismiss="alert">&times;</a>
 	<strong>Succes!</strong> De bedrijfsmedewerker is verwijdert.</div>';
