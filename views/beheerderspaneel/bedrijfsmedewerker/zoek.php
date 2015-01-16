@@ -24,7 +24,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
         $returnArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<table class='table table-hover'>";
         echo "<tr>";
-        echo "<th> idBedrijf </th>";
+        echo "<th> Bedrijfsnaam </th>";
         echo "<th> Gebruikersnaam </th>";
         echo "<th> Email </th>";
         echo "<th> Voornaam </th>";
