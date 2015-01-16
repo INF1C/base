@@ -43,8 +43,15 @@
         	pickerPosition: "bottom-left"
 		});
         $("#zoekBedrijfsMedewerker").submit(function() {
-
-            var url = "/ticket/zoekbedrijfsmedewerker/"; // the script where you handle the form input.
+<?php 
+  $sql = "SELECT idBedrijf FROM STATUSWIJZIGING WHERE idTicket = ?";
+  $db = new db;
+  $stmt = $db->link->prepare($sql);
+  $stmt->bindValue(1, $params);
+  $stmt->execute();
+  $result = $stmt->fetch(PDO::FETCH_ASSOC)['idBedrijf'];
+?>
+            var url = "/ticket/zoekbedrijfsmedewerker/<?= $result ?>" // the script where you handle the form input.
 
             $.ajax({
                    type: "POST",

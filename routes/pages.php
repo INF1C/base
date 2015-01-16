@@ -171,7 +171,7 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	$router->map("GET", "/ticket/statuswijziging/[i:id]", function ($id) {
 		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'), $id);
 	}, "Ticket -> in behandeling nemen");
-	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/", function () {
+	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/[i:id]", function ($params) {
 		require DIR_VIEW . "ticket/zoekbedrijfsmedewerker.php";
 	}, "Klantpaneel -> zoek");
         
