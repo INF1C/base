@@ -1,4 +1,17 @@
+<?php
+$db = new db;
+$gebruikersnaam = $_SESSION['gebruikersnaam'];
+$db->db_table = "BEDRIJFSMEDEWERKER";
+$idBedrijf = $db->select(array('idBedrijf'), array('Gebruikersnaam' => $gebruikersnaam))[0]['idBedrijf'];
+$db->db_table = "BEDRIJF";
+$licentie = $db->select(array('Licentie'), array('idBedrijf' => $idBedrijf))[0]['Licentie'];
+?>
 <div class="col-md-6 showback">
+    <?php
+    if($licentie == 1){
+        echo "<div class='alert alert-danger'>U heeft geen licentie. U dient een licentie aan te schaffen als u gebruk wilt maken van de dit pakket.</div>";
+    } else {
+        ?>
     <h2 class="text-center">Ticket aanmaken</h2>
     <form method="POST" action="/process/create/ticket/klantpaneel">
         <div class="form-group">
@@ -45,4 +58,5 @@
         </div>
         <button type="submit" value="submit" name="submit" class="btn btn-default">Verzend</button>
     </form>
+    <?php } ?>
 </div>
