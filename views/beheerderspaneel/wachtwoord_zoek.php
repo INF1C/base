@@ -7,7 +7,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
     <form class="form-inline" method="POST" action="" role="form">
         <div class="form-group">
             <label class="sr-only" for="zoekterm">Voor of achternaam:</label>
-            <input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Zoekterm" value="<?= $zoekterm ?>">
+            <input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Voer een naam in" value="<?= $zoekterm ?>">
         </div>
         <button type="submit" name="bedrijfsmedewerker" class="btn btn-theme">Zoek</button>
     </form>
@@ -60,7 +60,7 @@ if($_SESSION['autorisatie'] == "Admin"){
         <form class="form-inline" method="POST" action="" role="form">
             <div class="form-group">
                 <label class="sr-only" for="zoekterm">Voor of achternaam:</label>
-                <input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Zoekterm" value="<?= $zoekterm ?>">
+                <input type="text" name="zoekterm" class="form-control" id="zoekterm" placeholder="Voer een naam in" value="<?= $zoekterm ?>">
             </div>
             <button type="submit" name="medewerker" class="btn btn-theme">Zoek</button>
         </form>
