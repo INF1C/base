@@ -5,6 +5,7 @@ $stmt1 = $db->link->prepare("SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE
 $stmt1->bindValue(1, $id);
 $stmt1->execute();
 $result = $stmt1->fetch(PDO::FETCH_ASSOC)['Gebruikersnaam'];
+var_dump($result);
 $sql = 	" DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; " .
 		" DELETE FROM ACCOUNT WHERE Gebruikersnaam = ?;";
 $stmt = $db->link->prepare($sql);
