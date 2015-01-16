@@ -8,7 +8,7 @@ $check = $stmt->rowCount();
 if($check == 1){
 	echo'<div class="alert alert-success">
 	<a href="#" class="close" data-dismiss="alert">&times;</a>
-	<strong>Succes!</strong> De bedrijfsmedewerker is verwijdert.</div>';
+	<strong>Succes!</strong> Het bedrijf is verwijdert.</div>';
 	?><p>U wordt terug gestuurd in <span id="counter">5</span> seconden.</p>
 	<script type="text/javascript">
 		function countdown() {
