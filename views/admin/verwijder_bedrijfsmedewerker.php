@@ -1,9 +1,12 @@
 <?php
 $db = new db;
 $id = $params;
-$sql = "SET @naam := (SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?); DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; DELETE FROM ACCOUNT WHERE Gebruikersnaam = @user;";
+$sql = 	"SET @naam := (SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?);" .
+		" DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; " .
+		" DELETE FROM ACCOUNT WHERE Gebruikersnaam = @user;";
 $stmt = $db->link->prepare($sql);
 $stmt->bindValue(1, $id);
+$stmt->bindValue(2, $id);
 $check = $stmt->execute();
 if($check == 1){
 	echo'<div class="alert alert-success">
