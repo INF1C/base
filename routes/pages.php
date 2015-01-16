@@ -174,7 +174,13 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/", function () {
 		require DIR_VIEW . "ticket/zoekbedrijfsmedewerker.php";
 	}, "Klantpaneel -> zoek");
-
+        
+// Ticket editten
+$router->map("GET|POST", "/ticket/editticket/", function () {
+		openView("ticket/edit_ticket", array('Medewerker', 'Teamleider'));
+	}, "Ticket -> Ticket bewerken");
+        
+        
 // Admin verwijder functies
 	$router->map("GET|POST", "/beheerderspaneel/verwijder/bedrijfsmedewerker/", function () {
 		openView("ticket/statuswijziging_behandeling", array('Medewerker', 'Bedrijfsmedewerker'));
