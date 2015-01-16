@@ -25,5 +25,4 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     }
 } else {
     echo "Please post the next time!";
-    var_dump($idTicket);
 }
