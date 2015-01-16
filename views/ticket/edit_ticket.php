@@ -7,6 +7,7 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
 } else {
 	$data = array_fill_keys(array('idTicket', 'IncidentType', 'Probleemstelling', 'Oplossing'), '');
 }
+var_dump($data);
 ?>
 <form method="POST" action="/process/edit/ticket">
     	<div class="form-group">
