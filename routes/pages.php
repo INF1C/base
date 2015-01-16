@@ -181,4 +181,4 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	}, "Verwijder -> bedrijfsmedewerker");
 	$router->map("POST", "/beheerderspaneel/verwijder/bedrijfsmedewerker/[i:id]", function ($id) {
 		openView("ticket/statuswijziging_behandeling", array('Medewerker', 'Bedrijfsmedewerker'), $id);
-	}, "Ticket -> Statuswijziging");
+	}, "Verwijder -> Bedrijfsmedewerker.");
