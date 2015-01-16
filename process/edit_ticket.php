@@ -1,6 +1,6 @@
 <?php
 $edit = new edit;
-
+var_dump($_POST['submit']);
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     $idTicket = $_POST['idTicket'];
     if ($edit->ticket($idTicket) == TRUE) {
@@ -25,5 +25,6 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
         echo "Helaas, hier is iets mis gegaan. Probeer het later nog eens.";
     }
 } else {
+    var_dump($idTicket);
     echo "Please post the next time!";
 }

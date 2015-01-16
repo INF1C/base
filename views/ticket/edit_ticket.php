@@ -62,3 +62,6 @@ if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
 	    	<input type="submit" value="Gereed" name="submit">
 	    </div>
 </form>
+<?php
+var_dump($idTicket);
+?>
