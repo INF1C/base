@@ -17,7 +17,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
         echo "<div class='content-panel'>";
         $db = new db();
         $zoekterm = filter_input(INPUT_POST, 'zoekterm');
-        $stmt = $db->link->prepare("SELECT * FROM BEDRIJFSMEDEWERKER WHERE Voornaam LIKE ? OR Achternaam LIKE ?");
+        $stmt = $db->link->prepare("SELECT * FROM BEDRIJFSMEDEWERKER WHERE (Voornaam LIKE ? OR Achternaam LIKE ?) AND idBedrijf = ? ");
         $stmt->bindValue(1, "%" . $zoekterm . "%");
         $stmt->bindValue(2, "%" . $zoekterm . "%");
         $stmt->execute();
