@@ -1,4 +1,5 @@
 <div class="col-md-6 showback">
+    <h2> Nieuwe Medewerker</h2><br />
     <form method="POST" action="/process/create/medewerker">
         <div class="form-group">
             <label for="createMedewerkerUsername">Gebruikersnaam:</label>

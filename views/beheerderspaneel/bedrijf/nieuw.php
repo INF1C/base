@@ -1,4 +1,5 @@
 <div class="col-md-6">
+    <h2> Nieuw Bedrijf</h2><br />
     <form method="POST" action="/process/create/bedrijf">
         <div class="form-group">
             <label for="createBedrijfNaam">Bedrijfsnaam:</label>
