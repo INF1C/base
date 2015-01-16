@@ -7,6 +7,7 @@ $data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
 <div class="col-lg-6 showback">
     <form method="POST" action="/process/edit/bedrijf">
         <div class="form-group">
+            <h2> Bedrijf bewerken</h2><br />
             <label for="Bedrijfsnaam">Bedrijfsnaam:</label>
             <input type="text" class="form-control" id="Bedrijfsnaam" name="Bedrijfsnaam" value="<?= $data['Bedrijfsnaam'] ?>" placeholder="Bedrijfsnaam" />
         </div>
