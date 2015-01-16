@@ -1,5 +1,7 @@
 <?php
 $edit = new edit;
+$idTicket = $_POST['idTicket'];
+var_dump($idTicket);
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     $idTicket = $_POST['idTicket'];
     if ($edit->ticket($idTicket) == TRUE) {
