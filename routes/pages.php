@@ -183,20 +183,26 @@ $router->map("GET|POST", "/ticket/editticket/[i:id]", function ($id) {
         
 // Admin verwijder functies
 	$router->map("GET|POST", "/beheerderspaneel/verwijder/bedrijfsmedewerker/", function () {
-		openView("admin/zoek_bedrijfsmedewerker", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("admin/zoek_bedrijfsmedewerker", array());
 	}, "Verwijder -> bedrijfsmedewerker");
 	$router->map("GET", "/beheerderspaneel/verwijder/bedrijfsmedewerker/[i:id]", function ($id) {
-		openView("admin/verwijder_bedrijfsmedewerker", array('Medewerker', 'Bedrijfsmedewerker'), $id);
+		openView("admin/verwijder_bedrijfsmedewerker", array(), $id);
 	}, "Verwijder -> Bedrijfsmedewerker.");
 	$router->map("GET|POST", "/beheerderspaneel/verwijder/bedrijf/", function () {
-		openView("admin/zoek_bedrijf", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("admin/zoek_bedrijf", array());
 	}, "Verwijder -> bedrijf");
 	$router->map("GET", "/beheerderspaneel/verwijder/bedrijf/[i:id]", function ($id) {
-		openView("admin/verwijder_bedrijf", array('Medewerker', 'Bedrijfsmedewerker'), $id);
+		openView("admin/verwijder_bedrijf", array(), $id);
 	}, "Verwijder -> bedrijf.");
 	$router->map("GET|POST", "/beheerderspaneel/verwijder/medewerker/", function () {
-		openView("admin/zoek_medewerker", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("admin/zoek_medewerker", array());
 	}, "Verwijder -> Medewerker");
 	$router->map("GET", "/beheerderspaneel/verwijder/medewerker/[i:id]", function ($id) {
-		openView("admin/verwijder_medewerker", array('Medewerker', 'Bedrijfsmedewerker'), $id);
+		openView("admin/verwijder_medewerker", array(), $id);
 	}, "Verwijder -> Medewerker.");
+	$router->map("GET|POST", "/beheerderspaneel/verwijder/faq/", function () {
+		openView("admin/zoek_faq", array());
+	}, "Verwijder -> faq");
+	$router->map("GET", "/beheerderspaneel/verwijder/faq/[i:id]", function ($id) {
+		openView("admin/verwijder_faq", array(), $id);
+	}, "Verwijder -> faq.");

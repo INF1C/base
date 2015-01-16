@@ -33,7 +33,11 @@
         </div>
         <div class="form-group">
             <input type="hidden" value="<?= $idBedrijfsMedewerker ?>" name="idBedrijfsMedewerker">
+<<<<<<< HEAD
             <input type="submit" value="Verzend" name="submit" />
+=======
+            <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button> 
+>>>>>>> origin/master
         </div>
     </form>
 </div>
