@@ -12,8 +12,9 @@
         ?>
         <tr onclick="window.document.location = '/ticket/<?= $key ?>'">
             <?php
-            foreach ($value as $ticket) {
-                echo "<td>" . $ticket;
+            foreach ($value as $key => $ticket) {
+                echo $key == 'Probleemstelling' ? "<td class='limit'>" : "<td>";
+                echo $ticket;
                 echo "</td>";
             }
             echo "<td><a href='/ticket/statuswijziging/behandeling/" . $key . "'>Neem in behandeling</a></td>";
@@ -40,8 +41,9 @@
         <tr onclick="window.document.location = '/ticket/<?= $key ?>'">
             <?php
             echo "<td>" . $key . "</td>";
-            foreach ($value as $ticket) {
-                echo "<td>" . $ticket;
+            foreach ($value as $key => $ticket) {
+                echo $key == 'Probleemstelling' ? "<td class='limit'>" : "<td>";
+                echo  $ticket;
                 echo "</td>";
             }
             echo "<td><a href='/ticket/statuswijziging/" . $key . "'>Nieuwe status</a></td>";
