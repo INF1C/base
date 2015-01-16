@@ -28,6 +28,12 @@ ul li {
     list-style: none;
 }
 
+td {
+    max-width: 450px;
+    max-height: 55px;
+    overflow: hidden;
+}
+
 a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
