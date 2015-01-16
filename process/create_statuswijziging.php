@@ -12,13 +12,13 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     if ($result === TRUE) {
         echo'<div class="alert alert-success">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
-            <strong>Succes!</strong> Het account voor de medewerker is aangemaakt.</div>';
-        ?><p>U wordt terug gestuurd naar de mederwerkers pagina in <span id="counter">5</span> seconden.</p>
+            <strong>Succes!</strong> Uw statuswijziging is doorgevoerd .</div>';
+        ?><p>U wordt terug gestuurd naar de ticket pagina in <span id="counter">5</span> seconden.</p>
         <script type="text/javascript">
             function countdown() {
                 var i = document.getElementById('counter');
                 if (parseInt(i.innerHTML) <= 1) {
-                    location.href = '/beheerderspaneel/medewerker/';
+                    location.href = '/rapporten/tickets/';
                 }
                 i.innerHTML = parseInt(i.innerHTML) - 1;
             }
