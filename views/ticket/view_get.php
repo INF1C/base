@@ -38,13 +38,13 @@ reset($status);
     $idMedewerker = $db->select(array('idMedewerker'), array('idStatus' => $laatsteStatusID))[0]['idMedewerker'];
 	if ($idMedewerker != ""){
 		$db->db_table = "MEDEWERKER";
-		$afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
+		$afbeelding1 = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
 	}else{
-		if ($afbeelding == '')
-			$afbeelding = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+		if ($afbeelding1 == '')
+			$afbeelding1 = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
 	}
     ?>
-    <img class="img-responsive img-circle" src="<?= $afbeelding ?>" alt="Anonymous">
+    <img class="img-responsive img-circle" src="<?= $afbeelding1 ?>" alt="Anonymous">
     <p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
 </div>
 <span class="clearfix"></span>
