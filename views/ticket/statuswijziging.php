@@ -11,7 +11,7 @@
 
         <div class="radio">
             <label>
-                <input type="radio" id="editStatusWijzigingStatusBehandeling" value="In behandeling" name="Status">
+                <input type="radio" id="editStatusWijzigingStatusBehandeling" value="In behandeling" name="Status" checked>
                 In Behandeling
             </label>
         </div>
