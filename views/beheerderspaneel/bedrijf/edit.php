@@ -9,19 +9,19 @@ $data = $db->select(array('*'), array('idBedrijf' => $idBedrijf))[0];
         <div class="form-group">
             <h2> Bedrijf bewerken</h2><br />
             <label for="Bedrijfsnaam">Bedrijfsnaam:</label>
-            <input type="text" class="form-control" id="Bedrijfsnaam" name="Bedrijfsnaam" value="<?= $data['Bedrijfsnaam'] ?>" placeholder="Bedrijfsnaam" />
+            <input type="text" class="form-control" id="Bedrijfsnaam" name="Bedrijfsnaam" value="<?= $data['Bedrijfsnaam'] ?>" placeholder="Bedrijfsnaam" required />
         </div>
         <div class="form-group">
             <label for="Adresgegevens">Adresgegevens:</label>
-            <textarea placeholder="Adres gegevens" class="form-control" id="Adresgegevens" name="Adresgegevens"><?= $data['Adresgegevens'] ?> </textarea>
+            <textarea placeholder="Adres gegevens" class="form-control" id="Adresgegevens" name="Adresgegevens" required ><?= $data['Adresgegevens'] ?> </textarea>
         </div>
         <div class="form-group">
             <label for="Telefoon">Telefoon:</label>
-            <input type="text" class="form-control" id="Telefoon" placeholder="Telefoon" name="Telefoon" value="<?= $data['Telefoon'] ?>" />
+            <input type="text" class="form-control" id="Telefoon" placeholder="Telefoon" name="Telefoon" value="<?= $data['Telefoon'] ?>" required />
         </div>
         <div class="form-group">
             <label for="Email">E-mail:</label>
-            <input type="email" class="form-control" id="Email" name="Email" value="<?= $data['Email'] ?>" placeholder="E-mail" />
+            <input type="email" class="form-control" id="Email" name="Email" value="<?= $data['Email'] ?>" placeholder="E-mail" required/>
         </div>
         <label>Licentie</label>
         <div class="radio">

@@ -10,7 +10,7 @@ $gebruikersnaam = $db->select(array('Gebruikersnaam'), array('idBedrijfsMedewerk
     <form class="form-inline" action="/process/resetpassword/" method="POST">
         <div class="form-group">
             <label class="sr-only">Nieuwe wachtwoord</label>
-            <input type="text" class="form-control" name="Wachtwoord" placeholder="Voer nieuwe wachtwoord in">
+            <input type="text" class="form-control" name="Wachtwoord" placeholder="Voer nieuwe wachtwoord in" required>
         </div>
         <input type="hidden" name="Gebruikersnaam" value="<?= $gebruikersnaam ?>">
         <button type="submit" class="btn btn-default" name="submit" value="submit">Verwerk</button>

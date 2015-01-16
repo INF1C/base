@@ -3,22 +3,22 @@
     <form method="POST" action="/process/create/bedrijf">
         <div class="form-group">
             <label for="createBedrijfNaam">Bedrijfsnaam:</label>
-            <input type="text" class="form-control" id="createMedewerkerUsername" placeholder="Bedrijfsnaam" name="Bedrijfsnaam">
+            <input type="text" class="form-control" id="createMedewerkerUsername" placeholder="Bedrijfsnaam" name="Bedrijfsnaam" required>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfAdresGegevens">Adresgegevens:</label>
-            <textarea class="form-control" rows="3" id="createBedrijfAdresGegevens" placeholder="Adresgegevens"name="Adresgegevens"></textarea>
+            <textarea class="form-control" rows="3" id="createBedrijfAdresGegevens" placeholder="Adresgegevens"name="Adresgegevens" required></textarea>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfTelefoon">Telefoon:</label>
-            <input type="text" class="form-control" id="createBedrijfTelefoon" placeholder="Telefoon" name="Telefoon">
+            <input type="text" class="form-control" id="createBedrijfTelefoon" placeholder="Telefoon" name="Telefoon" required>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfEmail">Email-adres:</label>
-            <input type="email" class="form-control" id="createBedrijfEmail" placeholder="Email" name="Email">
+            <input type="email" class="form-control" id="createBedrijfEmail" placeholder="Email" name="Email" required>
         </div>
 
         <div class="form-group">

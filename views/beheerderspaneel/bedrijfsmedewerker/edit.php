@@ -13,7 +13,7 @@
         <div class="form-group">
             <h2> Bedrijfsmedewerker aanpassen </h2><br />
             <label for="Voornaam">Voornaam:</label>
-            <input type="text" class="form-control" id="Voornaam" name="Voornaam" value="<?= $data['Voornaam'] ?>" placeholder="Voornaam" />
+            <input type="text" class="form-control" id="Voornaam" name="Voornaam" value="<?= $data['Voornaam'] ?>" placeholder="Voornaam"  required/>
         </div>
         <div class="form-group">
             <label for="Tussenvoegsel">Tussenvoegsel:</label>
@@ -21,15 +21,15 @@
         </div>
         <div class="form-group">
             <label for="Achternaam">Achternaam:</label>
-            <input type="text" class="form-control" id="Achternaam" name="Achternaam" value="<?= $data['Achternaam'] ?>" placeholder="Achternaam"/>
+            <input type="text" class="form-control" id="Achternaam" name="Achternaam" value="<?= $data['Achternaam'] ?>" placeholder="Achternaam" required/>
         </div>
         <div class="form-group">
             <label for="Functie">Functie:</label>
-            <input type="text" class="form-control" id="Functie" name="Functie" value="<?= $data['Functie'] ?>" placeholder="Functie" />
+            <input type="text" class="form-control" id="Functie" name="Functie" value="<?= $data['Functie'] ?>" placeholder="Functie"  required/>
         </div>
         <div class="form-group">
             <label for="Email">E-mail:</label>
-            <input type="email" class="form-control" id="Email" name="Email" value="<?= $data['Email'] ?>" placeholder="E-mail" />
+            <input type="email" class="form-control" id="Email" name="Email" value="<?= $data['Email'] ?>" placeholder="E-mail"  required/>
         </div>
         <div class="form-group">
             <input type="hidden" value="<?= $idBedrijfsMedewerker ?>" name="idBedrijfsMedewerker">

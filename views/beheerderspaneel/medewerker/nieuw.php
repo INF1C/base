@@ -3,17 +3,17 @@
     <form method="POST" action="/process/create/medewerker">
         <div class="form-group">
             <label for="createMedewerkerUsername">Gebruikersnaam:</label>
-            <input type="text" class="form-control" id="createMedewerkerUsername" placeholder="Gebruikersnaam" name="Gebruikersnaam">
+            <input type="text" class="form-control" id="createMedewerkerUsername" placeholder="Gebruikersnaam" name="Gebruikersnaam" required>
         </div>
 
         <div class="form-group">
             <label for="createMedewerkerPassword">Wachtwoord:</label>
-            <input type="password" class="form-control" id="createMedewerkerPassword" placeholder="Wachtwoord" name="Wachtwoord">
+            <input type="password" class="form-control" id="createMedewerkerPassword" placeholder="Wachtwoord" name="Wachtwoord" required>
         </div>
 
         <div class="form-group">
             <label for="createMedewerkerVoornaam">Voornaam:</label>
-            <input type="text" class="form-control" id="createMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam">
+            <input type="text" class="form-control" id="createMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam" required>
         </div>
 
         <div class="form-group">
@@ -23,12 +23,12 @@
 
         <div class="form-group">
             <label for="createMedewerkerAchternaam">Achternaam:</label>
-            <input type="text" class="form-control" id="createMedewerkerAchternaam" placeholder="Achternaam" name="Achternaam">
+            <input type="text" class="form-control" id="createMedewerkerAchternaam" placeholder="Achternaam" name="Achternaam" required>
         </div>
 
         <div class="form-group">
             <label for="createMedewerkerEmail">E-mail:</label>
-            <input type="email" class="form-control" id="createMedewerkerEmail" placeholder="Email" name="Email">
+            <input type="email" class="form-control" id="createMedewerkerEmail" placeholder="Email" name="Email" required>
         </div>
 
         <button type="submit" name="submit" value="submit" class="btn btn-default">Verzend</button>

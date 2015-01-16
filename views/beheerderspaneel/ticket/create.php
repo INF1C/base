@@ -37,11 +37,11 @@
 
         <div class="form-group">
             <label for="createTicketProbleemstelling">Probleemstelling:</label>
-            <textarea class="form-control" rows="5" id="createTicketProbleemstelling" placeholder="Probleemstelling" name="Probleemstelling"></textarea>
+            <textarea class="form-control" rows="5" id="createTicketProbleemstelling" placeholder="Probleemstelling" name="Probleemstelling" required></textarea>
         </div>
         <div class="form-group">
             <label for="createTicketSoortContact">Soort contact:</label>
-            <input type="text" class="form-control" id="createTicketSoortContact" name="SoortContact" placeholder="E-mail">
+            <input type="text" class="form-control" id="createTicketSoortContact" name="SoortContact" placeholder="bijv. e-mail" required>
         </div>
         <input type="hidden" name="idBedrijfsMedewerker" value="<?= $params ?>">
         <input type="hidden" name="Status" value="Nieuw">

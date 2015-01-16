@@ -9,7 +9,7 @@ $licentie = $db->select(array('Licentie'), array('idBedrijf' => $idBedrijf))[0][
 <div class="col-md-6 showback">
     <?php
     if($licentie == 1){
-        echo "<div class='alert alert-danger'>U heeft geen licentie. U dient een licentie aan te schaffen als u gebruk wilt maken van de dit pakket.</div>";
+        echo "<div class='alert alert-danger'>U heeft geen licentie. U dient een licentie aan te schaffen als u gebruik wilt maken van de dit pakket.</div>";
     } else {
         ?>
     <h2 class="text-center">Ticket aanmaken</h2>

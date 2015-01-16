@@ -2,17 +2,17 @@
     <form method="POST" action="/process/create/bedrijfsmedewerker">
         <div class="form-group">
             <label for="createBedrijfMedewerkerUsername">Gebruikersnaam:</label>
-            <input type="text" class="form-control" id="createBedrijfMedewerkerUsername" placeholder="Gebruikersnaam" name="Gebruikersnaam">
+            <input type="text" class="form-control" id="createBedrijfMedewerkerUsername" placeholder="Gebruikersnaam" name="Gebruikersnaam" required>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfMedewerkerPassword">Wachtwoord:</label>
-            <input type="password" class="form-control" id="createBedrijfMedewerkerPassword" placeholder="Wachtwoord" name="Wachtwoord">
+            <input type="password" class="form-control" id="createBedrijfMedewerkerPassword" placeholder="Wachtwoord" name="Wachtwoord" required>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfMedewerkerVoornaam">Voornaam:</label>
-            <input type="text" class="form-control" id="createBedrijfMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam">
+            <input type="text" class="form-control" id="createBedrijfMedewerkerVoornaam" placeholder="Voornaam" name="Voornaam" required>
         </div>
 
         <div class="form-group">
@@ -22,17 +22,17 @@
 
         <div class="form-group">
             <label for="createBedrijfMedewerkerAchternaam">Achternaam:</label>
-            <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="Achternaam" name="Achternaam">
+            <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="Achternaam" name="Achternaam" required>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfMedewerkerFunctie">Functie:</label>
-            <input type="text" class="form-control" id="createBedrijfMedewerkerFunctie" placeholder="Functie" name="Functie">
+            <input type="text" class="form-control" id="createBedrijfMedewerkerFunctie" placeholder="Functie" name="Functie" required>
         </div>
 
         <div class="form-group">
             <label for="createBedrijfMedewerkerEmail">E-Mail:</label>
-            <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="E-Mail" name="Email">
+            <input type="text" class="form-control" id="createBedrijfMedewerkerAchternaam" placeholder="E-Mail" name="Email" required>
         </div>
 
         <!-- Value moet met een GET opgehaald worden -->
