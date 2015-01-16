@@ -1,6 +1,6 @@
 <?php
 $edit = new edit;
-$idTicket = $_POST['editOplossing'];
+$idTicket = $_POST;
 var_dump($idTicket);
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     $idTicket = $_POST['idTicket'];
