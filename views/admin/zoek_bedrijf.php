@@ -3,6 +3,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
 ?>
 <div class="col-lg-12">
     <div class="form-panel">
+        <h4> Verwijder Bedrijf</h4><br />
         <h4 class="mb"><i class="fa fa-angle-right"></i> Zoek bedrijf</h4>
         <form class="form-inline" method="POST" action="" role="form">
             <div class="form-group">
