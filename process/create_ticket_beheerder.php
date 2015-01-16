@@ -15,7 +15,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
         echo'<div class="alert alert-success">
 	        <a href="#" class="close" data-dismiss="alert">&times;</a>
 	        <strong>Succes!</strong> De ticket is aangemaakt.</div>';
-        ?><noscript><p>U word terug gestuurd naar de ticket pagina in <span id="counter">5</span> seconden.</p>
+        ?><p>U word terug gestuurd naar de ticket pagina in <span id="counter">5</span> seconden.</p>
         <script type="text/javascript">
             function countdown() {
                 var i = document.getElementById('counter');
@@ -27,7 +27,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
             setInterval(function () {
                 countdown();
             }, 1000);
-        </script></noscript><?php
+        </script><?php
     } else {
         echo "<div class='alert alert-danger' role='alert'>Helaas, hier is iets mis gegaan. Probeer het later nog eens.<br>";
         echo $result1 . "<br>";
