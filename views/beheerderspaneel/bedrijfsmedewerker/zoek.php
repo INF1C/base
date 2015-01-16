@@ -37,12 +37,16 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
             foreach ($result as $key => $subresult) {
 
                 if ($key == "idBedrijfsMedewerker") {
-                    $id = $subresult;
-                } else {
-                    echo "<td>";
-                    echo $subresult;
-                    echo "</td>";
-                }
+					$id = $subresult;
+				} elseif ($key == "idBedrijf") {
+					echo "<td>";
+					$db->db_table = "BEDRIJF";
+					echo $db->select(array('Bedrijfsnaam'), array('idBedrijf' => $subresult))[0]['Bedrijfsnaam'];
+				} else {
+					echo "<td>";
+					echo $subresult;
+					echo "</td>";
+				}
             }
             echo "<td><a href='/beheerderspaneel/bedrijfsmedewerker/edit/" . $id . "'>Klik hier om te bewerken</a></td>";
             echo "</tr>";
