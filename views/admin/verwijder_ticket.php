@@ -1,7 +1,7 @@
 <?php
 $db = new db;
 $id = $params;
-$stmt = $db->link->prepare("DELETE FROM STATUSWIJZIGING WHERE idTicket = ?");
+$stmt = $db->link->prepare("DELETE FROM STATUS_WIJZIGING WHERE idTicket = ?");
 $stmt->bindValue(1, $id);
 $check = $stmt->execute();
 
