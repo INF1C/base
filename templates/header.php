@@ -32,7 +32,7 @@
                 </div>
 
                 <!--logo start-->
-                <a href="index.php" class="logo"><b>Stenden eHelp</b></a>
+                <a href="/" class="logo"><b>Stenden eHelp</b></a>
 
                 <!--logo end-->
                 <div class="nav notify-row" id="top_menu">
