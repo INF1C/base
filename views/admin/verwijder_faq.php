@@ -1,7 +1,7 @@
 <?php
 $db = new db;
 $id = $params;
-$stmt = $db->link->prepare("DELETE FROM FAQ WHERE idBedrijf = ?");
+$stmt = $db->link->prepare("DELETE FROM FAQ WHERE idFAQ = ?");
 $stmt->bindValue(1, $id);
 $stmt->execute();
 $check = $stmt->rowCount();
