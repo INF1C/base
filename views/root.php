@@ -1,5 +1,5 @@
 <section class="wrapper main-chart">
-    <a href="/base/templates/subCss/"><img src="wehelp.png"></a>
+    <img src="/base/templates/subCss/wehelp.png">
 </section>
 
    
