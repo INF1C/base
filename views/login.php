@@ -68,7 +68,7 @@
                                                 <h4 class="modal-title">Forgot Password?</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Bel naar [telefoonnummer] om uw wachtwoord te resetten</p>
+                                                <p>Bel naar 0513-404637 om uw wachtwoord te resetten</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
