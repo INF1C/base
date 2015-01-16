@@ -57,6 +57,7 @@ $db = new db;
       
 	    <div class="form-group">
 	    	<input type="hidden" value="<?php $idTicket ?>" name="idTicket" />
+                <?php var_dump($idTicket); ?>
 	    	<input type="submit" value="Gereed" name="submit">
 	    </div>
 </form>
