@@ -58,6 +58,6 @@ $db = new db;
 	    <div class="form-group">
 	    	<input type="hidden" value="<?= $idTicket ?>" name="idTicket" />
                 
-  <button type="submit" class="btn btn-default">Bewerk</button>
+  <button type="submit" name="submit" value="submit" class="btn btn-default">Bewerk</button>
 	    </div>
 </form>
