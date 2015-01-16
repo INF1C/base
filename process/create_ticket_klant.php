@@ -18,7 +18,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
             function countdown() {
                 var i = document.getElementById('counter');
                 if (parseInt(i.innerHTML) <= 1) {
-                    location.href = '/klantpaneel/ticket/';
+                    location.href = '/klantpaneel/ticketingediend/';
                 }
                 i.innerHTML = parseInt(i.innerHTML) - 1;
             }
