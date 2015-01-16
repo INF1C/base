@@ -22,7 +22,7 @@ if($check == 1 && $check2 == 1){
 		function countdown() {
 			var i = document.getElementById('counter');
 			if (parseInt(i.innerHTML) <= 1) {
-				location.href = '/beheerderspaneel/verwijder/';
+				location.href = '/beheerderspaneel/verwijder/bedrijfsmedewerker/';
 			}
 			i.innerHTML = parseInt(i.innerHTML) - 1;
 		}
