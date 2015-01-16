@@ -22,12 +22,12 @@
         <?php } ?>
         <div class="form-group">
             <label for="createStatusWijzigingBedrijfsContact">Soort Contact:</label>
-            <input type="text" class="form-control" id="createStatusWijzigingBedrijfsContact" name="SoortContact">
+            <input type="text" class="form-control" id="createStatusWijzigingBedrijfsContact" name="SoortContact" required>
         </div>
 
         <div class="form-group">
             <label for="createStatusWijzigingMemo">Memo:</label>
-            <textarea class="form-control" rows="5" id="createStatusWijzigingMemo" placeholder="Memo" name="Memo"></textarea>
+            <textarea class="form-control" rows="5" id="createStatusWijzigingMemo" placeholder="Memo" name="Memo" required></textarea>
         </div>
 
         <button type="submit" value="submit" name="submit" class="btn btn-default">Verzend</button>

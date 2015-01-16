@@ -50,11 +50,11 @@ $licentie = $db->select(array('Licentie'), array('idBedrijf' => $idBedrijf))[0][
 
         <div class="form-group">
             <label for="createTicketProbleemstelling">Probleemstelling:</label>
-            <textarea class="form-control" rows="5" id="createTicketProbleemstelling" placeholder="Probleemstelling" name="Probleemstelling"></textarea>
+            <textarea class="form-control" rows="5" id="createTicketProbleemstelling" placeholder="Probleemstelling" name="Probleemstelling" required></textarea>
         </div>
         <div class="form-group">
             <label for="createTicketSoortContact">Soort contact:</label>
-            <input type="text" class="form-control" id="createTicketSoortContact" name="SoortContact" placeholder="E-mail">
+            <input type="text" class="form-control" id="createTicketSoortContact" name="SoortContact" placeholder="bijv. E-mail" required>
         </div>
         <button type="submit" value="submit" name="submit" class="btn btn-default">Verzend</button>
     </form>

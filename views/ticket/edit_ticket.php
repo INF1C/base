@@ -47,12 +47,12 @@ $db = new db;
     	</div>
 	    <div class="form-group">
                 <label for="editProbleemstelling">Probleemstelling</label>
-                    <textarea class="form-control" id="editProbleemstelling" placeholder="Probleemstelling" rows="5" cols="75" name="Probleemstelling"><?= $data['Probleemstelling'] ?></textarea>
+                    <textarea class="form-control" id="editProbleemstelling" placeholder="Probleemstelling" rows="5" cols="75" name="Probleemstelling" required><?= $data['Probleemstelling'] ?></textarea>
 	    </div>
             
             <div class="form-group">
                 <label for="editOplossing">Oplossing</label>
-                    <textarea class="form-control" id="editOplossing" placeholder="Oplossing" rows="5" cols="75" name="Oplossing"><?= $data['Oplossing'] ?></textarea>
+                    <textarea class="form-control" id="editOplossing" placeholder="Oplossing" rows="5" cols="75" name="Oplossing" required><?= $data['Oplossing'] ?></textarea>
 	    </div>
       
 	    <div class="form-group">
