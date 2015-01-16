@@ -206,3 +206,6 @@ $router->map("GET|POST", "/ticket/editticket/[i:id]", function ($id) {
 	$router->map("GET", "/beheerderspaneel/verwijder/faq/[i:id]", function ($id) {
 		openView("admin/verwijder_faq", array(), $id);
 	}, "Verwijder -> faq.");
+	$router->map("GET", "/beheerderspaneel/verwijder/ticket/[i:id]", function ($id) {
+		openView("admin/verwijder_ticket", array(), $id);
+	}, "Verwijder -> ticket.");
