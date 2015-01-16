@@ -27,7 +27,7 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 		}, "Wijzigen van autorisatie1");
 	// Afbeelding
 	$router->map("POST|GET", "/instellingen/afbeelding/", function () {
-		openView("instellingen/afbeelding", array());
+		openView("instellingen/afbeelding", array('Medewerker', 'Teamleider'));
 	}, "Wijzigen van uw afbeelding");
 
 // beheerderspaneel
@@ -110,19 +110,19 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 // Klantpaneel
 		//FAQ Bekijken
         $router->map("GET", "/klantpaneel/faq/", function () {
-		openView("klantpaneel/faq", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("klantpaneel/faq", array('Medewerker', 'Bedrijfsmedewerker', 'Teamleider'));
 	}, "Klantpaneel -> faq");
 		//Ticket Aanmaken/Wijzigen
 	 $router->map("GET", "/klantpaneel/ticket/", function () {
-		openView("klantpaneel/ticket", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("klantpaneel/ticket", array('Medewerker', 'Bedrijfsmedewerker', 'Teamleider'));
 	}, "Klantpaneel -> ticket");
 		//Ingediende tickets bekijken
 	 $router->map("GET", "/klantpaneel/ticketingediend/", function () {
-		openView("klantpaneel/ticketsingediend", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("klantpaneel/ticketsingediend", array('Medewerker', 'Bedrijfsmedewerker', 'Teamleider'));
 	}, "Klantpaneel -> ticketbekijken");
         //Contact gegevens aanpassen
 	 $router->map("GET", "/klantpaneel/contactgegevensedit/", function () {
-		openView("klantpaneel/contactgegevensedit", array('Medewerker', 'Bedrijfsmedewerker'));
+		openView("klantpaneel/contactgegevensedit", array('Medewerker', 'Bedrijfsmedewerker', 'Teamleider'));
 	}, "Klantpaneel -> contactgegevensedit");
 	
 
@@ -161,15 +161,15 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 // Wijzigen
 	// Wachtwoord
 	$router->map("POST|GET", "/wijzigen/wachtwoord/", function () {
-		openView("wijzigen/wachtwoord", array());
+		openView("wijzigen/wachtwoord", array('Medewerker', 'Bedrijfsmedewerker', 'Teamleider'));
 	}, "Wijzigen van wachtwoord");
         
 // Statuswijziging
 	$router->map("GET", "/ticket/statuswijziging/behandeling/[i:id]", function ($id) {
-		openView("ticket/statuswijziging_behandeling", array('Medewerker', 'Bedrijfsmedewerker'), $id);
+		openView("ticket/statuswijziging_behandeling", array('Medewerker', 'Teamleider'), $id);
 	}, "Ticket -> Statuswijziging");
 	$router->map("GET", "/ticket/statuswijziging/[i:id]", function ($id) {
-		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker'), $id);
+		openView("ticket/statuswijziging", array('Medewerker', 'Bedrijfsmedewerker', 'Teamleider'), $id);
 	}, "Ticket -> in behandeling nemen");
 	$router->map("POST", "/ticket/zoekbedrijfsmedewerker/[i:id]", function ($params) {
 		require DIR_VIEW . "ticket/zoekbedrijfsmedewerker.php";
@@ -177,7 +177,7 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
         
 // Ticket editten
 $router->map("GET|POST", "/ticket/editticket/[i:id]", function ($id) {
-		openView("ticket/edit_ticket", array('Medewerker', 'Teamleider'), $id);
+		openView("ticket/edit_ticket", array('Medewerker', 'Teamleider', 'Teamleider'), $id);
 	}, "Ticket -> Ticket bewerken");
         
         
