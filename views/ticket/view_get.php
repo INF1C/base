@@ -36,10 +36,13 @@ reset($status);
     $db = new db;
     $db->db_table = "STATUS_WIJZIGING";
     $idMedewerker = $db->select(array('idMedewerker'), array('idStatus' => $laatsteStatusID))[0]['idMedewerker'];
-    $db->db_table = "MEDEWERKER";
-    $afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
-    if ($afbeelding == '')
-        $afbeelding = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+	if ($idMedewerker != ""){
+		$db->db_table = "MEDEWERKER";
+		$afbeelding = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
+	}else{
+		if ($afbeelding == '')
+			$afbeelding = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+	}
     ?>
     <img class="img-responsive img-circle" src="<?= $afbeelding ?>" alt="Anonymous">
     <p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
