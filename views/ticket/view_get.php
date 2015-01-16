@@ -30,8 +30,12 @@ reset($status);
             <td><?= $ticket['Oplossing'] ?></td>
         </tr>
     </table>
-    <a href='/ticket/editticket/<?= $idTicket ?>'>Ticket bewerken</a>
-    <a class="pull-right" href='/beheerderspaneel/verwijder/ticket/<?= $idTicket ?>'>Ticket verwijderen</a>
+    ?php if($_SESSION['autorisatie'] != 'Bedrijfsmedewerker') { ?>
+            <a href='/ticket/editticket/<?= $idTicket ?>'>Ticket bewerken</a>
+        <?php }
+        if($_SESSION['autorisatie'] === 'Admin') { ?>
+            <a class="pull-right" href='/beheerderspaneel/verwijder/ticket/<?= $idTicket ?>'>Ticket verwijderen</a>
+        <?php } ?>
 </div>
 <div class="col-lg-3 showback pull-right">
     <?php
