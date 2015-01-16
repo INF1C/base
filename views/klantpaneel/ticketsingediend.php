@@ -3,7 +3,7 @@
     $output = new output;
     $Gebruikersnaam = $_SESSION['gebruikersnaam'];
     $sql = "SELECT idBedrijf FROM BEDRIJFSMEDEWERKER WHERE Gebruikersnaam = '" . $Gebruikersnaam . "'";
-    $idBedrijf = $output->db->select(NULL, NULL, $sql)[0]['idBedrijf'];
+    $idBedrijf = $output->db->select(NULL, NULL, $sql)['idBedrijf'];
     $tickets = $output->tickets($idBedrijf);
     ?>
     <div class="content-panel">
