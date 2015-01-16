@@ -44,7 +44,7 @@
 		});
         $("#zoekBedrijfsMedewerker").submit(function() {
 <?php 
-  $sql = "SELECT idBedrijf FROM STATUSWIJZIGING WHERE idTicket = ?";
+  $sql = "SELECT idBedrijf FROM STATUS_WIJZIGING WHERE idTicket = ?";
   $db = new db;
   $stmt = $db->link->prepare($sql);
   $stmt->bindValue(1, $params);
