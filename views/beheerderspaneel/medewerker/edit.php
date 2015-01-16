@@ -29,7 +29,7 @@ if ($idMedewerker !== NULL) {
         </div>
         <div class="form-group">
             <input type="hidden" value="<?= $data['idMedewerker'] ?>" name="idMedewerker" />
-            <input type="submit" value="submit" name="submit" />
+            <input type="submit" value="Verzend" name="submit" />
         </div>
     </form>
     <noscript>
