@@ -85,7 +85,18 @@
                                 <li><a  href="/wijzigen/wachtwoord/">Wijzig uw wachtwoord</a></li>
                             </ul>
                         </li>
-
+                        <li class="sub-menu"> 
+                            <a href="javascript:;">
+                                <i class="fa fa-cogs"></i>
+                                <span>Admin</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="/beheerderspaneel/verwijder/bedrijfsmedewerker/">Verwijder bedrijfsmedewerker</a></li>
+                                <li><a href="/beheerderspaneel/verwijder/bedrijf/">Verwijder bedrijf</a></li>
+                                <li><a href="/beheerderspaneel/verwijder/medewerker/">Verwijder medewerker</a></li>
+                                <li><a href="/beheerderspaneel/verwijder/faq/">Verwijder faq</a></li>
+                            </ul>
+                        </li>
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-dashboard"></i>
