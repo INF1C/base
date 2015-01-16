@@ -1,7 +1,6 @@
 <?php
 $db = new db;
 $id = $params;
-echo "Test";
 $stmt1 = $db->link->prepare("SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?");
 $stmt1->bindValue(1, $id);
 $stmt1->execute();
