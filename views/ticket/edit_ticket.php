@@ -1,12 +1,10 @@
 <?php
 $db = new db;
-if(!empty(FILTER_INPUT(INPUT_GET, 'idTicket'))) {
-	$idTicket = FILTER_INPUT(INPUT_GET, 'idTicket');
+
+	$idTicket = $params;
 	$db->db_table = "TICKET";
 	$data = $db->select(array('*'), array('idTicket' => $idTicket))[0];
-} else {
-	$data = array_fill_keys(array('idTicket', 'IncidentType', 'Probleemstelling', 'Oplossing'), '');
-}
+
 ?>
 <form method="POST" action="/process/edit/ticket">
     	<div class="form-group">

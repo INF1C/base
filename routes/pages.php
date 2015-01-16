@@ -176,8 +176,8 @@ $router->map("GET", "/ticket/[i:id]", function ($id) {
 	}, "Klantpaneel -> zoek");
         
 // Ticket editten
-$router->map("GET|POST", "/ticket/editticket/", function () {
-		openView("ticket/edit_ticket", array('Medewerker', 'Teamleider'));
+$router->map("GET|POST", "/ticket/editticket/[i:id]", function ($id) {
+		openView("ticket/edit_ticket", array('Medewerker', 'Teamleider'), $id);
 	}, "Ticket -> Ticket bewerken");
         
         
