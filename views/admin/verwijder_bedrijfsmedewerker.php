@@ -1,12 +1,15 @@
 <?php
 $db = new db;
 $id = $params;
-$sql = 	"SET @naam := (SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?);" .
-		" DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; " .
-		" DELETE FROM ACCOUNT WHERE Gebruikersnaam = @user;";
+$stmt1 = $db->prepare("SELECT Gebruikersnaam FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?");
+$stmt1->bindValue(1, $id);
+$stmt1->execute();
+$result = $stmt1->fetch(PDO::FETCH_ASSOC)['Gebruikersnaam'];
+$sql = 	" DELETE FROM BEDRIJFSMEDEWERKER WHERE idBedrijfsMedewerker = ?; " .
+		" DELETE FROM ACCOUNT WHERE Gebruikersnaam = ?;";
 $stmt = $db->link->prepare($sql);
 $stmt->bindValue(1, $id);
-$stmt->bindValue(2, $id);
+$stmt->bindValue(2, $result);
 $check = $stmt->execute();
 if($check == 1){
 	echo'<div class="alert alert-success">
