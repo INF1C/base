@@ -50,7 +50,7 @@ if (isset($_POST['idTicket'])) {
         $afbeelding1 = 'http://hanssietrainorphotography.com/wp-content/uploads/2013/06/facebook-no-image1.gif';
     }
     ?>
-        <img class="img-responsive img-circle" src="<?= $afbeelding ?>" alt="Anonymous">
+        <img class="img-responsive img-circle" src="<?= $afbeelding1 ?>" alt="Anonymous">
         <p class="text-center">Medewerker: <?= $laatsteStatus['Medewerker'] ?></p>
     </div>
     <span class="clearfix"></span>
