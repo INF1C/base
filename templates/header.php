@@ -94,7 +94,7 @@
                                 <li><a href="/beheerderspaneel/verwijder/bedrijfsmedewerker/">Verwijder bedrijfsmedewerker</a></li>
                                 <li><a href="/beheerderspaneel/verwijder/bedrijf/">Verwijder bedrijf</a></li>
                                 <li><a href="/beheerderspaneel/verwijder/medewerker/">Verwijder medewerker</a></li>
-                                <li><a href="/beheerderspaneel/verwijder/faq/">Verwijder faq</a></li>
+                                <li><a href="/beheerderspaneel/verwijder/faq/">Verwijder FAQ</a></li>
                             </ul>
                         </li>
                         <li class="sub-menu">
