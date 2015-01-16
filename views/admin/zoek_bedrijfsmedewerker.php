@@ -2,7 +2,7 @@
 isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $zoekterm = '';
 ?>
 <div class="col-lg-12">
-    <div class="form-panel">
+
         <h2> Verwijder Bedrijfsmedewerker</h2><br />
         <h4 class="mb"><i class="fa fa-angle-right"></i> Zoek bedrijfsmedewerker</h4>
         <form class="form-inline" method="POST" action="" role="form">
@@ -12,7 +12,7 @@ isset($_POST['zoekterm']) ? $zoekterm = filter_input(INPUT_POST, 'zoekterm') : $
             </div>
             <button type="submit" class="btn btn-theme">Zoek</button>
         </form>
-    </div><!-- /form-panel -->
+<!-- /form-panel -->
     <?php
     if (isset($_POST['zoekterm'])) {
         echo "<div class='content-panel'>";
