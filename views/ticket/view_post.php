@@ -47,7 +47,7 @@ if (isset($_POST['idTicket'])) {
         $db->db_table = "MEDEWERKER";
         $afbeelding1 = $db->select(array('Afbeelding'), array('idMedewerker' => $idMedewerker))[0]['Afbeelding'];
     }else{
-        $afbeelding1 = 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png';
+        $afbeelding1 = 'http://hanssietrainorphotography.com/wp-content/uploads/2013/06/facebook-no-image1.gif';
     }
     ?>
         <img class="img-responsive img-circle" src="<?= $afbeelding ?>" alt="Anonymous">
