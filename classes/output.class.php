@@ -94,7 +94,13 @@ class output {
 
     public function NietBehandeldeTickets() {
 
-        $sql = "SELECT * FROM STATUS_WIJZIGING WHERE Status = 'Nieuw' GROUP BY idTicket";
+        $sql = "SELECT * FROM STATUS_WIJZIGING
+                WHERE `idTicket` NOT IN (
+                    SELECT `idTicket` FROM STATUS_WIJZIGING
+                    WHERE `Status` <> 'Nieuw'
+                    GROUP BY `idTicket`
+                    )
+                AND `Status` = 'Nieuw'";
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
         foreach ($alleOpentickets as $openticketArray) {
