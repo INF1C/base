@@ -100,7 +100,8 @@ class output {
                     WHERE `Status` <> 'Nieuw'
                     GROUP BY `idTicket`
                     )
-                AND `Status` = 'Nieuw'";
+                AND `Status` = 'Nieuw'
+                GROUP BY `idticket`";
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
         foreach ($alleOpentickets as $openticketArray) {
