@@ -63,7 +63,12 @@ class output {
 
     public function openTickets() {
 
-        $sql = "SELECT * FROM STATUS_WIJZIGING WHERE Status NOT IN('opgelost', 'afgemeld', 'Nieuw') GROUP BY idTicket";
+        $sql = "SELECT idTicket FROM `STATUS_WIJZIGING` 
+                WHERE idStatus IN (
+                    SELECT MAX(idStatus) FROM STATUS_WIJZIGING
+                    GROUP BY idTicket
+                    HAVING Status NOT IN ('Nieuw', 'afgemeld')
+                )";
         $alleOpentickets = $this->db->select(NULL, NULL, $sql);
         $return = array();
         foreach ($alleOpentickets as $openticketArray) {
