@@ -109,7 +109,7 @@ class create {
         if($status !== NULL)
             $data["Status"] = $status;
 
-        $status = array('Nieuw', 'In behandeling', 'Doorgestuurd naar engineer', 'Doorgestuurd naar account manager', 'Opgelost', 'Afgemeld');
+        $status = array('Nieuw', 'In behandeling', 'Doorgestuurd naar engineer', 'Doorgestuurd naar account manager', 'opgelost', 'afgemeld');
         if (!in_array($data["Status"], $status)) {
             return "De invulmogelijkheden zijn: Nieuw, In behandeling, Doorgestuurd naar engineer, Doorgestuurd naar account manager, Opgelost , Afgemeld. Uw ingevulde incidenttype voldoet hier niet aan!";
         }
