@@ -6,9 +6,9 @@ class db {
 
     public $link;
     private $db_host = "localhost";
-    private $db_user = "c1_stenden_ehelp";
-    private $db_pass = "bxrwZHQM!2";
-    private $db_name = "c1_stenden_ehelp";
+    private $db_user = "admin_ehelp";
+    private $db_pass = "BbzO9hdczB";
+    private $db_name = "admin_ehelp";
     public $db_table;
 
     public function __construct() {
